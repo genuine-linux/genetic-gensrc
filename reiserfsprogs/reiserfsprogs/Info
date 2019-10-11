@@ -1,0 +1,11 @@
+### Package <reiserfsprogs> info. ###
+
+original_name=reiserfsprogs
+name=reiserfsprogs
+version=3.6.27
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

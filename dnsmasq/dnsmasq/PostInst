@@ -1,0 +1,5 @@
+#!/bin/bash
+
+groupadd -g 91 dnsmasq
+useradd -u 91 -G dnsmasq dnsmasq -s /bin/false
+rc-update add dnsmasq default

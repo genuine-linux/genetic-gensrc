@@ -1,0 +1,11 @@
+### Package <flux> info. ###
+
+original_name=flux
+name=flux
+version=1.4.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

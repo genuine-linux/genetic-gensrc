@@ -1,0 +1,4 @@
+source=glibmm
+version=2.60.0
+depends=
+package=glibmm

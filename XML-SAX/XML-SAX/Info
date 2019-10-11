@@ -1,0 +1,11 @@
+### Package <XML-SAX> info. ###
+
+original_name=XML-SAX
+name=XML-SAX
+version=1.00
+package=$name-$version
+depends=perl_5.28.1
+installbefore=
+installafter=
+replaces="$name"
+

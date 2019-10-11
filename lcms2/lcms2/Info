@@ -1,0 +1,11 @@
+### Package <lcms2> info. ###
+
+original_name=lcms2
+name=lcms2
+version=2.9
+package=$name-$version
+depends="libjpeg-turbo_2.0.2 tiff_4.0.10"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=pulseaudio
+version=12.99.3
+depends="libsndfile_1.0.28 alsa-lib_1.1.9 dbus_1.12.16 elogind_241.3 glib_2.60.7 libcap_2.27 speex_1.2.0 libxshmfence_1.3 avahi_0.7 bluez_5.50 fftw_3.3.8 gconf_3.2.6 gtk3+_3.24.10 libsamplerate_0.1.9 sbc_1.4 jack2_1.9.12 alsa-utils_1.1.9"
+package=pulseaudio

@@ -1,0 +1,11 @@
+### Package <libpthread-stubs> info. ###
+
+original_name=libpthread-stubs
+name=libpthread-stubs
+version=0.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

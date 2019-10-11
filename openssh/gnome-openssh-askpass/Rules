@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version/contrib;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make gnome-ssh-askpass2;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/libexec/openssh/contrib;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	install -v -m755 gnome-ssh-askpass2 $GENPKGDESTDIR/usr/libexec/openssh/contrib/
+	ln -svf contrib/gnome-ssh-askpass2 $GENPKGDESTDIR/usr/libexec/openssh/ssh-askpass
+fi;
+

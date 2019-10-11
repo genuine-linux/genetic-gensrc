@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grub-mkconf -o /boot/grub/grub.cfg

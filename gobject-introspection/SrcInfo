@@ -1,0 +1,4 @@
+source=gobject-introspection
+version=1.60.2
+depends="glib_2.60.4"
+package=gobject-introspection

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Rxvt-Unicode Terminal
+Comment=Use the command line
+GenericName=Terminal
+Exec=urxvt
+Terminal=false
+Type=Application
+Icon=utilities-terminal
+Categories=GTK;Utility;TerminalEmulator;
+StartupNotify=true
+Keywords=console;command line;execute;

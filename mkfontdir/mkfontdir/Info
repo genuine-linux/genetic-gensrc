@@ -1,0 +1,11 @@
+### Package <mkfontdir> info. ###
+
+original_name=mkfontdir
+name=mkfontdir
+version=1.0.7
+package=$name-$version
+depends="luit_1.1.1"
+installbefore=
+installafter=
+replaces="$name"
+

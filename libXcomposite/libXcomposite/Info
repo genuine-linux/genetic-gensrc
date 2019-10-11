@@ -1,0 +1,11 @@
+### Package <libXcomposite> info. ###
+
+original_name=libXcomposite
+name=libXcomposite
+version=0.4.5
+package=$name-$version
+depends="libXfixes_5.0.3"
+installbefore=
+installafter=
+replaces="$name"
+

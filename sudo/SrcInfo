@@ -1,0 +1,4 @@
+source=sudo
+version=1.8.27
+depends="Linux-PAM_1.3.1 krb5_5.1.17 postfix_3.4.5"
+package=sudo

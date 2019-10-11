@@ -1,0 +1,4 @@
+source=libXfixes
+version=5.0.3
+depends="libXaw_1.0.13"
+package=libXfixes

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+groupadd -g 65 lightdm
+useradd -c "Lightdm Daemon" \
+	-d /var/lib/lightdm \
+	-u 65 -g lightdm \
+	-s /bin/false lightdm
+
+mkdir -p /var/lib/lightdm
+chown -R lightdm:lightdm /var/lib/lightdm
+chmod 0750 /var/lib/lightdm

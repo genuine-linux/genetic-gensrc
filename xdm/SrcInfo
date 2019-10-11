@@ -1,0 +1,4 @@
+source=xdm
+version=1.1.12
+depends=
+package=xdm

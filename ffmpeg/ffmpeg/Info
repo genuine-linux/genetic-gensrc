@@ -1,0 +1,11 @@
+### Package <ffmpeg> info. ###
+
+original_name=ffmpeg
+name=ffmpeg
+version=4.2.1
+package=$name-$version
+depends="libass_0.14.0 fdk-aac_2.0.0 freetype_2.10.1 lame_3.100 libtheora_1.1.1 libvorbis_1.3.6 libvpx_1.8.1 opus_1.3.1 x264_2245 x265_3.1.2 yasm_1.3.0 alsa-lib_1.1.9 libva_2.5.0 libvdpau_1.3 fontconfig_2.13.1 frei0r-plugins_1.6.1 libcdio_2.1.0 libwebp_1.0.3 openjpeg_2.3.1 gnutls_3.6.9 pulseaudio_12.2 speex_1.2.0 v4l-utils_1.16.7 xvidcore_1.3.5 xorg-server_1.20.5 openal-soft_1.19.1"
+installbefore=
+installafter=
+replaces="$name"
+

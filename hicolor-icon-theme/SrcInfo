@@ -1,0 +1,4 @@
+source=hicolor-icon-theme
+version=0.17
+depends=
+package=hicolor-icon-theme

@@ -1,0 +1,11 @@
+### Package <sed> info. ###
+
+original_name=sed
+name=sed
+version=4.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

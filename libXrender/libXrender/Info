@@ -1,0 +1,11 @@
+### Package <libXrender> info. ###
+
+original_name=libXrender
+name=libXrender
+version=0.9.10
+package=$name-$version
+depends="libXcomposite_.0.4.5"
+installbefore=
+installafter=
+replaces="$name"
+

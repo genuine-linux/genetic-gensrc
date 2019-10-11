@@ -1,0 +1,11 @@
+### Package <libmng> info. ###
+
+original_name=libmng
+name=libmng
+version=2.0.3
+package=$name-$version
+depends="libjpeg-turbo_2.0.3 lcms2_2.9"
+installbefore=
+installafter=
+replaces="$name"
+

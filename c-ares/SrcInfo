@@ -1,0 +1,4 @@
+source=c-ares
+version=1.15.0
+depends="cmake_3.14.4"
+package=c-ares

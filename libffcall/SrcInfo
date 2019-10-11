@@ -1,0 +1,4 @@
+source=libffcall
+version=2.1
+depends="pth_2.0.7"
+package=libffcall

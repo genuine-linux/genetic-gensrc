@@ -1,0 +1,11 @@
+### Package <msql> info. ###
+
+original_name=msql
+name=msql
+version=4.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

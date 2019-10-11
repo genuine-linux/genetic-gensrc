@@ -1,0 +1,11 @@
+### Package <iso-codes> info. ###
+
+original_name=iso-codes
+name=iso-codes
+version=4.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

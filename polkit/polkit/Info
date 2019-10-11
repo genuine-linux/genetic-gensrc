@@ -1,0 +1,11 @@
+### Package <polkit> info. ###
+
+original_name=polkit
+name=polkit
+version=0.116
+package=$name-$version
+depends="glib_2.60.4 mozjs_60.1.0 Linux-PAM_1.3.1 elogind_241.3 gobject-introspection_1.60.2 docbook-xml_4.5 docbook-xsl-nons_1.79.2 gtk-doc_1.29 libxslt_1.1.33"
+installbefore=
+installafter=
+replaces="$name"
+

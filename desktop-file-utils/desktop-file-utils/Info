@@ -1,0 +1,11 @@
+### Package <desktop-file-utils> info. ###
+
+original_name=desktop-file-utils
+name=desktop-file-utils
+version=0.23
+package=$name-$version
+depends="glib_2.60.4"
+installbefore=
+installafter=
+replaces="$name"
+

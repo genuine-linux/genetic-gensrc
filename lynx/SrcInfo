@@ -1,0 +1,4 @@
+source=lynx
+version=2.8.9
+depends="gnutls_3.6.8 unzip_6.0 sharutils_4.15.2 zlib_1.2.11"
+package=lynx

@@ -1,0 +1,4 @@
+source=libproxy
+version=0.4.15
+depends="NetworkManager_1.20.0"
+package=libproxy

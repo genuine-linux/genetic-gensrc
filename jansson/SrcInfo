@@ -1,0 +1,4 @@
+source=jansson
+version=2.12
+depends=
+package=jansson

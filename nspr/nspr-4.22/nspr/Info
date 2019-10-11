@@ -1,0 +1,11 @@
+### Package <nspr> info. ###
+
+original_name=nspr
+name=nspr
+version=4.22
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

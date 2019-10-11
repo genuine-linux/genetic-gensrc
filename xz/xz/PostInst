@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ln -svf ../../lib/$(readlink /usr/lib/liblzma.so) /usr/lib/liblzma.so

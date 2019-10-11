@@ -1,0 +1,11 @@
+### Package <libpciaccess> info. ###
+
+original_name=libpciaccess
+name=libpciaccess
+version=0.14
+package=$name-$version
+depends="libdmx_1.1.4"
+installbefore=
+installafter=
+replaces="$name"
+

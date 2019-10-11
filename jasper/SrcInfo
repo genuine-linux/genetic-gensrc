@@ -1,0 +1,4 @@
+source=jasper
+version=2.0.14
+depends="cmake_3.15.3 libjpeg-turbo_2.0.3 freeglut_3.0.0 doxygen_1.8.16"
+package=jasper

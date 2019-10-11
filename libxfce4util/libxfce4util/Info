@@ -1,0 +1,11 @@
+### Package <libxfce4util> info. ###
+
+original_name=libxfce4util
+name=libxfce4util
+version=4.14.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

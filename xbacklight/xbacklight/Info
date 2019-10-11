@@ -1,0 +1,11 @@
+### Package <xbacklight> info. ###
+
+original_name=xbacklight
+name=xbacklight
+version=1.2.3
+package=$name-$version
+depends="xauth_1.1"
+installbefore=
+installafter=
+replaces="$name"
+

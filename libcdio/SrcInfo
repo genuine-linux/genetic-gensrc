@@ -1,0 +1,4 @@
+source=libcdio
+version=2.1.0
+depends="libcddb_1.3.2"
+package=libcdio

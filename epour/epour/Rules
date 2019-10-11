@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+python2 setup.py build --prefix=/usr
+python2 setup.py install --optimize=1 --prefix=$GENPKGDESTDIR/usr
+

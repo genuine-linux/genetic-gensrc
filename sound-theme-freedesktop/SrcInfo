@@ -1,0 +1,4 @@
+source=sound-theme-freedesktop
+version=0.8
+depends=
+package=sound-theme-freedesktop

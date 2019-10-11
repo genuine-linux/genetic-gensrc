@@ -1,0 +1,4 @@
+source=sassc
+version=3.6.1
+depends="libsass_3.6.1"
+package=sassc

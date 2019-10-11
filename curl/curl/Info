@@ -1,0 +1,11 @@
+### Package <curl> info. ###
+
+original_name=curl
+name=curl
+version=7.64.0
+package=$name-$version
+depends="make-ca_1.2 gnutls_3.6.6 libidn2_2.1.1 libpsl_0.20.2"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=font-bh-type1
+version=1.0.3
+depends="font-util_1.0.3"
+package=font-bh-type1

@@ -1,0 +1,4 @@
+source=iso-codes
+version=4.3
+depends=
+package=iso-codes

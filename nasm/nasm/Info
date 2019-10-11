@@ -1,0 +1,11 @@
+### Package <nasm> info. ###
+
+original_name=nasm
+name=nasm
+version=2.14.02
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

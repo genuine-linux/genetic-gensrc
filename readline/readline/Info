@@ -1,0 +1,11 @@
+### Package <readline> info. ###
+
+original_name=readline
+name=readline
+version=8.0
+package=$name-$version
+depends=file_5.36
+installbefore=
+installafter=
+replaces="$name"
+

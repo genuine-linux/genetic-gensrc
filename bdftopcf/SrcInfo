@@ -1,0 +1,4 @@
+source=bdftopcf
+version=1.1
+depends="xcursor-themes_1.0.6"
+package=bdftopcf

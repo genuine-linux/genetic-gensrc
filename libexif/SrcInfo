@@ -1,0 +1,4 @@
+source=libexif
+version=0.6.21
+depends=
+package=libexif

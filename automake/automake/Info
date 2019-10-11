@@ -1,0 +1,11 @@
+### Package <automake> info. ###
+
+original_name=automake
+name=automake
+version=1.16.1
+package=$name-$version
+depends=autoconf_2.69
+installbefore=
+installafter=
+replaces="$name"
+

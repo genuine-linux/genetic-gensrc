@@ -1,0 +1,11 @@
+### Package <libdmx> info. ###
+
+original_name=libdmx
+name=libdmx
+version=1.1.4
+package=$name-$version
+depends="libXxf86vm_1.1.4";
+installbefore=
+installafter=
+replaces="$name"
+

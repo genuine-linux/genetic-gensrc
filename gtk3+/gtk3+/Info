@@ -1,0 +1,11 @@
+### Package <gtk3+> info. ###
+
+original_name=gtk3+
+name=gtk3+
+version=3.24.10
+package=$name-$version
+depends="at-spi2-atk_2.32.0 fribidi_1.0.5 gdk-pixbuf_2.38.1 libepoxy_1.5.3 pango_1.42.4 adwaita-icon-theme_3.32.0 hicolor-icon-theme_0.17 iso-codes_4.3 libxkbcommon_0.8.4 sassc_3.6.1 wayland_1.17.0 wayland-protocols_1.18 colord_1.4.4 cups_2.3.0 docbook-utils_0.6.14 gtk-doc_1.31 json-glib_1.4.4 pyatspi_2.32.1 rest_0.8.1 gobject-introspection_1.60.2"
+installbefore=
+installafter=
+replaces="$name"
+

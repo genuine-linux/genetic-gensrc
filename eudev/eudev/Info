@@ -1,0 +1,11 @@
+### Package <eudev> info. ###
+
+original_name=eudev
+name=eudev
+version=3.2.7
+package=$name-$version
+depends="sysvinit_2.93"
+installbefore=
+installafter=
+replaces="$name"
+

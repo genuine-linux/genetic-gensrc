@@ -1,0 +1,4 @@
+source=mdadm
+version=4.0
+depends=
+package=mdadm

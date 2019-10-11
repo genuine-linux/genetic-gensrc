@@ -1,0 +1,4 @@
+source=libpsl
+version=0.20.2
+depends="libidn2_2.1.1 gtk-doc_1.29"
+package=libpsl

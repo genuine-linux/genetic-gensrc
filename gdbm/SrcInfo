@@ -1,0 +1,4 @@
+source=gdbm
+version=1.18.1
+depends=
+package=gdbm

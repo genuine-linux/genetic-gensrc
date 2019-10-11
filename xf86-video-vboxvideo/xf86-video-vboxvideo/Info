@@ -1,0 +1,11 @@
+### Package <xf86-video-vboxvideo> info. ###
+
+original_name=xf86-video-vboxvideo
+name=xf86-video-vboxvideo
+version=1.0.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

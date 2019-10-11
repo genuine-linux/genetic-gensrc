@@ -1,0 +1,11 @@
+### Package <tiff> info. ###
+
+original_name=tiff
+name=tiff
+version=4.0.10
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <acl> info. ###
+
+original_name=acl
+name=acl
+version=2.2.53
+package=$name-$version
+depends=attr_2.4.48
+installbefore=
+installafter=
+replaces="$name"
+

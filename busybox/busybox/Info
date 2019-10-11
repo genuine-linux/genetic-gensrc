@@ -1,0 +1,11 @@
+### Package <busybox> info. ###
+
+original_name=busybox
+name=busybox
+version=1.31.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

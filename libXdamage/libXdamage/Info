@@ -1,0 +1,11 @@
+### Package <libXdamage> info. ###
+
+original_name=libXdamage
+name=libXdamage
+version=1.1.5
+package=$name-$version
+depends="libXcursor_1.2.0"
+installbefore=
+installafter=
+replaces="$name"
+

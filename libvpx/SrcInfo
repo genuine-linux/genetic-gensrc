@@ -1,0 +1,4 @@
+source=libvpx
+version=1.8.1
+depends="yasm_1.3.0 which_2.21 doxygen_1.8.16"
+package=libvpx

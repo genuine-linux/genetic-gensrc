@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# CMake
+if test -f "CMakeLists.txt"; then
+	mkdir build.cmake;
+	cd build.cmake;
+	echo " --- CMake <$name ($version)> ---";
+	cmake -DCMAKE_BUILD_TYPE=Debug                      \
+      		-DCMAKE_INSTALL_PREFIX=/usr                     \
+		-DFREEGLUT_BUILD_SHARED_LIBS=ON \
+		-DFREEGLUT_BUILD_STATIC_LIBS=OFF \
+		-DFREEFLUT_REPLACE_GLUT=ON \
+		-DFREEGLUT_BUILD_DEMOS=NO \
+      ../;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+fi;
+
+echo " --- Cleaning sources <$name ($version)> ---";
+rm -rf *;
+
+# CMake
+echo " --- CMake <$name ($version)> ---";
+cmake -DCMAKE_BUILD_TYPE=Debug                      \
+	-DCMAKE_INSTALL_PREFIX=/usr                     \
+	-DFREEGLUT_BUILD_SHARED_LIBS=ON \
+	-DFREEGLUT_BUILD_STATIC_LIBS=OFF \
+	-DFREEGLUT_GLES=ON \
+	-DFREEFLUT_REPLACE_GLUT=ON \
+	-DFREEGLUT_BUILD_DEMOS=NO \
+../;
+
+# make
+echo " --- Make <$name ($version)> ---";
+make;
+
+# make install
+echo " --- Make Install <$name ($version)> ---";
+make DESTDIR=${GENPKGDESTDIR} install;
+

@@ -1,0 +1,4 @@
+source=LuaBitOp
+version=1.0.2
+depends=
+package=LuaBitOp

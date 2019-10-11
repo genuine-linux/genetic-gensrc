@@ -1,0 +1,11 @@
+### Package <iceauth> info. ###
+
+original_name=iceauth
+name=iceauth
+version=1.0.8
+package=$name-$version
+depends="xbitmaps_1.1.2"
+installbefore=
+installafter=
+replaces="$name"
+

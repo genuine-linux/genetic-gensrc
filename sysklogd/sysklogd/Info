@@ -1,0 +1,11 @@
+### Package <sysklogd> info. ###
+
+original_name=sysklogd
+name=sysklogd
+version=1.5.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

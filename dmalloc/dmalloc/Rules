@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	CFLAGS="$CFLAGS -fPIC" \
+	CXXFLAGS="$CXXFLAGS -fPIC" \
+	LDFLAGS="-fPIC" \
+		./configure \
+		--host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--enable-threads \
+		--enable-shlib;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make heavy;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make prefix=${GENPKGDESTDIR}/usr \
+		docdir=$GENPKGDESTDIR/share/doc/$name-$version \
+		install &&
+	mver=$(echo $version | awk -F'.' '{print $1}') &&
+	cd $GENPKGDESTDIR/usr/lib &&
+	ln -sfv libdmalloc.so.$version libdmalloc.so.$mver &&
+	ln -sfv libdmallocth.so.$version libdmallocth.so.$mver &&
+	ln -sfv libdmalloccxx.so.$version libdmalloccxx.so.$mver &&
+	ln -sfv libdmallocthcxx.so.$version libdmallocthcxx.so.$mver &&
+	ln -sfv libdmalloc.so.$mver libdmalloc.so &&
+	ln -sfv libdmallocth.so.$mver libdmallocth.so &&
+	ln -sfv libdmalloccxx.so.$mver libdmalloccxx.so &&
+	ln -sfv libdmallocthcxx.so.$mver libdmallocthcxx.so;
+fi;
+

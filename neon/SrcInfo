@@ -1,0 +1,4 @@
+source=neon
+version=0.30.2
+depends="gnutls_3.6.9 libxml2_2.9.9 krb5_1.17 libproxy_0.4.15"
+package=neon

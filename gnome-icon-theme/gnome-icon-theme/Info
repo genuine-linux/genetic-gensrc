@@ -1,0 +1,11 @@
+### Package <gnome-icon-theme> info. ###
+
+original_name=gnome-icon-theme
+name=gnome-icon-theme
+version=3.12.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

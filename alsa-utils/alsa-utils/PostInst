@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rc-update add alsasound default

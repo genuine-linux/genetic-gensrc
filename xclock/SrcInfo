@@ -1,0 +1,4 @@
+source=xclock
+version=1.0.9
+depends="xwud_1.0.3"
+package=xclock

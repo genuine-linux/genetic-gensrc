@@ -1,0 +1,11 @@
+### Package <xinit> info. ###
+
+original_name=xinit
+name=xinit
+version=1.4.1
+package=$name-$version
+depends="twm_1.0.10 xclock_1.0.9 xterm_348"
+installbefore=
+installafter=
+replaces="$name"
+

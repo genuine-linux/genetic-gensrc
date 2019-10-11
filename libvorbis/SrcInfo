@@ -1,0 +1,4 @@
+source=libvorbis
+version=1.3.6
+depends="libogg_1.3.3"
+package=libvorbis

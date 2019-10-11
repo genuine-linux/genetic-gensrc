@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--libexecdir=/usr/lib/$name \
+		--sbindir=/usr/bin \
+		--disable-static \
+		--enable-shared \
+		--disable-tests \
+		--with-greeter-user=$name \
+		--with-greeter-session=lightdm-gtk-greeter;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/bin;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	cp tests/src/lightdm-session $GENPKGDESTDIR/usr/bin/
+	sed -i '1 s/sh/bash --login/' $GENPKGDESTDIR/usr/bin/lightdm-session
+	rm -rf $GENPKGDESTDIR/etc/init
+	install -v -dm755 -o $name -g $name /var/lib/$name
+	install -v -dm755 -o $name -g $name /var/lib/$name-data
+	install -v -dm755 -o $name -g $name /var/cache/$name
+	install -v -dm770 -o $name -g $name /var/log/$name
+	cp -av ../$name/files/* $GENPKGDESTDIR/
+fi;
+

@@ -1,0 +1,11 @@
+### Package <zlib> info. ###
+
+original_name=zlib
+name=zlib
+version=1.2.11
+package=$name-$version
+depends=glibc_2.29
+installbefore=
+installafter=
+replaces="$name"
+

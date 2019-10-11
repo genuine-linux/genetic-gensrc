@@ -1,0 +1,4 @@
+source=ntp
+version=4.2.8p13
+depends="IO-Socket-SSL_2.066 libcap_2.26 libevent_2.1.8 autogen_5.18.16 readline_8.0 lynx_2.8.9"
+package=ntp

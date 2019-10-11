@@ -1,0 +1,4 @@
+source=ccache
+version=3.7.1
+depends="zlib_1.2.3"
+package=ccache

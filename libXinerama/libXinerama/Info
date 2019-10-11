@@ -1,0 +1,11 @@
+### Package <libXinerama> info. ###
+
+original_name=libXinerama
+name=libXinerama
+version=1.1.4
+package=$name-$version
+depends="libXi_1.7.10"
+installbefore=
+installafter=
+replaces="$name"
+

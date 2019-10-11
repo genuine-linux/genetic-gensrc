@@ -1,0 +1,11 @@
+### Package <freetype> info. ###
+
+original_name=freetype
+name=freetype
+version=2.10.0
+package=$name-$version
+depends="libpng_1.6.37 which_2.20"
+installbefore=
+installafter=
+replaces="$name"
+

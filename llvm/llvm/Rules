@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+if test -f "CMakeLists.txt"; then
+	mkdir build.cmake;
+	cd build.cmake;
+	echo " --- CMake <$name ($version)> ---";
+	CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" \
+	CC="${GENUINE_HOST}-gcc" CXX="${GENUINE_HOST}-g++" \
+	cmake -DCMAKE_INSTALL_PREFIX=/usr               \
+	      -DLLVM_ENABLE_FFI=ON                      \
+	      -DLLVM_ENABLE_RTTI=ON                      \
+	      -DCMAKE_BUILD_TYPE=Release                \
+	      -DLLVM_BUILD_LLVM_DYLIB=ON                \
+	      -DLLVM_LINK_LLVM_DYLIB=ON                 \
+	      -DLLVM_TARGETS_TO_BUILD="host;AMDGPU;BPF" \
+	      -DLLVM_BUILD_TESTS=OFF                     \
+	      -DLLVM_HOST_TRIPLE="$GENUINE_HOST" \
+	      -DLLVM_DEFAULT_TARGET_TRIPLE="$GENUINE_TGT" \
+	      -Wno-dev -G Ninja ..
+fi;
+
+# ninja
+if test -f "build.ninja"; then
+	echo " --- Ninja <$name ($version)> ---";
+	ninja;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# ninja install
+if test -f "build.ninja"; then
+	echo " --- Ninja Install <$name ($version)> ---";
+	DESTDIR=${GENPKGDESTDIR} ninja install;
+fi;
+

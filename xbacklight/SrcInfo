@@ -1,0 +1,4 @@
+source=xbacklight
+version=1.2.3
+depends="xauth_1.1"
+package=xbacklight

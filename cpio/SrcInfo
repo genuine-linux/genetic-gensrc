@@ -1,0 +1,4 @@
+source=cpio
+version=2.12
+depends=
+package=cpio

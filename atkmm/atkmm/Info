@@ -1,0 +1,11 @@
+### Package <atkmm> info. ###
+
+original_name=atkmm
+name=atkmm
+version=2.28.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

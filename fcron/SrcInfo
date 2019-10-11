@@ -1,0 +1,4 @@
+source=fcron
+version=3.2.1
+depends="postfix_3.4.5 vim_8.1 Linux-PAM_1.3.1 docbook-utils_0.6.14"
+package=fcron

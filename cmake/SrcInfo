@@ -1,0 +1,4 @@
+source=cmake
+version=3.14.4
+depends="ncurses_6.1 openssl_1.1.1a libuv_1.26.0 libarchive_3.3.3 curl_7.64.0"
+package=cmake

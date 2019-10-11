@@ -1,0 +1,11 @@
+### Package <intltool> info. ###
+
+original_name=intltool
+name=intltool
+version=0.51.0
+package=$name-$version
+depends=XML-Parser_2.44
+installbefore=
+installafter=
+replaces="$name"
+

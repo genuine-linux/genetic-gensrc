@@ -1,0 +1,4 @@
+source=gmp
+version=6.1.2
+depends=binutils_2.32
+package=gmp

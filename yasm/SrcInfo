@@ -1,0 +1,4 @@
+source=yasm
+version=1.3.0
+depends="Python2_2.7.16"
+package=yasm

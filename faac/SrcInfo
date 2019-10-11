@@ -1,0 +1,4 @@
+source=faac
+version=1.29.9.2
+depends=
+package=faac

@@ -1,0 +1,4 @@
+source=xgamma
+version=1.0.6
+depends="xev_1.2.3"
+package=xgamma

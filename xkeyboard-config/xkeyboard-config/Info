@@ -1,0 +1,11 @@
+### Package <xkeyboard-config> info. ###
+
+original_name=xkeyboard-config
+name=xkeyboard-config
+version=2.27
+package=$name-$version
+depends="font-xfree86-type1_1.0.4"
+installbefore=
+installafter=
+replaces="$name"
+

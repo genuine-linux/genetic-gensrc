@@ -1,0 +1,11 @@
+### Package <xrandr> info. ###
+
+original_name=xrandr
+name=xrandr
+version=1.5.0
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

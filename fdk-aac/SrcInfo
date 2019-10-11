@@ -1,0 +1,4 @@
+source=fdk-aac
+version=2.0.0
+depends=
+package=fdk-aac

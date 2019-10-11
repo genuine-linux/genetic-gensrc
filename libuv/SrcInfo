@@ -1,0 +1,4 @@
+source=libuv
+version=1.26.0
+depends=
+package=libuv

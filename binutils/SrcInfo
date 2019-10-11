@@ -1,0 +1,4 @@
+source=binutils
+version=2.32
+depends=zlib_1.2.11 bc_1.07.1
+package=binutils

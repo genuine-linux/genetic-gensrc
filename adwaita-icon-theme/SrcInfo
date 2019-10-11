@@ -1,0 +1,4 @@
+source=adwaita-icon-theme
+version=3.32.0
+depends=
+package=adwaita-icon-theme

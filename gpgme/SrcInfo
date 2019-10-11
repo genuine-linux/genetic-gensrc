@@ -1,0 +1,4 @@
+source=gpgme
+version=1.12.0
+depends="libassuan_2.5.3 gnupg_2.2.13 clisp_2.49 Python2_2.7.15 swig_3.0.12"
+package=gpgme

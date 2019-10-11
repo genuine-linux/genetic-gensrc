@@ -1,0 +1,11 @@
+### Package <man-pages> info. ###
+
+original_name=man-pages
+name=man-pages
+version=4.16
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=libaio
+version=0.3.111
+depends=
+package=libaio

@@ -1,0 +1,11 @@
+### Package <IO-Socket-SSL> info. ###
+
+original_name=IO-Socket-SSL
+name=IO-Socket-SSL
+version=2.066
+package=$name-$version
+depends="perl_5.28.1 URI_1.76 Net-SSLeay_1.86_06 make-ca_1.4"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <cpio> info. ###
+
+original_name=cpio
+name=cpio
+version=2.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

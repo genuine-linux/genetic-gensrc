@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make REAL_DAEMON_DIR=/usr/sbin STYLE=-DPROCESS_OPTIONS linux;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/{include,lib,bin,sbin,share/doc/$name-$version,share/man/man8,share/man/man5,share/man/man3};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+fi;
+

@@ -1,0 +1,4 @@
+source=xorg-server
+version=1.20.5
+depends="pixman_0.38.4 xkeyboard-config_2.27 font-xfree86-type1_1.0.4 elogind_241.3 libexpoxy_1.5.3 polkit_0.116 wayland-protocols_1.17 wayland_1.17.0 acpid_2.0.31 fop_2.3 nettle_3.5.1 libgcrypt_1.8.4 xcb-util-keysyms_0.4.0 xcb-util-image_0.4.0 xcb-util-renderutil_0.3.9 xcb-util-wm_0.4.1 xmlto_0.0.28 xorg-sgml-doctools_1.10_99.901"
+package=xorg-server

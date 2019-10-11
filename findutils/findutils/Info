@@ -1,0 +1,11 @@
+### Package <findutils> info. ###
+
+original_name=findutils
+name=findutils
+version=4.6.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

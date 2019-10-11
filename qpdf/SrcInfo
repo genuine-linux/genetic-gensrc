@@ -1,0 +1,4 @@
+source=qpdf
+version=9.0.0
+depends="libjpeg-turbo_2.0.3 libxslt_1.1.33"
+package=qpdf

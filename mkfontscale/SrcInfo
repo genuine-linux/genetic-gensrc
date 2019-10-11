@@ -1,0 +1,4 @@
+source=mkfontscale
+version=1.2.1
+depends="mkfontdir_1.0.7"
+package=mkfontscale

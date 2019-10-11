@@ -1,0 +1,4 @@
+source=xdriinfo
+version=1.0.6
+depends="xdpyinfo_1.3.2"
+package=xdriinfo

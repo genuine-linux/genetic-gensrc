@@ -1,0 +1,11 @@
+### Package <jasper> info. ###
+
+original_name=jasper
+name=jasper
+version=2.0.14
+package=$name-$version
+depends="cmake_3.15.3 libjpeg-turbo_2.0.3 freeglut_3.0.0 doxygen_1.8.16"
+installbefore=
+installafter=
+replaces="$name"
+

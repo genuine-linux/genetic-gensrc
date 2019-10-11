@@ -1,0 +1,4 @@
+source=e16-epplets
+version=0.1
+depends="e16_1.0.20"
+package=e16-epplets

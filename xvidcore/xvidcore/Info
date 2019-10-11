@@ -1,0 +1,11 @@
+### Package <xvidcore> info. ###
+
+original_name=xvidcore
+name=xvidcore
+version=1.3.5
+package=$name-$version
+depends="yasm_1.3.0"
+installbefore=
+installafter=
+replaces="$name"
+

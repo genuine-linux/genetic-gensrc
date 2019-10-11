@@ -1,0 +1,11 @@
+### Package <linux-firmware> info. ###
+
+original_name=linux-firmware
+name=linux-firmware
+version=4.20.12
+package=$name-$version
+depends="linux_$version"
+installbefore=
+installafter=
+replaces="$name"
+

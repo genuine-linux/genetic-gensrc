@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dbus-uuidgen --ensure
+ln -sv /var/lib/dbus/machine-id /etc
+
+rc-update add dbus default

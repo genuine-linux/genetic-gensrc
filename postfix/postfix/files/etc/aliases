@@ -1,0 +1,7 @@
+# Begin /etc/aliases
+
+MAILER-DAEMON:    postmaster
+postmaster:       root
+
+root:             <LOGIN>
+# End /etc/aliases

@@ -1,0 +1,4 @@
+source=perl
+version=5.28.1
+depends=bash_5.0
+package=perl

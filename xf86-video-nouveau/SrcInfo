@@ -1,0 +1,4 @@
+source=xf86-video-nouveau
+version=1.0.16
+depends="xorg-server_1.20.5"
+package=xf86-video-nouveau

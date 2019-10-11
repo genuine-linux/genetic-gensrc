@@ -1,0 +1,11 @@
+### Package <libdv> info. ###
+
+original_name=libdv
+name=libdv
+version=1.0.0
+package=$name-$version
+depends="popt_1.16 SDL_1.2.15 xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

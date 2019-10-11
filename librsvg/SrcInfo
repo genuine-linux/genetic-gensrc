@@ -1,0 +1,4 @@
+source=librsvg
+version=2.45.92
+depends="gdk-pixbuf_2.38.1 libcroco_0.6.13 cairo_1.16.0 pango_1.42.4 rustc_1.37.0 gobject-introspection_1.60.2 gtk3+3.24.10 vala_0.44.7 gtk-doc_1.31"
+package=librsvg

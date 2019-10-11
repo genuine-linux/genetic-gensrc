@@ -1,0 +1,11 @@
+### Package <netifrc> info. ###
+
+original_name=netifrc
+name=netifrc
+version=0.6.1
+package=$name-$version
+depends="openrc_0.41.2"
+installbefore=
+installafter=
+replaces="$name"
+

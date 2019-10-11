@@ -1,0 +1,4 @@
+source=xz
+version=5.2.4
+depends=
+package=xz

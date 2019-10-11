@@ -1,0 +1,4 @@
+source=econnman
+version=1.1
+depends=
+package=econnman

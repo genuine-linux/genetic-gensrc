@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--with-gitconfig=/etc/gitconfig \
+		--with-python=python3 \
+		--with-libpcre2 \
+		--with-openssl \
+		--with-expat \
+		--disable-static \
+		--enable-shared;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make prefix=/usr;
+	make prefix=/usr man;
+	make html;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/share/doc/$name-$version;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make prefix=/usr DESTDIR=${GENPKGDESTDIR} install &&
+	make prefix=/usr DESTDIR=${GENPKGDESTDIR} install-man &&
+	make htmldir=/usr/share/doc/$name-$version \
+		DESTDIR=${GENPKGDESTDIR} install-html &&
+	mkdir -vp $GENPKGDESTDIR/usr/share/doc/$name-$version/man-pages/{html,text}         &&
+	mv        $GENPKGDESTDIR/usr/share/doc/$name-$version/{git*.txt,man-pages/text}     &&
+	mv        $GENPKGDESTDIR/usr/share/doc/$name-$version/{git*.,index.,man-pages/}html &&
+	mkdir -vp $GENPKGDESTDIR/usr/share/doc/$name-$version/technical/{html,text}         &&
+	mv        $GENPKGDESTDIR/usr/share/doc/$name-$version/technical/{*.txt,text}        &&
+	mv        $GENPKGDESTDIR/usr/share/doc/$name-$version/technical/{*.,}html           &&
+	mkdir -vp $GENPKGDESTDIR/usr/share/doc/$name-$version/howto/{html,text}             &&
+	mv        $GENPKGDESTDIR/usr/share/doc/$name-$version/howto/{*.txt,text}            &&
+	mv        $GENPKGDESTDIR/usr/share/doc/$name-$version/howto/{*.,}html               &&
+	sed -i '/^<a href=/s|howto/|&html/|' $GENPKGDESTDIR/usr/share/doc/$name-$version/howto-index.html &&
+	sed -i '/^\* link:/s|howto/|&html/|' $GENPKGDESTDIR/usr/share/doc/$name-$version/howto-index.txt
+fi;
+

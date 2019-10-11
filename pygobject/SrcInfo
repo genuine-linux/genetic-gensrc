@@ -1,0 +1,4 @@
+source=pygobject
+version=2.28.7
+depends="glib_2.60.1 pycairo-python2_1.18.1 Python2_2.7.16 gobject-introspection_1.60.2 libxslt_1.1.33"
+package=pygobject

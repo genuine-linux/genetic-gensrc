@@ -1,0 +1,11 @@
+### Package <libtool> info. ###
+
+original_name=libtool
+name=libtool
+version=2.4.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

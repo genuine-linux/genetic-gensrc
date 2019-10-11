@@ -1,0 +1,4 @@
+source=libtheora
+version=1.1.1
+depends="libogg_1.3.4 libvorbis_1.3.6 SDL_1.2.15 libpng_1.6.37 doxygen_1.8.16"
+package=libtheora

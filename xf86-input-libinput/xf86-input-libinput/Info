@@ -1,0 +1,11 @@
+### Package <xf86-input-libinput> info. ###
+
+original_name=xf86-input-libinput
+name=xf86-input-libinput
+version=0.28.2
+package=$name-$version
+depends="libinput_1.13.4 xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

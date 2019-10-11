@@ -1,0 +1,4 @@
+source=iana-etc
+version=2.30
+depends=
+package=iana-etc

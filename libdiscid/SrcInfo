@@ -1,0 +1,4 @@
+source=libdiscid
+version=0.6.2
+depends=
+package=libdiscid

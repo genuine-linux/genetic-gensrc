@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	FORCE_UNSAFE_CONFIGURE=1 ./configure --prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--enable-no-install-program=kill,uptime;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	FORCE_UNSAFE_CONFIGURE=1 make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{bin,sbin,usr/sbin};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	mv -v $GENPKGDESTDIR/usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} $GENPKGDESTDIR/bin;
+	mv -v $GENPKGDESTDIR/usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm} $GENPKGDESTDIR/bin;
+	mv -v $GENPKGDESTDIR/usr/bin/{rmdir,stty,sync,true,uname} $GENPKGDESTDIR/bin;
+	mv -v $GENPKGDESTDIR/usr/bin/chroot $GENPKGDESTDIR/usr/sbin;
+	mv -v $GENPKGDESTDIR/usr/share/man/man1/chroot.1 $GENPKGDESTDIR/usr/share/man/man8/chroot.8;
+	sed -i s/\"1\"/\"8\"/1 $GENPKGDESTDIR/usr/share/man/man8/chroot.8;
+	mv -v $GENPKGDESTDIR/usr/bin/{head,nice,sleep,touch} $GENPKGDESTDIR/bin;
+fi;
+

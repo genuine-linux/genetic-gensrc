@@ -1,0 +1,4 @@
+source=asciidoc
+version=8.6.9
+depends="Python2_2.7.15 docbook-xsl-nons_1.79.2"
+package=asciidoc

@@ -1,0 +1,4 @@
+source=fuse
+version=3.6.2
+depends=
+package=fuse

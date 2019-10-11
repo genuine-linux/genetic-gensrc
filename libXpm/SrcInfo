@@ -1,0 +1,4 @@
+source=libXpm
+version=3.5.12
+depends="libXmu_1.1.3"
+package=libXpm

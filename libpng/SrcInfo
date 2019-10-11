@@ -1,0 +1,4 @@
+source=libpng
+version=1.6.37
+depends=
+package=libpng

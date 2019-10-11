@@ -1,0 +1,11 @@
+### Package <iproute2> info. ###
+
+original_name=iproute2
+name=iproute2
+version=4.20.0
+package=$name-$version
+depends="db_5.3.28 iptables_1.8.2"
+installbefore=
+installafter=
+replaces="$name"
+

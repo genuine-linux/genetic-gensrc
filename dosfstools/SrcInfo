@@ -1,0 +1,4 @@
+source=dosfstools
+version=4.1
+depends=
+package=dosfstools

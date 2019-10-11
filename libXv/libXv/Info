@@ -1,0 +1,11 @@
+### Package <libXv> info. ###
+
+original_name=libXv
+name=libXv
+version=1.0.11
+package=$name-$version
+depends="libXtst_1.2.3"
+installbefore=
+installafter=
+replaces="$name"
+

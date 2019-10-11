@@ -1,0 +1,11 @@
+### Package <gpm> info. ###
+
+original_name=gpm
+name=gpm
+version=1.20.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

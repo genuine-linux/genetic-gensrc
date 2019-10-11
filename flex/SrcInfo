@@ -1,0 +1,4 @@
+source=flex
+version=2.6.4
+depends=
+package=flex

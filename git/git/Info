@@ -1,0 +1,11 @@
+### Package <git> info. ###
+
+original_name=git
+name=git
+version=2.23.0
+package=$name-$version
+depends="curl_7.65.3 pcre2_10.33 Python2_2.7.16 subversion_1.12.2 tk_8.6.9 xmlto_0.0.28 asciidoc_8.6.9"
+installbefore=
+installafter=
+replaces="$name"
+

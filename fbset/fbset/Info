@@ -1,0 +1,11 @@
+### Package <fbset> info. ###
+
+original_name=fbset
+name=fbset
+version=2.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

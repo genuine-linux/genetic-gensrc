@@ -1,0 +1,4 @@
+source=linux-firmware
+version=4.20.12
+depends="linux_$version"
+package=linux-firmware

@@ -1,0 +1,11 @@
+### Package <openjpeg> info. ###
+
+original_name=openjpeg
+name=openjpeg
+version=2.3.1
+package=$name-$version
+depends="cmake_3.15.2 lcms2_2.9 libpng_1.6.37 tiff_4.0.10"
+installbefore=
+installafter=
+replaces="$name"
+

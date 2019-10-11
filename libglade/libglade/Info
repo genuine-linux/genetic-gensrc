@@ -1,0 +1,11 @@
+### Package <libglade> info. ###
+
+original_name=libglade
+name=libglade
+version=2.6.4
+package=$name-$version
+depends="gtk+_2.24.32 libxml2_2.9.9 Python2_2.7.16 gtk-doc_1.31"
+installbefore=
+installafter=
+replaces="$name"
+

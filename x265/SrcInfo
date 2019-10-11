@@ -1,0 +1,4 @@
+source=x265
+version=3.1.2
+depends="cmake_3.15.3 nasm_2.14.02"
+package=x265

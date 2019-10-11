@@ -1,0 +1,4 @@
+source=MPlayer
+version=1.4
+depends=
+package=MPlayer

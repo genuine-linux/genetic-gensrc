@@ -1,0 +1,11 @@
+### Package <SDL> info. ###
+
+original_name=SDL
+name=SDL
+version=1.2.15
+package=$name-$version
+depends="aalib_1.4.rc5 alsa-lib_1.1.9 glu_9.0.1 nasm_2.14.02 pth_2.0.7 xorg-server_1.20.5 DirectFB_1.6.3"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <id3lib> info. ###
+
+original_name=id3lib
+name=id3lib
+version=3.8.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

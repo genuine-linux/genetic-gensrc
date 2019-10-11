@@ -1,0 +1,4 @@
+source=unixODBC
+version=2.3.7
+depends="pth_2.0.7"
+package=unixODBC

@@ -1,0 +1,4 @@
+source=util-macros
+version=1.19.2
+depends=
+package=util-macros

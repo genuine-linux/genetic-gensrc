@@ -1,0 +1,11 @@
+### Package <xmlto> info. ###
+
+original_name=xmlto
+name=xmlto
+version=0.0.28
+package=$name-$version
+depends="docbook-xml_4.5 docbook-xsl-nons_1.79.2 libxslt_1.1.33"
+installbefore=
+installafter=
+replaces="$name"
+

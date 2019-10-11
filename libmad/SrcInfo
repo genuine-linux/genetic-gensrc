@@ -1,0 +1,4 @@
+source=libmad
+version=0.15.1b
+depends=
+package=libmad

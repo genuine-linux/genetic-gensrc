@@ -1,0 +1,11 @@
+### Package <gettext> info. ###
+
+original_name=gettext
+name=gettext
+version=0.19.8.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

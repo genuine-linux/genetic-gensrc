@@ -1,0 +1,11 @@
+### Package <libXxf86dga> info. ###
+
+original_name=libXxf86dga
+name=libXxf86dga
+version=1.1.5
+package=$name-$version
+depends="libXvMC_1.0.11"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=libsamplerate
+version=0.1.9
+depends="fftw_3.3.8 libsndfile_1.0.28"
+package=libsamplerate

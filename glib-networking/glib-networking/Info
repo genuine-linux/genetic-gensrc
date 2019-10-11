@@ -1,0 +1,11 @@
+### Package <glib-networking> info. ###
+
+original_name=glib-networking
+name=glib-networking
+version=2.62.0
+package=$name-$version
+depends="glib_2.61.0 gnutls_3.6.9 gsettings-desktop-schemas_3.32.0 make-ca_1.5 libproxy_0.4.15"
+installbefore=
+installafter=
+replaces="$name"
+

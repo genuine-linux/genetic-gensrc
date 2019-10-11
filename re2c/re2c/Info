@@ -1,0 +1,11 @@
+### Package <re2c> info. ###
+
+original_name=re2c
+name=re2c
+version=1.1.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

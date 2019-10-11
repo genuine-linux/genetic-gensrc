@@ -1,0 +1,11 @@
+### Package <libaio> info. ###
+
+original_name=libaio
+name=libaio
+version=0.3.111
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

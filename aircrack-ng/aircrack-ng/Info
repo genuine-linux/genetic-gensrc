@@ -1,0 +1,11 @@
+### Package <aircrack-ng> info. ###
+
+original_name=aircrack-ng
+name=aircrack-ng
+version=1.5.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

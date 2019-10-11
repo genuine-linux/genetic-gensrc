@@ -1,0 +1,11 @@
+### Package <xf86-video-intel> info. ###
+
+original_name=xf86-video-intel
+name=xf86-video-intel
+version=20190208
+package=$name-$version
+depends="xcb-util_0.4.0 xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

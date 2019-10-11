@@ -1,0 +1,4 @@
+source=libpthread-stubs
+version=0.4
+depends=
+package=libpthread-stubs

@@ -1,0 +1,4 @@
+source=libxml2
+version=2.9.9
+depends=Python_3.7.2
+package=libxml2

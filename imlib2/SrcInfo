@@ -1,0 +1,4 @@
+source=imlib2
+version=1.5.1
+depends="libxshmfence_1.3 libpng_1.6.37 libjpeg-turbo_2.0.3 tiff_4.0.10"
+package=imlib2

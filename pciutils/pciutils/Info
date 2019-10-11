@@ -1,0 +1,11 @@
+### Package <pciutils> info. ###
+
+original_name=pciutils
+name=pciutils
+version=3.6.2
+package=$name-$version
+depends="curl_7.65.1 wget_1.20.3 lynx_2.8.9"
+installbefore=
+installafter=
+replaces="$name"
+

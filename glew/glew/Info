@@ -1,0 +1,11 @@
+### Package <glew> info. ###
+
+original_name=glew
+name=glew
+version=2.1.0
+package=$name-$version
+depends="glu_9.0.0 freeglut_3.0.0"
+installbefore=
+installafter=
+replaces="$name"
+

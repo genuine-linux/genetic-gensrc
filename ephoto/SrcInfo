@@ -1,0 +1,4 @@
+source=ephoto
+version=1.5
+depends=
+package=ephoto

@@ -1,0 +1,4 @@
+source=libXi
+version=1.7.10
+depends="libXft_2.3.3"
+package=libXi

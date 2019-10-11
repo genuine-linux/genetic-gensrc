@@ -1,0 +1,4 @@
+source=cdrtools
+version=3.02a09
+depends=
+package=cdrtools

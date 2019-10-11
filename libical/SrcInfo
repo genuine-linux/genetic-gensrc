@@ -1,0 +1,4 @@
+source=libical
+version=3.0.5
+depends="cmake_3.15.2 db_5.3.28 gobject-introspection_1.60.2 icu_64.2"
+package=libical

@@ -1,0 +1,11 @@
+### Package <python-efl> info. ###
+
+original_name=python-efl
+name=python-efl
+version=1.22.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <cream> info. ###
+
+original_name=cream
+name=cream
+version=0.43
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

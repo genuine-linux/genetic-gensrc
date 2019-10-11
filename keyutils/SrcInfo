@@ -1,0 +1,4 @@
+source=keyutils
+version=1.6.1
+depends=
+package=keyutils

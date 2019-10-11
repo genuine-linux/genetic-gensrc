@@ -1,0 +1,11 @@
+### Package <docbook-xml> info. ###
+
+original_name=docbook-xml
+name=docbook-xml
+version=4.5
+package=$name-$version
+depends=libxml2_2.9.9 sgml-common_0.6.3 unzip_6.0
+installbefore=
+installafter=
+replaces="$name"
+

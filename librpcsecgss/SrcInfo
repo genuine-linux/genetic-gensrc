@@ -1,0 +1,4 @@
+source=librpcsecgss
+version=0.19
+depends="libgssglue_0.4"
+package=librpcsecgss

@@ -1,0 +1,11 @@
+### Package <connman> info. ###
+
+original_name=connman
+name=connman
+version=1.37
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

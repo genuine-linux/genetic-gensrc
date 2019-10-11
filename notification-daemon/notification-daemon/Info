@@ -1,0 +1,11 @@
+### Package <notification-daemon> info. ###
+
+original_name=notification-daemon
+name=notification-daemon
+version=3.20.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

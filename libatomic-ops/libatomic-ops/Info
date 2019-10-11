@@ -1,0 +1,11 @@
+### Package <libatomic-ops> info. ###
+
+original_name=libatomic-ops
+name=libatomic-ops
+version=7.6.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

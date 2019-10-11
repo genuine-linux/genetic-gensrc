@@ -1,0 +1,11 @@
+### Package <clutter> info. ###
+
+original_name=clutter
+name=clutter
+version=1.26.2
+package=$name-$version
+depends="atk_2.34.1 cogl_1.22.4 json-glib_1.4.4 gobject-introspection_1.62.0 gtk3+_3.24.11 libgudev_233 libinput_1.14.1 libxkbcommon_0.8.4 wayland_1.17.0 gtk-doc_1.31"
+installbefore=
+installafter=
+replaces="$name"
+

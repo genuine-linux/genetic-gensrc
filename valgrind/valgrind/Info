@@ -1,0 +1,11 @@
+### Package <valgrind> info. ###
+
+original_name=valgrind
+name=valgrind
+version=3.15.0
+package=$name-$version
+depends=which
+installbefore=
+installafter=
+replaces="$name"
+

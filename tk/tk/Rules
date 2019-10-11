@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure
+if test -f "unix/configure"; then
+	cd unix &&
+	./configure --prefix=/usr \
+            --mandir=/usr/share/man \
+            $([ $(uname -m) = x86_64 ] && echo --enable-64bit)
+fi
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make &&
+
+	sed -e "s@^\(TK_SRC_DIR='\).*@\1/usr/include'@" \
+	    -e "/TK_B/s@='\(-L\)\?.*unix@='\1/usr/lib@" \
+	    -i tkConfig.sh
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install &&
+	make DESTDIR=${GENPKGDESTDIR} install-private-headers &&
+	ln -v -sf wish8.6 $GENPKGDESTDIR/usr/bin/wish &&
+	chmod -v 755 $GENPKGDESTDIR/usr/lib/libtk8.6.so
+fi;
+

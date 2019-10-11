@@ -1,0 +1,11 @@
+### Package <cbindgen> info. ###
+
+original_name=cbindgen
+name=cbindgen
+version=0.9.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

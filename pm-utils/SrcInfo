@@ -1,0 +1,4 @@
+source=pm-utils
+version=1.4.1
+depends="xmlto_0.0.28 hdparm_9.58 wireless-tools_29 ethtool_5.1"
+package=pm-utils

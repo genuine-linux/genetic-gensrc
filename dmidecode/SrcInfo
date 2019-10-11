@@ -1,0 +1,4 @@
+source=dmidecode
+version=3.2
+depends=
+package=dmidecode

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc/$name \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--with-srv-lease-file=/var/lib/dhcpd/dhcpd.leases	\
+		--with-srv6-lease-file=/var/lib/dhcpd/dhcpd6.leases	\
+		--with-cli-lease-file=/var/lib/dhclient/dhclient.leases	\
+		--with-cli6-lease-file=/var/lib/dhclient/dhclient6.leases	\
+		--disable-static \
+		--enable-shared;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make -j1;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/sbin;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install &&
+	mv -v $GENPKGDESTDIR/usr/sbin/dhclient $GENPKGDESTDIR/sbin/ &&
+	install -v -m755 client/scripts/linux $GENPKGDESTDIR/sbin/dhclient-script &&
+	cp -av ../$name/files/* $GENPKGDESTDIR/;
+fi;
+

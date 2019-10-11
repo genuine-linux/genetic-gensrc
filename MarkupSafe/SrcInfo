@@ -1,0 +1,4 @@
+source=MarkupSafe
+version=1.0
+depends="Python2_2.7.15 Python_3.7.2"
+package=MarkupSafe

@@ -1,0 +1,4 @@
+source=lcms2
+version=2.9
+depends="libjpeg-turbo_2.0.2 tiff_4.0.10"
+package=lcms2

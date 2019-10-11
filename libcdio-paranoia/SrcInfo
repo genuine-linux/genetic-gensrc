@@ -1,0 +1,4 @@
+source=libcdio-paranoia
+version=10.2+2.0.0
+depends="libcdio_2.1.0"
+package=libcdio-paranoia

@@ -1,0 +1,4 @@
+source=make
+version=4.2.1
+depends="libpipeline_1.5.1"
+package=make

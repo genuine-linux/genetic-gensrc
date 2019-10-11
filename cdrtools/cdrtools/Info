@@ -1,0 +1,11 @@
+### Package <cdrtools> info. ###
+
+original_name=cdrtools
+name=cdrtools
+version=3.02a09
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

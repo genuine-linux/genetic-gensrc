@@ -1,0 +1,4 @@
+source=wireless-tools
+version=29
+depends=
+package=wireless-tools

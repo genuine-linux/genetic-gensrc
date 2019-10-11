@@ -1,0 +1,11 @@
+### Package <twm> info. ###
+
+original_name=twm
+name=twm
+version=1.0.10
+package=$name-$version
+depends="bdftopcf_1.1 font-adobe-100dpi_1.0.3 font-adobe-75dpi_1.0.3 font-jis-misc_1.0.3 font-daewoo-misc_1.0.3 font-isas-misc_1.0.3 xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

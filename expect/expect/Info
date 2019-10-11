@@ -1,0 +1,11 @@
+### Package <expect> info. ###
+
+original_name=expect
+name=expect
+version=5.45.4
+package=$name-$version
+depends="tcl_8.6.9"
+installbefore=
+installafter=
+replaces="$name"
+

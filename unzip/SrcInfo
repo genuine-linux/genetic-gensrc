@@ -1,0 +1,4 @@
+source=unzip
+version=6.0
+depends=
+package=unzip

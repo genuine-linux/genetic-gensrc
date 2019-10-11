@@ -1,0 +1,4 @@
+source=icu4c
+version=64.2
+depends="llvm_8.0.0"
+package=icu4c

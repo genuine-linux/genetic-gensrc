@@ -1,0 +1,11 @@
+### Package <libpng> info. ###
+
+original_name=libpng
+name=libpng
+version=1.6.37
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=clisp
+version=2.49
+depends="libffcall_2.1 libsigsegv_2.12"
+package=clisp

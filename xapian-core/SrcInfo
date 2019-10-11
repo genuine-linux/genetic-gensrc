@@ -1,0 +1,4 @@
+source=xapian-core
+version=1.4.12
+depends=
+package=xapian-core

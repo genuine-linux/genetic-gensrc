@@ -1,0 +1,11 @@
+### Package <gnome-icon-theme-symbolic> info. ###
+
+original_name=gnome-icon-theme-symbolic
+name=gnome-icon-theme-symbolic
+version=3.12.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <alsa-tools> info. ###
+
+original_name=alsa-tools
+name=alsa-tools
+version=1.1.7
+package=$name-$version
+depends="alsa-lib_1.1.9 gtk+_2.24.32 gtk3+_3.24.11 fltk_1.3.5"
+installbefore=
+installafter=
+replaces="$name"
+

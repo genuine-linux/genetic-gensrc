@@ -1,0 +1,11 @@
+### Package <tcl> info. ###
+
+original_name=tcl
+name=tcl
+version=8.6.9
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# CMake configure #
+if test -f "CMakeLists.txt"; then
+	echo " --- CMake Configure <$name ($version)> ---";
+	mkdir build.cmake;
+	cd build.cmake;
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release   \
+       		-DTESTDATADIR=$PWD/testfiles \
+       		-DENABLE_UNSTABLE_API_ABI_HEADERS=ON \
+		-DENABLE_GTK_DOC=ON \
+		../;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	install -v -m755 -d $GENPKGDESTDIR/usr/share/doc/$name-$version &&
+	cp -vr ../glib/reference/html $GENPKGDESTDIR/usr/share/doc/$name-$version
+fi;
+

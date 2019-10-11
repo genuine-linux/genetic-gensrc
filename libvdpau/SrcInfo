@@ -1,0 +1,4 @@
+source=libvdpau
+version=1.1.1
+depends="libxshmfence_1.3"
+package=libvdpau

@@ -1,0 +1,11 @@
+### Package <p11-kit> info. ###
+
+original_name=p11-kit
+name=p11-kit
+version=0.23.15
+package=$name-$version
+depends="libtasn1_4.13 libffi_3.2.1"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=iceauth
+version=1.0.8
+depends="xbitmaps_1.1.2"
+package=iceauth

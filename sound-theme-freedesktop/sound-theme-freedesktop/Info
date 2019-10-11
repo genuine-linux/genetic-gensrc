@@ -1,0 +1,11 @@
+### Package <sound-theme-freedesktop> info. ###
+
+original_name=sound-theme-freedesktop
+name=sound-theme-freedesktop
+version=0.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

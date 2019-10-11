@@ -1,0 +1,11 @@
+### Package <transmission> info. ###
+
+original_name=transmission
+name=transmission
+version=2.94
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

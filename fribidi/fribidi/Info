@@ -1,0 +1,11 @@
+### Package <fribidi> info. ###
+
+original_name=fribidi
+name=fribidi
+version=1.0.5
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

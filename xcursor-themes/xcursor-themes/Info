@@ -1,0 +1,11 @@
+### Package <xcursor-themes> info. ###
+
+original_name=xcursor-themes
+name=xcursor-themes
+version=1.0.6
+package=$name-$version
+depends="xwud_1.0.5"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=nasm
+version=2.14.02
+depends=
+package=nasm

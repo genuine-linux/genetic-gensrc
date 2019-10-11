@@ -1,0 +1,4 @@
+source=krb5
+version=1.17
+depends=e2fsprogs_1.44.5
+package=krb5

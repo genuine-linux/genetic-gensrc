@@ -1,0 +1,11 @@
+### Package <xf86-video-modesetting> info. ###
+
+original_name=xf86-video-modesetting
+name=xf86-video-modesetting
+version=0.9.0
+package=$name-$version
+depends="xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=xrdb
+version=1.2.0
+depends="iceauth_1.0.8"
+package=xrdb

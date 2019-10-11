@@ -1,0 +1,4 @@
+source=lxml
+version=4.3.4
+depends="Python2_2.7.14 Python_3.7.2 libxslt_1.1.33"
+package=lxml

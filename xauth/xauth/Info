@@ -1,0 +1,11 @@
+### Package <xauth> info. ###
+
+original_name=xauth
+name=xauth
+version=1.1
+package=$name-$version
+depends="x11perf_1.6.1"
+installbefore=
+installafter=
+replaces="$name"
+

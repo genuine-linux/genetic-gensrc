@@ -1,0 +1,4 @@
+source=xrandr
+version=1.5.0
+depends="iceauth_1.0.8"
+package=xrandr

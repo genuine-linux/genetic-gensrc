@@ -1,0 +1,11 @@
+### Package <libunistring> info. ###
+
+original_name=libunistring
+name=libunistring
+version=0.9.10
+package=$name-$version
+depends="texinfo_6.5"
+installbefore=
+installafter=
+replaces="$name"
+

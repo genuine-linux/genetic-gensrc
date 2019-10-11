@@ -1,0 +1,11 @@
+### Package <jpeg> info. ###
+
+original_name=jpeg
+name=jpeg
+version=9c
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

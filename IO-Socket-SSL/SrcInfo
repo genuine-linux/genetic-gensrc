@@ -1,0 +1,4 @@
+source=IO-Socket-SSL
+version=2.066
+depends="perl_5.28.1 URI_1.76 Net-SSLeay_1.86_06 make-ca_1.4"
+package=IO-Socket-SSL

@@ -1,0 +1,11 @@
+### Package <xcursorgen> info. ###
+
+original_name=xcursorgen
+name=xcursorgen
+version=1.0.7
+package=$name-$version
+depends="xcmsdb_1.0.5"
+installbefore=
+installafter=
+replaces="$name"
+

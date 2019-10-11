@@ -1,0 +1,4 @@
+source=protobuf-c
+version=1.3.2
+depends=
+package=protobuf-c

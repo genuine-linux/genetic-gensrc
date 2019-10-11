@@ -1,0 +1,11 @@
+### Package <nftables> info. ###
+
+original_name=nftables
+name=nftables
+version=0.9.0
+package=$name-$version
+depends=libnftnl_1.1.2
+installbefore=
+installafter=
+replaces="$name"
+

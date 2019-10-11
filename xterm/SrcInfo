@@ -1,0 +1,4 @@
+source=xterm
+version=348
+depends="xwud_1.0.3 dejavu-fonts-ttf_2.37"
+package=xterm

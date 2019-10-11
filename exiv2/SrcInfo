@@ -1,0 +1,4 @@
+source=exiv2
+version=0.27.2
+depends="cmake_3.15.3 curl_7.66.0 graphviz_2.42.1 libxslt_1.1.33"
+package=exiv2

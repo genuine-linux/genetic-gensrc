@@ -1,0 +1,4 @@
+source=libgudev
+version=1.0
+depends="eudev_3.2.7 glib_2.61.1"
+package=libgudev

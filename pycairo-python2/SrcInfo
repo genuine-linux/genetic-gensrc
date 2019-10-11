@@ -1,0 +1,4 @@
+source=pycairo-python2
+version=1.18.1
+depends="Python2_2.7.16 cairo_1.16.0"
+package=pycairo-python2

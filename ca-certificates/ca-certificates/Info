@@ -1,0 +1,11 @@
+### Package <ca-certificates> info. ###
+
+original_name=ca-certificates
+name=ca-certificates
+version=20190110
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=cbindgen
+version=0.9.1
+depends=
+package=cbindgen

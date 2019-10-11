@@ -1,0 +1,11 @@
+### Package <e2fsprogs> info. ###
+
+original_name=e2fsprogs
+name=e2fsprogs
+version=1.44.5
+package=$name-$version
+depends=util-linux_2.33.1
+installbefore=
+installafter=
+replaces="$name"
+

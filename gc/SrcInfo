@@ -1,0 +1,4 @@
+source=gc
+version=8.0.2
+depends="libatomic-ops_7.6.8"
+package=gc

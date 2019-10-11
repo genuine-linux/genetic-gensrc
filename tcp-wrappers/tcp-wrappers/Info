@@ -1,0 +1,11 @@
+### Package <tcp-wrappers> info. ###
+
+original_name=tcp-wrappers
+name=tcp-wrappers
+version=7.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

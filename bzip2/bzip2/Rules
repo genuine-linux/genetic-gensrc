@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<PREFIX> = <rootfs> to install package #
+GENPKGPREFIX="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make CFLAGS="$CFLAGS -fPIC" CXXFLAGS="$CXXFLAGS -fPIC" -f Makefile-libbz2_so;
+	make clean;
+	make CFLAGS="$CFLAGS -fPIC" CXXFLAGS="$CXXFLAGS -fPIC";
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGPREFIX}/usr/{bin,lib};
+mkdir -pv ${GENPKGPREFIX}/bin;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make PREFIX=${GENPKGPREFIX}/usr install;
+	cp -v bzip2-shared ${GENPKGPREFIX}/bin/bzip2
+	cp -av libbz2.so* ${GENPKGPREFIX}/usr/lib
+	rm -v ${GENPKGPREFIX}/usr/bin/{bunzip2,bzcat,bzip2}
+fi;
+

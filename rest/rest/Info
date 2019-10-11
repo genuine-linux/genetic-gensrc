@@ -1,0 +1,11 @@
+### Package <rest> info. ###
+
+original_name=rest
+name=rest
+version=0.8.1
+package=$name-$version
+depends="make-ca_1.4 libsoup_2.66.2 gobject-introspection_1.60.2 gtk-doc_1.31"
+installbefore=
+installafter=
+replaces="$name"
+

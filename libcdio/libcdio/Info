@@ -1,0 +1,11 @@
+### Package <libcdio> info. ###
+
+original_name=libcdio
+name=libcdio
+version=2.1.0
+package=$name-$version
+depends="libcddb_1.3.2"
+installbefore=
+installafter=
+replaces="$name"
+

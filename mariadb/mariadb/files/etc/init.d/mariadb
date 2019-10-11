@@ -1,0 +1,74 @@
+#!/usr/bin/openrc-run
+# Distributed under the terms of the GNU General Public License v2
+
+extra_commands="checkconfig"
+extra_started_commands="reload"
+
+: ${MARIABD_CONFDIR:=/etc/mysql}
+: ${MARIABD_CONFIG:=${MARIABD_CONFDIR}/my.cnf}
+: ${MARIABD_PIDFILE:=/run/mariadb/${SVCNAME}.pid}
+: ${MARIABD_BINARY:=/usr/bin/mysqld_safe}
+
+depend() {
+        use logger dns
+        if [ "${rc_need+set}" = "set" ] ; then
+                : # Do nothing, the user has explicitly set rc_need
+        else
+                local x warn_addr
+                for x in $(awk '/^ListenAddress/{ print $2 }' "$MARIABD_CONFIG" 2>/dev/null) ; do
+                        case "${x}" in
+                                0.0.0.0|0.0.0.0:*) ;;
+                                ::|\[::\]*) ;;
+                                *) warn_addr="${warn_addr} ${x}" ;;
+                        esac
+                done
+                if [ -n "${warn_addr}" ] ; then
+                        need net
+                        ewarn "You are binding an interface in ListenAddress statement in your mariadbd_config!"
+                        ewarn "You must add rc_need=\"net.FOO\" to your /etc/conf.d/mariadbd"
+                        ewarn "where FOO is the interface(s) providing the following address(es):"
+                        ewarn "${warn_addr}"
+                fi
+        fi
+}
+
+checkconfig() {
+        if [ ! -d /var/empty ] ; then
+                mkdir -p /var/empty || return 1
+        fi
+
+        if [ ! -e "${MARIABD_CONFIG}" ] ; then
+                eerror "You need an ${MARIABD_CONFIG} file to run mariadbd"
+                eerror "There is a sample file in /usr/share/doc/openmariadb"
+                return 1
+        fi
+
+
+}
+
+start() {
+        checkconfig || return 1
+
+        ebegin "Starting ${SVCNAME}"
+        echo "PIDFILE ${MARIABD_PIDFILE}"
+        start-stop-daemon --start --background --exec "${MARIABD_BINARY}"  --pidfile "${MARIABD_PIDFILE}"  -- ${MARIABD_OPTS}
+        eend $?
+}
+stop() {
+        if [ "${RC_CMD}" = "restart" ] ; then
+                checkconfig || return 1
+        fi
+
+        ebegin "Stopping ${SVCNAME}"
+        start-stop-daemon --stop --exec "${MARIABD_BINARY}" \
+            --pidfile "${MARIABD_PIDFILE}" --quiet
+        eend $?
+}
+
+reload() {
+        checkconfig || return 1
+        ebegin "Reloading ${SVCNAME}"
+        start-stop-daemon --signal HUP \
+            --exec "${MARIABD_BINARY}" --pidfile "${MARIABD_PIDFILE}"
+        eend $?
+}

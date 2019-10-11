@@ -1,0 +1,11 @@
+### Package <pth> info. ###
+
+original_name=pth
+name=pth
+version=2.0.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

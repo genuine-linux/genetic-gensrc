@@ -1,0 +1,11 @@
+### Package <gdbm> info. ###
+
+original_name=gdbm
+name=gdbm
+version=1.18.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

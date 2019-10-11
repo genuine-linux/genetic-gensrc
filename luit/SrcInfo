@@ -1,0 +1,4 @@
+source=luit
+version=1.1.1
+depends="iceauth_1.0.8"
+package=luit

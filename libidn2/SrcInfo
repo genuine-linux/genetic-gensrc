@@ -1,0 +1,4 @@
+source=libidn2
+version=2.1.1
+depends="gtk-doc_1.29 libunistring_0.9.10"
+package=libidn2

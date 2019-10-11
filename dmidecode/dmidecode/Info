@@ -1,0 +1,11 @@
+### Package <dmidecode> info. ###
+
+original_name=dmidecode
+name=dmidecode
+version=3.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

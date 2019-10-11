@@ -1,0 +1,11 @@
+### Package <initd-tools> info. ###
+
+original_name=initd-tools
+name=initd-tools
+version=0.1.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

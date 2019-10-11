@@ -1,0 +1,4 @@
+source=Python2
+version=2.7.15
+depends="expat_2.2.6 libffi_3.2.1 sqlite_3.27.1"
+package=Python2

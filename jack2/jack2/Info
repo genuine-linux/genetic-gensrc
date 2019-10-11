@@ -1,0 +1,11 @@
+### Package <jack2> info. ###
+
+original_name=jack2
+name=jack2
+version=1.9.12
+package=$name-$version
+depends="alsa-lib_1.1.9 libsndfile_1.0.28 portaudio_19.6.0 libsamplerate_0.1.9"
+installbefore=
+installafter=
+replaces="$name"
+

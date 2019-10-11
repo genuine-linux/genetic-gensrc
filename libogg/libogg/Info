@@ -1,0 +1,11 @@
+### Package <libogg> info. ###
+
+original_name=libogg
+name=libogg
+version=1.3.3
+package=$name-$version
+depends="alsa-lib_1.1.9"
+installbefore=
+installafter=
+replaces="$name"
+

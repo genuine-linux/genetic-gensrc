@@ -1,0 +1,11 @@
+### Package <libXfixes> info. ###
+
+original_name=libXfixes
+name=libXfixes
+version=5.0.3
+package=$name-$version
+depends="libXaw_1.0.13"
+installbefore=
+installafter=
+replaces="$name"
+

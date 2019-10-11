@@ -1,0 +1,4 @@
+source=net-tools
+version=10.10.30
+depends=
+package=net-tools

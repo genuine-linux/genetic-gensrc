@@ -1,0 +1,11 @@
+### Package <wpa_supplicant> info. ###
+
+original_name=wpa_supplicant
+name=wpa_supplicant
+version=2.9
+package=$name-$version
+depends="libnl_3.5.0 dbus_1.12.16 libxml2_2.9.9"
+installbefore=
+installafter=
+replaces="$name"
+

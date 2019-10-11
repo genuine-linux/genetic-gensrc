@@ -1,0 +1,4 @@
+source=libffi
+version=3.2.1
+depends=
+package=libffi

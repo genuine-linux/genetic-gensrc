@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# If building from dnatools we need to remove this link
+if [ -L "/usr/lib/gcc" ]; then
+	rm -fv /usr/lib/gcc;
+fi
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -v build
+cd       build
+
+# configure #
+if test -f "../configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	SED=sed \
+	CC=$GENUINE_TGT-gcc \
+	CXX=$GENUINE_TGT-g++ \
+		../configure \
+		--build="$GENUINE_TGT" \
+		--target="$GENUINE_TGT" \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-multilib \
+		--enable-languages=c,c++ \
+		--disable-bootstrap \
+		--disable-libmpx \
+		--with-system-zlib;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+
+	install -v -dm755 ${GENPKGDESTDIR}/usr/lib/bfd-plugins
+
+	mkdir -pv ${GENPKGDESTDIR}/usr/share/gdb/auto-load/usr/lib
+	mv -v ${GENPKGDESTDIR}/usr/lib/*gdb.py ${GENPKGDESTDIR}/usr/share/gdb/auto-load/usr/lib
+fi;
+
+cd ..
+rm -rf build

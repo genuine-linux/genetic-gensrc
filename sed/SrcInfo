@@ -1,0 +1,4 @@
+source=sed
+version=4.7
+depends=
+package=sed

@@ -1,0 +1,11 @@
+### Package <man-db> info. ###
+
+original_name=man-db
+name=man-db
+version=2.8.5
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

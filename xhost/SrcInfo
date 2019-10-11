@@ -1,0 +1,4 @@
+source=xhost
+version=1.0.8
+depends="xgamma_1.0.6"
+package=xhost

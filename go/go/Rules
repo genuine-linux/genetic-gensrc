@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$name-$version/src;
+
+# BUILD GO
+
+CGO_ENABLED=0
+GO_TEST_TIMEOUT_SCALE=10
+
+export CGO_ENABLED GO_TEST_TIMEOUT_SCALE
+
+#GOROOT="/opt/$name"
+#GOBIN="$GOROOT/bin"
+#export GOROOT GOBIN
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/opt/$name-$version;
+
+CGO_ENABLED=$CGO_ENABLED \
+GO_TEST_TIMEOUT_SCALE=$GO_TEST_TIMEOUT_SCALE \
+GOROOT_FINAL="/opt/$name-$version" \
+	./all.bash
+
+cp -av ../* $GENPKGDESTDIR/opt/$name-$version/
+
+cp -av ../../$name/files/* $GENPKGDESTDIR/
+
+cd $GENPKGDESTDIR/opt
+
+ln -sfv $name-$version $name

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<PREFIX> = <rootfs> to install package #
+GENPKGPREFIX="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make mrproper;
+	make INSTALL_HDR_PATH=dest headers_install;
+	find dest/include \( -name .install -o -name ..install.cmd \) -delete
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGPREFIX};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	mkdir -p ${GENPKGPREFIX}/usr/include
+	cp -rv dest/include/* ${GENPKGPREFIX}/usr/include;
+fi;
+

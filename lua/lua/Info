@@ -1,0 +1,11 @@
+### Package <lua> info. ###
+
+original_name=lua
+name=lua
+version=5.3.5
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <DirectFB> info. ###
+
+original_name=DirectFB
+name=DirectFB
+version=1.6.3
+package=$name-$version
+depends="flux_1.4.4"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=libspectre
+version=0.2.8
+depends="cairo_1.6.0 ghostscript_9.27"
+package=libspectre

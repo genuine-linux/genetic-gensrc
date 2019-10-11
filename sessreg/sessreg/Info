@@ -1,0 +1,11 @@
+### Package <sessreg> info. ###
+
+original_name=sessreg
+name=sessreg
+version=1.1.2
+package=$name-$version
+depends="mkfontscale_1.2.1"
+installbefore=
+installafter=
+replaces="$name"
+

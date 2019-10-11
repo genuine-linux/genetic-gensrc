@@ -1,0 +1,11 @@
+### Package <libXcursor> info. ###
+
+original_name=libXcursor
+name=libXcursor
+version=1.2.0
+package=$name-$version
+depends="LibXrender_0.9.10"
+installbefore=
+installafter=
+replaces="$name"
+

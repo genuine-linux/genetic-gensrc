@@ -1,0 +1,11 @@
+### Package <xmessage> info. ###
+
+original_name=xmessage
+name=xmessage
+version=1.0.5
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

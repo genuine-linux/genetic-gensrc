@@ -1,0 +1,4 @@
+source=libXmu
+version=1.1.3
+depends="libXt_1.2.0"
+package=libXmu

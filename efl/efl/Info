@@ -1,0 +1,11 @@
+### Package <efl> info. ###
+
+original_name=efl
+name=efl
+version=1.22.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=gnome-backgrounds
+version=3.32.0
+depends=
+package=gnome-backgrounds

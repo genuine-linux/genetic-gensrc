@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	export GMAKE_NOWARN=true &&
+	make -j1 INS_BASE=/usr DEFINSUSR=root DEFINSGRP=root;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	export GMAKE_NOWARN=true &&
+	make INS_BASE=${GENPKGDESTDIR}/usr DEFINSUSR=root DEFINSGRP=root install;
+fi;
+

@@ -1,0 +1,4 @@
+source=libXcomposite
+version=0.4.5
+depends="libXfixes_5.0.3"
+package=libXcomposite

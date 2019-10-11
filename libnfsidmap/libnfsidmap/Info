@@ -1,0 +1,11 @@
+### Package <libnfsidmap> info. ###
+
+original_name=libnfsidmap
+name=libnfsidmap
+version=0.25
+package=$name-$version
+depends="libgssglue_0.4"
+installbefore=
+installafter=
+replaces="$name"
+

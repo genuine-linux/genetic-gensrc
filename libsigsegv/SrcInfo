@@ -1,0 +1,4 @@
+source=libsigsegv
+version=2.12
+depends=
+package=libsigsegv

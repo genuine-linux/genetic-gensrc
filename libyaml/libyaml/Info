@@ -1,0 +1,11 @@
+### Package <libyaml> info. ###
+
+original_name=libyaml
+name=libyaml
+version=0.2.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

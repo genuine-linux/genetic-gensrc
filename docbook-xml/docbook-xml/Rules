@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -pv $GENPKGDESTDIR/{etc/xml,usr/share/xml/docbook/xml-dtd-4.5}
+install -v -d -m755 $GENPKGDESTDIR/usr/share/xml/docbook/xml-dtd-4.5
+install -v -d -m755 $GENPKGDESTDIR/etc/xml
+chown -R root:root . &&
+cp -v -af docbook.cat *.dtd ent/ *.mod \
+    $GENPKGDESTDIR/usr/share/xml/docbook/xml-dtd-4.5

@@ -1,0 +1,11 @@
+### Package <pcre2> info. ###
+
+original_name=pcre2
+name=pcre2
+version=10.33
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

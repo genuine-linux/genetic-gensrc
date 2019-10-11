@@ -1,0 +1,4 @@
+source=frei0r-plugins
+version=1.6.1
+depends="gavl_1.4.0 doxygen_1.8.16"
+package=frei0r-plugins

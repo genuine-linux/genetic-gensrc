@@ -1,0 +1,4 @@
+source=libXScrnSaver
+version=1.2.3
+depends="libX11_1.6.8"
+package=libXScrnSaver

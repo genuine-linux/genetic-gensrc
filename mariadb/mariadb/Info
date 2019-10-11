@@ -1,0 +1,12 @@
+### Package <mariadb> info. ###
+
+original_name=mariadb
+name=mariadb
+version=10.3.15
+package=$name-$version
+depends="cmake_3.14.5 libevent_2.1.10 boost_1.70.0 libxml2_2.9.9 Linux-PAM_1.3.1 krb5_5.1.17 pcre_8.43 ruby_2.6.3 unixODBC_2.3
+.7 judy_1.0.5 libaio_0.3.111"
+installbefore=
+installafter=
+replaces="$name"
+

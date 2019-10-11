@@ -1,0 +1,11 @@
+### Package <xkbutils> info. ###
+
+original_name=xkbutils
+name=xkbutils
+version=1.0.4
+package=$name-$version
+depends="xkbevd_1.1.4"
+installbefore=
+installafter=
+replaces="$name"
+

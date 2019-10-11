@@ -1,0 +1,23 @@
+#!/bin/bash
+
+chmod +x /etc/init.d/*
+
+rc-update add udev sysinit
+rc-update add udev-trigger sysinit
+rc-update add fcron default
+rc-update add sshd default
+rc-update add sysklogd default
+
+ln -s /etc/init.d/agetty{,.tty1}
+ln -s /etc/init.d/agetty{,.tty2}
+ln -s /etc/init.d/agetty{,.tty3}
+ln -s /etc/init.d/agetty{,.tty4}
+ln -s /etc/init.d/agetty{,.tty5}
+ln -s /etc/init.d/agetty{,.tty6}
+
+rc-update add agetty.tty1 default
+rc-update add agetty.tty2 default
+rc-update add agetty.tty3 default
+rc-update add agetty.tty4 default
+rc-update add agetty.tty5 default
+rc-update add agetty.tty6 default

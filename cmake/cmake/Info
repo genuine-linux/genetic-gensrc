@@ -1,0 +1,11 @@
+### Package <cmake> info. ###
+
+original_name=cmake
+name=cmake
+version=3.14.4
+package=$name-$version
+depends="ncurses_6.1 openssl_1.1.1a libuv_1.26.0 libarchive_3.3.3 curl_7.64.0"
+installbefore=
+installafter=
+replaces="$name"
+

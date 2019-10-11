@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{sbin,usr/share/man/{man5,man8}};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make BINDIR=$GENPKGDESTDIR/sbin MANDIR=$GENPKGDESTDIR/usr/share/man DESTDIR=${GENPKGDESTDIR} install;
+	cp -av ../$name/files/* $GENPKGDESTDIR/;
+fi;
+

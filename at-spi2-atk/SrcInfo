@@ -1,0 +1,4 @@
+source=at-spi2-atk
+version=2.32.0
+depends="at-spi2-core_2.31.1 atk_2.32.0"
+package=at-spi2-atk

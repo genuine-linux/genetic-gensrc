@@ -1,0 +1,4 @@
+source=gtkmm
+version=3.24.1
+depends=
+package=gtkmm

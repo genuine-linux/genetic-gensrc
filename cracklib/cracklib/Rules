@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
+		--disable-static \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--with-default-dict=/lib/cracklib/pw_dict \
+		--docdir=/usr/share/doc/$name-$version;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/lib;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	mv -v ${GENPKGDESTDIR}/usr/lib/libcrack.so.* ${GENPKGDESTDIR}/lib;
+	# Install cracklib-words
+	mkdir -pv ${GENPKGDESTDIR}/usr/share/dict;
+	install -v -m644 -D ../cracklib/files/cracklib-words.gz \
+                         ${GENPKGDESTDIR}/usr/share/dict/cracklib-words.gz;
+	gunzip -v ${GENPKGDESTDIR}/usr/share/dict/cracklib-words.gz;
+fi;
+

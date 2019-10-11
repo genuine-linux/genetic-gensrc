@@ -1,0 +1,11 @@
+### Package <nghttp2> info. ###
+
+original_name=nghttp2
+name=nghttp2
+version=1.39.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

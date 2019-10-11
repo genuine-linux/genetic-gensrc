@@ -1,0 +1,4 @@
+source=libsndfile
+version=1.0.28
+depends="alsa-lib_1.1.9 libogg_1.3.3 flac_1.3.3 libvorbis_1.3.6 sqlite_3.27.1"
+package=libsndfile

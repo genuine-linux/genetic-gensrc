@@ -1,0 +1,11 @@
+### Package <libgcrypt> info. ###
+
+original_name=libgcrypt
+name=libgcrypt
+version=1.8.4
+package=$name-$version
+depends="libgpg-error_1.35 pth_2.0.7 fig2dev_3.2.7"
+installbefore=
+installafter=
+replaces="$name"
+

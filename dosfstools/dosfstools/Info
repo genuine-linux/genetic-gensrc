@@ -1,0 +1,11 @@
+### Package <dosfstools> info. ###
+
+original_name=dosfstools
+name=dosfstools
+version=4.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

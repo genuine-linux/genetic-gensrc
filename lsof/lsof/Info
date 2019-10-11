@@ -1,0 +1,11 @@
+### Package <lsof> info. ###
+
+original_name=lsof
+name=lsof
+version=4.91
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

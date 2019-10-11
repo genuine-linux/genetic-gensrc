@@ -1,0 +1,11 @@
+### Package <libgusb> info. ###
+
+original_name=libgusb
+name=libgusb
+version=0.3.0
+package=$name-$version
+depends="libusb_1.0.23 gtk-doc_1.31 gobject-introspection_1.60.2 usbutils_012 vala_0.44.7"
+installbefore=
+installafter=
+replaces="$name"
+

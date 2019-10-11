@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+if test -f "Configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	echo "127.0.0.1 localhost $(hostname)" > /etc/hosts
+	BUILD_ZLIB=False BUILD_BZIP2=0 \
+	sh Configure -des \
+		  -Dcc="${GENUINE_TGT}-gcc" \
+		  -Dprefix=/usr                 \
+                  -Dvendorprefix=/usr           \
+                  -Dman1dir=/usr/share/man/man1 \
+                  -Dman3dir=/usr/share/man/man3 \
+                  -Dpager="/usr/bin/less -isR"  \
+                  -Duseshrplib                  \
+                  -Dusethreads
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make BUILD_ZLIB=False BUILD_BZIP2=0;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make BUILD_ZLIB=False BUILD_BZIP2=0 DESTDIR=${GENPKGDESTDIR} install;
+fi;
+

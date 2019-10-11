@@ -1,0 +1,11 @@
+### Package <xz> info. ###
+
+original_name=xz
+name=xz
+version=5.2.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

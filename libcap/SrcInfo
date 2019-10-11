@@ -1,0 +1,4 @@
+source=libcap
+version=2.26
+depends=ncurses_6.1
+package=libcap

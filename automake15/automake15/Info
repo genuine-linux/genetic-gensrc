@@ -1,0 +1,11 @@
+### Package <automake> info. ###
+
+original_name=automake15
+name=automake15
+version=1.15.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

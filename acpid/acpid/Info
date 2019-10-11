@@ -1,0 +1,11 @@
+### Package <acpid> info. ###
+
+original_name=acpid
+name=acpid
+version=2.0.31
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

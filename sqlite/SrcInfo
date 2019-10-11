@@ -1,0 +1,4 @@
+source=sqlite
+version=3.29.0
+depends=
+package=sqlite

@@ -1,0 +1,4 @@
+source=libcap-pam
+version=2.26
+depends=
+package=libcap-pam

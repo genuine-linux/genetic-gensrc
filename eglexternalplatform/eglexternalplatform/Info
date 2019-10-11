@@ -1,0 +1,11 @@
+### Package <eglexternalplatform> info. ###
+
+original_name=eglexternalplatform
+name=eglexternalplatform
+version=1.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

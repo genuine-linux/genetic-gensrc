@@ -1,0 +1,4 @@
+source=gnu-gs-fonts-other
+version=6.0
+depends="ghostscript-fonts-std_8.11"
+package=gnu-gs-fonts-other

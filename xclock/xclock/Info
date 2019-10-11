@@ -1,0 +1,11 @@
+### Package <xclock> info. ###
+
+original_name=xclock
+name=xclock
+version=1.0.9
+package=$name-$version
+depends="xwud_1.0.3"
+installbefore=
+installafter=
+replaces="$name"
+

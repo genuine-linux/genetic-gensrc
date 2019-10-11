@@ -1,0 +1,14 @@
+Info
+PkgArch
+PostInst
+PostRemv
+PreInst
+PreRemv
+autoconf213.dbg.dirs
+autoconf213.dbg.etc.dirs
+autoconf213.dbg.etc.files
+autoconf213.dbg.etc.links
+autoconf213.dbg.files
+autoconf213.dbg.links
+rootfs.tmp
+~genuine~0

@@ -1,0 +1,4 @@
+source=DirectFB
+version=1.6.3
+depends="flux_1.4.4"
+package=DirectFB

@@ -1,0 +1,4 @@
+source=libdaemon
+version=0.14
+depends="lynx_2.8.9"
+package=libdaemon

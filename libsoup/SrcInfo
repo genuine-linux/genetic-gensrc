@@ -1,0 +1,4 @@
+source=libsoup
+version=2.66.2
+depends="glib-networking_2.62.0 libpsl_0.21.0 libxml2_2.9.9 sqlite_3.29.0 gobject-introspection_1.62.0 vala_0.46.0 curl_7.65.3 krb5_1.17 gtk-doc_1.31"
+package=libsoup

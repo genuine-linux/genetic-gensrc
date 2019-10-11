@@ -1,0 +1,11 @@
+### Package <ilmbase> info. ###
+
+original_name=ilmbase
+name=ilmbase
+version=2.3.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=expect
+version=5.45.4
+depends="tcl_8.6.9"
+package=expect

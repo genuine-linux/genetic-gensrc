@@ -1,0 +1,4 @@
+source=bash-completion
+version=2.9
+depends=
+package=bash-completion

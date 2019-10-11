@@ -1,0 +1,11 @@
+### Package <json-c> info. ###
+
+original_name=json-c
+name=json-c
+version=0.13.1
+package=$name-$version
+depends="cmake_3.14.4"
+installbefore=
+installafter=
+replaces="$name"
+

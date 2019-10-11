@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--enable-gui=gtk3 \
+		--with-luajit \
+		--with-x \
+		--enable-terminal \
+		--enable-fontset \
+		--with-vim-name=gvim \
+		--with-ex-name=gex \
+		--with-view-name=gview;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+
+	#ln -sv vim $GENPKGDESTDIR/usr/bin/vi;
+
+	#for L in $GENPKGDESTDIR/usr/share/man/{,*/}man1/vim.1; do
+    	#	ln -sv vim.1 $(dirname $L)/vi.1
+	#done;
+
+	mkdir -p $GENPKGDESTDIR/usr/share/doc
+	ln -sv ../vim/vim81/doc $GENPKGDESTDIR/usr/share/doc/$name-$version;
+
+	#cp -av ../$name/files/* $GENPKGDESTDIR/;
+fi;
+

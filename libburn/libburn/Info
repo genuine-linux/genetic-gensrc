@@ -1,0 +1,11 @@
+### Package <libburn> info. ###
+
+original_name=libburn
+name=libburn
+version=1.5.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

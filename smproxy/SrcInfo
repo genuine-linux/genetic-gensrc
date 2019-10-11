@@ -1,0 +1,4 @@
+source=smproxy
+version=1.0.6
+depends="setxkbmap_1.3.2"
+package=smproxy

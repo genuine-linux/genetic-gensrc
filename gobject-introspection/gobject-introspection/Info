@@ -1,0 +1,11 @@
+### Package <gobject-introspection> info. ###
+
+original_name=gobject-introspection
+name=gobject-introspection
+version=1.60.2
+package=$name-$version
+depends="glib_2.60.4"
+installbefore=
+installafter=
+replaces="$name"
+

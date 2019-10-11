@@ -1,0 +1,11 @@
+### Package <sudo> info. ###
+
+original_name=sudo
+name=sudo
+version=1.8.27
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

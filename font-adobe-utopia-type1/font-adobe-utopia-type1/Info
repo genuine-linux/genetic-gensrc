@@ -1,0 +1,11 @@
+### Package <font-adobe-utopia-type1> info. ###
+
+original_name=font-adobe-utopia-type1
+name=font-adobe-utopia-type1
+version=1.0.4
+package=$name-$version
+depends="font-alias_1.0.3"
+installbefore=
+installafter=
+replaces="$name"
+

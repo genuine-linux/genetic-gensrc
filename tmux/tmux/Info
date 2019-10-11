@@ -1,0 +1,11 @@
+### Package <tmux> info. ###
+
+original_name=tmux
+name=tmux
+version=3.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

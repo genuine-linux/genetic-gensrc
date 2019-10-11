@@ -1,0 +1,5 @@
+#!/bin/bash
+
+chmod +x /etc/init.d/dhcpcd
+
+rc-update add dhcpcd default

@@ -1,0 +1,11 @@
+### Package <openssh> info. ###
+
+original_name=openssh
+name=openssh
+version=7.9p1
+package=$name-$version
+depends="Linux-PAM_1.3.1 krb5_1.17 net-tools-10.10.30 openrc_0.41.2"
+installbefore=
+installafter=
+replaces="$name"
+

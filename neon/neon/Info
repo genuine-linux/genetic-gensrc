@@ -1,0 +1,11 @@
+### Package <neon> info. ###
+
+original_name=neon
+name=neon
+version=0.30.2
+package=$name-$version
+depends="gnutls_3.6.9 libxml2_2.9.9 krb5_1.17 libproxy_0.4.15"
+installbefore=
+installafter=
+replaces="$name"
+

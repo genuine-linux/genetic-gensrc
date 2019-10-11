@@ -1,0 +1,4 @@
+source=readline
+version=8.0
+depends=file_5.36
+package=readline

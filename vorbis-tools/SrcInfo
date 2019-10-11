@@ -1,0 +1,4 @@
+source=vorbis-tools
+version=1.4.0
+depends=
+package=vorbis-tools

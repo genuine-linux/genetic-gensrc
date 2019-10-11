@@ -1,0 +1,11 @@
+### Package <fuse> info. ###
+
+original_name=fuse
+name=fuse
+version=3.6.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

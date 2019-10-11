@@ -1,0 +1,4 @@
+source=libXres
+version=1.2.0
+depends="libXrandr_1.5.2"
+package=libXres

@@ -1,0 +1,11 @@
+### Package <gnu-gs-fonts-other> info. ###
+
+original_name=gnu-gs-fonts-other
+name=gnu-gs-fonts-other
+version=6.0
+package=$name-$version
+depends="ghostscript-fonts-std_8.11"
+installbefore=
+installafter=
+replaces="$name"
+

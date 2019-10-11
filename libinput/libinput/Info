@@ -1,0 +1,11 @@
+### Package <libinput> info. ###
+
+original_name=libinput
+name=libinput
+version=1.13.4
+package=$name-$version
+depends="libevdev_1.7.0 mtdev_1.1.5 libwacom_0.33"
+installbefore=
+installafter=
+replaces="$name"
+

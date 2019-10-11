@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+mkdir python3
+pushd python3
+meson --prefix=/usr -Dpython=python3
+ninja
+DESTDIR=${GENPKGDESTDIR} ninja install;
+

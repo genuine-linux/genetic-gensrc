@@ -1,0 +1,11 @@
+### Package <pygobject3-python2> info. ###
+
+original_name=pygobject3-python2
+name=pygobject3-python2
+version=3.32.2
+package=$name-$version
+depends="pycairo-python2_1.18.1 Python2_2.7.16 gobject-introspection_1.60.2"
+installbefore=
+installafter=
+replaces="$name"
+

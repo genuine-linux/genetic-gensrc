@@ -1,0 +1,11 @@
+### Package <audacious> info. ###
+
+original_name=audacious
+name=audacious
+version=3.10.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

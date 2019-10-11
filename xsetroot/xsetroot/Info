@@ -1,0 +1,11 @@
+### Package <xsetroot> info. ###
+
+original_name=xsetroot
+name=xsetroot
+version=1.1.2
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=xwd
+version=1.0.7
+depends="iceauth_1.0.8"
+package=xwd

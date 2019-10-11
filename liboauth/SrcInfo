@@ -1,0 +1,4 @@
+source=liboauth
+version=1.0.3
+depends=
+package=liboauth

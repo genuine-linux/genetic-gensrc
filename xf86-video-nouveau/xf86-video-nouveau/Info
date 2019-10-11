@@ -1,0 +1,11 @@
+### Package <xf86-video-nouveau> info. ###
+
+original_name=xf86-video-nouveau
+name=xf86-video-nouveau
+version=1.0.16
+package=$name-$version
+depends="xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=wpa_supplicant
+version=2.9
+depends="libnl_3.5.0 dbus_1.12.16 libxml2_2.9.9"
+package=wpa_supplicant

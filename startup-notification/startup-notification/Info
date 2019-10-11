@@ -1,0 +1,11 @@
+### Package <startup-notification> info. ###
+
+original_name=startup-notification
+name=startup-notification
+version=0.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

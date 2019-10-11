@@ -1,0 +1,4 @@
+source=xcb-util-wm
+version=0.4.1
+depends="libxcb_1.13.1"
+package=xcb-util-wm

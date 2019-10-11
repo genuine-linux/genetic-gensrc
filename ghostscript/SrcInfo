@@ -1,0 +1,4 @@
+source=ghostscript
+version=9.27
+depends="cups_2.3.0 fontconfig_2.13.1 freetype_2.10.1 libjpeg-turbo_2.0.3 libpng_1.6.37 tiff_4.0.10 lcms2_2.9 openjpeg_2.3.1 cairo_1.16.0 libidn_1.35 libpaper_1.1.24 xorg-server_1.20.5 gtk3+_3.24.11"
+package=ghostscript

@@ -1,0 +1,4 @@
+source=libFS
+version=1.0.8
+depends="libXext_1.0.8"
+package=libFS

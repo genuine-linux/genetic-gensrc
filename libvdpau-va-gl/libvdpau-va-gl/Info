@@ -1,0 +1,11 @@
+### Package <libvdpau-va-gl> info. ###
+
+original_name=libvdpau-va-gl
+name=libvdpau-va-gl
+version=0.4.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

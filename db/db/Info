@@ -1,0 +1,11 @@
+### Package <db> info. ###
+
+original_name=db
+name=db
+version=5.3.28
+package=$name-$version
+depends="sharutils_4.15.2 tcl_8.6.9"
+installbefore=
+installafter=
+replaces="$name"
+

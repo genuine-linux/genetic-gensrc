@@ -1,0 +1,4 @@
+source=xinput
+version=1.6.2
+depends="xhost_1.0.8"
+package=xinput

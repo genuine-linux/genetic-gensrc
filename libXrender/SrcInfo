@@ -1,0 +1,4 @@
+source=libXrender
+version=0.9.10
+depends="libXcomposite_0.4.5"
+package=libXrender

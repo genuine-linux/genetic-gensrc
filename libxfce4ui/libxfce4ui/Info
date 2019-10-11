@@ -1,0 +1,11 @@
+### Package <libxfce4ui> info. ###
+
+original_name=libxfce4ui
+name=libxfce4ui
+version=4.14.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=libnftnl
+version=1.1.2
+depends=libmnl_1.0.4
+package=libnftnl

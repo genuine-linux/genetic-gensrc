@@ -1,0 +1,11 @@
+### Package <libXau> info. ###
+
+original_name=libXau
+name=libXau
+version=1.0.9
+package=$name-$version
+depends="xorgproto_2019.1"
+installbefore=
+installafter=
+replaces="$name"
+

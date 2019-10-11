@@ -1,0 +1,11 @@
+### Package <rpcsvc-proto> info. ###
+
+original_name=rpcsvc-proto
+name=rpcsvc-proto
+version=1.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

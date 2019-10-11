@@ -1,0 +1,4 @@
+source=libmpeg2
+version=0.5.1
+depends="xorg-server_1.20.5 SDL_1.2.15"
+package=libmpeg2

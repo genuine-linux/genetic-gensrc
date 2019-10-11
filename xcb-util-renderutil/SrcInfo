@@ -1,0 +1,4 @@
+source=xcb-util-renderutil
+version=0.3.9
+depends="libxcb_1.13.1"
+package=xcb-util-renderutil

@@ -1,0 +1,4 @@
+source=libass
+version=0.14.0
+depends="freetype_2.10.1 fribidi_1.0.5 nasm_2.14.02 fontconfig_2.13.1 harfbuzz_2.6.1"
+package=libass

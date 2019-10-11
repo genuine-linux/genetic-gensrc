@@ -1,0 +1,11 @@
+### Package <xdg-su> info. ###
+
+original_name=xdg-su
+name=xdg-su
+version=1.2.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <guile> info. ###
+
+original_name=guile
+name=guile
+version=2.2.4
+package=$name-$version
+depends="gc_8.0.2 libunistring_0.9.10"
+installbefore=
+installafter=
+replaces="$name"
+

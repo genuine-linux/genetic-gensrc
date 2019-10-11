@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+./waf configure --prefix=/usr \
+	--dbus \
+	--autostart=dbus \
+	--enable-pkg-config-dbus-service-dir
+
+./waf build -p
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+./waf install -p --destdir=$GENPKGDESTDIR
+

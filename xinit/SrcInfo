@@ -1,0 +1,4 @@
+source=xinit
+version=1.4.1
+depends="twm_1.0.10 xclock_1.0.9 xterm_348"
+package=xinit

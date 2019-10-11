@@ -1,0 +1,11 @@
+### Package <babl> info. ###
+
+original_name=babl
+name=babl
+version=0.1.72
+package=$name-$version
+depends="lcms2_2.9"
+installbefore=
+installafter=
+replaces="$name"
+

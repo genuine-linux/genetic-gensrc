@@ -1,0 +1,4 @@
+source=gst-libav
+version=1.16.0
+depends="ffmpeg_4.2.1 gst-plugins-base_1.16.0 yasm_1.3.0"
+package=gst-libav

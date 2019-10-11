@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "meson.build"; then
+	echo " --- Meson Build <$name ($version)> ---";
+	mkdir build;
+	cd build;
+	meson --prefix=/usr \
+		-Druntime_libdir=/usr/lib \
+		-Dman=true \
+		-Dselinux=disabled \
+		-Dgtk_doc=true \
+		../;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# ninja build
+if test -f "build.ninja"; then
+	echo " --- Ninja Build <$name ($version)> ---";
+	ninja;
+fi
+
+# ninja install
+if test -f "build.ninja"; then
+	echo " --- Ninja Install <$name ($version)> ---";
+	DESTDIR=${GENPKGDESTDIR} ninja install &&
+	mkdir -p $GENPKGDESTDIR/usr/share/doc/$name-$version &&
+	cp -rvf ../docs/reference/{NEWS,gio,glib,gobject} $GENPKGDESTDIR/usr/share/doc/$name-$version/ &&
+	mkdir -pv $GENPKGDESTDIR/usr/lib/pkgconfig &&
+	cp -rvf meson-private/*.pc $GENPKGDESTDIR/usr/lib/pkgconfig/;
+fi;
+

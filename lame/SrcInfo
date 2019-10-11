@@ -1,0 +1,4 @@
+source=lame
+version=3.100
+depends="dmalloc_5.5.2 libsndfile_1.0.28 nasm_2.14.02"
+package=lame

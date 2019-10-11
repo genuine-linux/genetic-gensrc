@@ -1,0 +1,11 @@
+### Package <extra> info. ###
+
+original_name=extra
+name=extra
+version=0.0.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

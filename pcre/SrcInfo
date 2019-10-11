@@ -1,0 +1,4 @@
+source=pcre
+version=8.43
+depends=
+package=pcre

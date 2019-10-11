@@ -1,0 +1,4 @@
+source=dnsmasq
+version=2.80
+depends=
+package=dnsmasq

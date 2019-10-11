@@ -1,0 +1,4 @@
+source=xf86-video-intel
+version=20190208
+depends="xcb-util_0.4.0 xorg-server_1.20.5"
+package=xf86-video-intel

@@ -1,0 +1,4 @@
+source=dos2unix
+version=7.4.0
+depends=
+package=dos2unix

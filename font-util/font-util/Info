@@ -1,0 +1,11 @@
+### Package <font-util> info. ###
+
+original_name=font-util
+name=font-util
+version=1.3.1
+package=$name-$version
+depends="libXdamage_1.1.5"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <xtrans> info. ###
+
+original_name=xtrans
+name=xtrans
+version=1.4.0
+package=$name-$version
+depends="fontconfig_2.13.1 libxcb_1.13.1 xmlto_0.0.28 lynx_2.8.9"
+installbefore=
+installafter=
+replaces="$name"
+

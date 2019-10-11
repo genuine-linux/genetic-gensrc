@@ -1,0 +1,11 @@
+### Package <glibc> info. ###
+
+original_name=glibc
+name=glibc
+version=2.29
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

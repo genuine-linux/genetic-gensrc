@@ -1,0 +1,11 @@
+### Package <yasm> info. ###
+
+original_name=yasm
+name=yasm
+version=1.3.0
+package=$name-$version
+depends="Python2_2.7.16"
+installbefore=
+installafter=
+replaces="$name"
+

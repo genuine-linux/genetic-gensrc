@@ -1,0 +1,4 @@
+source=xfsprogs
+version=5.0.0
+depends=
+package=xfsprogs

@@ -1,0 +1,12 @@
+### Package <cups> info. ###
+
+original_name=cups
+name=cups
+version=2.3.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+
+depends="gnutls_3.6.9 colord_1.4.4 dbus_1.12.16 libusb_1.0.33 Linux-PAM_1.3.1 xdg-utils_1.1.3 libpaper_1.1.24 krb5_1.17 Python2_2.7.16"

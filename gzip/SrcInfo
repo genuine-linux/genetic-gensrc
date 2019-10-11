@@ -1,0 +1,4 @@
+source=gzip
+version=1.10
+depends=
+package=gzip

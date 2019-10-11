@@ -1,0 +1,4 @@
+source=lvm2
+version=2.03.02
+depends="libaio_0.3.111 mdadm_4.0 reiserfsprogs_3.6.27 xfsprogs_4.19.0 thin-provisioning-tools_0.8.3 which_2.21"
+package=lvm2

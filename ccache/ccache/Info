@@ -1,0 +1,11 @@
+### Package <ccache> info. ###
+
+original_name=ccache
+name=ccache
+version=3.7.1
+package=$name-$version
+depends="zlib_1.2.3"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=fftw
+version=3.3.8
+depends=
+package=fftw

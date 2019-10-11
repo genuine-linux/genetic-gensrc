@@ -1,0 +1,11 @@
+### Package <tar> info. ###
+
+original_name=tar
+name=tar
+version=1.31
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

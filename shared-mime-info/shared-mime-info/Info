@@ -1,0 +1,11 @@
+### Package <shared-mime-info> info. ###
+
+original_name=shared-mime-info
+name=shared-mime-info
+version=1.12
+package=$name-$version
+depends="glib_2.60.4 libxml2_2.9.9"
+installbefore=
+installafter=
+replaces="$name"
+

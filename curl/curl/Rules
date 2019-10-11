@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-threaded-resolver \
+		--with-ca-path=/etc/ssl/certs;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install &&
+	install -v -d -m755 $GENPKGDESTDIR/usr/share/doc/$name-$version &&
+	cp -v -R docs/*     $GENPKGDESTDIR/usr/share/doc/$name-$version/ &&
+	find $GENPKGDESTDIR/usr/share/doc/$name-$version \( -name Makefile\* -o -name \*.1 -o -name \*.3 \) -exec rm {} \; &&
+	rm -rf $GENPKGDESTDIR/usr/share/doc/$name-$version/examples/.deps
+fi;
+

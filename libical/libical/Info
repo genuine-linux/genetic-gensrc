@@ -1,0 +1,11 @@
+### Package <libical> info. ###
+
+original_name=libical
+name=libical
+version=3.0.5
+package=$name-$version
+depends="cmake_3.15.2 db_5.3.28 gobject-introspection_1.60.2 icu_64.2"
+installbefore=
+installafter=
+replaces="$name"
+

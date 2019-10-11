@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rc-update del xdm-setup default
+rc-update del xdm default

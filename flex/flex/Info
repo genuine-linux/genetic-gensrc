@@ -1,0 +1,11 @@
+### Package <flex> info. ###
+
+original_name=flex
+name=flex
+version=2.6.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

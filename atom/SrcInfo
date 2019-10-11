@@ -1,0 +1,4 @@
+source=atom
+version=1.40.1
+depends=
+package=atom

@@ -1,0 +1,4 @@
+source=nspr
+version=4.20
+depends=
+package=nspr

@@ -1,0 +1,11 @@
+### Package <xrdb> info. ###
+
+original_name=xrdb
+name=xrdb
+version=1.2.0
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

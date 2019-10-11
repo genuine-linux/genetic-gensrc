@@ -1,0 +1,4 @@
+source=gstreamer-vaapi
+version=1.16.0
+depends="gstreamer_1.16.0 gst-plugins-base_1.16.0 gst-plugins-bad_1.16.0 libva_2.5.0"
+package=gstreamer-vaapi

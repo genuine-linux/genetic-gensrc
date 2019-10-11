@@ -1,0 +1,11 @@
+### Package <font-alias> info. ###
+
+original_name=font-alias
+name=font-alias
+version=1.0.3
+package=$name-$version
+depends="encodings_1.0.5"
+installbefore=
+installafter=
+replaces="$name"
+

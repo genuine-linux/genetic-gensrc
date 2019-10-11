@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/lib;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make RAISE_SETFCAP=no lib=lib prefix=/usr DESTDIR=${GENPKGDESTDIR} install;
+	mv -v ${GENPKGDESTDIR}/usr/lib/libcap.so.* ${GENPKGDESTDIR}/lib;
+fi;
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+useradd -c "Print Service User" -d /var/spool/cups -g lp -s /bin/false -u 9 lp
+groupadd -g 19 lpadmin
+usermod -a -G lpadmin root
+echo "ServerName /run/cups/cups.sock" > /etc/cups/client.conf
+gtk-update-icon-cache -qtf /usr/share/icons/hicolor
+
+rc-update add cupsd default

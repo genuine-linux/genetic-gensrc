@@ -1,0 +1,11 @@
+### Package <liboauth> info. ###
+
+original_name=liboauth
+name=liboauth
+version=1.0.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

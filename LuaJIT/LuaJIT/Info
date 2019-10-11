@@ -1,0 +1,11 @@
+### Package <LuaJIT> info. ###
+
+original_name=LuaJIT
+name=LuaJIT
+version=2.0.5
+package=$name-$version
+depends="lua_5.3.5"
+installbefore=
+installafter=
+replaces="$name"
+

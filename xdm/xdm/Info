@@ -1,0 +1,11 @@
+### Package <xdm> info. ###
+
+original_name=xdm
+name=xdm
+version=1.1.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

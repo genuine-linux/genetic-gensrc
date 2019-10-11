@@ -1,0 +1,4 @@
+source=xarchiver
+version=0.5.4
+depends=
+package=xarchiver

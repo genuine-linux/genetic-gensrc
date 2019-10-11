@@ -1,0 +1,11 @@
+### Package <ntfs-3g> info. ###
+
+original_name=ntfs-3g
+name=ntfs-3g
+version=2017.3.23
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

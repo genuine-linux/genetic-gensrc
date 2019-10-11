@@ -1,0 +1,4 @@
+source=pycairo-python3
+version=1.18.1
+depends="Python_3.7.2 cairo_1.16.0"
+package=pycairo-python3

@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared \
+		--enable-gtk \
+		--enable-drm \
+		--enable-gdm-transition \
+		--enable-upstart-monitoring \
+		--disable-systemd-integration \
+		--without-rhgb-compat-link \
+		--with-system-root-install=no \
+		--enable-pango \
+		--with-udev;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{bin,sbin};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	ln -sfvn ../usr/bin/$name $GENPKGDESTDIR/bin/$name
+	ln -sfvn ../usr/sbin/$name-set-default-theme $GENPKGDESTDIR/sbin/$name-set-default-theme
+	ln -sfvn ../usr/sbin/plymouthd $GENPKGDESTDIR/sbin/plymouthd
+fi;
+

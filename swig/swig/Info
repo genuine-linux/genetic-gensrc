@@ -1,0 +1,11 @@
+### Package <swig> info. ###
+
+original_name=swig
+name=swig
+version=3.0.12
+package=$name-$version
+depends="clisp_2.49 pcre_8.42 boost_1.70.0"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=poppler
+version=0.80.0
+depends="cmake_3.15.2 fontconfig_2.13.1 cairo_1.16.0 lcms2_2.9 libjpeg-turbo_2.0.2 libpng_1.6.37 nss_3.46 openjpeg_2.3.1 curl_7.65.3 gdk-pixbuf_2.38.1 git_2.23.0 gobjet-introspection_1.60.2 gtk-doc_1.21 tiff_4.0.10 Python2_2.7.16"
+package=poppler

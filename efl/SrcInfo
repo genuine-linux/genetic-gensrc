@@ -1,0 +1,4 @@
+source=efl
+version=1.22.4
+depends=
+package=efl

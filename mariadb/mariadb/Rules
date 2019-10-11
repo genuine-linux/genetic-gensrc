@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# CMake
+if test -f "CMakeLists.txt"; then
+	mkdir build.cmake;
+	cd build.cmake;
+	echo " --- CMake <$name ($version)> ---";
+	cmake -DCMAKE_BUILD_TYPE=Release                      \
+      -DCMAKE_INSTALL_PREFIX=/usr                     \
+      -DINSTALL_DOCDIR=share/doc/mariadb-10.3.15       \
+      -DINSTALL_DOCREADMEDIR=share/doc/mariadb-10.3.15 \
+      -DINSTALL_MANDIR=share/man                      \
+      -DINSTALL_MYSQLSHAREDIR=share/mysql             \
+      -DINSTALL_MYSQLTESTDIR=share/mysql/test         \
+      -DINSTALL_PLUGINDIR=lib/mysql/plugin            \
+      -DINSTALL_SBINDIR=sbin                          \
+      -DINSTALL_SCRIPTDIR=bin                         \
+      -DINSTALL_SQLBENCHDIR=share/mysql/bench         \
+      -DINSTALL_SUPPORTFILESDIR=share/mysql           \
+      -DMYSQL_DATADIR=/srv/mysql                      \
+      -DMYSQL_UNIX_ADDR=/run/mysqld/mysqld.sock       \
+      -DWITH_EXTRA_CHARSETS=complex                   \
+      -DWITH_EMBEDDED_SERVER=ON                       \
+      -DSKIP_TESTS=ON                                 \
+      -DTOKUDB_OK=0                                   \
+      ../;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	cp -av ../../$name/files/* $GENPKGDESTDIR/;
+fi;
+

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--enable-auth-sasldb \
+            --with-dbpath=/var/lib/sasl/sasldb2 \
+            --with-saslauthd=/var/run/saslauthd;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make -j1;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	install -v -dm755 $GENPKGDESTDIR/usr/share/doc/cyrus-sasl-2.1.27/html &&
+	install -v -m644  saslauthd/LDAP_SASLAUTHD $GENPKGDESTDIR/usr/share/doc/cyrus-sasl-2.1.27      &&
+	install -v -m644  doc/html/*.html          $GENPKGDESTDIR/usr/share/doc/cyrus-sasl-2.1.27/html &&
+	install -v -dm700 /var/lib/sasl
+fi;
+

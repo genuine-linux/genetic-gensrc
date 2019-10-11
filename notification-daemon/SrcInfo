@@ -1,0 +1,4 @@
+source=notification-daemon
+version=3.20.0
+depends=
+package=notification-daemon

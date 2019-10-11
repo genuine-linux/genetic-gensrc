@@ -1,0 +1,11 @@
+### Package <ruby> info. ###
+
+original_name=ruby
+name=ruby
+version=2.6.3
+package=$name-$version
+depends="db_5.3.28 libyaml_0.2.2"
+installbefore=
+installafter=
+replaces="$name"
+

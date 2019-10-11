@@ -1,0 +1,11 @@
+### Package <unifont> info. ###
+
+original_name=unifont
+name=unifont
+version=12.1.03
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <funcsigs> info. ###
+
+original_name=funcsigs
+name=funcsigs
+version=1.0.2
+package=$name-$version
+depends="Python2_2.7.15 Python_3.7.2"
+installbefore=
+installafter=
+replaces="$name"
+

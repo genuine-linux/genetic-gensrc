@@ -1,0 +1,4 @@
+source=svgalib
+version=1.4.3
+depends=
+package=svgalib

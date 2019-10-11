@@ -1,0 +1,11 @@
+### Package <cracklib> info. ###
+
+original_name=cracklib
+name=cracklib
+version=2.9.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=icon-naming-utils
+version=0.8.90
+depends=
+package=icon-naming-utils

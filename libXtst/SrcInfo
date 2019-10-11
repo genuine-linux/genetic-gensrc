@@ -1,0 +1,4 @@
+source=libXtst
+version=1.2.3
+depends="libXres_1.2.0"
+package=libXtst

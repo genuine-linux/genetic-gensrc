@@ -1,0 +1,4 @@
+source=docbook-xml
+version=4.5
+depends=libxml2_2.9.9 sgml-common_0.6.3 unzip_6.0
+package=docbook-xml

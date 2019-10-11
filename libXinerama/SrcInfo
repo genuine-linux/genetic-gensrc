@@ -1,0 +1,4 @@
+source=libXinerama
+version=1.1.4
+depends="libXi_1.7.10"
+package=libXinerama

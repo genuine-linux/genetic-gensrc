@@ -1,0 +1,11 @@
+### Package <gnome-backgrounds> info. ###
+
+original_name=gnome-backgrounds
+name=gnome-backgrounds
+version=3.32.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

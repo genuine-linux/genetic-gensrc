@@ -1,0 +1,11 @@
+### Package <vlc> info. ###
+
+original_name=vlc
+name=vlc
+version=3.0.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

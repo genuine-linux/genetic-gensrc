@@ -1,0 +1,11 @@
+### Package <usbutils> info. ###
+
+original_name=usbutils
+name=usbutils
+version=012
+package=$name-$version
+depends="libusb_1.0.22 wget_1.20.1"
+installbefore=
+installafter=
+replaces="$name"
+

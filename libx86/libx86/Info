@@ -1,0 +1,11 @@
+### Package <libx86> info. ###
+
+original_name=libx86
+name=libx86
+version=1.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

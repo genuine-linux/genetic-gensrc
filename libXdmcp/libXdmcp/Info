@@ -1,0 +1,11 @@
+### Package <libXdmcp> info. ###
+
+original_name=libXdmcp
+name=libXdmcp
+version=1.1.3
+package=$name-$version
+depends="xorgproto_2019.1 xmlto_0.0.28 libxslt_1.1.33"
+installbefore=
+installafter=
+replaces="$name"
+

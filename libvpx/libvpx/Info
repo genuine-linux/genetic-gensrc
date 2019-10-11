@@ -1,0 +1,11 @@
+### Package <libvpx> info. ###
+
+original_name=libvpx
+name=libvpx
+version=1.8.1
+package=$name-$version
+depends="yasm_1.3.0 which_2.21 doxygen_1.8.16"
+installbefore=
+installafter=
+replaces="$name"
+

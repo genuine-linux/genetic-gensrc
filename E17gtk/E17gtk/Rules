@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/share/themes/$name;
+
+cp -av * $GENPKGDESTDIR/usr/share/themes/$name/

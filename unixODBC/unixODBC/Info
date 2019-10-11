@@ -1,0 +1,11 @@
+### Package <unixODBC> info. ###
+
+original_name=unixODBC
+name=unixODBC
+version=2.3.7
+package=$name-$version
+depends="pth_2.0.7"
+installbefore=
+installafter=
+replaces="$name"
+

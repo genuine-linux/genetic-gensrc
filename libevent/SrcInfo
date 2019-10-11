@@ -1,0 +1,4 @@
+source=libevent
+version=2.1.8
+depends=
+package=libevent

@@ -1,0 +1,4 @@
+source=flux
+version=1.4.4
+depends=
+package=flux

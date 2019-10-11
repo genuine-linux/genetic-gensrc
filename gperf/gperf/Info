@@ -1,0 +1,11 @@
+### Package <gperf> info. ###
+
+original_name=gperf
+name=gperf
+version=3.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

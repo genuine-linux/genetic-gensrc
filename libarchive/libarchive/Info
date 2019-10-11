@@ -1,0 +1,11 @@
+### Package <libarchive> info. ###
+
+original_name=libarchive
+name=libarchive
+version=3.3.3
+package=$name-$version
+depends="acl_2.2.53 attr_2.4.48 libxml2_2.9.9 lzo_2.10 nettle_3.4.1"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <libICE> info. ###
+
+original_name=libICE
+name=libICE
+version=1.0.9
+package=$name-$version
+depends="libFS_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

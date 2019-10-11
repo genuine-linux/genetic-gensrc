@@ -1,0 +1,11 @@
+### Package <sbc> info. ###
+
+original_name=sbc
+name=sbc
+version=1.4
+package=$name-$version
+depends="libsndfile_1.0.28"
+installbefore=
+installafter=
+replaces="$name"
+

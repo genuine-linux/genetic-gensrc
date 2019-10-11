@@ -1,0 +1,4 @@
+source=libxfce4ui
+version=4.14.1
+depends=
+package=libxfce4ui

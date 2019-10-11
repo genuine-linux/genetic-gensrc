@@ -1,0 +1,11 @@
+### Package <net-tools> info. ###
+
+original_name=net-tools
+name=net-tools
+version=10.10.30
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

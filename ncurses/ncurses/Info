@@ -1,0 +1,11 @@
+### Package <ncurses> info. ###
+
+original_name=ncurses
+name=ncurses
+version=6.1
+package=$name-$version
+depends=pkg-config_0.29.2
+installbefore=
+installafter=
+replaces="$name"
+

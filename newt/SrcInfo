@@ -1,0 +1,4 @@
+source=newt
+version=0.52.21
+depends="popt_1.16 slang_2.3.2 tcl_8.6.9 gpm_1.20.7 Python2_2.7.16"
+package=newt

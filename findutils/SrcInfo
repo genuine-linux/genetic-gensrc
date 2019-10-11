@@ -1,0 +1,4 @@
+source=findutils
+version=4.6.0
+depends=
+package=findutils

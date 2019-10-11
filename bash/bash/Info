@@ -1,0 +1,11 @@
+### Package <bash> info. ###
+
+original_name=bash
+name=bash
+version=5.0
+package=$name-$version
+depends=grep_3.3
+installbefore=
+installafter=
+replaces="$name"
+

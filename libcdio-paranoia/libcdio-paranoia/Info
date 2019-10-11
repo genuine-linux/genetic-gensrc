@@ -1,0 +1,11 @@
+### Package <libcdio-paranoia> info. ###
+
+original_name=libcdio-paranoia
+name=libcdio-paranoia
+version=10.2+2.0.0
+package=$name-$version
+depends="libcdio_2.1.0"
+installbefore=
+installafter=
+replaces="$name"
+

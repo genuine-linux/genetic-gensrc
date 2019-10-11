@@ -1,0 +1,4 @@
+source=thin-provisioning-tools
+version=0.8.3
+depends="expat_2.2.6 libaio_0.3.111 boost_1.70.0"
+package=thin-provisioning-tools

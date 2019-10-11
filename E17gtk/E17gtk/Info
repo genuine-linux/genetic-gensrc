@@ -1,0 +1,11 @@
+### Package <E17gtk> info. ###
+
+original_name=E17gtk
+name=E17gtk
+version=3.22.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

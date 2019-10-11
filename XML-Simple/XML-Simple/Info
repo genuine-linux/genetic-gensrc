@@ -1,0 +1,11 @@
+### Package <XML-Simple> info. ###
+
+original_name=XML-Simple
+name=XML-Simple
+version=2.25
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <gexiv2> info. ###
+
+original_name=gexiv2
+name=gexiv2
+version=0.12.0
+package=$name-$version
+depends="exiv2_0.27.2 vala_0.46.0 gtk-doc_1.31 Python2_2.7.16"
+installbefore=
+installafter=
+replaces="$name"
+

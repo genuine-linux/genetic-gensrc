@@ -1,0 +1,11 @@
+### Package <apr-util> info. ###
+
+original_name=apr-util
+name=apr-util
+version=1.6.1
+package=$name-$version
+depends="unixODBC_2.3.7 db_5.3.28 mariadb_10.4.7 sqlite_3.29.0"
+installbefore=
+installafter=
+replaces="$name"
+

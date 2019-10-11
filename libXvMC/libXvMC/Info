@@ -1,0 +1,11 @@
+### Package <libXvMC> info. ###
+
+original_name=libXvMC
+name=libXvMC
+version=1.0.11
+package=$name-$version
+depends="libXv_1.0.11"
+installbefore=
+installafter=
+replaces="$name"
+

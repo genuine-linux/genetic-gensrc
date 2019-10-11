@@ -1,0 +1,11 @@
+### Package <v4l-utils> info. ###
+
+original_name=v4l-utils
+name=v4l-utils
+version=1.16.7
+package=$name-$version
+depends="llvm_8.0.1 alsa-lib_1.1.9 glu_9.0.0 libjpeg-turbo_2.0.3 doxygen_1.8.16 SDL2_2.0.10"
+installbefore=
+installafter=
+replaces="$name"
+

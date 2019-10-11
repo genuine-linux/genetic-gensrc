@@ -1,0 +1,11 @@
+### Package <xf86-input-synaptics> info. ###
+
+original_name=xf86-input-synaptics
+name=xf86-input-synaptics
+version=1.9.1
+package=$name-$version
+depends="libevdev_1.7.0 xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

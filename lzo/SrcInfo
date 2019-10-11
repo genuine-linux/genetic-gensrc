@@ -1,0 +1,4 @@
+source=lzo
+version=2.10
+depends=
+package=lzo

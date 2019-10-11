@@ -1,0 +1,4 @@
+source=audiofile
+version=0.3.6
+depends="alsa-lib_1.1.9 flac_1.3.3 asciidoc_8.6.9"
+package=audiofile

@@ -1,0 +1,4 @@
+source=p11-kit
+version=0.23.15
+depends="libtasn1_4.13 libffi_3.2.1"
+package=p11-kit

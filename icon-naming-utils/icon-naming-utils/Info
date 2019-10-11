@@ -1,0 +1,11 @@
+### Package <icon-naming-utils> info. ###
+
+original_name=icon-naming-utils
+name=icon-naming-utils
+version=0.8.90
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

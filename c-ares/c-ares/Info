@@ -1,0 +1,11 @@
+### Package <c-ares> info. ###
+
+original_name=c-ares
+name=c-ares
+version=1.15.0
+package=$name-$version
+depends="cmake_3.14.4"
+installbefore=
+installafter=
+replaces="$name"
+

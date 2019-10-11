@@ -1,0 +1,4 @@
+source=portaudio
+version=19.6.0
+depends="alsa-lib_1.1.9"
+package=portaudio

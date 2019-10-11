@@ -1,0 +1,11 @@
+### Package <enlightenment> info. ###
+
+original_name=enlightenment
+name=enlightenment
+version=0.23.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <xhost> info. ###
+
+original_name=xhost
+name=xhost
+version=1.0.8
+package=$name-$version
+depends="xgamma_1.0.6"
+installbefore=
+installafter=
+replaces="$name"
+

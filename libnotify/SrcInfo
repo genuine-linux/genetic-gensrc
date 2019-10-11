@@ -1,0 +1,4 @@
+source=libnotify
+version=0.7.8
+depends=
+package=libnotify

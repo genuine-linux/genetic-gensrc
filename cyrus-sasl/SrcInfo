@@ -1,0 +1,4 @@
+source=cyrus-sasl
+version=2.1.27
+depends="Linux-PAM_1.3.1 krb5_1.17 dmalloc_5.5.2 sqlite_3.27.1"
+package=cyrus-sasl

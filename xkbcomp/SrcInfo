@@ -1,0 +1,4 @@
+source=xkbcomp
+version=1.4.2
+depends="xinput_1.6.2"
+package=xkbcomp

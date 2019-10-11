@@ -1,0 +1,11 @@
+### Package <graphviz> info. ###
+
+original_name=graphviz
+name=graphviz
+version=2.42.1
+package=$name-$version
+depends="pango_1.42.4 cairo_1.16.0 libxshmfence_1.3 fontconfig_2.13.1 libpng_1.6.37 gtk+_2.24.32 libjpeg-turbo_2.0.3 poppler_0.80.0 freeglut_3.0.0 libglade_2.6.4 swig_4.0.1 Python2_2.7.16 ruby_2.6.4 tcl_8.6.9 tk_8.6.9 lua_5.3.5 guile_2.2.6"
+installbefore=
+installafter=
+replaces="$name"
+

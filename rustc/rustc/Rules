@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/opt/$name-$version;
+ln -svfin $name-$version $GENPKGDESTDIR/opt/rustc
+
+./install.sh --destdir=$GENPKGDESTDIR \
+	--prefix=/opt/$name-$version
+
+chown -R root:root $GENPKGDESTDIR/opt/$name-$version &&
+cp -av ../$name/files/* $GENPKGDESTDIR/;

@@ -1,0 +1,4 @@
+source=libksba
+version=1.3.5
+depends="libgpg-error_1.35"
+package=libksba

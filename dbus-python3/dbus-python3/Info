@@ -1,0 +1,11 @@
+### Package <dbus-python3> info. ###
+
+original_name=dbus-python3
+name=dbus-python3
+version=1.2.8
+package=$name-$version
+depends="dbus_1.12.16 glib_2.60.4 Python_3.7.2"
+installbefore=
+installafter=
+replaces="$name"
+

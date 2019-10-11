@@ -1,0 +1,4 @@
+source=XML-Parser
+version=2.44
+depends=perl_5.28.1
+package=XML-Parser

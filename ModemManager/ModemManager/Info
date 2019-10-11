@@ -1,0 +1,11 @@
+### Package <ModemManager> info. ###
+
+original_name=ModemManager
+name=ModemManager
+version=1.10.4
+package=$name-$version
+depends="libgudev_233 elogind_241.3 gobject-introspection_1.60.2 libmbim_1.20.0 libqmi_1.22.4 polkit_0.116 vala_0.46.0 gtk-doc_1.31"
+installbefore=
+installafter=
+replaces="$name"
+

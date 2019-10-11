@@ -1,0 +1,11 @@
+### Package <parted> info. ###
+
+original_name=parted
+name=parted
+version=3.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

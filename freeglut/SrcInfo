@@ -1,0 +1,4 @@
+source=freeglut
+version=3.0.0
+depends="cmake_3.14.5 mesa_12.0.5 glu_9.0.0"
+package=freeglut

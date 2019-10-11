@@ -1,0 +1,11 @@
+### Package <audiofile> info. ###
+
+original_name=audiofile
+name=audiofile
+version=0.3.6
+package=$name-$version
+depends="alsa-lib_1.1.9 flac_1.3.3 asciidoc_8.6.9"
+installbefore=
+installafter=
+replaces="$name"
+

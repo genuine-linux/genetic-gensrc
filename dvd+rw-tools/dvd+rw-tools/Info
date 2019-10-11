@@ -1,0 +1,11 @@
+### Package <dvd+rw-tools> info. ###
+
+original_name=dvd+rw-tools
+name=dvd+rw-tools
+version=7.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

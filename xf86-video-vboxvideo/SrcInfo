@@ -1,0 +1,4 @@
+source=xf86-video-vboxvideo
+version=1.0.0
+depends=
+package=xf86-video-vboxvideo

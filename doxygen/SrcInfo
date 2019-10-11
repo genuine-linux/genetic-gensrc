@@ -1,0 +1,4 @@
+source=doxygen
+version=1.8.16
+depends="cmake_3.15.3 git_2.23.0 graphviz_2.42.1 ghostscript_9.27 libxml2_2.9.9 llvm_8.0.1 Python2_2.7.16 xapian-core_1.4.12"
+package=doxygen

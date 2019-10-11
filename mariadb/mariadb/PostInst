@@ -1,0 +1,9 @@
+#!/bin/bash
+
+groupadd -g 40 mysql &&
+useradd -c "MySQL Server" -d /srv/mysql -g mysql -s /bin/false -u 40 mysql
+
+mysql_install_db --basedir=/usr --datadir=/srv/mysql --user=mysql
+chown -R mysql:mysql /srv/mysql
+
+install -v -m755 -o mysql -g mysql -d /run/mysqld

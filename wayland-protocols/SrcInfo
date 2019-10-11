@@ -1,0 +1,4 @@
+source=wayland-protocols
+version=1.17
+depends="wayland_1.17.0"
+package=wayland-protocols

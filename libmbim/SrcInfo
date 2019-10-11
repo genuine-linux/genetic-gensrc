@@ -1,0 +1,4 @@
+source=libmbim
+version=1.20.0
+depends="libgudev_233 gtk-doc_1.31 help2man_1.47.10"
+package=libmbim

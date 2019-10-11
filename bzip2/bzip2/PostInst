@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ln -sv ../../lib/libbz2.so.1.0 /usr/lib/libbz2.so
+ln -sv bzip2 /bin/bunzip2
+ln -sv bzip2 /bin/bzcat
+

@@ -1,0 +1,4 @@
+source=fig2dev
+version=3.2.7
+depends=
+package=fig2dev

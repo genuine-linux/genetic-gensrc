@@ -1,0 +1,11 @@
+### Package <clisp> info. ###
+
+original_name=clisp
+name=clisp
+version=2.49
+package=$name-$version
+depends="libffcall_2.1 libsigsegv_2.12"
+installbefore=
+installafter=
+replaces="$name"
+

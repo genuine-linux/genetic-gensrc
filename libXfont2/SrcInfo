@@ -1,0 +1,4 @@
+source=libXfont2
+version=2.0.3
+depends="libfontenc_1.1.4"
+package=libXfont2

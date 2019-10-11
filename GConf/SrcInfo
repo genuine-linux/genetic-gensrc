@@ -1,0 +1,4 @@
+source=GConf
+version=3.2.6
+depends="dbus-glib_0.110 libxml2_2.9.9 gobject-introspection_1.62.0 gtk3+_3.24.11 polkit_0.116 gtk-doc_1.31"
+package=GConf

@@ -1,0 +1,4 @@
+source=font-bh-ttf
+version=1.0.3
+depends="font-alias_1.0.3"
+package=font-bh-ttf

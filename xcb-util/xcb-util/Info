@@ -1,0 +1,11 @@
+### Package <xcb-util> info. ###
+
+original_name=xcb-util
+name=xcb-util
+version=0.4.0
+package=$name-$version
+depends="libxcb_1.13.1"
+installbefore=
+installafter=
+replaces="$name"
+

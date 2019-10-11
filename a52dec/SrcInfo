@@ -1,0 +1,4 @@
+source=a52dec
+version=0.7.4
+depends=
+package=a52dec

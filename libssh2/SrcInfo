@@ -1,0 +1,4 @@
+source=libssh2
+version=1.8.0
+depends="libgcrypt_1.8.4 openssh_7.9p1"
+package=libssh2

@@ -1,0 +1,4 @@
+source=alsa-firmware
+version=1.0.29
+depends="alsa-tools_1.1.7"
+package=alsa-firmware

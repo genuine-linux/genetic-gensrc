@@ -1,0 +1,4 @@
+source=libjpeg-turbo
+version=2.0.2
+depends="cmake_3.15.2 nasm_2.14.02"
+package=libjpeg-turbo

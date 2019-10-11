@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--with-libcrack \
+		--with-group-name-max-length=32 \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{bin,etc/pam.d};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	mv -v ${GENPKGDESTDIR}/usr/bin/passwd ${GENPKGDESTDIR}/bin/;
+	install -v -m644 $GENPKGDESTDIR/etc/login.defs $GENPKGDESTDIR/etc/login.defs.orig &&
+	for FUNCTION in FAIL_DELAY               \
+                FAILLOG_ENAB             \
+                LASTLOG_ENAB             \
+                MAIL_CHECK_ENAB          \
+                OBSCURE_CHECKS_ENAB      \
+                PORTTIME_CHECKS_ENAB     \
+                QUOTAS_ENAB              \
+                CONSOLE MOTD_FILE        \
+                FTMP_FILE NOLOGINS_FILE  \
+                ENV_HZ PASS_MIN_LEN      \
+                SU_WHEEL_ONLY            \
+                CRACKLIB_DICTPATH        \
+                PASS_CHANGE_TRIES        \
+                PASS_ALWAYS_WARN         \
+                CHFN_AUTH ENCRYPT_METHOD \
+                ENVIRON_FILE; do
+	    sed -i "s/^${FUNCTION}/# &/" $GENPKGDESTDIR/etc/login.defs;
+	done
+	
+	cp -av ../$name/files/* $GENPKGDESTDIR/;
+
+	for PROGRAM in chfn chgpasswd chpasswd chsh groupadd groupdel \
+               groupmems groupmod newusers useradd userdel usermod; do
+    		install -v -m644 $GENPKGDESTDIR/etc/pam.d/chage $GENPKGDESTDIR/etc/pam.d/${PROGRAM}
+    		sed -i "s/chage/$PROGRAM/" $GENPKGDESTDIR/etc/pam.d/${PROGRAM}
+	done
+fi;
+

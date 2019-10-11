@@ -1,0 +1,11 @@
+### Package <font-misc-ethiopic> info. ###
+
+original_name=font-misc-ethiopic
+name=font-misc-ethiopic
+version=1.0.3
+package=$name-$version
+depends="font-util_1.0.3"
+installbefore=
+installafter=
+replaces="$name"
+

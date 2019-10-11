@@ -1,0 +1,4 @@
+source=ninja
+version=1.9.0
+depends="Python_3.7.2 re2c_1.1.1"
+package=ninja

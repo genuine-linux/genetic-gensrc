@@ -1,0 +1,4 @@
+source=ghostscript-fonts-std
+version=8.11
+depends="ghostscript_9.27"
+package=ghostscript-fonts-std

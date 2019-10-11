@@ -1,0 +1,11 @@
+### Package <hdparm> info. ###
+
+original_name=hdparm
+name=hdparm
+version=9.58
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

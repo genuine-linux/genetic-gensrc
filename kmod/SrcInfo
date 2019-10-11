@@ -1,0 +1,4 @@
+source=kmod
+version=26
+depends="libxml2_2.9.9 libxslt_1.1.33"
+package=kmod

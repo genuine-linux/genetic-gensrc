@@ -1,0 +1,4 @@
+source=openal-soft
+version=1.19.1
+depends="alsa-lib_1.1.9 pulseaudio_12.2 SDL_1.2.15 jack2_1.9.12"
+package=openal-soft

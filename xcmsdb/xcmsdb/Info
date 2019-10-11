@@ -1,0 +1,11 @@
+### Package <xcmsdb> info. ###
+
+original_name=xcmsdb
+name=xcmsdb
+version=1.0.5
+package=$name-$version
+depends="xbacklight_1.2.3"
+installbefore=
+installafter=
+replaces="$name"
+

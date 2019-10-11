@@ -1,0 +1,11 @@
+### Package <xf86-input-wacom> info. ###
+
+original_name=xf86-input-wacom
+name=xf86-input-wacom
+version=0.37.0
+package=$name-$version
+depends="libwacom_0.33 xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

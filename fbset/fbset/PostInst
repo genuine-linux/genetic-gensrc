@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ! -c /dev/fb0 ]; then mknod /dev/fb0 c 29 0; fi
+if [ ! -c /dev/fb1 ]; then mknod /dev/fb1 c 29 32; fi
+if [ ! -c /dev/fb2 ]; then mknod /dev/fb2 c 29 64; fi
+if [ ! -c /dev/fb3 ]; then mknod /dev/fb3 c 29 96; fi
+if [ ! -c /dev/fb4 ]; then mknod /dev/fb4 c 29 128; fi
+if [ ! -c /dev/fb5 ]; then mknod /dev/fb5 c 29 160; fi
+if [ ! -c /dev/fb6 ]; then mknod /dev/fb6 c 29 192; fi
+if [ ! -c /dev/fb7 ]; then mknod /dev/fb7 c 29 224; fi
+

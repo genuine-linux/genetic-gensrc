@@ -1,0 +1,4 @@
+source=accountsservice
+version=0.6.55
+depends=
+package=accountsservice

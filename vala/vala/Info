@@ -1,0 +1,11 @@
+### Package <vala> info. ###
+
+original_name=vala
+name=vala
+version=0.44.7
+package=$name-$version
+depends="glib_2.26 dbus_1.12.16 libxslt_1.1.33 help2man_1.47.10 graphviz_2.42.1"
+installbefore=
+installafter=
+replaces="$name"
+

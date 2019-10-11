@@ -1,0 +1,4 @@
+source=libXxf86vm
+version=1.1.4
+depends="libXxf86dga_1.1.5"
+package=libXxf86vm

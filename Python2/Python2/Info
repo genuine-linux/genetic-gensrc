@@ -1,0 +1,11 @@
+### Package <Python> info. ###
+
+original_name=Python2
+name=Python2
+version=2.7.15
+package=$name-$version
+depends="expat_2.2.6 libffi_3.2.1 sqlite_3.27.1"
+installbefore=
+installafter=
+replaces="$name"
+

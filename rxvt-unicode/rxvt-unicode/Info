@@ -1,0 +1,11 @@
+### Package <rxvt-unicode> info. ###
+
+original_name=rxvt-unicode
+name=rxvt-unicode
+version=9.22
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

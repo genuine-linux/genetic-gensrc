@@ -1,0 +1,11 @@
+### Package <xprop> info. ###
+
+original_name=xprop
+name=xprop
+version=1.2.4
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

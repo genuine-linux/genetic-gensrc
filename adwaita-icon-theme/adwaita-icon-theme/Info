@@ -1,0 +1,11 @@
+### Package <adwaita-icon-theme> info. ###
+
+original_name=adwaita-icon-theme
+name=adwaita-icon-theme
+version=3.32.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

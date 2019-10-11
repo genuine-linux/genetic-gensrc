@@ -1,0 +1,11 @@
+### Package <xrefresh> info. ###
+
+original_name=xrefresh
+name=xrefresh
+version=1.0.6
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

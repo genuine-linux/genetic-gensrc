@@ -1,0 +1,4 @@
+source=mesa-demos
+version=8.4.0
+depends="cmake_3.14.4 glew_2.1.0 mesa_12.0.5 llvm_7.0.1"
+package=mesa-demos

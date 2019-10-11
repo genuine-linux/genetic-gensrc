@@ -1,0 +1,11 @@
+### Package <gavl> info. ###
+
+original_name=gavl
+name=gavl
+version=1.4.0
+package=$name-$version
+depends="libpng_1.6.37 doxygen_1.8.16"
+installbefore=
+installafter=
+replaces="$name"
+

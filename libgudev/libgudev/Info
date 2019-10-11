@@ -1,0 +1,11 @@
+### Package <libgudev> info. ###
+
+original_name=libgudev
+name=libgudev
+version=1.0
+package=$name-$version
+depends="eudev_3.2.7 glib_2.61.1"
+installbefore=
+installafter=
+replaces="$name"
+

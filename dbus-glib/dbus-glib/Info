@@ -1,0 +1,11 @@
+### Package <dbus-glib> info. ###
+
+original_name=dbus-glib
+name=dbus-glib
+version=0.110
+package=$name-$version
+depends="dbus_1.12.16 glib_2.62.0 gtk-doc_1.31"
+installbefore=
+installafter=
+replaces="$name"
+

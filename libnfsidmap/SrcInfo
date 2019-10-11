@@ -1,0 +1,4 @@
+source=libnfsidmap
+version=0.25
+depends="libgssglue_0.4"
+package=libnfsidmap

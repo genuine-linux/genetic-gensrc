@@ -1,0 +1,11 @@
+### Package <help2man> info. ###
+
+original_name=help2man
+name=help2man
+version=1.47.10
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

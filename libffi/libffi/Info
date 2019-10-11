@@ -1,0 +1,11 @@
+### Package <libffi> info. ###
+
+original_name=libffi
+name=libffi
+version=3.2.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

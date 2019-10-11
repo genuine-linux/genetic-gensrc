@@ -1,0 +1,11 @@
+### Package <libdiscid> info. ###
+
+original_name=libdiscid
+name=libdiscid
+version=0.6.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

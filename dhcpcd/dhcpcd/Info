@@ -1,0 +1,11 @@
+### Package <dhcpcd> info. ###
+
+original_name=dhcpcd
+name=dhcpcd
+version=8.0.3
+package=$name-$version
+depends="llvm_7.0.1 ntp_4.2.p13"
+installbefore=
+installafter=
+replaces="$name"
+

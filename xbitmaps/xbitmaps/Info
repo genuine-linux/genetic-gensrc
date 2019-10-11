@@ -1,0 +1,11 @@
+### Package <xbitmaps> info. ###
+
+original_name=xbitmaps
+name=xbitmaps
+version=1.1.2
+package=$name-$version
+depends="util-macros_1.19.2"
+installbefore=
+installafter=
+replaces="$name"
+

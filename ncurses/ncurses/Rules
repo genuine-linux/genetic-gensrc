@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
+	    --with-shared           \
+            --without-debug         \
+            --without-normal        \
+            --enable-pc-files       \
+            --enable-widec \
+	    --mandir=/usr/share/man \
+	    --sysconfdir=/etc \
+	    --localstatedir=/var;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/lib;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	mv -v ${GENPKGDESTDIR}/usr/lib/libncursesw.so.6* ${GENPKGDESTDIR}/lib;
+	for lib in ncurses form panel menu ; do
+    	  rm -vf                    ${GENPKGDESTDIR}/usr/lib/lib${lib}.so;
+    	  echo "INPUT(-l${lib}w)" > ${GENPKGDESTDIR}/usr/lib/lib${lib}.so;
+    	  ln -sfv ${lib}w.pc        ${GENPKGDESTDIR}/usr/lib/pkgconfig/${lib}.pc;
+	done
+	rm -vf                     ${GENPKGDESTDIR}/usr/lib/libcursesw.so;
+	echo "INPUT(-lncursesw)" > ${GENPKGDESTDIR}/usr/lib/libcursesw.so;
+	ln -sfv libncurses.so      ${GENPKGDESTDIR}/usr/lib/libcurses.so;
+	mkdir -pv       ${GENPKGDESTDIR}/usr/share/doc/${name}-${version};
+	cp -v -R doc/* ${GENPKGDESTDIR}/usr/share/doc/${name}-${version};
+fi
+
+if test -f "Makefile"; then
+	echo " --- Make Install non-wide charater <$name ($version)> ---";
+	make distclean
+	./configure --prefix=/usr    \
+            --with-shared    \
+            --without-normal \
+            --without-debug  \
+            --without-cxx-binding \
+            --with-abi-version=5
+	make sources libs
+	cp -av lib/lib*.so.5* ${GENPKGDESTDIR}/usr/lib/
+fi
+

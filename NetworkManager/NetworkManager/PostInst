@@ -1,0 +1,6 @@
+#!/bin/bash
+
+groupadd -fg 86 netdev &&
+/usr/sbin/usermod -a -G netdev root
+
+rc-update add NetworkManager default

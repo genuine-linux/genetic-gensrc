@@ -1,0 +1,4 @@
+source=zip
+version=3.0
+depends=
+package=zip

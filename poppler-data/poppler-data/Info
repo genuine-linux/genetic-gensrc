@@ -1,0 +1,11 @@
+### Package <poppler-data> info. ###
+
+original_name=poppler-data
+name=poppler-data
+version=0.4.9
+package=$name-$version
+depends="poppler_0.80.0"
+installbefore=
+installafter=
+replaces="$name"
+

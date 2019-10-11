@@ -1,0 +1,4 @@
+source=Mako
+version=1.0.4
+depends="Python2_2.7.15 Python_3.7.2 Beaker_1.9.0 MarkupSafe_1.0"
+package=Mako

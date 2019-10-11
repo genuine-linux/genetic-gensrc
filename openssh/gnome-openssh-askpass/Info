@@ -1,0 +1,11 @@
+### Package <gnome-openssh-askpass> info. ###
+
+original_name=openssh
+name=gnome-openssh-askpass
+version=7.9p1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

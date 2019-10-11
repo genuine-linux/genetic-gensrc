@@ -1,0 +1,4 @@
+source=mruby
+version=2.0.1
+depends=
+package=mruby

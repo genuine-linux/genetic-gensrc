@@ -1,0 +1,11 @@
+### Package <strace> info. ###
+
+original_name=strace
+name=strace
+version=4.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=lz4
+version=1.9.1
+depends=
+package=lz4

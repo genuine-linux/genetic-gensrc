@@ -1,0 +1,4 @@
+source=debianutils
+version=4.8.6.3
+depends=
+package=debianutils

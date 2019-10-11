@@ -1,0 +1,4 @@
+source=libsigc++
+version=2.10.2
+depends=
+package=libsigc++

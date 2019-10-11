@@ -1,0 +1,4 @@
+source=LibRaw
+version=0.19.5
+depends="libjpeg-turbo_2.0.3 jasper_2.0.14 lcms2_2.6"
+package=LibRaw

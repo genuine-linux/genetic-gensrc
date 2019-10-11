@@ -1,0 +1,11 @@
+### Package <libvorbis> info. ###
+
+original_name=libvorbis
+name=libvorbis
+version=1.3.6
+package=$name-$version
+depends="libogg_1.3.3"
+installbefore=
+installafter=
+replaces="$name"
+

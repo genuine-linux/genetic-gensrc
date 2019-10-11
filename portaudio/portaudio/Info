@@ -1,0 +1,11 @@
+### Package <portaudio> info. ###
+
+original_name=portaudio
+name=portaudio
+version=19.6.0
+package=$name-$version
+depends="alsa-lib_1.1.9"
+installbefore=
+installafter=
+replaces="$name"
+

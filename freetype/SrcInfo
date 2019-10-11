@@ -1,0 +1,4 @@
+source=freetype
+version=2.10.0
+depends="libpng_1.6.37 which_2.20"
+package=freetype

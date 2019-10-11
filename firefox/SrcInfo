@@ -1,0 +1,4 @@
+source=firefox
+version=69.0
+depends=
+package=firefox

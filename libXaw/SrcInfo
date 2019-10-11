@@ -1,0 +1,4 @@
+source=libXaw
+version=1.0.13
+depends="libXpm_3.5.12"
+package=libXaw

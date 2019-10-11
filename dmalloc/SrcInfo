@@ -1,0 +1,4 @@
+source=dmalloc
+version=5.5.2
+depends=
+package=dmalloc

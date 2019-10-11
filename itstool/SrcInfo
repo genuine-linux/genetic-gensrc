@@ -1,0 +1,4 @@
+source=itstool
+version=2.0.5
+depends="docbook-xml_4.5"
+package=itstool

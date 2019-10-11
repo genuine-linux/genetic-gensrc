@@ -1,0 +1,11 @@
+### Package <subversion> info. ###
+
+original_name=subversion
+name=subversion
+version=1.12.2
+package=$name-$version
+depends="apr-util_1.6.1 sqlite_3.29.0 serf_1.3.9 dbus_1.12.16 libsecret_0.18.8 Python2_2.7.16 ruby_2.6.4 swig_4.0.1 lz4_1.9.1"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <dbus> info. ###
+
+original_name=dbus
+name=dbus
+version=1.12.16
+package=$name-$version
+depends="libxshmfence_1.3 xmlto_0.0.28"
+installbefore=
+installafter=
+replaces="$name"
+

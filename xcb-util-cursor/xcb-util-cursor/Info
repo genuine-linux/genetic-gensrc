@@ -1,0 +1,11 @@
+### Package <xcb-util-cursor> info. ###
+
+original_name=xcb-util-cursor
+name=xcb-util-cursor
+version=0.1.3
+package=$name-$version
+depends="xcb-util_0.4.0"
+installbefore=
+installafter=
+replaces="$name"
+

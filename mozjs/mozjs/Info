@@ -1,0 +1,11 @@
+### Package <mozjs> info. ###
+
+original_name=mozjs
+name=mozjs
+version=60.1.0
+package=$name-$version
+depends="zlib_1.2.11 readline_8.0 autoconf213_2.13 icu4c_64.2 nspr_4.20 nss_3.42.1 libevent_2.1.8 bzip2_1.0.6 Python2_2.7.16 Python_3.7.2 libxshmfence_1.3"
+installbefore=
+installafter=
+replaces="$name"
+

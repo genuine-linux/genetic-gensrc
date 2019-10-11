@@ -1,0 +1,4 @@
+source=xorg-sgml-doctools
+version=1.10.99.901
+depends="docbook-xml_4.5 docbook-xls-nons_1.79.2"
+package=xorg-sgml-doctools

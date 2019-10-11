@@ -1,0 +1,11 @@
+### Package <libssh2> info. ###
+
+original_name=libssh2
+name=libssh2
+version=1.8.0
+package=$name-$version
+depends="libgcrypt_1.8.4 openssh_7.9p1"
+installbefore=
+installafter=
+replaces="$name"
+

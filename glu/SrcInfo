@@ -1,0 +1,4 @@
+source=glu
+version=9.0.0
+depends="mesa_12.0.5"
+package=glu

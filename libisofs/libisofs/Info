@@ -1,0 +1,11 @@
+### Package <libisofs> info. ###
+
+original_name=libisofs
+name=libisofs
+version=1.5.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

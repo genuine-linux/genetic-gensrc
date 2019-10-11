@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make -C pam_cap;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{lib/security,etc/security};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	install -v -m 755 pam_cap/pam_cap.so $GENPKGDESTDIR/lib/security;
+	install -v -m 644 pam_cap/capability.conf $GENPKGDESTDIR/etc/security;
+fi;
+

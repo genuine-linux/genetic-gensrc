@@ -1,0 +1,11 @@
+### Package <kismet> info. ###
+
+original_name=kismet
+name=kismet
+version=2019.09r1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

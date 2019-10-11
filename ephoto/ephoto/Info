@@ -1,0 +1,11 @@
+### Package <ephoto> info. ###
+
+original_name=ephoto
+name=ephoto
+version=1.5
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

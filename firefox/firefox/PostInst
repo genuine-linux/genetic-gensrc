@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir -pv /usr/share/pixmaps
+ln -sfv /usr/lib/firefox/browser/chrome/icons/default/default128.png \
+        /usr/share/pixmaps/firefox.png

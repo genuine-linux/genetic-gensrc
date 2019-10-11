@@ -1,0 +1,4 @@
+source=dbus
+version=1.12.16
+depends="libxshmfence_1.3 xmlto_0.0.28"
+package=dbus

@@ -1,0 +1,11 @@
+### Package <pyatspi> info. ###
+
+original_name=pyatspi
+name=pyatspi
+version=2.32.1
+package=$name-$version
+depends="pygobject3-python3_3.32.2 at-spi2-core_2.32.1 Python2_2.7.16"
+installbefore=
+installafter=
+replaces="$name"
+

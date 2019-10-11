@@ -1,0 +1,11 @@
+### Package <libpsl> info. ###
+
+original_name=libpsl
+name=libpsl
+version=0.20.2
+package=$name-$version
+depends="libidn2_2.1.1 gtk-doc_1.29"
+installbefore=
+installafter=
+replaces="$name"
+

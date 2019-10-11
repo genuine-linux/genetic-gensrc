@@ -1,0 +1,4 @@
+source=xrefresh
+version=1.0.6
+depends="iceauth_1.0.8"
+package=xrefresh

@@ -1,0 +1,4 @@
+source=encodings
+version=1.0.5
+depends="font-util_1.3.1"
+package=encodings

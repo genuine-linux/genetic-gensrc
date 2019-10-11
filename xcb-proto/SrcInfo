@@ -1,0 +1,4 @@
+source=xcb-proto
+version=1.13
+depends="libxml2_2.9.9"
+package=xcb-proto

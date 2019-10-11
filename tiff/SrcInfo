@@ -1,0 +1,4 @@
+source=tiff
+version=4.0.10
+depends=
+package=tiff

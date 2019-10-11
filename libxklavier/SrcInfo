@@ -1,0 +1,4 @@
+source=libxklavier
+version=5.4
+depends=
+package=libxklavier

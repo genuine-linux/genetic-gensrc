@@ -1,0 +1,11 @@
+#!/bin/bash
+
+groupdel avahi
+userdel avahi
+
+groupdel netdev
+
+rc-update del autoipd default
+rc-update del avahi-daemon default
+rc-update del avahi-dnsconfd default
+

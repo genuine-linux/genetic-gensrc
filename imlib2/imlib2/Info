@@ -1,0 +1,11 @@
+### Package <imlib2> info. ###
+
+original_name=imlib2
+name=imlib2
+version=1.5.1
+package=$name-$version
+depends="libxshmfence_1.3 libpng_1.6.37 libjpeg-turbo_2.0.3 tiff_4.0.10"
+installbefore=
+installafter=
+replaces="$name"
+

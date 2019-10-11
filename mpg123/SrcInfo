@@ -1,0 +1,4 @@
+source=mpg123
+version=1.25.12
+depends="alsa-lib_1.1.9 pulseaudio_12.2 SDL_1.2.15 openal-soft_1.19.1"
+package=mpg123

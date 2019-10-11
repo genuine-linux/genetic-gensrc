@@ -1,0 +1,11 @@
+### Package <dialog> info. ###
+
+original_name=dialog
+name=dialog
+version=0.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

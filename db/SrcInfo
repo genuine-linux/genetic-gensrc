@@ -1,0 +1,4 @@
+source=db
+version=5.3.28
+depends="sharutils_4.15.2 tcl_8.6.9"
+package=db

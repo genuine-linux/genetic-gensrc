@@ -1,0 +1,11 @@
+### Package <at-spi2-atk> info. ###
+
+original_name=at-spi2-atk
+name=at-spi2-atk
+version=2.32.0
+package=$name-$version
+depends="at-spi2-core_2.31.1 atk_2.32.0"
+installbefore=
+installafter=
+replaces="$name"
+

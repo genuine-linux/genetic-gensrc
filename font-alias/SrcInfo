@@ -1,0 +1,4 @@
+source=font-alias
+version=1.0.3
+depends="encodings_1.0.5"
+package=font-alias

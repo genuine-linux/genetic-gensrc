@@ -1,0 +1,11 @@
+### Package <texinfo> info. ###
+
+original_name=texinfo
+name=texinfo
+version=6.6
+package=$name-$version
+depends=perl_5.28.1
+installbefore=
+installafter=
+replaces="$name"
+

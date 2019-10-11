@@ -1,0 +1,11 @@
+### Package <xlsclients> info. ###
+
+original_name=xlsclients
+name=xlsclients
+version=1.1.4
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

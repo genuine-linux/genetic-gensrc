@@ -1,0 +1,4 @@
+source=iwd
+version=0.19
+depends="readline_7.0 dbus_1.12.16"
+package=iwd

@@ -1,0 +1,11 @@
+### Package <pycairo-python2> info. ###
+
+original_name=pycairo-python2
+name=pycairo-python2
+version=1.18.1
+package=$name-$version
+depends="Python2_2.7.16 cairo_1.16.0"
+installbefore=
+installafter=
+replaces="$name"
+

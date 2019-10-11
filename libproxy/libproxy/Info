@@ -1,0 +1,11 @@
+### Package <libproxy> info. ###
+
+original_name=libproxy
+name=libproxy
+version=0.4.15
+package=$name-$version
+depends="NetworkManager_1.20.0"
+installbefore=
+installafter=
+replaces="$name"
+

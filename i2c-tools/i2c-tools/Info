@@ -1,0 +1,11 @@
+### Package <i2c-tools> info. ###
+
+original_name=i2c-tools
+name=i2c-tools
+version=4.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

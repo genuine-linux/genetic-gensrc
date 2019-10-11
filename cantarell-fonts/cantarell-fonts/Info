@@ -1,0 +1,11 @@
+### Package <cantarell-fonts> info. ###
+
+original_name=cantarell-fonts
+name=cantarell-fonts
+version=0.0.25
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

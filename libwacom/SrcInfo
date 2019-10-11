@@ -1,0 +1,4 @@
+source=libwacom
+version=0.33
+depends="libgudev_1.0"
+package=libwacom

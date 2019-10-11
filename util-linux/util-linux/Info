@@ -1,0 +1,11 @@
+### Package <util-linux> info. ###
+
+original_name=util-linux
+name=util-linux
+version=2.33.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

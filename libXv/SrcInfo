@@ -1,0 +1,4 @@
+source=libXv
+version=1.0.11
+depends="libXtst_1.2.3"
+package=libXv

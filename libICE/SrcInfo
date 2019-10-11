@@ -1,0 +1,4 @@
+source=libICE
+version=1.0.9
+depends="libFS_1.0.8"
+package=libICE

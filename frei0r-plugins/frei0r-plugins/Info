@@ -1,0 +1,11 @@
+### Package <frei0r-plugins> info. ###
+
+original_name=frei0r-plugins
+name=frei0r-plugins
+version=1.6.1
+package=$name-$version
+depends="gavl_1.4.0 doxygen_1.8.16"
+installbefore=
+installafter=
+replaces="$name"
+

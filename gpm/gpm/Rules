@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--docdir=/usr/share/doc/$name-$version;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/etc;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	install-info --dir-file=$GENPKGDESTDIR/usr/share/info/dir           \
+             $GENPKGDESTDIR/usr/share/info/gpm.info                 &&
+	ln -sfv libgpm.so.2.1.0 $GENPKGDESTDIR/usr/lib/libgpm.so            &&
+	install -v -m644 conf/gpm-root.conf $GENPKGDESTDIR/etc              &&
+	install -v -m755 -d $GENPKGDESTDIR/usr/share/doc/$name-$version/support &&
+	install -v -m644    doc/support/*                     \
+                    $GENPKGDESTDIR/usr/share/doc/$name-$version/support &&
+	install -v -m644    doc/{FAQ,HACK_GPM,README*}        \
+                    $GENPKGDESTDIR/usr/share/doc/$name-$version/ &&
+	cp -av ../$name/files/* $GENPKGDESTDIR/;
+fi;
+

@@ -1,0 +1,4 @@
+source=pyatspi
+version=2.32.1
+depends="pygobject3-python3_3.32.2 at-spi2-core_2.32.1 Python2_2.7.16"
+package=pyatspi

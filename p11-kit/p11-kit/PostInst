@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ln -s /usr/libexec/p11-kit/trust-extract-compat \
+      /usr/bin/update-ca-certificates
+

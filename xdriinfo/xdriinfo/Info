@@ -1,0 +1,11 @@
+### Package <xdriinfo> info. ###
+
+original_name=xdriinfo
+name=xdriinfo
+version=1.0.6
+package=$name-$version
+depends="xdpyinfo_1.3.2"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=gnome-doc-utils
+version=0.20.10
+depends="which_2.21 intltool_0.50.0 libxslt_1.1.26 Python_3.7.2"
+package=gnome-doc-utils

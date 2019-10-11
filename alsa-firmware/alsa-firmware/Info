@@ -1,0 +1,11 @@
+### Package <alsa-firmware> info. ###
+
+original_name=alsa-firmware
+name=alsa-firmware
+version=1.0.29
+package=$name-$version
+depends="alsa-tools_1.1.7"
+installbefore=
+installafter=
+replaces="$name"
+

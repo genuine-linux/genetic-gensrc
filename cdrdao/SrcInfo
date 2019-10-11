@@ -1,0 +1,4 @@
+source=cdrdao
+version=1.2.4
+depends=
+package=cdrdao

@@ -1,0 +1,4 @@
+source=swig
+version=3.0.12
+depends="clisp_2.49 pcre_8.42 boost_1.70.0"
+package=swig

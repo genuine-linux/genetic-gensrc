@@ -1,0 +1,4 @@
+source=WindowMaker
+version=0.95.8
+depends="libexif_0.6.21"
+package=WindowMaker

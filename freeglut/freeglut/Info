@@ -1,0 +1,11 @@
+### Package <freeglut> info. ###
+
+original_name=freeglut
+name=freeglut
+version=3.0.0
+package=$name-$version
+depends="cmake_3.14.5 mesa_12.0.5 glu_9.0.0"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <libspectre> info. ###
+
+original_name=libspectre
+name=libspectre
+version=0.2.8
+package=$name-$version
+depends="cairo_1.6.0 ghostscript_9.27"
+installbefore=
+installafter=
+replaces="$name"
+

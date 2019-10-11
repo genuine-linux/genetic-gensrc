@@ -1,0 +1,11 @@
+### Package <libassuan> info. ###
+
+original_name=libassuan
+name=libassuan
+version=2.5.3
+package=$name-$version
+depends="libgpg-error_1.35"
+installbefore=
+installafter=
+replaces="$name"
+

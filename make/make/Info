@@ -1,0 +1,11 @@
+### Package <make> info. ###
+
+original_name=make
+name=make
+version=4.2.1
+package=$name-$version
+depends="libpipeline_1.5.1"
+installbefore=
+installafter=
+replaces="$name"
+

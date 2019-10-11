@@ -1,0 +1,4 @@
+source=atkmm
+version=2.28.0
+depends=
+package=atkmm

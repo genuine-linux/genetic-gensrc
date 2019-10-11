@@ -1,0 +1,4 @@
+source=xf86-input-libinput
+version=0.28.2
+depends="libinput_1.13.4 xorg-server_1.20.5"
+package=xf86-input-libinput

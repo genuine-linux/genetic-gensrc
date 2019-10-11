@@ -1,0 +1,11 @@
+### Package <libffcall> info. ###
+
+original_name=libffcall
+name=libffcall
+version=2.1
+package=$name-$version
+depends="pth_2.0.7"
+installbefore=
+installafter=
+replaces="$name"
+

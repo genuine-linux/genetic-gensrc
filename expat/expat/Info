@@ -1,0 +1,11 @@
+### Package <expat> info. ###
+
+original_name=expat
+name=expat
+version=2.2.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

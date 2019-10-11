@@ -1,0 +1,4 @@
+source=gsl
+version=2.6
+depends=
+package=gsl

@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared \
+		--enable-user-session                \
+            --disable-doxygen-docs               \
+            --disable-xml-docs                   \
+            --with-systemduserunitdir=no         \
+            --with-systemdsystemunitdir=no       \
+	    --with-console-auth-dir=/run/console \
+            --with-system-pid-file=/run/dbus/pid \
+            --with-system-socket=/run/dbus/system_bus_socket;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/lib;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install &&
+	mv -v $GENPKGDESTDIR/usr/lib/libdbus-1.so.* $GENPKGDESTDIR/lib &&
+	cd $GENPKGDESTDIR/usr/lib;
+	ln -sfv /lib/libdbus-1.so.3 libdbus-1.so &&
+	cd - &&
+	chown -v root:messagebus $GENPKGDESTDIR/usr/libexec/dbus-daemon-launch-helper &&
+	chmod -v      4750       $GENPKGDESTDIR/usr/libexec/dbus-daemon-launch-helper &&
+	cp -av ../$name/files/* $GENPKFDESTDIR/;
+fi;
+

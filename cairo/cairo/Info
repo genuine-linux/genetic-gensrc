@@ -1,0 +1,11 @@
+### Package <cairo> info. ###
+
+original_name=cairo
+name=cairo
+version=1.16.0
+package=$name-$version
+depends="libpng_1.6.37 pixman_0.38.4 fontconfig_2.13.1 glib_2.60.7 libxshmfence_1.3 gtk-doc_1.31 libdrm_2.4.99 librsvg_2.44.14 lzo_2.10 mesa_19.1.5 DirectFB_1.6.3"
+installbefore=
+installafter=
+replaces="$name"
+

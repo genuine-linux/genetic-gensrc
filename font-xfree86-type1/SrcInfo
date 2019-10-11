@@ -1,0 +1,4 @@
+source=font-xfree86-type1
+version=1.0.4
+depends="font-util_1.0.3"
+package=font-xfree86-type1

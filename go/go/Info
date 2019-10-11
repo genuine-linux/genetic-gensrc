@@ -1,0 +1,11 @@
+### Package <go> info. ###
+
+original_name=go
+name=go
+version=1.13
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

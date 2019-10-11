@@ -1,0 +1,11 @@
+### Package <autogen> info. ###
+
+original_name=autogen
+name=autogen
+version=5.18.16
+package=$name-$version
+depends="libxml2_2.9.9 guile_2.4.4"
+installbefore=
+installafter=
+replaces="$name"
+

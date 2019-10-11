@@ -1,0 +1,4 @@
+source=ethtool
+version=5.1
+depends="pkg-config_0.9.0"
+package=ethtool

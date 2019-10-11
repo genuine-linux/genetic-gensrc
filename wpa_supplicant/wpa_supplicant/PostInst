@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rc-update add wpa_supplicant default
+
+update-desktop-database -q

@@ -1,0 +1,11 @@
+### Package <libnsl> info. ###
+
+original_name=libnsl
+name=libnsl
+version=1.2.0
+package=$name-$version
+depends="libtirpc_1.1.4 rpcsvc-proto_1.4"
+installbefore=
+installafter=
+replaces="$name"
+

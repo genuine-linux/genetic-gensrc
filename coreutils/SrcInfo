@@ -1,0 +1,4 @@
+source=coreutils
+version=8.30
+depends=
+package=coreutils

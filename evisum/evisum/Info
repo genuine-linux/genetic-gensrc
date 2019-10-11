@@ -1,0 +1,11 @@
+### Package <evisum> info. ###
+
+original_name=evisum
+name=evisum
+version=0.2.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

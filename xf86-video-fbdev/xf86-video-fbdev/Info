@@ -1,0 +1,11 @@
+### Package <xf86-video-fbdev> info. ###
+
+original_name=xf86-video-fbdev
+name=xf86-video-fbdev
+version=0.5.0
+package=$name-$version
+depends="xorg-server_1.20.5 xcb-util_0.4.0"
+installbefore=
+installafter=
+replaces="$name"
+

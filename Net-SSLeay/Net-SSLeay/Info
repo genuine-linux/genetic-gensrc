@@ -1,0 +1,11 @@
+### Package <Net-SSLeay> info. ###
+
+original_name=Net-SSLeay
+name=Net-SSLeay
+version=1.86_06
+package=$name-$version
+depends="perl_5.28.1"
+installbefore=
+installafter=
+replaces="$name"
+

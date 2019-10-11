@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr;
+
+for tool in *
+do
+  case $tool in
+    seq )
+      tool_dir=seq/sbiload
+    ;;
+    * )
+      tool_dir=$tool
+    ;;
+  esac
+
+  pushd $tool_dir
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$GENPKGDESTDIR install
+    /sbin/ldconfig
+  popd
+
+done
+

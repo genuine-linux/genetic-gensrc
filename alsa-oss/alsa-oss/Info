@@ -1,0 +1,11 @@
+### Package <alsa-oss> info. ###
+
+original_name=alsa-oss
+name=alsa-oss
+version=1.1.8
+package=$name-$version
+depends="alsa-lib_1.1.9"
+installbefore=
+installafter=
+replaces="$name"
+

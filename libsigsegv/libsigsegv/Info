@@ -1,0 +1,11 @@
+### Package <libsigsegv> info. ###
+
+original_name=libsigsegv
+name=libsigsegv
+version=2.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

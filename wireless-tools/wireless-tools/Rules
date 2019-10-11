@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<PREFIX> = <rootfs> to install package #
+GENPKGPREFIX="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGPREFIX};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make PREFIX=$GENPKGPREFIX/usr INSTALL_MAN=$GENPKGPREFIX/usr/share/man install;
+fi;
+

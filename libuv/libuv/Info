@@ -1,0 +1,11 @@
+### Package <libuv> info. ###
+
+original_name=libuv
+name=libuv
+version=1.26.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

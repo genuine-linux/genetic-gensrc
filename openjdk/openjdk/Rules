@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/opt;
+
+cp -av $original_name-$version $GENPKGDESTDIR/opt;
+ln -sfvn $original_name-$version $GENPKGDESTDIR/opt/jdk
+cp -av $name/files/* $GENPKGDESTDIR/

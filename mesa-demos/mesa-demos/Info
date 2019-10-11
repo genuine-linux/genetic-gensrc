@@ -1,0 +1,11 @@
+### Package <mesa-demos> info. ###
+
+original_name=mesa-demos
+name=mesa-demos
+version=8.4.0
+package=$name-$version
+depends="cmake_3.14.4 glew_2.1.0 mesa_12.0.5 llvm_7.0.1"
+installbefore=
+installafter=
+replaces="$name"
+

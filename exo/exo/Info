@@ -1,0 +1,11 @@
+### Package <exo> info. ###
+
+original_name=exo
+name=exo
+version=0.12.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

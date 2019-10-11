@@ -1,0 +1,4 @@
+source=libXext
+version=1.3.4
+depends="libX11_1.6.8"
+package=libXext

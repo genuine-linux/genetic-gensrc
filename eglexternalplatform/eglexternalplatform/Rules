@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/{lib/pkgconfig,include/EGL};
+
+cp -a interface/* $GENPKGDESTDIR/usr/include/EGL/
+cp -a eglexternalplatform.pc $GENPKGDESTDIR/usr/lib/pkgconfig/

@@ -1,0 +1,11 @@
+### Package <xf86-video-vmware> info. ###
+
+original_name=xf86-video-vmware
+name=xf86-video-vmware
+version=13.3.0
+package=$name-$version
+depends="xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <grub> info. ###
+
+original_name=grub
+name=grub
+version=2.02
+package=$name-$version
+depends="unifont_12.1.03"
+installbefore=
+installafter=
+replaces="$name"
+

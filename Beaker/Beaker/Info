@@ -1,0 +1,11 @@
+### Package <Beaker> info. ###
+
+original_name=Beaker
+name=Beaker
+version=1.9.0
+package=$name-$version
+depends="Python2_2.7.15 Python_3.7.2 funcsigs_1.0.2"
+installbefore=
+installafter=
+replaces="$name"
+

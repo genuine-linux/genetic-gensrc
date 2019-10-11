@@ -1,0 +1,11 @@
+### Package <libXaw> info. ###
+
+original_name=libXaw
+name=libXaw
+version=1.0.13
+package=$name-$version
+depends="libXpm_3.5.12"
+installbefore=
+installafter=
+replaces="$name"
+

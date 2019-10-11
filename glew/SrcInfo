@@ -1,0 +1,4 @@
+source=glew
+version=2.1.0
+depends="glu_9.0.0 freeglut_3.0.0"
+package=glew

@@ -1,0 +1,4 @@
+source=XML-SAX
+version=1.00
+depends=perl_5.28.1
+package=XML-SAX

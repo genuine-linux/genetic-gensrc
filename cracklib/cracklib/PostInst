@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ln -sfv ../../lib/$(readlink /usr/lib/libcrack.so) /usr/lib/libcrack.so
+
+ln -v -sf cracklib-words /usr/share/dict/words;
+echo $(hostname) >> /usr/share/dict/cracklib-extra-words;
+install -v -m755 -d /lib/cracklib;
+create-cracklib-dict /usr/share/dict/cracklib-words \
+               /usr/share/dict/cracklib-extra-words
+

@@ -1,0 +1,11 @@
+### Package <libXi> info. ###
+
+original_name=libXi
+name=libXi
+version=1.7.10
+package=$name-$version
+depends="libXft_2.3.3"
+installbefore=
+installafter=
+replaces="$name"
+

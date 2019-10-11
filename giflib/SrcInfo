@@ -1,0 +1,4 @@
+source=giflib
+version=5.2.1
+depends="xmlto_0.0.28"
+package=giflib

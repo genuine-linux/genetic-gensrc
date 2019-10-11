@@ -1,0 +1,4 @@
+source=man-db
+version=2.8.5
+depends=
+package=man-db

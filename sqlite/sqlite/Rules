@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-fts5 \
+		CFLAGS="-g -O2                    \
+            -DSQLITE_ENABLE_FTS3=1            \
+            -DSQLITE_ENABLE_FTS4=1            \
+            -DSQLITE_ENABLE_COLUMN_METADATA=1 \
+            -DSQLITE_ENABLE_UNLOCK_NOTIFY=1   \
+            -DSQLITE_ENABLE_DBSTAT_VTAB=1     \
+            -DSQLITE_SECURE_DELETE=1          \
+            -DSQLITE_ENABLE_FTS3_TOKENIZER=1";
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	install -v -m755 -d $GENPKGDESTDIR/usr/share/doc/$name-$version
+	cp -v -R doc/* $GENPKGDESTDIR/usr/share/doc/$name-$version
+fi;
+

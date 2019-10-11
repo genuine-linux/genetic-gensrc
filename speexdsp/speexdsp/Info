@@ -1,0 +1,11 @@
+### Package <speexdsp> info. ###
+
+original_name=speexdsp
+name=speexdsp
+version=1.2rc3
+package=$name-$version
+depends="speex_1.2.0 libogg_1.3.3"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <sgml-common> info. ###
+
+original_name=sgml-common
+name=sgml-common
+version=0.6.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

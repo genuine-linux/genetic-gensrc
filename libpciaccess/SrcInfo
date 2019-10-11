@@ -1,0 +1,4 @@
+source=libpciaccess
+version=0.14
+depends="libdmx_1.1.4"
+package=libpciaccess

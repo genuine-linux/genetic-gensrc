@@ -1,0 +1,4 @@
+source=libXau
+version=1.0.9
+depends="xorgproto_2019.1"
+package=libXau

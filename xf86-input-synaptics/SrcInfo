@@ -1,0 +1,4 @@
+source=xf86-input-synaptics
+version=1.9.1
+depends="libevdev_1.7.0 xorg-server_1.20.5"
+package=xf86-input-synaptics

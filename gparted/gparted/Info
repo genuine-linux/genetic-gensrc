@@ -1,0 +1,11 @@
+### Package <gparted> info. ###
+
+original_name=gparted
+name=gparted
+version=1.0.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

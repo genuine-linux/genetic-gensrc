@@ -1,0 +1,11 @@
+### Package <jansson> info. ###
+
+original_name=jansson
+name=jansson
+version=2.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

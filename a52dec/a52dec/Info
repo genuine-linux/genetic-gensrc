@@ -1,0 +1,11 @@
+### Package <a52dec> info. ###
+
+original_name=a52dec
+name=a52dec
+version=0.7.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

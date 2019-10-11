@@ -1,0 +1,4 @@
+source=python-efl
+version=1.22.0
+depends=
+package=python-efl

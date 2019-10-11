@@ -1,0 +1,4 @@
+source=Python
+version=3.7.2
+depends=libffi_3.2.1 openssl_1.1.1a
+package=Python

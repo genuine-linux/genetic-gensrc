@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+case $(uname -m) in
+    i?86)    GCC_INCDIR=/usr/lib/gcc/$(uname -m)-genuine-linux-gnu/8.2.0/include
+            ln -sfv ld-linux.so.2 /lib/ld-lsb.so.3
+    ;;
+    x86_64) GCC_INCDIR=/usr/lib/gcc/x86_64-genuine-linux-gnu/8.2.0/include
+            #ln -sfv ../lib/ld-linux-x86-64.so.2 /lib64
+            ln -sfv ../lib/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3
+    ;;
+esac
+
+rm -rf /usr/include/limits.h
+
+mkdir -v build
+cd build
+
+# configure #
+if test -f "../configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	CC="${GENUINE_TGT}-gcc -isystem $GCC_INCDIR -isystem /usr/include" \
+	../configure --prefix=/usr \
+	     --host="$GENUINE_HOST" \
+	     --target="$GENUINE_TGT" \
+	     --build="$GENUINE_TGT" \
+             --disable-werror \
+             --enable-kernel=3.2 \
+             --enable-stack-protector=strong \
+	     --docdir=/usr/share/doc/$name-$version \
+             libc_cv_slibdir=/lib;
+	     unset GCC_INCDIR
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/etc/;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	# Create ld.so.conf
+	touch /etc/ld.so.conf ${GENPKGDESTDIR}/etc/ld.so.conf;
+
+	# Install glibc
+	sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile;
+	make DESTDIR=${GENPKGDESTDIR} install;
+
+	# Create nscd.conf
+	cp -v ../nscd/nscd.conf ${GENPKGDESTDIR}/etc/nscd.conf;
+	mkdir -pv ${GENPKGDESTDIR}/var/cache/nscd;
+
+	# Install locales
+	make DESTDIR=${GENPKGDESTDIR} localedata/install-locales;
+
+	# Install timezone data
+	cp -av ../../glibc/files/tzdata tzdata;
+	cd tzdata;
+
+	ZONEINFO=/usr/share/zoneinfo
+	mkdir -pv $ZONEINFO/posix
+	mkdir -pv $ZONEINFO/right
+
+	for tz in etcetera southamerica northamerica europe africa antarctica  \
+          asia australasia backward pacificnew systemv; do
+		zic -L /dev/null   -d $ZONEINFO       ${tz}
+		zic -L /dev/null   -d $ZONEINFO/posix ${tz}
+		zic -L leapseconds -d $ZONEINFO/right ${tz}
+	done
+
+	cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
+	zic -d $ZONEINFO -p America/New_York
+	unset ZONEINFO
+
+	cd ..
+
+	# Install configuration files
+	cp -av ../../glibc/files/etc/* ${GENPKGDESTDIR}/etc/;
+fi;
+

@@ -1,0 +1,11 @@
+### Package <bzip2> info. ###
+
+original_name=bzip2
+name=bzip2
+version=1.0.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

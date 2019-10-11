@@ -1,0 +1,11 @@
+### Package <lightdm-gtk-greeter> info. ###
+
+original_name=lightdm-gtk-greeter
+name=lightdm-gtk-greeter
+version=2.0.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

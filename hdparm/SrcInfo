@@ -1,0 +1,4 @@
+source=hdparm
+version=9.58
+depends=
+package=hdparm

@@ -1,0 +1,4 @@
+source=grub
+version=2.02
+depends="unifont_12.1.03"
+package=grub

@@ -1,0 +1,11 @@
+### Package <npth> info. ###
+
+original_name=npth
+name=npth
+version=1.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

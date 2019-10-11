@@ -1,0 +1,4 @@
+source=shared-mime-info
+version=1.12
+depends="glib_2.60.4 libxml2_2.9.9"
+package=shared-mime-info

@@ -1,0 +1,4 @@
+source=libevdev
+version=1.7.0
+depends="xorg-server_1.20.5"
+package=libevdev

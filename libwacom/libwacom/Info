@@ -1,0 +1,11 @@
+### Package <libwacom> info. ###
+
+original_name=libwacom
+name=libwacom
+version=0.33
+package=$name-$version
+depends="libgudev_1.0"
+installbefore=
+installafter=
+replaces="$name"
+

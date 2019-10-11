@@ -1,0 +1,4 @@
+source=libXft
+version=2.3.3
+depends="libXfont2_2.0.3"
+package=libXft

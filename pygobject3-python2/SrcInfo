@@ -1,0 +1,4 @@
+source=pygobject3-python2
+version=3.32.2
+depends="pycairo-python2_1.18.1 Python2_2.7.16 gobject-introspection_1.60.2"
+package=pygobject3-python2

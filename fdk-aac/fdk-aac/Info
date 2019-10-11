@@ -1,0 +1,11 @@
+### Package <fdk-aac> info. ###
+
+original_name=fdk-aac
+name=fdk-aac
+version=2.0.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

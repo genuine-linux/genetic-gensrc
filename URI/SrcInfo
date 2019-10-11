@@ -1,0 +1,4 @@
+source=URI
+version=1.76
+depends="perl_5.28.1"
+package=URI

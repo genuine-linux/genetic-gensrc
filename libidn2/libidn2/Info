@@ -1,0 +1,11 @@
+### Package <libidn2> info. ###
+
+original_name=libidn2
+name=libidn2
+version=2.1.1
+package=$name-$version
+depends="gtk-doc_1.29 libunistring_0.9.10"
+installbefore=
+installafter=
+replaces="$name"
+

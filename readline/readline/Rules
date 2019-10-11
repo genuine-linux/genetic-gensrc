@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+sed -i '/MV.*old/d' Makefile.in
+sed -i '/{OLDSUFF}/c:' support/shlib-install
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make SHLIB_LIBS="-L/dnatools/lib -lncursesw";
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/lib;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make SHLIB_LIBS="-L/dnatools/lib -lncursesw" DESTDIR=${GENPKGDESTDIR} install;
+	mv -v ${GENPKGDESTDIR}/usr/lib/lib{readline,history}.so.* ${GENPKGDESTDIR}/lib
+	chmod -v u+w ${GENPKGDESTDIR}/lib/lib{readline,history}.so.*
+	install -v -m644 doc/*.{ps,pdf,html,dvi} ${GENPKGDESTDIR}/usr/share/doc/$name-$version
+fi;
+

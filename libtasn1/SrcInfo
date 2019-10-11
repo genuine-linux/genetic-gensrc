@@ -1,0 +1,4 @@
+source=libtasn1
+version=4.13
+depends="help2man_1.47.10"
+package=libtasn1

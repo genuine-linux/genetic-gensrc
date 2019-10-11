@@ -1,0 +1,11 @@
+### Package <glibmm> info. ###
+
+original_name=glibmm
+name=glibmm
+version=2.60.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

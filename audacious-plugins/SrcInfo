@@ -1,0 +1,4 @@
+source=audacious-plugins
+version=3.10.1
+depends=
+package=audacious-plugins

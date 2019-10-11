@@ -1,0 +1,4 @@
+source=highlight
+version=3.49
+depends="lua_5.3.5 boost_1.70.0"
+package=highlight

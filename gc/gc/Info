@@ -1,0 +1,11 @@
+### Package <gc> info. ###
+
+original_name=gc
+name=gc
+version=8.0.2
+package=$name-$version
+depends="libatomic-ops_7.6.8"
+installbefore=
+installafter=
+replaces="$name"
+

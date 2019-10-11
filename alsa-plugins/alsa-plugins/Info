@@ -1,0 +1,11 @@
+### Package <alsa-plugins> info. ###
+
+original_name=alsa-plugins
+name=alsa-plugins
+version=1.1.9
+package=$name-$version
+depends="alsa-lib_1.1.9 libsamplerate_0.1.9 pulseaudio_12.99.3 speex_1.2.0 jack2_1.9.12"
+installbefore=
+installafter=
+replaces="$name"
+

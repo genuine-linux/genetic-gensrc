@@ -1,0 +1,11 @@
+### Package <font-jis-misc> info. ###
+
+original_name=font-jis-misc
+name=font-jis-misc
+version=1.0.3
+package=$name-$version
+depends="xcursor-themes_1.0.6"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <atom> info. ###
+
+original_name=atom
+name=atom
+version=1.40.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

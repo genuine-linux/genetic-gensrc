@@ -1,0 +1,11 @@
+### Package <cyrus-sasl> info. ###
+
+original_name=cyrus-sasl
+name=cyrus-sasl
+version=2.1.27
+package=$name-$version
+depends="Linux-PAM_1.3.1 krb5_1.17 dmalloc_5.5.2 sqlite_3.27.1"
+installbefore=
+installafter=
+replaces="$name"
+

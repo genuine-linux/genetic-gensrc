@@ -1,0 +1,11 @@
+### Package <libcap-pam> info. ###
+
+original_name=libcap-pam
+name=libcap-pam
+version=2.26
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

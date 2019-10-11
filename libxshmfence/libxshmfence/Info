@@ -1,0 +1,11 @@
+### Package <libxshmfence> info. ###
+
+original_name=libxshmfence
+name=libxshmfence
+version=1.3
+package=$name-$version
+depends="libxkbfile_1.1.0"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <libXtst> info. ###
+
+original_name=libXtst
+name=libXtst
+version=1.2.3
+package=$name-$version
+depends="libXres_1.2.0"
+installbefore=
+installafter=
+replaces="$name"
+

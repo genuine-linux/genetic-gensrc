@@ -1,0 +1,4 @@
+source=help2man
+version=1.47.10
+depends=
+package=help2man

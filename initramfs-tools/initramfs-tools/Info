@@ -1,0 +1,11 @@
+### Package <initramfs-tools> info. ###
+
+original_name=initramfs-tools
+name=initramfs-tools
+version=4.1.5
+package=$name-$version
+depends="busybox_1.31.0 debianutils_4.8.6.3"
+installbefore=
+installafter=
+replaces="$name"
+

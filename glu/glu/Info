@@ -1,0 +1,11 @@
+### Package <glu> info. ###
+
+original_name=glu
+name=glu
+version=9.0.0
+package=$name-$version
+depends="mesa_12.0.5"
+installbefore=
+installafter=
+replaces="$name"
+

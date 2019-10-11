@@ -1,0 +1,11 @@
+### Package <font-adobe-75dpi> info. ###
+
+original_name=font-adobe-75dpi
+name=font-adobe-75dpi
+version=1.0.3
+package=$name-$version
+depends="xcursor-themes_1.0.6"
+installbefore=
+installafter=
+replaces="$name"
+

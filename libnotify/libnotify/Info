@@ -1,0 +1,11 @@
+### Package <libnotify> info. ###
+
+original_name=libnotify
+name=libnotify
+version=0.7.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

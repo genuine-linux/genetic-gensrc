@@ -1,0 +1,11 @@
+### Package <sqlite> info. ###
+
+original_name=sqlite
+name=sqlite
+version=3.29.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

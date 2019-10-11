@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir build.meson
+cd build.meson
+
+echo " --- Meson <$name ($version)> ---";
+meson --prefix /usr              \
+      --sysconfdir /etc          \
+      --localstatedir /var       \
+      -Dlibaudit=no              \
+      -Dnmtui=true               \
+      -Ddocs=true		\
+      -Dovs=false                \
+      -Dppp=false                \
+      -Dselinux=false            \
+      -Dudev_dir=/lib/udev       \
+      -Dsession_tracking=elogind \
+      -Dmodem_manager=true      \
+      -Dsystemdsystemunitdir=no  \
+      -Dsystemd_journal=false    \
+      -Dqt=false                 \
+      ..
+
+echo " --- Ninja <$name ($version)> ---";
+ninja
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+echo " --- Make Install <$name ($version)> ---";
+DESTDIR=${GENPKGDESTDIR} ninja install;
+mv -v $GENPKGDESTDIR/usr/share/doc/$name{,-$version}
+cp -av ../../$name/files/* $GENPKGDESTDIR/;
+

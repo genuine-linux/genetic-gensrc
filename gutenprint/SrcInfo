@@ -1,0 +1,4 @@
+source=gutenprint
+version=5.3.3
+depends=
+package=gutenprint

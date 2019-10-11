@@ -1,0 +1,4 @@
+source=font-adobe-utopia-type1
+version=1.0.4
+depends="font-alias_1.0.3"
+package=font-adobe-utopia-type1

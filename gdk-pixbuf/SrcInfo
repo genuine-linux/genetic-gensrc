@@ -1,0 +1,4 @@
+source=gdk-pixbuf
+version=2.38.1
+depends="glib_2.60.7 libjpeg-turbo_2.0.2 libpng_1.6.37 shared-mime-info_1.12 librsvg_2.44.15 object-introspection_1.60.2 gtk-doc_1.31"
+package=gdk-pixbuf

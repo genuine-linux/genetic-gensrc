@@ -1,0 +1,11 @@
+### Package <libmicrohttpd> info. ###
+
+original_name=libmicrohttpd
+name=libmicrohttpd
+version=0.9.66
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

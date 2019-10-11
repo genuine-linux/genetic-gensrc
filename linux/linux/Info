@@ -1,0 +1,11 @@
+### Package <linux> info. ###
+
+original_name=linux
+name=linux
+version=4.20.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

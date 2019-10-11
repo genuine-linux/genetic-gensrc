@@ -1,0 +1,4 @@
+source=autoconf
+version=2.69
+depends=gcc_8.2.0
+package=autoconf

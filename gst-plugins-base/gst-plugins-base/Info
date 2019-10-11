@@ -1,0 +1,11 @@
+### Package <gst-plugins-base> info. ###
+
+original_name=gst-plugins-base
+name=gst-plugins-base
+version=1.16.0
+package=$name-$version
+depends="gstreamer_1.16.0 alsa-lib_1.1.9 cdparanoia-III_10.2 gobject-introspection_1.62.0 iso-codes_4.3 libogg_1.3.4 libtheora_1.3.4 libvorbis_1.3.6 libxshmfence_1.3 gtk3+_3.24.11 gtk-doc_1.32 opus_1.3.1 SDL_1.2.15"
+installbefore=
+installafter=
+replaces="$name"
+

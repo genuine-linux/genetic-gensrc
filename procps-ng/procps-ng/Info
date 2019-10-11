@@ -1,0 +1,11 @@
+### Package <procps-ng> info. ###
+
+original_name=procps-ng
+name=procps-ng
+version=3.3.15
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

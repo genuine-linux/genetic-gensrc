@@ -1,0 +1,4 @@
+source=libwebp
+version=1.0.3
+depends="libjpeg-turbo_2.0.3 libpng_1.6.37 tiff_4.0.10 freeglut_3.0.0 giflib_5.2.1"
+package=libwebp

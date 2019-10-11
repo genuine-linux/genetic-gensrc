@@ -1,0 +1,11 @@
+### Package <nettle> info. ###
+
+original_name=nettle
+name=nettle
+version=3.4.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <protobuf> info. ###
+
+original_name=protobuf
+name=protobuf
+version=3.10.0rc1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

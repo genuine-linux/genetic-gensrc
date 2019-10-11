@@ -1,0 +1,4 @@
+source=SDL2
+version=2.0.10
+depends="alsa-lib_1.1.9 nasm_2.14.02 pth_2.0.7 xorg-server_1.20.5 DirectFB_1.6.3"
+package=SDL2

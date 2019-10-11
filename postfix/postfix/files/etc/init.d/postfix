@@ -1,0 +1,77 @@
+#!/usr/bin/openrc-run
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+extra_commands="checkconfig"
+extra_started_commands="reload"
+
+: ${POSTFIX_CONFDIR:=/etc/postfix}
+: ${POSTFIX_QDIR:=/var/spool/postfix}
+: ${POSTFIX_CONFIG:=${POSTFIX_CONFDIR}/main.cf}
+: ${POSTFIX_PIDFILE:=${POSTFIX_QDIR}/pid/master.pid}
+: ${POSTFIX_BINARY:=/usr/bin/postfix}
+
+
+depend() {
+        need net
+        use logger dns
+        provide mta
+        if [ "${rc_need+set}" = "set" ] ; then
+                : # Do nothing, the user has explicitly set rc_need
+        else
+                local x warn_addr
+                for x in $(awk '/^ListenAddress/{ print $2 }' "$POSTFIX_CONFIG" 2>/dev/null) ; do
+                        case "${x}" in
+                                0.0.0.0|0.0.0.0:*) ;;
+                                ::|\[::\]*) ;;
+                                *) warn_addr="${warn_addr} ${x}" ;;
+                        esac
+                done
+                if [ -n "${warn_addr}" ] ; then
+                        need net
+                        ewarn "You are binding an interface in ListenAddress statement in your postfix_config!"
+                        ewarn "You must add rc_need=\"net.FOO\" to your /etc/conf.d/postfixd"
+                        ewarn "where FOO is the interface(s) providing the following address(es):"
+                        ewarn "${warn_addr}"
+                fi
+        fi
+}
+
+checkconfig() {
+        echo "Yo - go find ${POSTFIX_CONFIG}"
+        if [ ! -e "${POSTFIX_CONFIG}" ] ; then
+                eerror "You need an ${POSTFIX_CONFIG} file to run postfix"
+                return 1
+        fi
+
+
+}
+
+start() {
+        echo "Go find the config"
+        checkconfig || return 1
+
+        ebegin "Starting ${SVCNAME}"
+        echo "PIDFILE ${POSTFIX_PIDFILE}"
+        start-stop-daemon --make-pid --pidfile="${POSTFIX_PIDFILE}" --start --exec "${POSTFIX_BINARY}" start 
+        eend $?
+}
+
+stop() {
+        if [ "${RC_CMD}" = "restart" ] ; then
+                checkconfig || return 1
+        fi
+
+        ebegin "Stopping ${SVCNAME}"
+        start-stop-daemon --stop --exec "${POSTFIX_BINARY}" \
+            --pidfile "${POSTFIX_PIDFILE}" --quiet
+        eend $?
+}
+
+reload() {
+        checkconfig || return 1
+        ebegin "Reloading ${SVCNAME}"
+        start-stop-daemon --signal HUP \
+            --exec "${POSTFIX_BINARY}" --pidfile "${POSTFIX_PIDFILE}"
+        eend $?
+}

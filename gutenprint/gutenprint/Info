@@ -1,0 +1,11 @@
+### Package <gutenprint> info. ###
+
+original_name=gutenprint
+name=gutenprint
+version=5.3.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

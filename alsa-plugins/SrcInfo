@@ -1,0 +1,4 @@
+source=alsa-plugins
+version=1.1.9
+depends="alsa-lib_1.1.9 libsamplerate_0.1.9 pulseaudio_12.99.3 speex_1.2.0 jack2_1.9.12"
+package=alsa-plugins

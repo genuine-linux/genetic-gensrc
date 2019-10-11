@@ -1,0 +1,4 @@
+source=startup-notification
+version=0.12
+depends=
+package=startup-notification

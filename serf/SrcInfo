@@ -1,0 +1,4 @@
+source=serf
+version=1.3.9
+depends="apr-util_1.6.1 scons_3.1.1 krb5_1.17"
+package=serf

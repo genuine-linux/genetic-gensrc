@@ -1,0 +1,11 @@
+### Package <glib> info. ###
+
+original_name=glib
+name=glib
+version=2.61.1
+package=$name-$version
+depends="libxslt_1.1.33 pcre_8.43 docbook-xml_4.5 docbooc-xsl-nons_1.79.2 gtk-doc_1.29"
+installbefore=
+installafter=
+replaces="$name"
+

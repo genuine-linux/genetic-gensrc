@@ -1,0 +1,11 @@
+### Package <openrc> info. ###
+
+original_name=openrc
+name=openrc
+version=0.41.2
+package=$name-$version
+depends="sysvinit_2.93 eudev_3.2.7"
+installbefore=
+installafter=
+replaces="$name"
+

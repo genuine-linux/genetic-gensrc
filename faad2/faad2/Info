@@ -1,0 +1,11 @@
+### Package <faad2> info. ###
+
+original_name=faad2
+name=faad2
+version=2.8.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

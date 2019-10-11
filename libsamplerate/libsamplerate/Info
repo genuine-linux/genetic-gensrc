@@ -1,0 +1,11 @@
+### Package <libsamplerate> info. ###
+
+original_name=libsamplerate
+name=libsamplerate
+version=0.1.9
+package=$name-$version
+depends="fftw_3.3.8 libsndfile_1.0.28"
+installbefore=
+installafter=
+replaces="$name"
+

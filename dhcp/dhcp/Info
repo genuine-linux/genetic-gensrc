@@ -1,0 +1,11 @@
+### Package <dhcp> info. ###
+
+original_name=dhcp
+name=dhcp
+version=4.4.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

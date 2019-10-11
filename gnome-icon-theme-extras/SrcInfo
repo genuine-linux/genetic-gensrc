@@ -1,0 +1,4 @@
+source=gnome-icon-theme-extras
+version=3.12.0
+depends=
+package=gnome-icon-theme-extras

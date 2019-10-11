@@ -1,0 +1,4 @@
+source=taglib
+version=1.11.1
+depends="cmake_3.15.3"
+package=taglib

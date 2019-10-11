@@ -1,0 +1,11 @@
+### Package <xarchiver> info. ###
+
+original_name=xarchiver
+name=xarchiver
+version=0.5.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

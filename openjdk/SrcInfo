@@ -1,0 +1,4 @@
+source=openjdk
+version=12.0.2
+depends=
+package=openjdk

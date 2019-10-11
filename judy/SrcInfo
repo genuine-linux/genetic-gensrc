@@ -1,0 +1,4 @@
+source=judy
+version=1.0.5
+depends=
+package=judy

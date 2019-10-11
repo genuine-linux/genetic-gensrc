@@ -1,0 +1,4 @@
+source=rpcbind
+version=1.2.5
+depends="libtirpc_1.1.4"
+package=rpcbind

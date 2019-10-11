@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version/src;
+
+# configure 
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr            \
+            --sysconfdir=/etc        \
+            --localstatedir=/var/lib \
+            --with-system-et         \
+            --with-system-ss         \
+            --with-system-verto=no   \
+            --enable-dns-for-realm
+fi
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{bin,lib,etc};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+
+	for f in gssapi_krb5 gssrpc k5crypto kadm5clnt kadm5srv \
+         kdb5 kdb_ldap krad krb5 krb5support verto ; do
+	    find $GENPKGDESTDIR/usr/lib -type f -name "lib$f*.so*" -exec chmod -v 755 {} \;
+	done
+
+	mv -v $GENPKGDESTDIR/usr/lib/libkrb5.so.3*        $GENPKGDESTDIR/lib &&
+	mv -v $GENPKGDESTDIR/usr/lib/libk5crypto.so.3*    $GENPKGDESTDIR/lib &&
+	mv -v $GENPKGDESTDIR/usr/lib/libkrb5support.so.0* $GENPKGDESTDIR/lib &&
+
+	ln -v -sf ../../lib/libkrb5.so.3.3        $GENPKGDESTDIR/usr/lib/libkrb5.so        &&
+	ln -v -sf ../../lib/libk5crypto.so.3.1    $GENPKGDESTDIR/usr/lib/libk5crypto.so    &&
+	ln -v -sf ../../lib/libkrb5support.so.0.1 $GENPKGDESTDIR/usr/lib/libkrb5support.so &&
+
+	mv -v $GENPKGDESTDIR/usr/bin/ksu $GENPKGDESTDIR/bin &&
+	chmod -v 755 $GENPKGDESTDIR/bin/ksu   &&
+
+	install -v -dm755 $GENPKGDESTDIR/usr/share/doc/$name-$version &&
+	cp -vfr ../doc/*  $GENPKGDESTDIR/usr/share/doc/$name-$version
+
+	cp -v ../../$name/files/krb5.conf $GENPKGDESTDIR/etc/
+fi;
+

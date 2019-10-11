@@ -1,0 +1,4 @@
+source=meson
+version=0.51.2
+depends="Python_3.7.2 ninja_1.9.0"
+package=meson

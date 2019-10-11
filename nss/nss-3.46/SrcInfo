@@ -1,0 +1,4 @@
+source=nss
+version=3.46
+depends="nspr_4.20 sqlite_3.27.1 p11-kit_0.23.15"
+package=nss

@@ -1,0 +1,11 @@
+### Package <MarkupSafe> info. ###
+
+original_name=MarkupSafe
+name=MarkupSafe
+version=1.0
+package=$name-$version
+depends="Python2_2.7.15 Python_3.7.2"
+installbefore=
+installafter=
+replaces="$name"
+

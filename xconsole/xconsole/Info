@@ -1,0 +1,11 @@
+### Package <xconsole> info. ###
+
+original_name=xconsole
+name=xconsole
+version=1.0.7
+package=$name-$version
+depends="libxshmfence_1.3"
+installbefore=
+installafter=
+replaces="$name"
+

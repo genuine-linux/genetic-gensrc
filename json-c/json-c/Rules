@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+./configure --host=$GENUINE_HOST \
+	--target=$GENUINE_TARGET \
+	--build=$GENUINE_TARGET \
+	--prefix=/usr \
+	--sysconfdir=/etc \
+	--docdir=/usr/share/doc/$name-$version \
+	--disable-static \
+	--enable-shared
+
+# CMake configure #
+#if test -f "CMakeLists.txt"; then
+#	echo " --- CMake Configure <$name ($version)> ---";
+#	mkdir build.cmake;
+#	cd build.cmake;
+#	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+#		-DINSTALL_PKGCONFIG_DIR=/usr/lib/pkgconfig \
+#		../;
+#fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	cp -a bits.h json_object_iterator.h \
+		json_object_private.h json_visit.h \
+		math_compat.h random_seed.h \
+		snprintf_compat.h strdup_compat.h \
+		strerror_override.h strerror_override_private.h \
+		vasprintf_compat.h $GENPKGDESTDIR/usr/include/json-c/;
+fi;

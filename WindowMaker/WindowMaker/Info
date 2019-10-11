@@ -1,0 +1,11 @@
+### Package <WindowMaker> info. ###
+
+original_name=WindowMaker
+name=WindowMaker
+version=0.95.8
+package=$name-$version
+depends="libexif_0.6.21"
+installbefore=
+installafter=
+replaces="$name"
+

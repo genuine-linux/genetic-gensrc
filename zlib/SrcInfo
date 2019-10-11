@@ -1,0 +1,4 @@
+source=zlib
+version=1.2.11
+depends=glibc_2.29
+package=zlib

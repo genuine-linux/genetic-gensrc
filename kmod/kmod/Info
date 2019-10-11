@@ -1,0 +1,11 @@
+### Package <kmod> info. ###
+
+original_name=kmod
+name=kmod
+version=26
+package=$name-$version
+depends="libxml2_2.9.9 libxslt_1.1.33"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=libdvdcss
+version=1.4.2
+depends=
+package=libdvdcss

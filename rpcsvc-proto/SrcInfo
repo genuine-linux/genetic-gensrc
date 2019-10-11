@@ -1,0 +1,4 @@
+source=rpcsvc-proto
+version=1.4
+depends=
+package=rpcsvc-proto

@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+	make html;
+	LC_ALL="en_US.UTF-8" makeinfo --plaintext -o doc/r5rs/r5rs.txt doc/r5rs/r5rs.texi &&
+	LC_ALL="en_US.UTF-8" makeinfo --plaintext -o doc/ref/guile.txt doc/ref/guile.texi
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/share/{doc/$name-$version,gdb/auto-load/usr/lib};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	make install-html &&
+	mv $GENPKGDESTDIR/usr/lib/libguile-*-gdb.scm $GENPKGDESTDIR/usr/share/gdb/auto-load/usr/lib &&
+	cp -vR examples   $GENPKGDESTDIR/usr/share/doc/$name-$version   &&
+	find $GENPKGDESTDIR/usr/share/doc/$name-$version/examples -name "Makefile*" -delete         &&
+	for DIRNAME in r5rs ref; do
+	mkdir -pv $GENPKGDESTDIR/usr/share/doc/$name-$version/$DIRNAME &&
+	  install -v -m644  doc/${DIRNAME}/*.txt \
+             $GENPKGDESTDIR/usr/share/doc/$name-$version/${DIRNAME}
+	done &&
+	unset DIRNAME
+fi;
+

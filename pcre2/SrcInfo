@@ -1,0 +1,4 @@
+source=pcre2
+version=10.33
+depends=
+package=pcre2

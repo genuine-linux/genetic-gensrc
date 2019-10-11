@@ -1,0 +1,11 @@
+### Package <asciidoc> info. ###
+
+original_name=asciidoc
+name=asciidoc
+version=8.6.9
+package=$name-$version
+depends="Python2_2.7.15 docbook-xsl-nons_1.79.2"
+installbefore=
+installafter=
+replaces="$name"
+

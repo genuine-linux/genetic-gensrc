@@ -1,0 +1,4 @@
+source=transmission
+version=2.94
+depends=
+package=transmission

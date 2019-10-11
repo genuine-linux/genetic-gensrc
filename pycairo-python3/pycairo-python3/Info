@@ -1,0 +1,11 @@
+### Package <pycairo-python3> info. ###
+
+original_name=pycairo-python3
+name=pycairo-python3
+version=1.18.1
+package=$name-$version
+depends="Python_3.7.2 cairo_1.16.0"
+installbefore=
+installafter=
+replaces="$name"
+

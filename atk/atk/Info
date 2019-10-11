@@ -1,0 +1,11 @@
+### Package <atk> info. ###
+
+original_name=atk
+name=atk
+version=2.32.0
+package=$name-$version
+depends="glib_2.60.7 gobject-introspection_1.60.2 gtk-doc_1.31"
+installbefore=
+installafter=
+replaces="$name"
+

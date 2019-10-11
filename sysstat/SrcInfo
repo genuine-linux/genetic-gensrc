@@ -1,0 +1,4 @@
+source=sysstat
+version=12.1.5
+depends=
+package=sysstat

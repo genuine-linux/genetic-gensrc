@@ -1,0 +1,10 @@
+/usr/bin/apr-1-config
+/usr/lib/apr.exp
+/usr/lib/libapr-1.la
+/usr/lib/libapr-1.so.0.7.0
+/usr/lib/pkgconfig/apr-1.pc
+/usr/share/apr-1/build/mkdir.sh
+/usr/share/apr-1/build/make_var_export.awk
+/usr/share/apr-1/build/apr_rules.mk
+/usr/share/apr-1/build/make_exports.awk
+/usr/share/apr-1/build/libtool

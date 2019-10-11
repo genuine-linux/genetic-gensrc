@@ -1,0 +1,11 @@
+### Package <pixman> info. ###
+
+original_name=pixman
+name=pixman
+version=0.38.4
+package=$name-$version
+depends="libpng_1.6.37"
+installbefore=
+installafter=
+replaces="$name"
+

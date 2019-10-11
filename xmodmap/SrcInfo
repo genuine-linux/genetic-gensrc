@@ -1,0 +1,4 @@
+source=xmodmap
+version=1.0.10
+depends="iceauth_1.0.8"
+package=xmodmap

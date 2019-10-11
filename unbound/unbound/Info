@@ -1,0 +1,11 @@
+### Package <unbound> info. ###
+
+original_name=unbound
+name=unbound
+version=1.9.1
+package=$name-$version
+depends="libevent_2.1.8 nettle_3.4.1 Python2_2.7.15 swig_3.0.12"
+installbefore=
+installafter=
+replaces="$name"
+

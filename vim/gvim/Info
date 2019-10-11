@@ -1,0 +1,11 @@
+### Package <gvim> info. ###
+
+original_name=vim
+name=gvim
+version=8.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <dnsmasq> info. ###
+
+original_name=dnsmasq
+name=dnsmasq
+version=2.80
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <xfsprogs> info. ###
+
+original_name=xfsprogs
+name=xfsprogs
+version=5.0.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

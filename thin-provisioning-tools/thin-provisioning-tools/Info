@@ -1,0 +1,11 @@
+### Package <thin-provisioning-tools> info. ###
+
+original_name=thin-provisioning-tools
+name=thin-provisioning-tools
+version=0.8.3
+package=$name-$version
+depends="expat_2.2.6 libaio_0.3.111 boost_1.70.0"
+installbefore=
+installafter=
+replaces="$name"
+

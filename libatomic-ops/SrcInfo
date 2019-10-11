@@ -1,0 +1,4 @@
+source=libatomic-ops
+version=7.6.8
+depends=
+package=libatomic-ops

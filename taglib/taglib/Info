@@ -1,0 +1,11 @@
+### Package <taglib> info. ###
+
+original_name=taglib
+name=taglib
+version=1.11.1
+package=$name-$version
+depends="cmake_3.15.3"º
+installbefore=
+installafter=
+replaces="$name"
+

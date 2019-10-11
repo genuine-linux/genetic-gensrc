@@ -1,0 +1,11 @@
+### Package <font-daewoo-misc> info. ###
+
+original_name=font-daewoo-misc
+name=font-daewoo-misc
+version=1.0.3
+package=$name-$version
+depends="xcursor-themes_1.0.6"
+installbefore=
+installafter=
+replaces="$name"
+

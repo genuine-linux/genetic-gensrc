@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+	install -v -dm755 \
+        $GENPKGDESTDIR/usr/share/{man/man{1,3,5},doc/$name-$version/$name-devel} &&
+	install -v -m644 fc-*/*.1         $GENPKGDESTDIR/usr/share/man/man1 &&
+	install -v -m644 doc/*.3          $GENPKGDESTDIR/usr/share/man/man3 &&
+	install -v -m644 doc/fonts-conf.5 $GENPKGDESTDIR/usr/share/man/man5 &&
+	install -v -m644 doc/fontconfig-devel/* \
+                                  $GENPKGDESTDIR/usr/share/doc/$name-$version/$name-devel &&
+	install -v -m644 doc/*.{pdf,sgml,txt,html} \
+                                  $GENPKGDESTDIR/usr/share/doc/$name-$version
+fi;
+

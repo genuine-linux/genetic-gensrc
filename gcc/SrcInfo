@@ -1,0 +1,4 @@
+source=gcc
+version=8.2.0
+depends="zlib_1.2.11 gmp_6.1.2 mpfr_4.0.2 mpc_1.1.0 shadow_4.6"
+package=gcc

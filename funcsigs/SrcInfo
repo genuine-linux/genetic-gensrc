@@ -1,0 +1,4 @@
+source=funcsigs
+version=1.0.2
+depends="Python2_2.7.15 Python_3.7.2"
+package=funcsigs

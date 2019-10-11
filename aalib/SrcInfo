@@ -1,0 +1,4 @@
+source=aalib
+version=1.4rc5
+depends="xorg-server_1.20.5 slang_2.3.2 gpm_1.20.7"
+package=aalib

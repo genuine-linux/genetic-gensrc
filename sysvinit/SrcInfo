@@ -1,0 +1,4 @@
+source=sysvinit
+version=2.93
+depends="sysklogd_1.5.1"
+package=sysvinit

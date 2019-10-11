@@ -1,0 +1,11 @@
+### Package <sysvinit> info. ###
+
+original_name=sysvinit
+name=sysvinit
+version=2.93
+package=$name-$version
+depends="sysklogd_1.5.1"
+installbefore=
+installafter=
+replaces="$name"
+

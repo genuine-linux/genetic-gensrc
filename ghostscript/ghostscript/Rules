@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<PREFIX> = <rootfs> to install package #
+GENPKGPREFIX="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared \
+		--disable-compile-inits \
+		--enable-dynamic \
+		--with-system-libtiff;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+	make so;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGPREFIX}/usr;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make prefix=${GENPKGPREFIX}/usr install;
+	make prefix=${GENPKGPREFIX}/usr soinstall;
+	install -v -m644 base/*.h $GENPKGPREFIX/usr/include/ghostscript/
+	ln -sfvn ghostscript $GENPKGPREFIX/usr/include/ps
+	mv -v $GENPKGPREFIX/usr/share/doc/$name-$version/$version \
+		$GENPKGPREFIX/usr/share/doc/$name-$version
+	rm -rf $GENPKGPREFIX/usr/share/doc/$name-$version
+	cp -a examples/ $GENPKGPREFIX/usr/share/$name/$version
+fi;
+

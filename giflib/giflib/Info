@@ -1,0 +1,11 @@
+### Package <giflib> info. ###
+
+original_name=giflib
+name=giflib
+version=5.2.1
+package=$name-$version
+depends="xmlto_0.0.28"
+installbefore=
+installafter=
+replaces="$name"
+

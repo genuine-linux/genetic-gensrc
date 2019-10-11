@@ -1,0 +1,11 @@
+### Package <libmbim> info. ###
+
+original_name=libmbim
+name=libmbim
+version=1.20.0
+package=$name-$version
+depends="libgudev_233 gtk-doc_1.31 help2man_1.47.10"
+installbefore=
+installafter=
+replaces="$name"
+

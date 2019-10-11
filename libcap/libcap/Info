@@ -1,0 +1,11 @@
+### Package <libcap> info. ###
+
+original_name=libcap
+name=libcap
+version=2.26
+package=$name-$version
+depends=ncurses_6.1
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=sbc
+version=1.4
+depends="libsndfile_1.0.28"
+package=sbc

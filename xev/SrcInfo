@@ -1,0 +1,4 @@
+source=xev
+version=1.2.3
+depends="xdriinfo_1.0.6"
+package=xev

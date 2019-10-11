@@ -1,0 +1,4 @@
+source=unbound
+version=1.9.1
+depends="libevent_2.1.8 nettle_3.4.1 Python2_2.7.15 swig_3.0.12"
+package=unbound

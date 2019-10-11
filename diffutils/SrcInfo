@@ -1,0 +1,4 @@
+source=diffutils
+version=3.7
+depends=coreutils_8.30
+package=diffutils

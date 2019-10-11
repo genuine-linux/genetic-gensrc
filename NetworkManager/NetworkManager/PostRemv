@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rc-update del NetworkManager default
+groupdel netdev

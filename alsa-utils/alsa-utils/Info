@@ -1,0 +1,11 @@
+### Package <alsa-utils> info. ###
+
+original_name=alsa-utils
+name=alsa-utils
+version=1.1.9
+package=$name-$version
+depends="alsa-lib_1.1.9 fftw_3.3.8 libsamplerate_0.1.9 xmlto_0.0.28"
+installbefore=
+installafter=
+replaces="$name"
+

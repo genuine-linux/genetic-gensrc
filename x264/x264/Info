@@ -1,0 +1,11 @@
+### Package <x264> info. ###
+
+original_name=x264
+name=x264
+version=2245
+package=$name-$version
+depends="nasm_2.14.02"
+installbefore=
+installafter=
+replaces="$name"
+

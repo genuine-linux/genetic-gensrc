@@ -1,0 +1,4 @@
+source=bzip2
+version=1.0.6
+depends=
+package=bzip2

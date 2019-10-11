@@ -1,0 +1,4 @@
+source=msql
+version=4.2
+depends=
+package=msql

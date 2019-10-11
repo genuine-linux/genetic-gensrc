@@ -1,0 +1,11 @@
+### Package <libXfont2> info. ###
+
+original_name=libXfont2
+name=libXfont2
+version=2.0.3
+package=$name-$version
+depends="libfontenc_1.1.4"
+installbefore=
+installafter=
+replaces="$name"
+

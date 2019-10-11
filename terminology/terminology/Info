@@ -1,0 +1,11 @@
+### Package <terminology> info. ###
+
+original_name=terminology
+name=terminology
+version=1.5.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+
+# setup.py build
+if test -f "setup.py"; then
+	# Create install directory
+	mkdir -pv ${GENPKGDESTDIR};
+
+	echo " --- Python2 setyp.py Install <$name ($version)> ---";
+	DESTDIR=${GENPKGDESTDIR} python setup.py install --optimize=1 --root="$GENPKGDESTDIR";
+
+	echo " --- Python3 setyp.py Install <$name ($version)> ---";
+	DESTDIR=${GENPKGDESTDIR} python3 setup.py install --optimize=1 --root="$GENPKGDESTDIR";
+fi;
+

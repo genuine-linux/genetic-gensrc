@@ -1,0 +1,11 @@
+### Package <check> info. ###
+
+original_name=check
+name=check
+version=0.12.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

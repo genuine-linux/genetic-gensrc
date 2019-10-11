@@ -1,0 +1,11 @@
+### Package <librpcsecgss> info. ###
+
+original_name=librpcsecgss
+name=librpcsecgss
+version=0.19
+package=$name-$version
+depends="libgssglue_0.4"
+installbefore=
+installafter=
+replaces="$name"
+

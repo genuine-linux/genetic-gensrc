@@ -1,0 +1,11 @@
+### Package <util-macros> info. ###
+
+original_name=util-macros
+name=util-macros
+version=1.19.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

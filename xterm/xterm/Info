@@ -1,0 +1,11 @@
+### Package <xterm> info. ###
+
+original_name=xterm
+name=xterm
+version=348
+package=$name-$version
+depends="xwud_1.0.3 dejavu-fonts-ttf_2.37"
+installbefore=
+installafter=
+replaces="$name"
+

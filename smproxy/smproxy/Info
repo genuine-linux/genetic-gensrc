@@ -1,0 +1,11 @@
+### Package <smproxy> info. ###
+
+original_name=smproxy
+name=smproxy
+version=1.0.6
+package=$name-$version
+depends="setxkbmap_1.3.2"
+installbefore=
+installafter=
+replaces="$name"
+

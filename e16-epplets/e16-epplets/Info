@@ -1,0 +1,11 @@
+### Package <e16-epplets> info. ###
+
+original_name=e16-epplets
+name=e16-epplets
+version=0.1
+package=$name-$version
+depends="e16_1.0.20"
+installbefore=
+installafter=
+replaces="$name"
+

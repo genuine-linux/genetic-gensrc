@@ -1,0 +1,4 @@
+source=xf86-input-wacom
+version=0.37.0
+depends="libwacom_0.33 xorg-server_1.20.5"
+package=xf86-input-wacom

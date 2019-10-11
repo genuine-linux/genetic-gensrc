@@ -1,0 +1,4 @@
+source=gavl
+version=1.4.0
+depends="libpng_1.6.37 doxygen_1.8.16"
+package=gavl

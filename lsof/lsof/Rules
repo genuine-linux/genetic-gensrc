@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+./Configure -n linux
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make CFGL="-L./lib -ltirpc";
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/{share/man/man8,bin};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	install -v -m0755 -o root -g root lsof $GENPKGDESTDIR/usr/bin &&
+	install -v lsof.8 $GENPKGDESTDIR/usr/share/man/man8
+fi;
+

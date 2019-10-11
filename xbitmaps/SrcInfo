@@ -1,0 +1,4 @@
+source=xbitmaps
+version=1.1.2
+depends="util-macros_1.19.2"
+package=xbitmaps

@@ -1,0 +1,11 @@
+### Package <mpfr> info. ###
+
+original_name=mpfr
+name=mpfr
+version=4.0.2
+package=$name-$version
+depends=gmp_6.1.2
+installbefore=
+installafter=
+replaces="$name"
+

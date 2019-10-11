@@ -1,0 +1,11 @@
+### Package <xorgproto> info. ###
+
+original_name=xorgproto
+name=xorgproto
+version=2019.1
+package=$name-$version
+depends="util-macros_1.19.2 libxslt_1.1.33 xmlto_0.0.28 asciidoc_8.6.9 meson_0.49.2 ninja_1.9.0"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/share/vim/vim81;
+
+# make install
+export DESTDIR=$GENPKGDESTDIR
+export VIMRUNTIME=$GENPKGDESTDIR/usr/share/vim/vim81
+
+chmod +x INSTALL.sh
+./INSTALL.sh /usr

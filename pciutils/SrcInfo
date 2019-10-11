@@ -1,0 +1,4 @@
+source=pciutils
+version=3.6.2
+depends="curl_7.65.1 wget_1.20.3 lynx_2.8.9"
+package=pciutils

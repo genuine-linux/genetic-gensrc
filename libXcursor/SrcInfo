@@ -1,0 +1,4 @@
+source=libXcursor
+version=1.2.0
+depends="libXrender_0.9.10"
+package=libXcursor

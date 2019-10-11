@@ -1,0 +1,11 @@
+### Package <iw> info. ###
+
+original_name=iw
+name=iw
+version=5.3
+package=$name-$version
+depends="libnl_3.4.0"
+installbefore=
+installafter=
+replaces="$name"
+

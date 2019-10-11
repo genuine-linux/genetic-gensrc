@@ -1,0 +1,11 @@
+### Package <sharutils> info. ###
+
+original_name=sharutils
+name=sharutils
+version=4.15.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

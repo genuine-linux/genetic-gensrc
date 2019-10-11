@@ -1,0 +1,11 @@
+### Package <libSM> info. ###
+
+original_name=libSM
+name=libSM
+version=1.2.3
+package=$name-$version
+depends="libICE_1.0.9"
+installbefore=
+installafter=
+replaces="$name"
+

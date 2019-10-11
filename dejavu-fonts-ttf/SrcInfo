@@ -1,0 +1,4 @@
+source=dejavu-fonts-ttf
+version=2.37
+depends=
+package=dejavu-fonts-ttf

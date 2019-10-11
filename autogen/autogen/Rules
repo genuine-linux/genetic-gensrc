@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	CFLAGS="$CFLAGS -Wno-all" \
+	CXXFLAGS="CXXFLAGS -Wno-all" \
+	./configure \
+		--host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-dependency-tracking;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install && \
+	cd $GENPKGDESTDIR/usr/bin && \
+	ln -sfv x86_64-genuine-linux-gnu-getdefs getdefs && \
+	ln -sfv x86_64-genuine-linux-gnu-autogen autogen && \
+	ln -sfv x86_64-genuine-linux-gnu-xml2ag xml2ag && \
+	ln -sfv x86_64-genuine-linux-gnu-autoopts-config autoopts-config && \
+	ln -sfv x86_64-genuine-linux-gnu-columns columns;
+fi;
+

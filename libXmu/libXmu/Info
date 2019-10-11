@@ -1,0 +1,11 @@
+### Package <libXmu> info. ###
+
+original_name=libXmu
+name=libXmu
+version=1.1.3
+package=$name-$version
+depends="libXt_1.2.0"
+installbefore=
+installafter=
+replaces="$name"
+

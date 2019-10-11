@@ -1,0 +1,11 @@
+### Package <scons> info. ###
+
+original_name=scons
+name=scons
+version=3.1.1
+package=$name-$version
+depends="docbook-xsl-nons_1.7.92 libxslt_1.1.33"
+installbefore=
+installafter=
+replaces="$name"
+

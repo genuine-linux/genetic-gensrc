@@ -1,0 +1,11 @@
+### Package <libXres> info. ###
+
+original_name=libXres
+name=libXres
+version=1.2.0
+package=$name-$version
+depends="libXrandr_1.5.2"
+installbefore=
+installafter=
+replaces="$name"
+

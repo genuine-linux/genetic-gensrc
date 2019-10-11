@@ -1,0 +1,11 @@
+### Package <encodings> info. ###
+
+original_name=encodings
+name=encodings
+version=1.0.5
+package=$name-$version
+depends="font-util_1.3.1"
+installbefore=
+installafter=
+replaces="$name"
+

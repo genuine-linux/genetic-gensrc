@@ -1,0 +1,4 @@
+source=dialog
+version=0.7
+depends=
+package=dialog

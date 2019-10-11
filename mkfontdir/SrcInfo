@@ -1,0 +1,4 @@
+source=mkfontdir
+version=1.0.7
+depends="luit_1.1.1"
+package=mkfontdir

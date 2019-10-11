@@ -1,0 +1,11 @@
+### Package <file> info. ###
+
+original_name=file
+name=file
+version=5.36
+package=$name-$version
+depends=zlib_1.2.11
+installbefore=
+installafter=
+replaces="$name"
+

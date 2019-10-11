@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -pv ${GENPKGDESTDIR}/usr/share/{fonts/X11/TTF,fontconfig/conf.aval,doc/$name-$version};
+
+cp -av ttf/* $GENPKGDESTDIR/usr/share/fonts/X11/TTF/ &&
+cp -av fontconfig/* $GENPKGDESTDIR/usr/share/fontconfig/conf.aval/ &&
+cp -av README.md NEWS AUTHORS LICENSE BUGS *.txt $GENPKGDESTDIR/usr/share/doc/$name-$version;
+

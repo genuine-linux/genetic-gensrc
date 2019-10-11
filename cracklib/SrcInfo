@@ -1,0 +1,4 @@
+source=cracklib
+version=2.9.7
+depends=
+package=cracklib

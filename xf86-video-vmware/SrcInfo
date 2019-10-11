@@ -1,0 +1,4 @@
+source=xf86-video-vmware
+version=13.3.0
+depends="xorg-server_1.20.5"
+package=xf86-video-vmware

@@ -1,0 +1,11 @@
+### Package <autoconf213> info. ###
+
+original_name=autoconf213
+name=autoconf213
+version=2.13
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

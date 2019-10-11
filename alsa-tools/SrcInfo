@@ -1,0 +1,4 @@
+source=alsa-tools
+version=1.1.7
+depends="alsa-lib_1.1.9 gtk+_2.24.32 gtk3+_3.24.11 fltk_1.3.5"
+package=alsa-tools

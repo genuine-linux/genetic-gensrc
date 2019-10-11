@@ -1,0 +1,4 @@
+source=upower
+version=0.99.11
+depends="dbus-glib_0.110 libgudev_233 libusb_1.0.23 polkit_0.116 gobject-introspection_1.60.2 gtk-doc_1.31 pygobject3-python3_3.32.2"
+package=upower

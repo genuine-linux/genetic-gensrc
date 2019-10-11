@@ -1,0 +1,11 @@
+### Package <ghostscript-fonts-std> info. ###
+
+original_name=ghostscript-fonts-std
+name=ghostscript-fonts-std
+version=8.11
+package=$name-$version
+depends="ghostscript_9.27"
+installbefore=
+installafter=
+replaces="$name"
+

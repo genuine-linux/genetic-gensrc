@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	mkdir build &&
+	cd    build &&
+	meson --prefix=/usr                        \
+		--sysconfdir=/etc                    \
+		--localstatedir=/var                 \
+		--libdir /usr/lib \
+		-Dcgroup-controller=elogind          \
+		-Ddbuspolicydir=/etc/dbus-1/system.d \
+		..
+fi;
+
+# ninja
+if test -f "build.ninja"; then
+	echo " --- Ninja <$name ($version)> ---";
+	ninja;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# ninja install
+if test -f "build.ninja"; then
+	echo " --- Ninja Install <$name ($version)> ---";
+	DESTDIR=${GENPKGDESTDIR} ninja install &&
+	cd $GENPKGDESTDIR/usr/lib/pkgconfig &&
+	ln -sfv  libelogind.pc libsystemd.pc &&
+	cd - &&
+	cd $GENPKGDESTDIR/usr/include &&
+	ln -sfvn elogind systemd &&
+	cd - &&
+	cp -av ../../$name/files/* $GENPKGDESTDIR/;
+fi;
+

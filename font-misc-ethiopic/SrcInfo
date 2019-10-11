@@ -1,0 +1,4 @@
+source=font-misc-ethiopic
+version=1.0.3
+depends="font-util_1.0.3"
+package=font-misc-ethiopic

@@ -1,0 +1,11 @@
+### Package <libxcb> info. ###
+
+original_name=libxcb
+name=libxcb
+version=1.13.1
+package=$name-$version
+depends="libpthread-stubs_0.4 libXau_1.0.9 xcb-proto_1.13 libXdmcp_1.1.3 libxslt_1.1.33"
+installbefore=
+installafter=
+replaces="$name"
+

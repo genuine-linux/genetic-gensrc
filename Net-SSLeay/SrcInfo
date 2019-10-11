@@ -1,0 +1,4 @@
+source=Net-SSLeay
+version=1.86_06
+depends="perl_5.28.1"
+package=Net-SSLeay

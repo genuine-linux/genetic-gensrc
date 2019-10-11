@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
+		--sbindir=/sbin \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--enable-readline;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make DEBUG=-DNDEBUG     \
+	     INSTALL_USER=root  \
+	     INSTALL_GROUP=root \
+	     LOCAL_CONFIGURE_OPTIONS="--enable-readline";
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/lib;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make PKG_DOC_DIR=/usr/share/doc/$name-$version DESTDIR=${GENPKGDESTDIR} install;
+	make PKG_DOC_DIR=/usr/share/doc/$name-$version DESTDIR=${GENPKGDESTDIR} install-dev;
+	rm -rfv $GENPKGDESTDIR/usr/lib/libhandle.a                                &&
+	rm -rfv $GENPKGDESTDIR/lib/libhandle.{a,la,so}                            &&
+	ln -sfv ../../lib/libhandle.so.1 $GENPKGDESTDIR/usr/lib/libhandle.so      &&
+	sed -i "s@libdir='/lib@libdir='/usr/lib@" $GENPKGDESTDIR/usr/lib/libhandle.la
+fi;
+

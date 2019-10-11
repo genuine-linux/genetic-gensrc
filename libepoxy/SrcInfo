@@ -1,0 +1,4 @@
+source=libepoxy
+version=1.5.3
+depends=
+package=libepoxy

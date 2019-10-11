@@ -1,0 +1,11 @@
+### Package <libXpm> info. ###
+
+original_name=libXpm
+name=libXpm
+version=3.5.12
+package=$name-$version
+depends="libXmu_1.1.3"
+installbefore=
+installafter=
+replaces="$name"
+

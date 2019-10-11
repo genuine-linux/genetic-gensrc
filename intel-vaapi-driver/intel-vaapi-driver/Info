@@ -1,0 +1,11 @@
+### Package <intel-vaapi-driver> info. ###
+
+original_name=intel-vaapi-driver
+name=intel-vaapi-driver
+version=2.3.0
+package=$name-$version
+depends="libva_2.5.0"
+installbefore=
+installafter=
+replaces="$name"
+

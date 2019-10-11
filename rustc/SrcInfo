@@ -1,0 +1,4 @@
+source=rustc
+version=1.37.0
+depends="curl_7.65.3 cmake_3.15.2 libssh2_1.9.0 Python2_2.7.16 llvm_8.0.1"
+package=rustc

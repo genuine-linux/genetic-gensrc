@@ -1,0 +1,4 @@
+source=libao
+version=1.2.0
+depends=
+package=libao

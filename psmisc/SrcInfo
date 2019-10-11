@@ -1,0 +1,4 @@
+source=psmisc
+version=23.2
+depends=sed_4.7
+package=psmisc

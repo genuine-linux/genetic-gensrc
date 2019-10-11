@@ -1,0 +1,11 @@
+### Package <itstool> info. ###
+
+original_name=itstool
+name=itstool
+version=2.0.5
+package=$name-$version
+depends="docbook-xml_4.5"
+installbefore=
+installafter=
+replaces="$name"
+

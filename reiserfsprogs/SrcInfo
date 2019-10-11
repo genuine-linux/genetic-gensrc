@@ -1,0 +1,4 @@
+source=reiserfsprogs
+version=3.6.27
+depends=
+package=reiserfsprogs

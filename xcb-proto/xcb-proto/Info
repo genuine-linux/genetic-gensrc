@@ -1,0 +1,11 @@
+### Package <xcb-proto> info. ###
+
+original_name=xcb-proto
+name=xcb-proto
+version=1.13
+package=$name-$version
+depends="libxml2_2.9.9"
+installbefore=
+installafter=
+replaces="$name"
+

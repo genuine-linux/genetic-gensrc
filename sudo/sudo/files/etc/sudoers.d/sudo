@@ -1,0 +1,2 @@
+Defaults secure_path="/usr/bin:/bin:/usr/sbin:/sbin"
+%wheel ALL=(ALL) ALL

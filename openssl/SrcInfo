@@ -1,0 +1,4 @@
+source=openssl
+version=1.1.1a
+depends=
+package=openssl

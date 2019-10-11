@@ -1,0 +1,4 @@
+source=man-pages
+version=4.16
+depends=
+package=man-pages

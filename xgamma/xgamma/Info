@@ -1,0 +1,11 @@
+### Package <xgamma> info. ###
+
+original_name=xgamma
+name=xgamma
+version=1.0.6
+package=$name-$version
+depends="xev_1.2.3"
+installbefore=
+installafter=
+replaces="$name"
+

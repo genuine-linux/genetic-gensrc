@@ -1,0 +1,11 @@
+### Package <bash-completion> info. ###
+
+original_name=bash-completion
+name=bash-completion
+version=2.9
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

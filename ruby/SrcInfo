@@ -1,0 +1,4 @@
+source=ruby
+version=2.6.3
+depends="db_5.3.28 libyaml_0.2.2"
+package=ruby

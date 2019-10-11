@@ -1,0 +1,4 @@
+source=apr
+version=1.7.0
+depends=
+package=apr

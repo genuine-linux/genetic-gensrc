@@ -1,0 +1,11 @@
+### Package <libvdpau> info. ###
+
+original_name=libvdpau
+name=libvdpau
+version=1.1.1
+package=$name-$version
+depends="libxshmfence_1.3"
+installbefore=
+installafter=
+replaces="$name"
+

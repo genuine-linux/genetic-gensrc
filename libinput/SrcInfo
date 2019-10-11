@@ -1,0 +1,4 @@
+source=libinput
+version=1.13.4
+depends="libevdev_1.7.0 mtdev_1.1.5 libwacom_0.33"
+package=libinput

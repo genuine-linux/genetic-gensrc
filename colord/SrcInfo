@@ -1,0 +1,4 @@
+source=colord
+version=1.4.4
+depends="dbus_1.12.16 glib_2.60.7 lcms_2.9 polkit_0.116 sqlite_3.29.0 gobject-introspection_1.60.2 libgudev_233 libgusb_0.3.0 vala_0.46.0 libxslt_1.1.33 gtk-doc_1.31 bash-completion_2.9"
+package=colord

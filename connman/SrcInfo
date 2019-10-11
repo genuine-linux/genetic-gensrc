@@ -1,0 +1,4 @@
+source=connman
+version=1.37
+depends=
+package=connman

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rc-update add iwd default
+rc-update add ead default

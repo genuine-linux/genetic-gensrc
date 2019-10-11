@@ -1,0 +1,11 @@
+### Package <iwd> info. ###
+
+original_name=iwd
+name=iwd
+version=0.19
+package=$name-$version
+depends="readline_7.0 dbus_1.12.16"
+installbefore=
+installafter=
+replaces="$name"
+

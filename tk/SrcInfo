@@ -1,0 +1,4 @@
+source=tk
+version=8.6.9
+depends="tcl_8.6.9 libxshmfence_1.3"
+package=tk

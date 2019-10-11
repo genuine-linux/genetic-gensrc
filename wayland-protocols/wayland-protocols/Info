@@ -1,0 +1,11 @@
+### Package <wayland-protocols> info. ###
+
+original_name=wayland-protocols
+name=wayland-protocols
+version=1.17
+package=$name-$version
+depends="wayland_1.17.0"
+installbefore=
+installafter=
+replaces="$name"
+

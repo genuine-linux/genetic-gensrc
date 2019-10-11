@@ -1,0 +1,4 @@
+source=parted
+version=3.2
+depends=
+package=parted

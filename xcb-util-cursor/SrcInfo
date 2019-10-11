@@ -1,0 +1,4 @@
+source=xcb-util-cursor
+version=0.1.3
+depends="xcb-util_0.4.0"
+package=xcb-util-cursor

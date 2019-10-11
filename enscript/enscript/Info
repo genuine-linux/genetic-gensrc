@@ -1,0 +1,11 @@
+### Package <enscript> info. ###
+
+original_name=enscript
+name=enscript
+version=1.6.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

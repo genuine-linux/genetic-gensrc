@@ -1,0 +1,11 @@
+### Package <docbook2X> info. ###
+
+original_name=docbook2X
+name=docbook2X
+version=0.8.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

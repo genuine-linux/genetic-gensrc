@@ -1,0 +1,11 @@
+### Package <libisoburn> info. ###
+
+original_name=libisoburn
+name=libisoburn
+version=1.5.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

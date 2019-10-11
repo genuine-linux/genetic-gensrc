@@ -1,0 +1,11 @@
+### Package <gst-plugins-ugly> info. ###
+
+original_name=gst-plugins-ugly
+name=gst-plugins-ugly
+version=1.16.0
+package=$name-$version
+depends="gst-plugins-base_1.16.0 a52dec_0.7.4 libdvdread_6.0.1 x264_2245 gtk-doc_1.31 libmpeg2_0.5.1 libcdio_2.1.0"
+installbefore=
+installafter=
+replaces="$name"
+

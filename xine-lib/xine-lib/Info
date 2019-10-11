@@ -1,0 +1,11 @@
+### Package <xine-lib> info. ###
+
+original_name=xine-lib
+name=xine-lib
+version=1.2.9
+package=$name-$version
+depends="xorg-server_1.20.5 ffmpeg_4.2.1 alsa-lib_1.1.9 pulseaudio_12.2 jack2_1.19.12 libdvdnav_6.0.0 aalib_1.4rc5 faad2_2.8.8 flac_1.3.3 gdk-pixbuf_2.38.2 glu_9.0.1 a52dec_0.7.4 libmad_0.15.1b libmng_2.0.3 libtheora_1.1.1 libva_2.5.0 libvdpau_1.3 libvorbis_1.3.6 libvpx_1.8.1 mesa_19.1.6 SDL_1.2.15 speex_1.2.0 doxygen_1.8.16 v4l-utils_1.16.7 DirectFB_1.6.3"
+installbefore=
+installafter=
+replaces="$name"
+

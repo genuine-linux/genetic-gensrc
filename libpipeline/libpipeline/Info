@@ -1,0 +1,11 @@
+### Package <libpipeline> info. ###
+
+original_name=libpipeline
+name=libpipeline
+version=1.5.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=sgml-common
+version=0.6.3
+depends=
+package=sgml-common

@@ -1,0 +1,11 @@
+### Package <gnutls> info. ###
+
+original_name=gnutls
+name=gnutls
+version=3.6.6
+package=$name-$version
+depends="nettle_3.4.1 make-ca_1.2 libunistring_0.9.10 libtasn1_4.13 p11-kit_0.23.15 gtk-doc_1.29 guile_2.2.4 libidn2_2.1.1 net-tools_10.10.30 unbound_1.9.0 autogen_5.18.16"
+installbefore=
+installafter=
+replaces="$name"
+

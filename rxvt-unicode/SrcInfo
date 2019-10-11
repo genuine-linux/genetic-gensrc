@@ -1,0 +1,4 @@
+source=rxvt-unicode
+version=9.22
+depends=
+package=rxvt-unicode

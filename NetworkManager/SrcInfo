@@ -1,0 +1,5 @@
+source=NetworkManager
+version=1.20.0
+depends="dbus-glib_0.110 libndp_1.7 curl_7.65.3 dhcpcd_8.0.4 gobject-introspection_1.62.0 iptables_1.8.3 jansson_2.12 newt_0.52.21 nss_3.46 polkit_0.116 pygobject-python2_3.34.0 pygobject-python3_2.34.0 elogind_241.3 upower_0.99.11 vala-0.46.0 wpa-supplicant_2.9 bluez_5.50 dbus-python2_1.2.10 dbus-python3_1.2.10 gnutls_3.6.9 gtk-doc_1.31 libpsl_0.21.0 ModemManager_1.10.4 iwd_0.19"
+package=NetworkManager
+

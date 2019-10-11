@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make CCARGS="-DUSE_TLS -I/usr/include/openssl/ \
+		-DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl \
+		-DHAS_MYSQL -I/usr/include/mysql -DHAS_SQLITE" \
+		AUXLIBS="-lssl -lcrypto -lsasl2 \
+     		-lmysqlclient -lz -lm \
+		-lsqlite3 -lpthread" \
+     		makefiles;
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	sh postfix-install -non-interactive -package \
+		install_root=$GENPKGDESTDIR \
+		daemon_directory=/usr/lib/postfix \
+		manpage_directory=/usr/share/man \
+		html_directory=/usr/share/doc/$name-$version/html \
+		readme_directory=/usr/share/doc/$name-$version/readme
+	cp -av ../$name/files/* $GENPKGDESTDIR/;
+fi;
+

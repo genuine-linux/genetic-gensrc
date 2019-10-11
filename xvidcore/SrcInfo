@@ -1,0 +1,4 @@
+source=xvidcore
+version=1.3.5
+depends="yasm_1.3.0"
+package=xvidcore

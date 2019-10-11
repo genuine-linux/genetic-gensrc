@@ -1,0 +1,4 @@
+source=xcmsdb
+version=1.0.5
+depends="xbacklight_1.2.3"
+package=xcmsdb

@@ -1,0 +1,11 @@
+### Package <rage> info. ###
+
+original_name=rage
+name=rage
+version=0.3.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

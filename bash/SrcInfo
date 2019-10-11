@@ -1,0 +1,4 @@
+source=bash
+version=5.0
+depends=grep_3.3
+package=bash

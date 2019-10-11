@@ -1,0 +1,11 @@
+### Package <xorg-sgml-doctools> info. ###
+
+original_name=xorg-sgml-doctools
+name=xorg-sgml-doctools
+version=1.10.99.901
+package=$name-$version
+depends="docbook-xml_4.5 docbook-xls-nons_1.79.2"
+installbefore=
+installafter=
+replaces="$name"
+

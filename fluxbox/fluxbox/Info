@@ -1,0 +1,11 @@
+### Package <fluxbox> info. ###
+
+original_name=fluxbox
+name=fluxbox
+version=1.3.7
+package=$name-$version
+depends="imlib2_1.5.1"
+installbefore=
+installafter=
+replaces="$name"
+

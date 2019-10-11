@@ -1,0 +1,4 @@
+source=libassuan
+version=2.5.3
+depends="libgpg-error_1.35"
+package=libassuan

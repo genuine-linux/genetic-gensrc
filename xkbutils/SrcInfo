@@ -1,0 +1,4 @@
+source=xkbutils
+version=1.0.4
+depends="xkbevd_1.1.4"
+package=xkbutils

@@ -1,0 +1,11 @@
+### Package <which> info. ###
+
+original_name=which
+name=which
+version=2.21
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

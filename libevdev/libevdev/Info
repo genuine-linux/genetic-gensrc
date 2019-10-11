@@ -1,0 +1,11 @@
+### Package <libevdev> info. ###
+
+original_name=libevdev
+name=libevdev
+version=1.7.0
+package=$name-$version
+depends="xorg-server_1.20.5"
+installbefore=
+installafter=
+replaces="$name"
+

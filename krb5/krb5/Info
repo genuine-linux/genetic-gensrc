@@ -1,0 +1,11 @@
+### Package <krb5> info. ###
+
+original_name=krb5
+name=krb5
+version=1.17
+package=$name-$version
+depends=e2fsprogs_1.44.5
+installbefore=
+installafter=
+replaces="$name"
+

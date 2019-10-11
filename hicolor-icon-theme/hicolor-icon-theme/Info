@@ -1,0 +1,11 @@
+### Package <hicolor-icon-theme> info. ###
+
+original_name=hicolor-icon-theme
+name=hicolor-icon-theme
+version=0.17
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <xwd> info. ###
+
+original_name=xwd
+name=xwd
+version=1.0.7
+package=$name-$version
+depends="iceauth_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

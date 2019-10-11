@@ -1,0 +1,4 @@
+source=iptables
+version=1.8.2
+depends=nftables_0.9.0
+package=iptables

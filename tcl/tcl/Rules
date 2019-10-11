@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+#configure
+if test -f "unix/configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	export SRCDIR=`pwd` &&
+
+	cd unix &&
+
+	./configure --prefix=/usr           \
+            --mandir=/usr/share/man \
+            $([ $(uname -m) = x86_64 ] && echo --enable-64bit)
+fi
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make &&
+
+	sed -e "s#$SRCDIR/unix#/usr/lib#" \
+	    -e "s#$SRCDIR#/usr/include#"  \
+	    -i tclConfig.sh               &&
+
+	sed -e "s#$SRCDIR/unix/pkgs/tdbc1.1.0#/usr/lib/tdbc1.1.0#" \
+	    -e "s#$SRCDIR/pkgs/tdbc1.1.0/generic#/usr/include#"    \
+	    -e "s#$SRCDIR/pkgs/tdbc1.1.0/library#/usr/lib/tcl8.6#" \
+	    -e "s#$SRCDIR/pkgs/tdbc1.1.0#/usr/include#"            \
+	    -i pkgs/tdbc1.1.0/tdbcConfig.sh                        &&
+
+	sed -e "s#$SRCDIR/unix/pkgs/itcl4.1.2#/usr/lib/itcl4.1.2#" \
+	    -e "s#$SRCDIR/pkgs/itcl4.1.2/generic#/usr/include#"    \
+	    -e "s#$SRCDIR/pkgs/itcl4.1.2#/usr/include#"            \
+	    -i pkgs/itcl4.1.2/itclConfig.sh                        &&
+
+	unset SRCDIR
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install &&
+	make DESTDIR=${GENPKGDESTDIR} install-private-headers &&
+	ln -sfv tclsh8.6 $GENPKGDESTDIR/usr/bin/tclsh &&
+	chmod -v 755 $GENPKGDESTDIR/usr/lib/libtcl8.6.so &&
+	mkdir -pv $GENPKGDESTDIR/usr/share/doc/$name-$version &&
+	cp -rv ../html/* $GENPKGDESTDIR/usr/share/doc/$name-$version/
+fi;
+

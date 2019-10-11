@@ -1,0 +1,4 @@
+source=gtk+
+version=2.24.32
+depends="atk_2.32.0 gdk-pixbuf_2.38.1 pango_1.42.4 hicolor-icon-theme_0.17 docbook-utils_0.6.14 gobject-introspection_1.60.2 gtk-doc_1.31"
+package=gtk+

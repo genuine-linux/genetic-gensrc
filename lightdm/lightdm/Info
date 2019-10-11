@@ -1,0 +1,11 @@
+### Package <lightdm> info. ###
+
+original_name=lightdm
+name=lightdm
+version=1.30.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <fftw> info. ###
+
+original_name=fftw
+name=fftw
+version=3.3.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <diffutils> info. ###
+
+original_name=diffutils
+name=diffutils
+version=3.7
+package=$name-$version
+depends=coreutils_8.30
+installbefore=
+installafter=
+replaces="$name"
+

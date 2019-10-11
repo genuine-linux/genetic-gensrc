@@ -1,0 +1,11 @@
+### Package <libcroco> info. ###
+
+original_name=libcroco
+name=libcroco
+version=0.6.13
+package=$name-$version
+depends="glib_2.60.0 libxml2_2.9.9 gtk-doc_1.31"
+installbefore=
+installafter=
+replaces="$name"
+

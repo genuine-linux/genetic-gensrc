@@ -1,0 +1,4 @@
+source=automake
+version=1.16.1
+depends=autoconf_2.69
+package=automake

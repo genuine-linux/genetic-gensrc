@@ -1,0 +1,4 @@
+source=babl
+version=0.1.72
+depends="lcms2_2.9"
+package=babl

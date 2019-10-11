@@ -1,0 +1,4 @@
+source=gawk
+version=4.2.1
+depends=automake15_1.15.1
+package=gawk

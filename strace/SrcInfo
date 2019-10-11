@@ -1,0 +1,4 @@
+source=strace
+version=4.6
+depends=
+package=strace

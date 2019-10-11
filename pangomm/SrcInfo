@@ -1,0 +1,4 @@
+source=pangomm
+version=2.42.0
+depends=
+package=pangomm

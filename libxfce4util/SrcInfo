@@ -1,0 +1,4 @@
+source=libxfce4util
+version=4.14.0
+depends=
+package=libxfce4util

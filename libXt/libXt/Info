@@ -1,0 +1,11 @@
+### Package <libXt> info. ###
+
+original_name=libXt
+name=libXt
+version=1.2.0
+package=$name-$version
+depends="libXScrnSaver_1.2.3"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=cairomm
+version=1.12.2
+depends=
+package=cairomm

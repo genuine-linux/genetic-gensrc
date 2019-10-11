@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/share/xml/docbook/xsl-stylesheets-nons-$version;
+
+install -v -m755 -d /usr/share/xml/docbook/xsl-stylesheets-nons-$version &&
+cp -v -R VERSION assembly common eclipse epub epub3 extensions fo        \
+         highlighting html htmlhelp images javahelp lib manpages params  \
+         profiling roundtrip slides template tests tools webhelp website \
+         xhtml xhtml-1_1 xhtml5                                          \
+    $GENPKGDESTDIR/usr/share/xml/docbook/xsl-stylesheets-nons-$version/;
+ln -s VERSION $GENPKGDESTDIR/usr/share/xml/docbook/xsl-stylesheets-nons-$version/VERSION.xsl;
+install -v -m644 -D README \
+                    $GENPKGDESTDIR/usr/share/doc/$name-$version/README.txt;
+install -v -m644    RELEASE-NOTES* NEWS* \
+                    $GENPKGDESTDIR/usr/share/doc/$name-$version/

@@ -1,0 +1,4 @@
+source=autogen
+version=5.18.16
+depends="libxml2_2.9.9 guile_2.4.4"
+package=autogen

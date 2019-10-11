@@ -1,0 +1,11 @@
+### Package <x265> info. ###
+
+original_name=x265
+name=x265
+version=3.1.2
+package=$name-$version
+depends="cmake_3.15.3 nasm_2.14.02"
+installbefore=
+installafter=
+replaces="$name"
+

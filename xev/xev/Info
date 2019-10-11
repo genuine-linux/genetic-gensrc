@@ -1,0 +1,11 @@
+### Package <xev> info. ###
+
+original_name=xev
+name=xev
+version=1.2.3
+package=$name-$version
+depends="xdriinfo_1.0.6"
+installbefore=
+installafter=
+replaces="$name"
+

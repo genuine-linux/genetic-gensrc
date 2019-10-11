@@ -1,0 +1,11 @@
+### Package <node> info. ###
+
+original_name=node
+name=node
+version=v10.16.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

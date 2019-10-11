@@ -1,0 +1,4 @@
+source=poppler-data
+version=0.4.9
+depends="poppler_0.80.0"
+package=poppler-data

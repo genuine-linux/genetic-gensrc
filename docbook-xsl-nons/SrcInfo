@@ -1,0 +1,4 @@
+source=docbook-xsl-nons
+version=1.79.2
+depends=libxml2_2.9.9
+package=docbook-xsl-nons

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+update-desktop-database -q
+gtk-update-icon-cache -tf --include-image-data /usr/share/icons/hicolor

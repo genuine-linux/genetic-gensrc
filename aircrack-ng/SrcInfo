@@ -1,0 +1,4 @@
+source=aircrack-ng
+version=1.5.2
+depends=
+package=aircrack-ng

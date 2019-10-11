@@ -1,0 +1,11 @@
+### Package <libXft> info. ###
+
+original_name=libXft
+name=libXft
+version=2.3.3
+package=$name-$version
+depends="libXfont2_2.0.3"
+installbefore=
+installafter=
+replaces="$name"
+

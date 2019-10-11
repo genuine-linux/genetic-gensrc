@@ -1,0 +1,11 @@
+### Package <pcre> info. ###
+
+original_name=pcre
+name=pcre
+version=8.43
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

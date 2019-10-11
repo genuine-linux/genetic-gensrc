@@ -1,0 +1,11 @@
+### Package <autoconf> info. ###
+
+original_name=autoconf
+name=autoconf
+version=2.69
+package=$name-$version
+depends=gcc_8.2.0
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <xscreensaver> info. ###
+
+original_name=xscreensaver
+name=xscreensaver
+version=5.43
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

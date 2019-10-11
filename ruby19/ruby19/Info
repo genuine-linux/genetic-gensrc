@@ -1,0 +1,11 @@
+### Package <ruby19> info. ###
+
+original_name=ruby19
+name=ruby19
+version=1.9.3
+package=$name-$version
+depends="db_5.3.28"
+installbefore=
+installafter=
+replaces="$name"
+

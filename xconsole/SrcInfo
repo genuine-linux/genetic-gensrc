@@ -1,0 +1,4 @@
+source=xconsole
+version=1.0.7
+depends="libxshmfence_1.3"
+package=xconsole

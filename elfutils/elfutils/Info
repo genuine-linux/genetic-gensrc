@@ -1,0 +1,11 @@
+### Package <elfutils> info. ###
+
+original_name=elfutils
+name=elfutils
+version=0.176
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

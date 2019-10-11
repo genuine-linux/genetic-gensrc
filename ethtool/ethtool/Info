@@ -1,0 +1,11 @@
+### Package <ethtool> info. ###
+
+original_name=ethtool
+name=ethtool
+version=5.1
+package=$name-$version
+depends="pkg-config_0.9.0"
+installbefore=
+installafter=
+replaces="$name"
+

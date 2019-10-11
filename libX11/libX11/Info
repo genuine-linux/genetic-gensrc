@@ -1,0 +1,11 @@
+### Package <libX11> info. ###
+
+original_name=libX11
+name=libX11
+version=1.6.8
+package=$name-$version
+depends="fontconfig_2.13.1 libxcb_1.13.1 xmlto_0.0.28 lynx_2.8.9 xtrans_1.4.0"
+installbefore=
+installafter=
+replaces="$name"
+

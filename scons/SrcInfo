@@ -1,0 +1,4 @@
+source=scons
+version=3.1.1
+depends="docbook-xsl-nons_1.7.92 libxslt_1.1.33"
+package=scons

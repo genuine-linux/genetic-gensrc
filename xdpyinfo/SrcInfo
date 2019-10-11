@@ -1,0 +1,4 @@
+source=xdpyinfo
+version=1.3.2
+depends="xcursorgen_1.0.7"
+package=xdpyinfo

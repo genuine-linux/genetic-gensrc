@@ -1,0 +1,11 @@
+### Package <mypaint-brushes> info. ###
+
+original_name=mypaint-brushes
+name=mypaint-brushes
+version=1.3.0
+package=$name-$version
+depends="libmypaint_1.4.0"
+installbefore=
+installafter=
+replaces="$name"
+

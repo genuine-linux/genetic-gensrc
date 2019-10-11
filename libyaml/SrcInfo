@@ -1,0 +1,4 @@
+source=libyaml
+version=0.2.2
+depends=
+package=libyaml

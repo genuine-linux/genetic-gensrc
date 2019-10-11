@@ -1,0 +1,4 @@
+source=groff
+version=1.22.4
+depends=
+package=groff

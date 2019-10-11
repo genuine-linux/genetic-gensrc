@@ -1,0 +1,4 @@
+source=XML-Simple
+version=2.25
+depends=
+package=XML-Simple

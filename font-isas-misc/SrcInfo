@@ -1,0 +1,4 @@
+source=font-isas-misc
+version=1.0.3
+depends="xcursor-themes_1.0.6"
+package=font-isas-misc

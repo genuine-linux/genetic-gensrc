@@ -1,0 +1,11 @@
+### Package <lame> info. ###
+
+original_name=lame
+name=lame
+version=3.100
+package=$name-$version
+depends="dmalloc_5.5.2 libsndfile_1.0.28 nasm_2.14.02"
+installbefore=
+installafter=
+replaces="$name"
+

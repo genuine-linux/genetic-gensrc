@@ -1,0 +1,4 @@
+source=expat
+version=2.2.6
+depends=
+package=expat

@@ -1,0 +1,4 @@
+source=dbus-glib
+version=0.110
+depends="dbus_1.12.16 glib_2.62.0 gtk-doc_1.31"
+package=dbus-glib

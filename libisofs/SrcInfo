@@ -1,0 +1,4 @@
+source=libisofs
+version=1.5.0
+depends=
+package=libisofs

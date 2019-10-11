@@ -1,0 +1,4 @@
+source=dbus-python2
+version=1.2.8
+depends="dbus_1.12.16 glib_2.60.4 Python2_2.7.14"
+package=dbus-python2

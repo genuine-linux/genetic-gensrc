@@ -1,0 +1,11 @@
+### Package <llvm> info. ###
+
+original_name=llvm
+name=llvm
+version=8.0.1
+package=$name-$version
+depends="cmake_3.13.4 libxml2_2.9.9 Python2_2.7.15 ninja_1.9.0"
+installbefore=
+installafter=
+replaces="$name"
+

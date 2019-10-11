@@ -1,0 +1,11 @@
+### Package <xine-ui> info. ###
+
+original_name=xine-ui
+name=xine-ui
+version=0.99.10
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

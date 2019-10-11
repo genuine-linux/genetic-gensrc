@@ -1,0 +1,11 @@
+### Package <mdadm> info. ###
+
+original_name=mdadm
+name=mdadm
+version=4.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=nftables
+version=0.9.0
+depends=libnftnl_1.1.2
+package=nftables

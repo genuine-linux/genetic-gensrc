@@ -1,0 +1,11 @@
+### Package <judy> info. ###
+
+original_name=judy
+name=judy
+version=1.0.5
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

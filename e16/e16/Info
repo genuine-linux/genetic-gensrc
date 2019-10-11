@@ -1,0 +1,11 @@
+### Package <e16> info. ###
+
+original_name=e16
+name=e16
+version=1.0.20
+package=$name-$version
+depends="xorg-server_1.20.5 pulseaudio_12.99.3"
+installbefore=
+installafter=
+replaces="$name"
+

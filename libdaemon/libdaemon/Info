@@ -1,0 +1,11 @@
+### Package <libdaemon> info. ###
+
+original_name=libdaemon
+name=libdaemon
+version=0.14
+package=$name-$version
+depends="lynx_2.8.9"
+installbefore=
+installafter=
+replaces="$name"
+

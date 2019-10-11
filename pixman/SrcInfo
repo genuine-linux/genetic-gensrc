@@ -1,0 +1,4 @@
+source=pixman
+version=0.38.4
+depends="libpng_1.6.37"
+package=pixman

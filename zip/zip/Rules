@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "unix/Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make -f unix/Makefile generic_gcc;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "unix/Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make prefix=${GENPKGDESTDIR}/usr \
+		MANDIR=$GENPKGDESTDIR/usr/share/man/man1 \
+		-f unix/Makefile install;
+fi;
+

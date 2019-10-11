@@ -1,0 +1,11 @@
+### Package <font-bh-ttf> info. ###
+
+original_name=font-bh-ttf
+name=font-bh-ttf
+version=1.0.3
+package=$name-$version
+depends="font-alias_1.0.3"
+installbefore=
+installafter=
+replaces="$name"
+

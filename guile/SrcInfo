@@ -1,0 +1,4 @@
+source=guile
+version=2.2.4
+depends="gc_8.0.2 libunistring_0.9.10"
+package=guile

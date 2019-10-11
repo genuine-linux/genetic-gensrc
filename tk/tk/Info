@@ -1,0 +1,11 @@
+### Package <tk> info. ###
+
+original_name=tk
+name=tk
+version=8.6.9
+package=$name-$version
+depends="tcl_8.6.9 libxshmfence_1.3"
+installbefore=
+installafter=
+replaces="$name"
+

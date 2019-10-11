@@ -1,0 +1,4 @@
+source=gnome-themes-extra
+version=3.28
+depends="gtk+_2.24.32 gtk3+_3.24.11 librsvg_2.44.15"
+package=gnome-themes-extra

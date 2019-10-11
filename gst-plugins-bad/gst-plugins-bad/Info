@@ -1,0 +1,11 @@
+### Package <gst-plugins-bad> info. ###
+
+original_name=gst-plugins-bad
+name=gst-plugins-bad
+version=1.16.0
+package=$name-$version
+depends="gst-plugins-base_1.16.0 libdvdnav_6.0.0 llvm_8.0.1 bluez_5.50 clutter_1.26.2 curl_7.66.0 faac_1.29.9.2 faad2_2.8.8 fdk-acc_2.0.0 gnutls_3.6.9 gtk-doc_1.31 gtk+_2.24.32 gtk3+_3.24.11 lcms2_2.9 libass_0.14.0 libexif_0.6.21 openal-soft_1.19.1 libgcrypt_1.8.5 libgudev_233 libmpeg2_0.5.1 libssh2_1.9.0 libusb_1.0.23 libvdpau_1.3 libwebp_1.0.3 neon_0.30.2 nettle_3.5.1 opencv_4.1.1 openjpeg_2.3.1 opus_1.3.1 SDL_1.2.15 wayland_1.17.0 x265_3.1.2 libxshmfence_1.3"
+installbefore=
+installafter=
+replaces="$name"
+

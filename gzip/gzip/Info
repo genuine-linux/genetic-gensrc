@@ -1,0 +1,11 @@
+### Package <gzip> info. ###
+
+original_name=gzip
+name=gzip
+version=1.10
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

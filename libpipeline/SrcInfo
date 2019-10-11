@@ -1,0 +1,4 @@
+source=libpipeline
+version=1.5.1
+depends=
+package=libpipeline

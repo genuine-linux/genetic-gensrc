@@ -1,0 +1,11 @@
+### Package <libcanberra> info. ###
+
+original_name=libcanberra
+name=libcanberra
+version=0.30
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

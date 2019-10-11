@@ -1,0 +1,4 @@
+source=intel-vaapi-driver
+version=2.3.0
+depends="libva_2.5.0"
+package=intel-vaapi-driver

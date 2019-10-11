@@ -1,0 +1,4 @@
+source=initramfs-tools
+version=4.1.5
+depends="busybox_1.31.0 debianutils_4.8.6.3"
+package=initramfs-tools

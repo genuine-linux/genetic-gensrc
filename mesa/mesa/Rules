@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+GALLIUM_DRV="i915,nouveau,r600,radeonsi,svga,swrast,virgl"
+DRI_DRIVERS="i965,nouveau"
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir build &&
+cd    build &&
+
+echo " --- Meson <$name ($version)> ---";
+meson --prefix=/usr          \
+      -Dbuildtype=release            \
+      -D egl=true \
+      -D gles1=true \
+      -D gles2=true \
+      -Ddri-drivers=$DRI_DRIVERS     \
+      -Dgallium-drivers=$GALLIUM_DRV \
+      -Dgallium-nine=false           \
+      -Dglx=dri                      \
+      -Dosmesa=gallium               \
+      -Dvalgrind=false               \
+      ..;
+
+unset GALLIUM_DRV DRI_DRIVERS;
+
+echo " --- Ninja <$name ($version)> ---";
+ninja;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+echo " --- Make Install <$name ($version)> ---";
+DESTDIR=${GENPKGDESTDIR} ninja install &&
+install -v -dm755 $GENPKGDESTDIR/usr/share/doc/$name-$version &&
+cp -rfv ../docs/* $GENPKGDESTDIR/usr/share/doc/$name-$version
+

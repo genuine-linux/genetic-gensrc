@@ -1,0 +1,4 @@
+source=libndp
+version=1.7
+depends=
+package=libndp

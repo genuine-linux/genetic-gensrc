@@ -1,0 +1,11 @@
+### Package <libmpeg2> info. ###
+
+original_name=libmpeg2
+name=libmpeg2
+version=0.5.1
+package=$name-$version
+depends="xorg-server_1.20.5 SDL_1.2.15"
+installbefore=
+installafter=
+replaces="$name"
+

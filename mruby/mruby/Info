@@ -1,0 +1,11 @@
+### Package <mruby> info. ###
+
+original_name=mruby
+name=mruby
+version=2.0.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

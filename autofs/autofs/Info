@@ -1,0 +1,11 @@
+### Package <autofs> info. ###
+
+original_name=autofs
+name=autofs
+version=5.1.5
+package=$name-$version
+depends="libtirpc_1.1.4 rpcsvc-proto_1.4 libxml2_2.9.9 krb5_1.17"
+installbefore=
+installafter=
+replaces="$name"
+

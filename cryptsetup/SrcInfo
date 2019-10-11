@@ -1,0 +1,4 @@
+source=cryptsetup
+version=2.2.0
+depends="json-c_0.13.1"
+package=cryptsetup

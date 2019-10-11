@@ -1,0 +1,11 @@
+### Package <gtk-doc> info. ###
+
+original_name=gtk-doc
+name=gtk-doc
+version=1.29
+package=$name-$version
+depends="docbook-xml_4.5 docbook-xsl-nons_1.79.2 itstool_2.0.5 libxslt_1.1.33 highlight_3.49 which_2.21 gnome-doc-utils_0.20.10"
+installbefore=
+installafter=
+replaces="$name"
+

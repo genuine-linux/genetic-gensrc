@@ -1,0 +1,4 @@
+source=xine-ui
+version=0.99.10
+depends=
+package=xine-ui

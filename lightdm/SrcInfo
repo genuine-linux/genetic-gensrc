@@ -1,0 +1,4 @@
+source=lightdm
+version=1.30.0
+depends=
+package=lightdm

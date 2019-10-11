@@ -1,0 +1,4 @@
+source=conky
+version=1.11.5
+depends=
+package=conky

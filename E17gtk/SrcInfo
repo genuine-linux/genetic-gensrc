@@ -1,0 +1,4 @@
+source=E17gtk
+version=3.22.2
+depends=
+package=E17gtk

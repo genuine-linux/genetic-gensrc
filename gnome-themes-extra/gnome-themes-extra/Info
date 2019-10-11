@@ -1,0 +1,11 @@
+### Package <gnome-themes-extra> info. ###
+
+original_name=gnome-themes-extra
+name=gnome-themes-extra
+version=3.28
+package=$name-$version
+depends="gtk+_2.24.32 gtk3+_3.24.11 librsvg_2.44.15"
+installbefore=
+installafter=
+replaces="$name"
+

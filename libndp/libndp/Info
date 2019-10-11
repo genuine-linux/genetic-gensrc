@@ -1,0 +1,11 @@
+### Package <libndp> info. ###
+
+original_name=libndp
+name=libndp
+version=1.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

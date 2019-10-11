@@ -1,0 +1,4 @@
+source=initd-tools
+version=0.1.3
+depends=
+package=initd-tools

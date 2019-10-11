@@ -1,0 +1,11 @@
+### Package <x11perf> info. ###
+
+original_name=x11perf
+name=x11perf
+version=1.6.1
+package=$name-$version
+depends="smproxy_1.0.6"
+installbefore=
+installafter=
+replaces="$name"
+

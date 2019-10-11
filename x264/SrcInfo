@@ -1,0 +1,4 @@
+source=x264
+version=2245
+depends="nasm_2.14.02"
+package=x264

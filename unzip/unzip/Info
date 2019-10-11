@@ -1,0 +1,11 @@
+### Package <unzip> info. ###
+
+original_name=unzip
+name=unzip
+version=6.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

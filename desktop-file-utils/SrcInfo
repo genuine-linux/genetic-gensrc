@@ -1,0 +1,4 @@
+source=desktop-file-utils
+version=0.23
+depends="glib_2.60.4"
+package=desktop-file-utils

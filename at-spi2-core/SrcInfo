@@ -1,0 +1,4 @@
+source=at-spi2-core
+version=2.32.1
+depends="dbus_1.12.16 glib_2.60.7 libxshmfence_1.3 gobject-introspection_1.60.2 gtk-doc_1.31"
+package=at-spi2-core

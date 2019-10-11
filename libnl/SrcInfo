@@ -1,0 +1,4 @@
+source=libnl
+version=3.4.0
+depends=
+package=libnl

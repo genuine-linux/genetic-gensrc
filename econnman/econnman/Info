@@ -1,0 +1,11 @@
+### Package <econnman> info. ###
+
+original_name=econnman
+name=econnman
+version=1.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

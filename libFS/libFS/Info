@@ -1,0 +1,11 @@
+### Package <libFS> info. ###
+
+original_name=libFS
+name=libFS
+version=1.0.8
+package=$name-$version
+depends="libXext_1.0.8"
+installbefore=
+installafter=
+replaces="$name"
+

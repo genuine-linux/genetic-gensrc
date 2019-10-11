@@ -1,0 +1,11 @@
+### Package <sassc> info. ###
+
+original_name=sassc
+name=sassc
+version=3.6.1
+package=$name-$version
+depends="libsass_3.6.1"
+installbefore=
+installafter=
+replaces="$name"
+

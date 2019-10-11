@@ -1,0 +1,11 @@
+### Package <binutils> info. ###
+
+original_name=binutils
+name=binutils
+version=2.32
+package=$name-$version
+depends=zlib_1.2.11 bz_1.07.1
+installbefore=
+installafter=
+replaces="$name"
+

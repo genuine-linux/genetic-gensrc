@@ -1,0 +1,4 @@
+source=gst-plugins-good
+version=1.16.0
+depends="gst-plugins-base_1.16.0 cairo_1.16.0 flac_1.3.3 lame_3.100 mpg123_1.25.12 mesa_19.1.6 gdk-pixbuf_2.38.2 libgudev_233 libjpeg-turbo_2.0.3 libpng_1.6.37 libsoup_2.66.2 libvpx_1.8.1 libxshmfence_1.3 aalib_1.4rc5 alsa-oss_1.1.8 gtk3+_3.24.11 gtk-doc_1.31 libdv_1.0.0 pulseaudio_12.2 speex_1.2.0 taglib_1.11.1 v4l-utils_1.16.7 wayland_1.17.9 jack2_1.9.12"
+package=gst-plugins-good

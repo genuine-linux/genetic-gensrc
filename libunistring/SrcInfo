@@ -1,0 +1,4 @@
+source=libunistring
+version=0.9.10
+depends="texinfo_6.5"
+package=libunistring

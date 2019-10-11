@@ -1,0 +1,4 @@
+source=e16
+version=1.0.20
+depends="xorg-server_1.20.5 pulseaudio_12.99.3"
+package=e16

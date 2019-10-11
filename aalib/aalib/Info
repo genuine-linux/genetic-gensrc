@@ -1,0 +1,11 @@
+### Package <aalib> info. ###
+
+original_name=aalib
+name=aalib
+version=1.4rc5
+package=$name-$version
+depends="xorg-server_1.20.5 slang_2.3.2 gpm_1.20.7"
+installbefore=
+installafter=
+replaces="$name"
+

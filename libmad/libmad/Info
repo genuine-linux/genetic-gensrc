@@ -1,0 +1,11 @@
+### Package <libmad> info. ###
+
+original_name=libmad
+name=libmad
+version=0.15.1b
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

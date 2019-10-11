@@ -1,0 +1,11 @@
+### Package <libqmi> info. ###
+
+original_name=libqmi
+name=libqmi
+version=1.22.4
+package=$name-$version
+depends="glib_2.60.1 libmbim_1.20.0 gtk-doc_1.31 help2man_1.47.10"
+installbefore=
+installafter=
+replaces="$name"
+

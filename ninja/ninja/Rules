@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure.py #
+if test -f "configure.py"; then
+	echo " --- Configure <$name ($version)> ---";
+	/usr/bin/python3 configure.py --bootstrap;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{usr/bin,usr/share/bash-completion/completions,usr/share/zsh/site-functions};
+
+# make install
+install -vm755 ninja $GENPKGDESTDIR/usr/bin/
+install -vDm644 misc/bash-completion $GENPKGDESTDIR/usr/share/bash-completion/completions/ninja
+install -vDm644 misc/zsh-completion  $GENPKGDESTDIR/usr/share/zsh/site-functions/_ninja
+

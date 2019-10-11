@@ -1,0 +1,11 @@
+### Package <dos2unix> info. ###
+
+original_name=dos2unix
+name=dos2unix
+version=7.4.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,4 @@
+source=dejagnu
+version=1.6.2
+depends="expect_5.45.4 docbook-utils_0.6.14 docbook2X_0.8.8"
+package=dejagnu

@@ -1,0 +1,4 @@
+source=harfbuzz
+version=2.5.3
+depends="glib_2.60.4 icu_64.2 freetype_2.10.0 gtk-doc_1.29 Python2_2.7.10 Python_3.7.2"
+package=harfbuzz

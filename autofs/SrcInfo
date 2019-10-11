@@ -1,0 +1,4 @@
+source=autofs
+version=5.1.5
+depends="libtirpc_1.1.4 rpcsvc-proto_1.4 libxml2_2.9.9 krb5_1.17"
+package=autofs

@@ -1,0 +1,4 @@
+source=mpfr
+version=4.0.2
+depends=gmp_6.1.2
+package=mpfr

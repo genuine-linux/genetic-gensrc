@@ -1,0 +1,4 @@
+source=usbutils
+version=012
+depends="libusb_1.0.22 wget_1.20.1"
+package=usbutils

@@ -1,0 +1,4 @@
+source=intltool
+version=0.51.0
+depends=XML-Parser_2.44
+package=intltool

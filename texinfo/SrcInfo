@@ -1,0 +1,4 @@
+source=texinfo
+version=6.6
+depends=perl_5.28.1
+package=texinfo

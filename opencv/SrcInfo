@@ -1,0 +1,4 @@
+source=opencv
+version=4.1.1
+depends="cmake_3.15.3 unzip_6.0 ffmpeg_4.2.1 gst-plugins-base_1.16.0 gtk3+_3.24.11 jasper_2.0.14 libjpeg-turbo_2.0.3 libpng_1.6.37 tiff_4.0.10 libwebp_1.0.3 v4l-utils_1.16.7 xine-lib_1.2.9 doxygen_1.8.16 Python2_2.7.16 jack2_1.9.12"
+package=opencv

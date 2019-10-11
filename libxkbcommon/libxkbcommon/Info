@@ -1,0 +1,11 @@
+### Package <libxkbcommon> info. ###
+
+original_name=libxkbcommon
+name=libxkbcommon
+version=0.8.4
+package=$name-$version
+depends="xkeyboard-config_2.27 libxcb_1.13.1 wayland_1.17.0"
+installbefore=
+installafter=
+replaces="$name"
+
