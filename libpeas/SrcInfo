@@ -1,0 +1,5 @@
+source=libpeas
+version=1.24.1
+srcurl=http://host/-1.24.1
+depends=
+package=libpeas

@@ -1,0 +1,5 @@
+source=gtksourceview
+version=4.4.0
+srcurl=http://host/-4.4.0
+depends=
+package=gtksourceview

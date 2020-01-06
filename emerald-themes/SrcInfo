@@ -1,0 +1,5 @@
+source=emerald-themes
+version=0.8.16
+srcurl=http://host/-0.8.16
+depends=
+package=emerald-themes

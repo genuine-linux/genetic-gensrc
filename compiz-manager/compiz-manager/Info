@@ -1,0 +1,11 @@
+### Package <compiz-manager> info. ###
+
+original_name=compiz-manager
+name=compiz-manager
+version=0.7.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

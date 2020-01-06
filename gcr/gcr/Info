@@ -1,0 +1,11 @@
+### Package <gcr> info. ###
+
+original_name=gcr
+name=gcr
+version=3.34.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

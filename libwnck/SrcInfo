@@ -1,0 +1,5 @@
+source=libwnck
+version=3.32.0
+srcurl=http://host/-3.32.0
+depends=
+package=libwnck

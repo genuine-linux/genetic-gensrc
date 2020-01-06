@@ -1,0 +1,11 @@
+### Package <mozo> info. ###
+
+original_name=mozo
+name=mozo
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

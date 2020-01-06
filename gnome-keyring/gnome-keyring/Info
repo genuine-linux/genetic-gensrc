@@ -1,0 +1,11 @@
+### Package <gnome-keyring> info. ###
+
+original_name=gnome-keyring
+name=gnome-keyring
+version=3.34.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

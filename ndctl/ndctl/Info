@@ -1,0 +1,11 @@
+### Package <ndctl> info. ###
+
+original_name=ndctl
+name=ndctl
+version=67
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

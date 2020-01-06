@@ -1,0 +1,5 @@
+source=dconf-editor
+version=3.34.2
+srcurl=http://host/-3.34.2
+depends="dconf_0.34.0"
+package=dconf-editor

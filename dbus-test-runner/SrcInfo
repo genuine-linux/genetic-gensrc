@@ -1,0 +1,5 @@
+source=dbus-test-runner
+version=19.04.0
+srcurl=http://host/-19.04.0
+depends=
+package=dbus-test-runner

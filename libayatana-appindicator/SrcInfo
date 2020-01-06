@@ -1,0 +1,5 @@
+source=libayatana-appindicator
+version=0.5.4
+srcurl=http://host/-0.5.4
+depends=
+package=libayatana-appindicator

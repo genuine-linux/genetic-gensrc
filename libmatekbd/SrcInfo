@@ -1,0 +1,5 @@
+source=libmatekbd
+version=1.23.0
+srcurl=http://host/-1.23.0
+depends="mate-common_1.23.0 autoconf-archive_2019.01.06"
+package=libmatekbd

@@ -1,0 +1,5 @@
+source=libfakekey
+version=0.3
+srcurl=http://host/-0.3
+depends=
+package=libfakekey

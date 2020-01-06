@@ -1,0 +1,11 @@
+### Package <emerald-themes> info. ###
+
+original_name=emerald-themes
+name=emerald-themes
+version=0.8.16
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

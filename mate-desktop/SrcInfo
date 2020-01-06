@@ -1,0 +1,5 @@
+source=mate-desktop
+version=1.23.2
+srcurl=http://host/-1.23.2
+depends=
+package=mate-desktop

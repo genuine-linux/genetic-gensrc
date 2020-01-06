@@ -1,0 +1,11 @@
+### Package <mate-power-manager> info. ###
+
+original_name=mate-power-manager
+name=mate-power-manager
+version=1.23.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

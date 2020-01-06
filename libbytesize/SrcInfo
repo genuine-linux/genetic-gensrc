@@ -1,0 +1,5 @@
+source=libbytesize
+version=2.1
+srcurl=http://host/-2.1
+depends=
+package=libbytesize

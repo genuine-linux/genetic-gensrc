@@ -1,0 +1,11 @@
+### Package <dbus-test-runner> info. ###
+
+original_name=dbus-test-runner
+name=dbus-test-runner
+version=19.04.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

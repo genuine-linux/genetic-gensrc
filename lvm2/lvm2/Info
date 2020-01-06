@@ -2,7 +2,7 @@
 
 original_name=lvm2
 name=lvm2
-version=2.03.02
+version=2.03.05
 package=$name-$version
 depends="libaio_0.3.111 mdadm_4.0 reiserfsprogs_3.6.27 xfsprogs_4.19.0 thin-provisioning-tools_0.8.3 which_2.21"
 installbefore=

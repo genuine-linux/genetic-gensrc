@@ -1,0 +1,5 @@
+source=gtksourceview3
+version=3.24.11
+srcurl=http://host/-3.24.11
+depends=
+package=gtksourceview3

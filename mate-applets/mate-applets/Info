@@ -1,0 +1,11 @@
+### Package <mate-applets> info. ###
+
+original_name=mate-applets
+name=mate-applets
+version=1.23.0
+package=$name-$version
+depends="mate-panel_1.23.0"
+installbefore=
+installafter=
+replaces="$name"
+

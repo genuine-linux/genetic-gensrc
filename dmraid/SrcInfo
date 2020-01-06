@@ -1,0 +1,5 @@
+source=dmraid
+version=1.0.0.rc16.3
+srcurl=http://host/-1.0.0.rc16.3
+depends=
+package=dmraid

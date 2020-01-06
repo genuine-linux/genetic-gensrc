@@ -2,7 +2,7 @@
 
 original_name=go
 name=go
-version=1.13
+version=1.4
 package=$name-$version
 depends=
 installbefore=

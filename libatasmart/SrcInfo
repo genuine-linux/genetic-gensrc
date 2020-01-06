@@ -1,0 +1,5 @@
+source=libatasmart
+version=0.19
+srcurl=http://host/-0.19
+depends=
+package=libatasmart

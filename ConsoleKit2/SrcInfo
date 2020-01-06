@@ -1,0 +1,5 @@
+source=ConsoleKit2
+version=1.0.2
+srcurl=http://host/-1.0.2
+depends=
+package=ConsoleKit2

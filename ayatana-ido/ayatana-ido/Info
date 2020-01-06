@@ -1,0 +1,11 @@
+### Package <ayatana-ido> info. ###
+
+original_name=ayatana-ido
+name=ayatana-ido
+version=0.4.90
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -7,7 +7,7 @@ source ./Info;
 GENPKGDESTDIR="$(pwd)/rootfs";
 
 # Change to source directory #
-cd ../$original_name-$version;
+cd ../$original_name-$version/nspr;
 
 # configure #
 if test -f "configure"; then

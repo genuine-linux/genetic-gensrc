@@ -1,0 +1,11 @@
+### Package <mate-system-monitor> info. ###
+
+original_name=mate-system-monitor
+name=mate-system-monitor
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

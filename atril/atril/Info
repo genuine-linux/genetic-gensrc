@@ -1,0 +1,11 @@
+### Package <atril> info. ###
+
+original_name=atril
+name=atril
+version=1.23.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

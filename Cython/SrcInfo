@@ -1,0 +1,5 @@
+source=Cython
+version=0.29.14
+srcurl=http://host/-0.29.14
+depends=
+package=Cython

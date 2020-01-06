@@ -1,0 +1,11 @@
+### Package <mate-notification-daemon> info. ###
+
+original_name=mate-notification-daemon
+name=mate-notification-daemon
+version=1.23.0
+package=$name-$version
+depends="mate-common_1.23.0 autoconf-archive_2019.01.06 mate-desktop_1.23.0"
+installbefore=
+installafter=
+replaces="$name"
+

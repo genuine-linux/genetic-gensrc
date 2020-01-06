@@ -1,0 +1,5 @@
+source=compiz
+version=0.9.14.1
+srcurl=http://host/-0.9.14.1
+depends=
+package=compiz

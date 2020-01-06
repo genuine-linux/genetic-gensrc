@@ -1,0 +1,11 @@
+### Package <python-caja> info. ###
+
+original_name=python-caja
+name=python-caja
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

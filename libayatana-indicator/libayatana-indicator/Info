@@ -1,0 +1,11 @@
+### Package <libayatana-indicator> info. ###
+
+original_name=libayatana-indicator
+name=libayatana-indicator
+version=0.6.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

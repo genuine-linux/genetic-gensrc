@@ -1,0 +1,11 @@
+### Package <mate-calc> info. ###
+
+original_name=mate-calc
+name=mate-calc
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

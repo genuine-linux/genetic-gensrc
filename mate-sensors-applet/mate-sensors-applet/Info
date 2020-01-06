@@ -1,0 +1,11 @@
+### Package <mate-sensors-applet> info. ###
+
+original_name=mate-sensors-applet
+name=mate-sensors-applet
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

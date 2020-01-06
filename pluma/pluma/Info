@@ -1,0 +1,11 @@
+### Package <pluma> info. ###
+
+original_name=pluma
+name=pluma
+version=1.23.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

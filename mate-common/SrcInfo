@@ -1,0 +1,5 @@
+source=mate-common
+version=1.23.152
+srcurl=http://host/-1.23.152
+depends=
+package=mate-common

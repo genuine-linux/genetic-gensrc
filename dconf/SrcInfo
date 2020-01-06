@@ -1,0 +1,5 @@
+source=dconf
+version=0.34.0
+srcurl=http://host/-0.34.0
+depends=
+package=dconf

@@ -1,0 +1,5 @@
+source=gcr
+version=3.34.0
+srcurl=http://host/-3.34.0
+depends=
+package=gcr

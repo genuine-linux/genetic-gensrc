@@ -1,0 +1,11 @@
+### Package <ayatana-indicator-notifications> info. ###
+
+original_name=ayatana-indicator-notifications
+name=ayatana-indicator-notifications
+version=0.4.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

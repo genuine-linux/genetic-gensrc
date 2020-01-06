@@ -1,0 +1,5 @@
+source=ayatana-ido
+version=0.4.90
+srcurl=http://host/-0.4.90
+depends=
+package=ayatana-ido

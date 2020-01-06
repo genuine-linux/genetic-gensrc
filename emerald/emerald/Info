@@ -1,0 +1,11 @@
+### Package <emerald> info. ###
+
+original_name=emerald
+name=emerald
+version=0.8.16
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

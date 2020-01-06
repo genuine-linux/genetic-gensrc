@@ -9,28 +9,36 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$name-$version/src;
 
-# BUILD GO
+# BOOTSTRAP GO
+
+GOROOT_BOOTSTRAP="$GENPKGDESTDIR/opt/$name-$version"
+GOROOT_FINAL="/opt/$name-$version"
+#GOROOT="$GENPKGDESTDIR/opt/$name-1.4"
+#GOBIN="$GOROOT/bin"
 
 CGO_ENABLED=0
 GO_TEST_TIMEOUT_SCALE=10
 
-export CGO_ENABLED GO_TEST_TIMEOUT_SCALE
+PATH=$PATH:$GOROOT_BOOTSTRAP/bin
 
-#GOROOT="/opt/$name"
-#GOBIN="$GOROOT/bin"
+export PATH CGO_ENABLED GO_TEST_TIMEOUT_SCALE
+export GOROOT_BOOTSTRAP
+export GOROOT_FINAL
 #export GOROOT GOBIN
 
 # Create install directory
-mkdir -pv ${GENPKGDESTDIR}/opt/$name-$version;
+mkdir -pv $GOROOT_BOOTSTRAP
 
-CGO_ENABLED=$CGO_ENABLED \
 GO_TEST_TIMEOUT_SCALE=$GO_TEST_TIMEOUT_SCALE \
 GOROOT_FINAL="/opt/$name-$version" \
-	./all.bash
+CFLAGS="$CFLAGS -Wno-implicit-fallthrough" CXXFLAGS="$CFLAGS" \
+	GOROOT_BOOTSTRAP=$GOROOT_BOOTSTRAP ./make.bash
 
-cp -av ../* $GENPKGDESTDIR/opt/$name-$version/
+cd ..
 
-cp -av ../../$name/files/* $GENPKGDESTDIR/
+cp -av * $GOROOT_BOOTSTRAP/
+
+cp -av ../$name/files/* $GENPKGDESTDIR/
 
 cd $GENPKGDESTDIR/opt
 

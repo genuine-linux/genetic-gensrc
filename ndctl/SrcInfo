@@ -1,0 +1,5 @@
+source=ndctl
+version=67
+srcurl=http://host/-67
+depends=
+package=ndctl

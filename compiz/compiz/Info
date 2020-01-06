@@ -1,0 +1,11 @@
+### Package <compiz> info. ###
+
+original_name=compiz
+name=compiz
+version=0.9.14.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

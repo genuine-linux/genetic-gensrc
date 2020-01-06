@@ -1,0 +1,11 @@
+### Package <mate-themes> info. ###
+
+original_name=mate-themes
+name=mate-themes
+version=3.22.20
+package=$name-$version
+depends="mate-common_1.23.0 autoconf-archive_2019.01.06 mate-desktop_1.23.0"
+installbefore=
+installafter=
+replaces="$name"
+

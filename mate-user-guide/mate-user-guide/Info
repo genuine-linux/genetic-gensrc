@@ -1,0 +1,11 @@
+### Package <mate-user-guide> info. ###
+
+original_name=mate-user-guide
+name=mate-user-guide
+version=1.23.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

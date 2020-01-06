@@ -1,0 +1,5 @@
+source=mate-indicator-applet
+version=1.23.0
+srcurl=http://host/-1.23.0
+depends="mate-applets_1.23.0 libayatana-indicator_0.6.3"
+package=mate-indicator-applet

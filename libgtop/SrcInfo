@@ -1,0 +1,5 @@
+source=libgtop
+version=2.40.0
+srcurl=http://host/-2.40.0
+depends=
+package=libgtop

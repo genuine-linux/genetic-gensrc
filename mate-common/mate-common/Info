@@ -1,0 +1,11 @@
+### Package <mate-common> info. ###
+
+original_name=mate-common
+name=mate-common
+version=1.23.152
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

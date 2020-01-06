@@ -1,0 +1,11 @@
+### Package <gtksourceview3> info. ###
+
+original_name=gtksourceview3
+name=gtksourceview3
+version=3.24.11
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

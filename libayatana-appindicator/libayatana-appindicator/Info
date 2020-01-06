@@ -1,0 +1,11 @@
+### Package <libayatana-appindicator> info. ###
+
+original_name=libayatana-appindicator
+name=libayatana-appindicator
+version=0.5.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

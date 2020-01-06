@@ -2,7 +2,7 @@
 
 original_name=nspr
 name=nspr
-version=4.20
+version=4.22
 package=$name-$version
 depends=
 installbefore=

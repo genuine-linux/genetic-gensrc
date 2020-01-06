@@ -1,0 +1,11 @@
+### Package <mate-indicator-applet> info. ###
+
+original_name=mate-indicator-applet
+name=mate-indicator-applet
+version=1.23.0
+package=$name-$version
+depends="mate-applets_1.23.0 libayatana-indicator_0.6.3"
+installbefore=
+installafter=
+replaces="$name"
+

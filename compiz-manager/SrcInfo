@@ -1,0 +1,5 @@
+source=compiz-manager
+version=0.7.0
+srcurl=http://host/-0.7.0
+depends=
+package=compiz-manager

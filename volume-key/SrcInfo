@@ -1,0 +1,5 @@
+source=volume-key
+version=0.3.12
+srcurl=http://host/-0.3.12
+depends=
+package=volume-key

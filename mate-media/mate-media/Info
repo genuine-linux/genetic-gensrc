@@ -1,0 +1,11 @@
+### Package <mate-media> info. ###
+
+original_name=mate-media
+name=mate-media
+version=1.23.1
+package=$name-$version
+depends="mate-session-manager_1.23.0"
+installbefore=
+installafter=
+replaces="$name"
+

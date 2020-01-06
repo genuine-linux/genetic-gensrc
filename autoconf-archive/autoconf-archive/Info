@@ -1,0 +1,11 @@
+### Package <autoconf-archive> info. ###
+
+original_name=autoconf-archive
+name=autoconf-archive
+version=2019.01.06
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <libfakekey> info. ###
+
+original_name=libfakekey
+name=libfakekey
+version=0.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

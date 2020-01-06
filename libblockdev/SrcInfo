@@ -1,0 +1,5 @@
+source=libblockdev
+version=2.23
+srcurl=http://host/-2.23
+depends=
+package=libblockdev

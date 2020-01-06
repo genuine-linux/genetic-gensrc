@@ -1,0 +1,11 @@
+### Package <vte> info. ###
+
+original_name=vte
+name=vte
+version=0.58.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

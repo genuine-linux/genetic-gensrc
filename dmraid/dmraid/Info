@@ -1,0 +1,11 @@
+### Package <dmraid> info. ###
+
+original_name=dmraid
+name=dmraid
+version=1.0.0.rc16.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

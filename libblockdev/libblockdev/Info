@@ -1,0 +1,11 @@
+### Package <libblockdev> info. ###
+
+original_name=libblockdev
+name=libblockdev
+version=2.23
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

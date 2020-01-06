@@ -1,0 +1,5 @@
+source=pip-python3
+version=19.3.1
+srcurl=http://host/-19.3.1
+depends=
+package=pip-python3

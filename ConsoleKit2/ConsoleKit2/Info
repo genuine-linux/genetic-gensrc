@@ -1,0 +1,11 @@
+### Package <ConsoleKit2> info. ###
+
+original_name=ConsoleKit2
+name=ConsoleKit2
+version=1.0.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

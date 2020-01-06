@@ -1,0 +1,11 @@
+### Package <volume-key> info. ###
+
+original_name=volume-key
+name=volume-key
+version=0.3.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

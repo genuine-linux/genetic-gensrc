@@ -1,0 +1,5 @@
+source=mate-icon-theme
+version=1.23.2
+srcurl=http://host/-1.23.2
+depends="mate-common_1.23.0 autoconf-archive_2019.01.06"
+package=mate-icon-theme

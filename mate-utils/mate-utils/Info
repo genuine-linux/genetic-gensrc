@@ -1,0 +1,11 @@
+### Package <mate-utils> info. ###
+
+original_name=mate-utils
+name=mate-utils
+version=1.23.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

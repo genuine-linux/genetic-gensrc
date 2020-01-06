@@ -1,0 +1,11 @@
+### Package <libwnck> info. ###
+
+original_name=libwnck
+name=libwnck
+version=3.32.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

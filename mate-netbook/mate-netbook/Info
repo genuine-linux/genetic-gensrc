@@ -1,0 +1,11 @@
+### Package <mate-netbook> info. ###
+
+original_name=mate-netbook
+name=mate-netbook
+version=1.23.0
+package=$name-$version
+depends="mate-desktop_1.23.0"
+installbefore=
+installafter=
+replaces="$name"
+

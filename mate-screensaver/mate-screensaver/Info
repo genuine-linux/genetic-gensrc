@@ -1,0 +1,11 @@
+### Package <mate-screensaver> info. ###
+
+original_name=mate-screensaver
+name=mate-screensaver
+version=1.23.1
+package=$name-$version
+depends="mate-desktop_1.23.0"
+installbefore=
+installafter=
+replaces="$name"
+

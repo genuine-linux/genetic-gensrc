@@ -1,0 +1,11 @@
+### Package <mate-terminal> info. ###
+
+original_name=mate-terminal
+name=mate-terminal
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

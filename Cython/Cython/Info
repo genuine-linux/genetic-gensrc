@@ -1,0 +1,11 @@
+### Package <Cython> info. ###
+
+original_name=Cython
+name=Cython
+version=0.29.14
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

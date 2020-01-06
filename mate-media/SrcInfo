@@ -1,0 +1,5 @@
+source=mate-media
+version=1.23.1
+srcurl=http://host/-1.23.1
+depends="mate-session-manager_1.23.0"
+package=mate-media

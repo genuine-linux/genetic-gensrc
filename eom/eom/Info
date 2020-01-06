@@ -1,0 +1,11 @@
+### Package <eom> info. ###
+
+original_name=eom
+name=eom
+version=1.23.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

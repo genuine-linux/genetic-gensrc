@@ -1,0 +1,5 @@
+source=mate-system-monitor
+version=1.23.0
+srcurl=http://host/-1.23.0
+depends=
+package=mate-system-monitor

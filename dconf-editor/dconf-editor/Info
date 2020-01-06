@@ -1,0 +1,11 @@
+### Package <dconf-editor> info. ###
+
+original_name=dconf-editor
+name=dconf-editor
+version=3.34.2
+package=$name-$version
+depends="dconf_0.34.0"
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <libmateweather> info. ###
+
+original_name=libmateweather
+name=libmateweather
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

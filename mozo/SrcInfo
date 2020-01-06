@@ -1,0 +1,5 @@
+source=mozo
+version=1.23.0
+srcurl=http://host/-1.23.0
+depends=
+package=mozo

@@ -1,0 +1,11 @@
+### Package <gtksourceview> info. ###
+
+original_name=gtksourceview
+name=gtksourceview
+version=4.4.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

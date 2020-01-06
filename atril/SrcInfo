@@ -1,0 +1,5 @@
+source=atril
+version=1.23.1
+srcurl=http://host/-1.23.1
+depends=
+package=atril

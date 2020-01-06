@@ -1,0 +1,5 @@
+source=indent
+version=2.2.12
+srcurl=http://host/-2.2.12
+depends=
+package=indent

@@ -1,0 +1,11 @@
+### Package <enchant> info. ###
+
+original_name=enchant
+name=enchant
+version=2.2.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

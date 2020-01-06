@@ -1,0 +1,5 @@
+source=enchant
+version=2.2.7
+srcurl=http://host/-2.2.7
+depends=
+package=enchant

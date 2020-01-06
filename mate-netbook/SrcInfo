@@ -1,0 +1,5 @@
+source=mate-netbook
+version=1.23.0
+srcurl=http://host/-1.23.0
+depends="mate-desktop_1.23.0"
+package=mate-netbook

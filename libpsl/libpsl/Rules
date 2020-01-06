@@ -12,14 +12,15 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
-	./configure \
-		--host=$GENUINE_TGT \
+	./configure --host=$GENUINE_HOST \
 		--target=$GENUINE_TGT \
 		--build=$GENUINE_TGT \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--docdir=/usr/share/doc/$name-$version;
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared;
 fi;
 
 # make

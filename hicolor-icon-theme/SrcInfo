@@ -1,4 +1,5 @@
 source=hicolor-icon-theme
 version=0.17
+srcurl=http://host/-0.17
 depends=
 package=hicolor-icon-theme

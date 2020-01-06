@@ -1,0 +1,11 @@
+### Package <indent> info. ###
+
+original_name=indent
+name=indent
+version=2.2.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

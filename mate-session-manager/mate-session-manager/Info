@@ -1,0 +1,11 @@
+### Package <mate-session-manager> info. ###
+
+original_name=mate-session-manager
+name=mate-session-manager
+version=1.23.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <libpeas> info. ###
+
+original_name=libpeas
+name=libpeas
+version=1.24.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+
