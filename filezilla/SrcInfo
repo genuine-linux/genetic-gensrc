@@ -1,0 +1,5 @@
+source=filezilla
+version=3.45.1
+srcurl=http://host/-3.45.1
+depends=
+package=filezilla

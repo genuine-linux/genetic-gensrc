@@ -1,0 +1,5 @@
+source=dosbox
+version=0.74.3
+srcurl=http://host/-0.74.3
+depends=
+package=dosbox

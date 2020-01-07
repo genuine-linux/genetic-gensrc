@@ -1,0 +1,5 @@
+source=python2-distutils-extra
+version=2.39
+srcurl=http://host/-2.39
+depends=
+package=python2-distutils-extra

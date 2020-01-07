@@ -1,0 +1,87 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --build="$GENUINE_TGT" \
+		--host="$GENUINE_HOST" \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-systemd \
+		--enable-udev \
+		--enable-dbus \
+		--enable-libusb \
+		--enable-sdl2 \
+		--enable-threads \
+		--enable-ffmpeg \
+		--enable-dylib \
+		--enable-networking \
+		--enable-opengl \
+		--enable-opengles \
+		--enable-x11 \
+		--enable-xrandr \
+		--enable-xinerama \
+		--enable-kms \
+		--enable-plain_drm \
+		--enable-wayland \
+		--enable-egl \
+		--enable-cg \
+		--disable-builtinzlib \
+		--enable-zlib \
+		--enable-alsa \
+		--disable-rpiled \
+		--disable-tinyalsa \
+		--disable-vg \
+		--disable-oss \
+		--disable-audioio \
+		--disable-rsound \
+		--disable-roar \
+		--disable-al \
+		--disable-jack \
+		--disable-coreaudio \
+		--enable-pulse \
+		--enable-freetype \
+		--enable-xvideo \
+		--enable-v4l2 \
+		--disable-neon \
+		--enable-sse \
+		--enable-flac \
+		--disable-builtinflac \
+		--disable-parport \
+		--enable-xshm \
+		--enable-lua \
+		--disable-qt \
+		--disable-cheevos \
+		--disable-discord \
+		--enable-osmesa \
+		--enable-videoprocessor \
+		--enable-videocore \
+		--enable-cdrom \
+		--enable-glsl
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+fi;
+

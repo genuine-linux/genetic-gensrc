@@ -1,0 +1,11 @@
+### Package <python3-psutil> info. ###
+
+original_name=python3-psutil
+name=python3-psutil
+version=5.6.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <dosbox> info. ###
+
+original_name=dosbox
+name=dosbox
+version=0.74.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

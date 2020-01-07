@@ -1,0 +1,5 @@
+source=mate-tweak
+version=19.10.4
+srcurl=http://host/-19.10.4
+depends=
+package=mate-tweak

@@ -1,0 +1,5 @@
+source=scummvm
+version=2.1.0
+srcurl=http://host/-2.1.0
+depends=
+package=scummvm

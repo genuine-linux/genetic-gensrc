@@ -1,0 +1,11 @@
+### Package <python3-distutils-extra> info. ###
+
+original_name=python3-distutils-extra
+name=python3-distutils-extra
+version=2.39
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,5 @@
+source=python3-distro
+version=1.4.0
+srcurl=http://host/-1.4.0
+depends=
+package=python3-distro

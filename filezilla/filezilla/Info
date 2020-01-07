@@ -1,0 +1,11 @@
+### Package <filezilla> info. ###
+
+original_name=filezilla
+name=filezilla
+version=3.45.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

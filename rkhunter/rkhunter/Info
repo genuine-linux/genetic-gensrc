@@ -1,0 +1,11 @@
+### Package <rkhunter> info. ###
+
+original_name=rkhunter
+name=rkhunter
+version=1.4.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

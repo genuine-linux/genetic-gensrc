@@ -1,0 +1,5 @@
+source=python3-setproctitle
+version=1.1.10
+srcurl=http://host/-1.1.10
+depends=
+package=python3-setproctitle

@@ -1,0 +1,11 @@
+### Package <python2-distutils-extra> info. ###
+
+original_name=python2-distutils-extra
+name=python2-distutils-extra
+version=2.39
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

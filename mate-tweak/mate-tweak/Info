@@ -1,0 +1,11 @@
+### Package <mate-tweak> info. ###
+
+original_name=mate-tweak
+name=mate-tweak
+version=19.10.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

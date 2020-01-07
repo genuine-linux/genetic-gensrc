@@ -1,0 +1,11 @@
+### Package <scummvm> info. ###
+
+original_name=scummvm
+name=scummvm
+version=2.1.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

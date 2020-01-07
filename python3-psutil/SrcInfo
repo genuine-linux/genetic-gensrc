@@ -1,0 +1,5 @@
+source=python3-psutil
+version=5.6.7
+srcurl=http://host/-5.6.7
+depends=
+package=python3-psutil

@@ -1,0 +1,5 @@
+source=RetroArch
+version=1.8.2
+srcurl=http://host/-1.8.2
+depends=
+package=RetroArch

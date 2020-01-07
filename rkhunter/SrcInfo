@@ -1,0 +1,5 @@
+source=rkhunter
+version=1.4.6
+srcurl=http://host/-1.4.6
+depends=
+package=rkhunter

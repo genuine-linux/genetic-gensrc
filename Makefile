@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
 
+update:
+	@bash update.sh
+
 all:
-	@bash extract.sh
+	@bash extractall.sh
