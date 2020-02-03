@@ -1,0 +1,5 @@
+source=network-manager-applet
+version=1.8.24
+srcurl=http://host/-1.8.24
+depends=
+package=network-manager-applet

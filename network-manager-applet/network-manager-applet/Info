@@ -1,0 +1,11 @@
+### Package <network-manager-applet> info. ###
+
+original_name=network-manager-applet
+name=network-manager-applet
+version=1.8.24
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

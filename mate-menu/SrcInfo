@@ -1,0 +1,5 @@
+source=mate-menu
+version=19.10.2
+srcurl=http://host/-19.10.2
+depends=
+package=mate-menu

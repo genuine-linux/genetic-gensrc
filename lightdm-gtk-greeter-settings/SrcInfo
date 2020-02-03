@@ -1,0 +1,5 @@
+source=lightdm-gtk-greeter-settings
+version=1.2.2
+srcurl=http://host/-1.2.2
+depends=
+package=lightdm-gtk-greeter-settings

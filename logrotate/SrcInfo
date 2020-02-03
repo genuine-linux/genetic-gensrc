@@ -1,0 +1,5 @@
+source=logrotate
+version=3.15.1
+srcurl=http://host/-3.15.1
+depends=
+package=logrotate

@@ -20,7 +20,8 @@ if test -f "configure"; then
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
-		--disable-static;
+		--disable-static \
+		--enable-shared;
 fi;
 
 # make

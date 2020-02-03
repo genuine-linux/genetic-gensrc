@@ -1,0 +1,11 @@
+### Package <tree> info. ###
+
+original_name=tree
+name=tree
+version=1.8.0.tgz
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

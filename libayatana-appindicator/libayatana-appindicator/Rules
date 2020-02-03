@@ -9,17 +9,10 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-if test ! -f "configure"; then
-	if test -f "autogen.sh"; then
-		echo " --- Autogen <$name ($version)> ---";
-		sh autogen.sh
-		echo " --- Configure <$name ($version)> ---";
-		./configure --prefix=/usr
-	fi
-else
-	echo " --- Configure <$name ($version)> ---";
-	./configure --prefix=/usr
-fi;
+./configure --prefix=/usr \
+	--disable-static \
+	--enable-shared \
+	--with-gtk=3
 
 # make
 if test -f "Makefile"; then

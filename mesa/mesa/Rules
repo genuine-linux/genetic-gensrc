@@ -16,17 +16,28 @@ mkdir build &&
 cd    build &&
 
 echo " --- Meson <$name ($version)> ---";
-meson --prefix=/usr          \
-      -Dbuildtype=release            \
-      -D egl=true \
-      -D gles1=true \
-      -D gles2=true \
-      -Ddri-drivers=$DRI_DRIVERS     \
+meson --prefix=/usr \
+      -Dbuildtype=release \
+      -Dplatforms=auto \
+      -Ddri3=true \
+      -Ddri-drivers=$DRI_DRIVERS \
       -Dgallium-drivers=$GALLIUM_DRV \
-      -Dgallium-nine=false           \
-      -Dglx=dri                      \
-      -Dosmesa=gallium               \
-      -Dvalgrind=false               \
+      -Dgallium-extra-hud=true \
+      -Dgallium-vdpau=true \
+      -Dgallium-xvmc=false \
+      -Dgallium-omx=disabled \
+      -Dgallium-va=true \
+      -Dgallium-nine=true \
+      -Dshared-glapi=true \
+      -Dgles1=true \
+      -Dgles2=true \
+      -Dopengl=true \
+      -Dglx=dri \
+      -Degl=true \
+      -Dglvnd=true \
+      -Dvalgrind=false \
+      -Dglx-direct=true \
+      -Dosmesa=gallium \
       ..;
 
 unset GALLIUM_DRV DRI_DRIVERS;

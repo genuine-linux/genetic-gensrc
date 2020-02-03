@@ -1,0 +1,11 @@
+### Package <metacity> info. ###
+
+original_name=metacity
+name=metacity
+version=3.34.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

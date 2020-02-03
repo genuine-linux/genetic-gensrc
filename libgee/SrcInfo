@@ -1,0 +1,5 @@
+source=libgee
+version=0.20.2
+srcurl=http://host/-0.20.2
+depends=
+package=libgee

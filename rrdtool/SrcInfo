@@ -1,0 +1,5 @@
+source=rrdtool
+version=1.7.2
+srcurl=http://host/-1.7.2
+depends=
+package=rrdtool

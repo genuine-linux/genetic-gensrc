@@ -1,4 +1,5 @@
 source=libxml2
 version=2.9.9
-depends=Python_3.7.2
+depends="Python_3.7.2 Python_2.7.4"
 package=libxml2
+package=python2-libxml2

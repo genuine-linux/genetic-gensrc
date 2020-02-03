@@ -20,5 +20,6 @@ for SOURCE in $(ls $SOURCE_POOL/*.src.gen); do
 	echo "OK!"
 done
 
+chown -R root:root *
 
 exit $?

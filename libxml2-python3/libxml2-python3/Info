@@ -1,0 +1,11 @@
+### Package <libxml2-python3> info. ###
+
+original_name=libxml2-python3
+name=libxml2-python3
+version=2.9.5
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

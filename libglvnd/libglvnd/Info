@@ -1,0 +1,11 @@
+### Package <libglvnd> info. ###
+
+original_name=libglvnd
+name=libglvnd
+version=1.2.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

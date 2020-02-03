@@ -1,0 +1,5 @@
+source=time
+version=1.9
+srcurl=http://host/-1.9
+depends=
+package=time

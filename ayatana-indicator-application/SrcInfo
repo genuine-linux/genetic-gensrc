@@ -1,0 +1,5 @@
+source=ayatana-indicator-application
+version=0.5.3
+srcurl=http://host/-0.5.3
+depends=
+package=ayatana-indicator-application

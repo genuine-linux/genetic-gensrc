@@ -1,0 +1,11 @@
+### Package <xdg-user-dirs> info. ###
+
+original_name=xdg-user-dirs
+name=xdg-user-dirs
+version=0.17
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

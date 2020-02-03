@@ -1,0 +1,5 @@
+source=plank
+version=0.11.89
+srcurl=http://host/-0.11.89
+depends=
+package=plank

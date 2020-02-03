@@ -1,0 +1,11 @@
+### Package <python2-libxml2> info. ###
+
+original_name=libxml2
+name=python2-libxml2
+version=2.9.9
+package=$name-$version
+depends=Python_2.7.4
+installbefore=
+installafter=
+replaces="$name"
+

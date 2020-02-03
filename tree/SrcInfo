@@ -1,0 +1,5 @@
+source=tree
+version=1.8.0.tgz
+srcurl=http://host/-1.8.0.tgz
+depends=
+package=tree

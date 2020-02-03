@@ -1,0 +1,5 @@
+source=libglvnd
+version=1.2.0
+srcurl=http://host/-1.2.0
+depends=
+package=libglvnd

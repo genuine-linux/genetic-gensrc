@@ -1,0 +1,5 @@
+source=libayatana-indicator
+version=0.6.3.src.gen
+srcurl=http://host/-0.6.3.src.gen
+depends=
+package=libayatana-indicator

@@ -1,0 +1,11 @@
+### Package <bamf> info. ###
+
+original_name=bamf
+name=bamf
+version=0.5.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

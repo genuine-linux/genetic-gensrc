@@ -1,0 +1,11 @@
+### Package <libgee> info. ###
+
+original_name=libgee
+name=libgee
+version=0.20.2
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

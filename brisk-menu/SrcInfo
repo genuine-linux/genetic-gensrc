@@ -1,0 +1,5 @@
+source=brisk-menu
+version=0.5.0
+srcurl=http://host/-0.5.0
+depends=
+package=brisk-menu

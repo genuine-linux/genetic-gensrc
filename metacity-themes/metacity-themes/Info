@@ -1,0 +1,11 @@
+### Package <metacity-themes> info. ###
+
+original_name=metacity-themes
+name=metacity-themes
+version=3.18.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

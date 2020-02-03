@@ -1,0 +1,11 @@
+### Package <logrotate> info. ###
+
+original_name=logrotate
+name=logrotate
+version=3.15.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

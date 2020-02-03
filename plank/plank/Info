@@ -1,0 +1,11 @@
+### Package <plank> info. ###
+
+original_name=plank
+name=plank
+version=0.11.89
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

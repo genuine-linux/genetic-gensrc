@@ -1,0 +1,5 @@
+source=metacity-themes
+version=3.18.12
+srcurl=http://host/-3.18.12
+depends=
+package=metacity-themes

@@ -19,5 +19,6 @@ for SOURCE in $(ls $SOURCE_POOL/*.src.gen); do
 	fi
 done
 
+chown -R root:root *
 
 exit $?

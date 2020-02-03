@@ -16,11 +16,21 @@ mkdir -pv ${GENPKGDESTDIR}/usr;
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	CFLAGS="$CFLAGS -fPIC" CXXFLAGS="$CXXFLAGS -fPIC" \
-	make PREFIX=/ PKG_PREFIX=/usr MANDIR=/usr/share/man \
-		LIBDIR=/usr/lib LIBEXECDIR=/usr/libexec \
+	make PREFIX=/ \
+		PKG_PREFIX=/usr \
+		MANDIR=/usr/share/man \
+		LIBDIR=/usr/lib \
+		LIBEXECDIR=/usr/libexec \
 		DATADIR=/usr/share/openrc \
 		INCDIR=/usr/include \
-		DESTDIR=${GENPKGDESTDIR} install && \
+		DESTDIR=${GENPKGDESTDIR} \
+		MKBASHCOMP=yes \
+		MKPKGCONFIG=yes \
+		MKSELINUX=no \
+		MKTERMCAP=ncurses \
+		MKSYSVINIT=yes \
+		BRANDING=\"Genuine/$(uname -s)\" \
+		install && \
 	cp -av ../$name/files/* $GENPKGDESTDIR/;
 fi;
 

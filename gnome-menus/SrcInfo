@@ -1,0 +1,5 @@
+source=gnome-menus
+version=3.35.3
+srcurl=http://host/-3.35.3
+depends=
+package=gnome-menus

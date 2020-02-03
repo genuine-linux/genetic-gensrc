@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir build &&
+cd    build &&
+
+meson --prefix=/usr     \
+      --sysconfdir=/etc \
+      -Dfuse=false      \
+      -Dgphoto2=false   \
+      -Dafc=false       \
+      -Dbluray=false    \
+      -Dnfs=false       \
+      -Dmtp=false       \
+      -Dsmb=false       \
+      -Dtmpfilesdir=no  \
+      -Ddnssd=false     \
+      -Dgoa=false       \
+      -Dgoogle=false    \
+      -Dsystemduserunitdir=no .. &&
+ninja
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+DESTDIR=$GENPKGDESTDIR ninja install
+

@@ -1,0 +1,5 @@
+source=ayatana-indicator-printers
+version=0.1.9
+srcurl=http://host/-0.1.9
+depends=
+package=ayatana-indicator-printers

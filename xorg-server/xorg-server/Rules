@@ -23,6 +23,8 @@ if test -f "configure"; then
 		--enable-shared \
 		--enable-glamor         \
             --enable-suid-wrapper   \
+	    --enable-xwayland \
+	    --enable-xwayland-eglstream \
             --with-xkb-output=/var/lib/xkb;
 fi;
 

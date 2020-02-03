@@ -1,0 +1,11 @@
+### Package <time> info. ###
+
+original_name=time
+name=time
+version=1.9
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

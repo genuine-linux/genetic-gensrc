@@ -1,0 +1,5 @@
+source=metacity
+version=3.34.1
+srcurl=http://host/-3.34.1
+depends=
+package=metacity

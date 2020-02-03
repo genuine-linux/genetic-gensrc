@@ -1,0 +1,11 @@
+### Package <googletest> info. ###
+
+original_name=googletest
+name=googletest
+version=1.10.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,5 @@
+source=googletest
+version=1.10.0
+srcurl=http://host/-1.10.0
+depends=
+package=googletest

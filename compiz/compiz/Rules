@@ -15,6 +15,12 @@ if test -f "CMakeLists.txt"; then
 	mkdir build.cmake;
 	cd build.cmake;
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+		-DCOMPIZ_BUILD_WITH_RPATH=FALSE \
+		-DCMAKE_BUILD_TYPE=Release \
+	       	-DCOMPIZ_PACKAGING_ENABLED=TRUE \
+		-DCOMPIZ_DISABLE_GS_SCHEMAS_INSTALL=OFF \
+		-DBUILD_GLES=OFF \
+		-DBUILD_XORG_GTEST=OFF \
 	../;
 fi;
 

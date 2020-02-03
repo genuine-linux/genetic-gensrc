@@ -1,0 +1,5 @@
+source=libxml2-python3
+version=2.9.5
+srcurl=http://host/-2.9.5
+depends=
+package=libxml2-python3

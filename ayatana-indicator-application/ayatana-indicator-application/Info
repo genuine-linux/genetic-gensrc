@@ -1,0 +1,11 @@
+### Package <ayatana-indicator-application> info. ###
+
+original_name=ayatana-indicator-application
+name=ayatana-indicator-application
+version=0.5.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <gnome-menus> info. ###
+
+original_name=gnome-menus
+name=gnome-menus
+version=3.35.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

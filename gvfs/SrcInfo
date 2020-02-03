@@ -1,0 +1,5 @@
+source=gvfs
+version=1.42.2
+srcurl=http://host/-1.42.2
+depends=
+package=gvfs

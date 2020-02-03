@@ -1,0 +1,11 @@
+### Package <ayatana-indicator-session> info. ###
+
+original_name=ayatana-indicator-session
+name=ayatana-indicator-session
+version=0.4.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

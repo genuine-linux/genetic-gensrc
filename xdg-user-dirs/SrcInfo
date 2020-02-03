@@ -1,0 +1,5 @@
+source=xdg-user-dirs
+version=0.17
+srcurl=http://host/-0.17
+depends=
+package=xdg-user-dirs

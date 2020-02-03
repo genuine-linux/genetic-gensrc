@@ -1,0 +1,11 @@
+### Package <brisk-menu> info. ###
+
+original_name=brisk-menu
+name=brisk-menu
+version=0.5.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

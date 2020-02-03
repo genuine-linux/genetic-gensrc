@@ -1,4 +1,5 @@
 source=i2c-tools
 version=4.1
+srcurl=http://host/-4.1
 depends=
 package=i2c-tools

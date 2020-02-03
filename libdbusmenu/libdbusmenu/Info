@@ -1,0 +1,11 @@
+### Package <libdbusmenu> info. ###
+
+original_name=libdbusmenu
+name=libdbusmenu
+version=16.04.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

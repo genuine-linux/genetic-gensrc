@@ -1,0 +1,5 @@
+source=libdbusmenu
+version=16.04.0
+srcurl=http://host/-16.04.0
+depends=
+package=libdbusmenu

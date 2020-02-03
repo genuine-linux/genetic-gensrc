@@ -27,6 +27,15 @@ fi;
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
 	make;
+	sed -e 's,[@]PM-UTILS-LIBDIR[@],/usr/lib/pm-utils,g' \
+		-e 's,[@]PM-UTILS-SYSCONFDIR[@],/etc/pm,g' \
+		pm-is-supported.in >pm-is-supported
+	sed -e 's,[@]PM-UTILS-LIBDIR[@],/usr/lib/pm-utils,g' \
+		-e 's,[@]PM-UTILS-SYSCONFDIR[@],/etc/pm,g' \
+		pm-action.in >pm-action
+	sed -e 's,[@]PM-UTILS-LIBDIR[@],/usr/lib/pm-utils,g' \
+		-e 's,[@]PM-UTILS-SYSCONFDIR[@],/etc/pm,g' \
+		pm-powersave.in >pm-powersave
 fi;
 
 # Create install directory
@@ -36,6 +45,11 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
+	install -d -m755 $GENPKGDESTDIR/usr/bin
+	cp -av src/pm-is-supported $GENPKGDESTDIR/usr/bin/pm-is-supported
+	cp -av src/pm-action $GENPKGDESTDIR/usr/bin/pm-action
+	cp -av src/pm-powersave $GENPKGDESTDIR/usr/bin/pm-powersave
+	chmod +x $GENPKGDESTDIR/usr/bin/*
 	install -d -m755 $GENPKGDESTDIR/usr/share/man/man1
 	install -d -m755 $GENPKGDESTDIR/usr/share/man/man8
 	install -v -m644 man/*.1 $GENPKGDESTDIR/usr/share/man/man1

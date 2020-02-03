@@ -1,0 +1,11 @@
+### Package <lm-sensors> info. ###
+
+original_name=lm-sensors
+name=lm-sensors
+version=3.6.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

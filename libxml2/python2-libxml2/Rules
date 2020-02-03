@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		--host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--with-history
+fi;
+
+cd python
+python2 setup.py build
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+python2 setup.py install --optimize=1 --root=dest
+cp -av dest/* $GENPKGDESTDIR/
