@@ -1,0 +1,12 @@
+### Package <emacs> info. ###
+
+original_name=emacs
+name=emacs
+version=26.3
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

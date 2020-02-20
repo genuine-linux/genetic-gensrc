@@ -1,0 +1,11 @@
+### Package <ansible> info. ###
+
+original_name=ansible
+name=ansible
+version=2.9.5
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

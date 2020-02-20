@@ -1,0 +1,14 @@
+/etc/bashrc
+/etc/profile
+/etc/bash-completion.d/README
+/etc/profile.d/.keep
+/etc/profile.d/bash_completion.sh
+/etc/profile.d/umask.sh
+/etc/profile.d/i18n.sh
+/etc/profile.d/dircolors.sh
+/etc/profile.d/readline.sh
+/etc/profile.d/extrapaths.sh
+/etc/skel/.bash_logout
+/etc/skel/.bash_profile
+/etc/skel/.profile
+/etc/skel/.bashrc

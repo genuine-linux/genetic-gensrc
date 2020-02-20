@@ -1,0 +1,12 @@
+### Package <wireshark> info. ###
+
+original_name=wireshark
+name=wireshark
+version=3.2.1
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

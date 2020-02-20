@@ -1,0 +1,5 @@
+source=ansible
+version=2.9.5
+srcurl=http://host/-2.9.5
+depends=
+package=ansible

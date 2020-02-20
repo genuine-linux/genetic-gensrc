@@ -1,0 +1,6 @@
+source=nmap
+version=7.80
+srcurl=http://srchost/nmap-7.80
+category=base
+depends=
+package=nmap

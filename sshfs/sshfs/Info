@@ -1,0 +1,12 @@
+### Package <sshfs> info. ###
+
+original_name=sshfs
+name=sshfs
+version=3.7.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

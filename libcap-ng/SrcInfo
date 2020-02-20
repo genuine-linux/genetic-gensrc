@@ -1,0 +1,6 @@
+source=libcap-ng
+version=0.7.10
+srcurl=http://srchost/libcap-ng-0.7.10
+category=base
+depends=
+package=libcap-ng

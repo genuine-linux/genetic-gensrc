@@ -41,6 +41,11 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install &&
+	rm -v $GENPKGDESTDIR/etc/pam.conf &&
 	cp -av ../$name/files/* $GENPKGDESTDIR/;
+	chmod -v +x $GENPKGDESTDIR/etc/init.d/$name
+	chmod -v 755 $GENPKGDESTDIR/usr/bin/run-parts
 fi;
 
+groupdel fcron
+userdel fcron

@@ -1,0 +1,6 @@
+source=smartmontools
+version=7.1
+srcurl=http://srchost/smartmontools-7.1
+category=base
+depends=
+package=smartmontools

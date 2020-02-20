@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure \
+		-prefix /usr \
+		-sysconfdir /etc/xdg \
+		-bindir /usr/bin \
+		-archdatadir /usr/lib/qt5 \
+		-plugindir /usr/lib/qt5/plugins \
+		-importdir /usr/lib/qt5/imports \
+		-headerdir /usr/include/qt5 \
+		-datadir /usr/share/qt5 \
+		-docdir /usr/share/doc/qt5 \
+		-translationdir /usr/share/qt5/translations \
+		-examplesdir /usr/share/doc/qt5/examples \
+		-confirm-license \
+		-opensource \
+		-dbus-linked \
+		-openssl-linked \
+		-system-harfbuzz \
+		-system-sqlite \
+		-nomake examples \
+		-no-rpath \
+		-skip qtwebengine;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/bin;
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make INSTALL_ROOT=${GENPKGDESTDIR} install;
+	find $GENPKGDESTDIR/usr/ -name \*.prl \
+	   -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \;
+	install -v -dm755 $GENPKGDESTDIR/usr/share/pixmaps/                  &&
+	install -v -Dm644 qttools/src/assistant/assistant/images/assistant-128.png \
+                  $GENPKGDESTDIR/usr/share/pixmaps/assistant-qt5.png &&
+	install -v -Dm644 qttools/src/designer/src/designer/images/designer.png \
+                  $GENPKGDESTDIR/usr/share/pixmaps/designer-qt5.png  &&
+	install -v -Dm644 qttools/src/linguist/linguist/images/icons/linguist-128-32.png \
+                  $GENPKGDESTDIR/usr/share/pixmaps/linguist-qt5.png  &&
+	install -v -Dm644 qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png \
+                  $GENPKGDESTDIR/usr/share/pixmaps/qdbusviewer-qt5.png &&
+	cp -av ../$name/files/* $GENPKGDESTDIR/;
+	cd $GENPKGDESTDIR/usr/bin &&
+	for file in moc uic rcc qmake lconvert lrelease lupdate; do
+	  ln -sfrvn $file $file-qt5
+	done
+fi;
+

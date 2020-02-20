@@ -1,0 +1,6 @@
+source=Net-DBus
+version=1.2.0
+srcurl=http://srchost/Net-DBus-1.2.0
+category=base
+depends=
+package=Net-DBus

@@ -52,7 +52,6 @@ if test -f "configure"; then
 		--enable-opus \
 		--enable-pulse \
 		--disable-oss \
-		--disable-qt \
 		--enable-samplerate \
 		--disable-sdl-image \
 		--enable-sftp \
@@ -92,7 +91,7 @@ if test -f "configure"; then
         	--disable-fluidlite \
         	--disable-freerdp \
         	--disable-goom \
-		--disable-qt \
+		--enable-qt \
 		--disable-live555 \
         	--disable-gst-decode \
         	--disable-libtar \

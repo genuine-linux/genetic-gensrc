@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	export CFLAGS="$CFLAGS -O2 -pipe -fPIC -Wno-all"
+	export CXXFLAGS="$CXXFLAGS -O2 -pipe -fPIC -Wno-all"
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	$MAKE CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS";
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	$MAKE CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" \
+		DESTDIR=${GENPKGDESTDIR} install;
+fi;
+

@@ -1,0 +1,5 @@
+source=libodfgen
+version=0.1.7
+srcurl=http://host/-0.1.7
+depends=
+package=libodfgen

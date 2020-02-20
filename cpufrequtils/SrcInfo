@@ -1,0 +1,6 @@
+source=cpufrequtils
+version=008
+srcurl=http://srchost/cpufrequtils-008
+category=base
+depends=
+package=cpufrequtils

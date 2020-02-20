@@ -1,0 +1,12 @@
+### Package <openexr-viewers> info. ###
+
+original_name=openexr-viewers
+name=openexr-viewers
+version=2.3.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

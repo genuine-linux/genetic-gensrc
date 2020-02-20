@@ -1,0 +1,5 @@
+source=librevenge
+version=0.0.4
+srcurl=http://host/-0.0.4
+depends=
+package=librevenge

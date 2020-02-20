@@ -1,0 +1,12 @@
+### Package <mypaint> info. ###
+
+original_name=mypaint
+name=mypaint
+version=2.0.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+plvers="$(ls /usr/bin/perl5* | sed 's/\/usr\/bin\/perl//g')"
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+make -C po all adduser.pot
+
+mkdir -pv $GENPKGDESTDIR/usr/{sbin,lib/perl5/$plvers/Debian}
+
+make -C po install DESTDIR=$GENPKGDESTDIR
+
+sed -e 's/VERSION/'$version'/g' adduser > $GENPKGDESTDIR/usr/sbin/adduser
+sed -e 's/VERSION/'$version'/g' deluser > $GENPKGDESTDIR/usr/sbin/deluser
+sed -e 's/VERSION/'$version'/g' AdduserCommon.pm > $GENPKGDESTDIR/usr/lib/perl5/$plvers/Debian/AdduserCommon.pm
+
+chmod 755 $GENPKGDESTDIR/usr/sbin/*
+
+(cd $GENPKGDESTDIR/usr/sbin &&
+ln -s adduser addgroup &&
+ln -s deluser delgroup)
+
+mkdir -pv $GENPKGDESTDIR/etc
+cp -av adduser.conf deluser.conf $GENPKGDESTDIR/etc/
+
+./debian/scripts/install-manpages.pl $version doc/ $GENPKGDESTDIR/usr/share/man/
+
+mkdir -pv $GENPKGDESTDIR/usr/share/$name
+cp -av debian/templates $GENPKGDESTDIR/usr/share/$name/
+cp -av examples $GENPKGDESTDIR/usr/share/$name/
+

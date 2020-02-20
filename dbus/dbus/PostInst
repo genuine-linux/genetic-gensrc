@@ -1,6 +1,12 @@
 #!/bin/bash
 
-dbus-uuidgen --ensure
-ln -sv /var/lib/dbus/machine-id /etc
+# clean files
+rm /usr/share/dbus-1/services/_keep
+rm /etc/dbus-1/{session,system}.d/_keep
+rm /var/lib/dbus/_keep
+
+# configure dbus
+dbus-uuidgen --ensure=/etc/machine-id
+ln -sf /etc/machine-id /var/lib/dbus/machine-id
 
 rc-update add dbus default

@@ -1,0 +1,4 @@
+# /etc/conf.d/ntpd: config file for /etc/init.d/ntpd
+
+# Insert any other options needed
+NTPD_OPTS=""

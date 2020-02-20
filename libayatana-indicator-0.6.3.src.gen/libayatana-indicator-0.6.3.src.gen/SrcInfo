@@ -1,5 +1,0 @@
-source=libayatana-indicator
-version=0.6.3
-srcurl=http://host/-0.6.3
-depends=
-package=libayatana-indicator

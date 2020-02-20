@@ -1,0 +1,6 @@
+source=emacs
+version=26.3
+srcurl=http://srchost/emacs-26.3
+category=base
+depends=
+package=emacs

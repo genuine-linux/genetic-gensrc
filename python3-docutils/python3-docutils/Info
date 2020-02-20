@@ -1,0 +1,12 @@
+### Package <python3-docutils> info. ###
+
+original_name=python3-docutils
+name=python3-docutils
+version=0.16
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

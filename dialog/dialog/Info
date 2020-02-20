@@ -2,8 +2,9 @@
 
 original_name=dialog
 name=dialog
-version=0.7
+version=1.3.20190808
 package=$name-$version
+category=
 depends=
 installbefore=
 installafter=

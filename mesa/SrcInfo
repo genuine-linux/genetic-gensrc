@@ -1,4 +1,4 @@
 source=mesa
 version=19.3.2
-depends="libxshmfence_1.3 libdrm_2.4.100 Mako_1.0.4 Python2_2.7.13 Python_3.7.2 elfutils_0.170 libvdpay_1.1.1 llvm_7.0.1 libgcrypt_1.8.0 nettle_3.3 wayland_1.14.0 libglvnd_1.2.0"
+depends="libxshmfence_1.3 libdrm_2.4.100 Mako_1.0.4 Python2_2.7.13 Python_3.7.2 elfutils_0.170 libvdpay_1.1.1 llvm_7.0.1 libgcrypt_1.8.0 nettle_3.3 wayland_1.14.0 libglvnd_1.3.0"
 package=mesa

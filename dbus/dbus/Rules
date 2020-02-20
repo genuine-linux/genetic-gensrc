@@ -21,14 +21,23 @@ if test -f "configure"; then
 		--docdir=/usr/share/doc/$name-$version \
 		--disable-static \
 		--enable-shared \
-		--enable-user-session                \
-            --disable-doxygen-docs               \
-            --disable-xml-docs                   \
-            --with-systemduserunitdir=no         \
-            --with-systemdsystemunitdir=no       \
-	    --with-console-auth-dir=/run/console \
-            --with-system-pid-file=/run/dbus/pid \
-            --with-system-socket=/run/dbus/system_bus_socket;
+		--disable-asserts \
+		--disable-checks \
+		--enable-elogind \
+		--disable-systemd \
+		--enable-user-session   \
+		--disable-embedded-tests \
+		--disable-modular-tests \
+            	--disable-doxygen-docs               \
+            	--disable-xml-docs                   \
+            	--with-systemduserunitdir=no         \
+            	--with-systemdsystemunitdir=no       \
+	    	--with-console-auth-dir=/run/console \
+            	--with-system-pid-file=/run/dbus/dbus.pid \
+            	--with-system-socket=/run/dbus/system_bus_socket \
+		--with-session-socket-dir=/tmp \
+		--with-dbus-user=messagebus \
+		--with-x
 fi;
 
 # make
@@ -50,6 +59,13 @@ if test -f "Makefile"; then
 	cd - &&
 	chown -v root:messagebus $GENPKGDESTDIR/usr/libexec/dbus-daemon-launch-helper &&
 	chmod -v      4750       $GENPKGDESTDIR/usr/libexec/dbus-daemon-launch-helper &&
-	cp -av ../$name/files/* $GENPKFDESTDIR/;
+	# needs to exist for dbus sessions to launch
+	mkdir -pv $GENPKGDESTDIR/usr/share/dbus-1/services
+	touch $GENPKGDESTDIR/usr/share/dbus-1/services/_keep
+	mkdir -pv $GENPKGDESTDIR/etc/dbus-1/{session,system}.d
+	touch $GENPKGDESTDIR/etc/dbus-1/{session,system}.d/_keep
+	mkdir -pv $GENPKGDESTDIR/var/lib/dbus
+	touch $GENPKGDESTDIR/var/lib/dbus/_keep
+	cp -av ../$name/files/* $GENPKFDESTDIR/
 fi;
 

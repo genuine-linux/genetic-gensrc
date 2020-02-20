@@ -1,0 +1,11 @@
+### Package <libcdr> info. ###
+
+original_name=libcdr
+name=libcdr
+version=0.1.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <scour-python3> info. ###
+
+original_name=scour-python3
+name=scour-python3
+version=0.37
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

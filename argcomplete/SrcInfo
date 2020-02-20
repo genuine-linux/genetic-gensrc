@@ -1,0 +1,5 @@
+source=argcomplete
+version=1.11.1
+srcurl=http://host/-1.11.1
+depends=
+package=argcomplete

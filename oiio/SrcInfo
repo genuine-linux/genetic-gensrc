@@ -1,0 +1,6 @@
+source=oiio
+version=2.1.11.0
+srcurl=http://srchost/oiio-2.1.11.0
+category=base
+depends=
+package=oiio

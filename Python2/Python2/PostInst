@@ -1,1 +1,7 @@
 #!/bin/bash
+
+# Ensure pip links to pip3
+if [ -f "/usr/bin/python3" ] && [ "$(pip --version)" != "$(py3versions -iv)" ]; then
+	/usr/bin/python3 -m pip install --force pip
+fi;
+

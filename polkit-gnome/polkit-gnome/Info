@@ -1,0 +1,12 @@
+### Package <polkit-gnome> info. ###
+
+original_name=polkit-gnome
+name=polkit-gnome
+version=0.105
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

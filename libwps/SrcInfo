@@ -1,0 +1,5 @@
+source=libwps
+version=0.4.8
+srcurl=http://host/-0.4.8
+depends=
+package=libwps

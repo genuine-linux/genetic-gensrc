@@ -1,0 +1,6 @@
+source=audit-userspace
+version=2.8.5
+srcurl=http://srchost/audit-userspace-2.8.5
+category=base
+depends=
+package=audit-userspace

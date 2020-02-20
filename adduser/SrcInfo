@@ -1,0 +1,6 @@
+source=adduser
+version=3.118
+srcurl=http://srchost/adduser-3.118
+category=base
+depends=
+package=adduser

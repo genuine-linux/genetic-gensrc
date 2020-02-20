@@ -2,7 +2,12 @@
 
 udevadm hwdb --update
 
+udevadm control --reload
+
+/etc/init.d/udev --nodeps restart
+
 bash /lib/udev/init-net-rules.sh
 
 rc-update add udevd sysinit
 rc-update add udev-trigger sysinit
+rc-update add udev-postmount default

@@ -1,0 +1,6 @@
+source=XML-Twig
+version=3.52
+srcurl=http://srchost/XML-Twig-3.52
+category=base
+depends=
+package=XML-Twig

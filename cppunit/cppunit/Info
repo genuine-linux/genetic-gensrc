@@ -1,0 +1,11 @@
+### Package <cppunit> info. ###
+
+original_name=cppunit
+name=cppunit
+version=1.15.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

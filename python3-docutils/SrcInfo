@@ -1,0 +1,6 @@
+source=python3-docutils
+version=0.16
+srcurl=http://srchost/python3-docutils-0.16
+category=base
+depends=
+package=python3-docutils

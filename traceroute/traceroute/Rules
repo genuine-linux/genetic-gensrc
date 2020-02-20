@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+pushd ../$original_name-$version;
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make  ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{bin,usr/bin};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make  prefix=/usr DESTDIR=${GENPKGDESTDIR} install &&
+	mv $GENPKGDESTDIR/usr/bin/traceroute $GENPKGDESTDIR/bin/ &&
+	cd $GENPKGDESTDIR/bin &&
+	ln -svf traceroute traceroute6 &&
+	cd $GENPKGDESTDIR/usr/share/man/man8 &&
+	ln -svf traceroute.8 traceroute6.8 &&
+	rm -fv $GENPKGDESTDIR/usr/share/man/man1/traceroute.1
+fi;
+
+popd;
+

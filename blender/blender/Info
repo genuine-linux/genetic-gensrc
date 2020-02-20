@@ -1,0 +1,12 @@
+### Package <blender> info. ###
+
+original_name=blender
+name=blender
+version=2.81
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,12 @@
+### Package <tbb> info. ###
+
+original_name=tbb
+name=tbb
+version=2020.1
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

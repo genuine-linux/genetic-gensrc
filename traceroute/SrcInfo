@@ -1,0 +1,6 @@
+source=traceroute
+version=2.1.0
+srcurl=http://srchost/traceroute-2.1.0
+category=base
+depends=
+package=traceroute

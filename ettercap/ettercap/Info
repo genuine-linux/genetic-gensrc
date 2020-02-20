@@ -1,0 +1,11 @@
+### Package <ettercap> info. ###
+
+original_name=ettercap
+name=ettercap
+version=0.8.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

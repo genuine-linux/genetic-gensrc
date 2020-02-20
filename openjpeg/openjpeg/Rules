@@ -15,15 +15,16 @@ if test -f "CMakeLists.txt"; then
 	mkdir build.cmake;
 	cd build.cmake;
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+		-DCPACK_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
-      		-DBUILD_STATIC_LIBS=OFF
+      		-DBUILD_STATIC_LIBS=OFF \
 		../;
 fi;
 
 # make
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
-	make;
+	make prefix=/usr;
 fi;
 
 # Create install directory
@@ -32,11 +33,10 @@ mkdir -pv ${GENPKGDESTDIR};
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	make DESTDIR=${GENPKGDESTDIR} install;
-	pushd ../doc &&
-	  for man in man/man?/* ; do
-	      install -v -D -m 644 $man $GENPKGDESTDIR/usr/share/$man
-	  done
-	popd
+	make prefix=/usr DESTDIR=${GENPKGDESTDIR} install;
+	cd ../doc &&
+	for man in man/man?/* ; do
+		install -v -D -m 644 $man $GENPKGDESTDIR/usr/share/$man
+	done
 fi;
 

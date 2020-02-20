@@ -1,0 +1,12 @@
+### Package <liboobs> info. ###
+
+original_name=liboobs
+name=liboobs
+version=3.0.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

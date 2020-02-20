@@ -1,2 +1,4 @@
 #!/bin/bash
 
+chmod +x /etc/profile /etc/profile.d/* /etc/bashrc
+

@@ -1,4 +1,0 @@
-source=valgrind
-version=3.15.0
-depends=which
-package=valgrind

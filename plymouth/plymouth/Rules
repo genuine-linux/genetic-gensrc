@@ -26,6 +26,7 @@ if test -f "configure"; then
 		--enable-gdm-transition \
 		--enable-upstart-monitoring \
 		--disable-systemd-integration \
+		--with-systemdunitdir=no \
 		--without-rhgb-compat-link \
 		--with-system-root-install=no \
 		--enable-pango \

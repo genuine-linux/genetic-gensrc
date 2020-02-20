@@ -1,0 +1,6 @@
+source=dkms
+version=2.8.1
+srcurl=http://srchost/dkms-2.8.1
+category=base
+depends=
+package=dkms

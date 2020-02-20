@@ -1,0 +1,11 @@
+### Package <gdl> info. ###
+
+original_name=gdl
+name=gdl
+version=3.34.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

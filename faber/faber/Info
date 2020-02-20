@@ -1,0 +1,11 @@
+### Package <faber> info. ###
+
+original_name=faber
+name=faber
+version=0.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

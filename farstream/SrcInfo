@@ -1,0 +1,5 @@
+source=farstream
+version=0.2.8
+srcurl=http://host/-0.2.8
+depends=
+package=farstream

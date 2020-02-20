@@ -20,6 +20,7 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--enable-libsystemd-login=no \
 		--with-os_type=genuine \
+		--enable-introspection \
 		--disable-static \
 		--enable-shared;
 fi;

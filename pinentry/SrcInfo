@@ -1,0 +1,6 @@
+source=pinentry
+version=1.1.0
+srcurl=http://srchost/pinentry-1.1.0
+category=base
+depends=
+package=pinentry

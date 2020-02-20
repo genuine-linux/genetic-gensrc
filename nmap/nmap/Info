@@ -1,0 +1,12 @@
+### Package <nmap> info. ###
+
+original_name=nmap
+name=nmap
+version=7.80
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

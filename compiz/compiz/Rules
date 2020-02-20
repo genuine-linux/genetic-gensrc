@@ -19,7 +19,7 @@ if test -f "CMakeLists.txt"; then
 		-DCMAKE_BUILD_TYPE=Release \
 	       	-DCOMPIZ_PACKAGING_ENABLED=TRUE \
 		-DCOMPIZ_DISABLE_GS_SCHEMAS_INSTALL=OFF \
-		-DBUILD_GLES=OFF \
+		-DBUILD_GLES=ON \
 		-DBUILD_XORG_GTEST=OFF \
 	../;
 fi;

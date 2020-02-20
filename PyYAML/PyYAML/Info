@@ -1,0 +1,11 @@
+### Package <PyYAML> info. ###
+
+original_name=PyYAML
+name=PyYAML
+version=5.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,4 +1,4 @@
 source=libmypaint
-version=1.4.0
+version=1.5.0
 depends="json-c_0.13.1 glib_2.60.0 gobject-introspection_1.62.0 doxygen_1.8.16 gegl_0.4.16"
 package=libmypaint

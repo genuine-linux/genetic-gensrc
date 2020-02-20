@@ -1,0 +1,11 @@
+### Package <geany-plugins> info. ###
+
+original_name=geany-plugins
+name=geany-plugins
+version=1.36.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,5 @@
+source=XML-XQL
+version=0.68
+srcurl=http://host/-0.68
+depends=
+package=XML-XQL

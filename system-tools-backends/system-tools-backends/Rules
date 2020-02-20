@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+plvers="$(ls /usr/bin/perl5* | sed 's/\/usr\/bin\/perl//g')";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--datadir=/usr/share \
+		--with-net-dbus=/usr/lib/perl5/site_perl/$plvers/`uname -m`-linux-thread-multi \
+		--with-dbus-sys=/etc/dbus-1/system.d \
+		--disable-static \
+		--enable-shared;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make  DESTDIR=${GENPKGDESTDIR} install;
+	cp -av ../$name/files/* $GENPKGDESTDIR/
+fi;

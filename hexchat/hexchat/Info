@@ -1,0 +1,11 @@
+### Package <hexchat> info. ###
+
+original_name=hexchat
+name=hexchat
+version=2.14.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

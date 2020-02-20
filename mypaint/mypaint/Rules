@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# setup.py #
+if test -f "setup.py"; then
+	echo " --- Python Build <$name ($version)> ---";
+	/usr/bin/python3 setup.py build;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/{bin,share};
+
+# setup.py #
+if test -f "setup.py"; then
+	echo " --- Python Install <$name ($version)> ---";
+	/usr/bin/python3 setup.py install --optimize=1 --root=dest;
+	mkdir -pv dest/usr/bin/
+	cp -av build/scripts*/* dest/usr/bin/
+	cp -av dest/* ${GENPKGDESTDIR}
+	cd $GENPKGDESTDIR/usr/bin
+	ln -sfv mypaint.py mypaint
+        ln -sfv	mypaint-ora-thumbnailer.py mypaint-ora-thumbnailer
+fi;
+

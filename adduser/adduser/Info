@@ -1,0 +1,12 @@
+### Package <adduser> info. ###
+
+original_name=adduser
+name=adduser
+version=3.118
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

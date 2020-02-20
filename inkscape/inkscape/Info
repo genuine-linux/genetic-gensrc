@@ -1,0 +1,11 @@
+### Package <inkscape> info. ###
+
+original_name=inkscape
+name=inkscape
+version=0.92.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

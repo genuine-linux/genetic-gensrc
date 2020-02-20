@@ -1,0 +1,11 @@
+### Package <libwps> info. ###
+
+original_name=libwps
+name=libwps
+version=0.4.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

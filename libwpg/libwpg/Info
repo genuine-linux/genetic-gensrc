@@ -1,0 +1,11 @@
+### Package <libwpg> info. ###
+
+original_name=libwpg
+name=libwpg
+version=0.3.3
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

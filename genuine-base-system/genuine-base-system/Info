@@ -1,0 +1,12 @@
+### Package <genuine-base-system> info. ###
+
+original_name=genuine-base-system
+name=genuine-base-system
+version=G20.02.02
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

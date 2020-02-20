@@ -1,0 +1,16 @@
+Info
+PkgArch
+PostInst
+PostRemv
+PreInst
+PreRemv
+bash.dirs
+bash.etc.dirs
+bash.etc.files
+bash.etc.links
+bash.files
+bash.links
+rootfs.tmp
+stripbin.log
+striplib.log
+~genuine~4

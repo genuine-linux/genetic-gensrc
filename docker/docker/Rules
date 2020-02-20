@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/bin;
+
+# make install
+echo " --- Make Install <$name ($version)> ---";
+  install -D -m 0755 docker \
+	  $GENPKGDESTDIR/usr/bin/docker
+  install -D -m 0755 dockerd \
+	  $GENPKGDESTDIR/usr/bin/dockerd
+  install -D -m 0755 docker-proxy \
+	  $GENPKGDESTDIR/usr/bin/docker-proxy
+  install -D -m 0755 docker-init \
+	  $GENPKGDESTDIR/usr/bin/docker-init
+  install -D -m 0755 containerd \
+	  $GENPKGDESTDIR/usr/bin/containerd
+  install -D -m 0755 containerd-shim \
+	  $GENPKGDESTDIR/usr/bin/containerd-shim
+  install -D -m 0755 runc \
+	  $GENPKGDESTDIR/usr/bin/runc
+  install -D -m 0755 ctr \
+	  $GENPKGDESTDIR/usr/bin/ctr
+  cp -av ../$name/files/* \
+	  $GENPKGDESTDIR/

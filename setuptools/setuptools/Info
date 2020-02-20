@@ -1,0 +1,12 @@
+### Package <setuptools> info. ###
+
+original_name=setuptools
+name=setuptools
+version=45.1.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

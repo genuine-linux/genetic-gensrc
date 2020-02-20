@@ -1,0 +1,5 @@
+source=libwpd
+version=0.9.9
+srcurl=http://host/-0.9.9
+depends=
+package=libwpd

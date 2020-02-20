@@ -1,0 +1,11 @@
+### Package <pidgin> info. ###
+
+original_name=pidgin
+name=pidgin
+version=2.13.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

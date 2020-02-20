@@ -1,0 +1,6 @@
+source=openrc-settingsd
+version=1.0.1
+srcurl=http://srchost/openrc-settingsd-1.0.1
+category=base
+depends=
+package=openrc-settingsd

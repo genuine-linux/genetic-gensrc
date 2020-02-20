@@ -1,0 +1,5 @@
+source=geany-plugins
+version=1.36.0
+srcurl=http://host/-1.36.0
+depends=
+package=geany-plugins

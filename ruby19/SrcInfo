@@ -1,4 +1,0 @@
-source=ruby19
-version=1.9.3
-depends="db_5.3.28"
-package=ruby19

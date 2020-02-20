@@ -1,0 +1,5 @@
+source=potrace
+version=1.16
+srcurl=http://host/-1.16
+depends=
+package=potrace

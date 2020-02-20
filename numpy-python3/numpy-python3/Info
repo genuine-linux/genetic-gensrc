@@ -1,0 +1,11 @@
+### Package <numpy-python3> info. ###
+
+original_name=numpy-python3
+name=numpy-python3
+version=1.18.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

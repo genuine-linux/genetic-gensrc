@@ -1,0 +1,6 @@
+source=liboobs
+version=3.0.0
+srcurl=http://srchost/liboobs-3.0.0
+category=base
+depends=
+package=liboobs

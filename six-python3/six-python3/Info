@@ -1,0 +1,11 @@
+### Package <six-python3> info. ###
+
+original_name=six-python3
+name=six-python3
+version=1.14.0
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,6 @@
+source=sshfs
+version=3.7.0
+srcurl=http://srchost/sshfs-3.7.0
+category=base
+depends=
+package=sshfs

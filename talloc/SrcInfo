@@ -1,0 +1,6 @@
+source=talloc
+version=2.3.1
+srcurl=http://srchost/talloc-2.3.1
+category=base
+depends=
+package=talloc

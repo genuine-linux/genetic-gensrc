@@ -9,6 +9,8 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
+export PYTHON="python3";
+
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";

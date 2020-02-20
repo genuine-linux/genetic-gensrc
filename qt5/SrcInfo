@@ -1,0 +1,5 @@
+source=qt5
+version=5.14.1
+srcurl=http://host/qt5-5.14.1
+depends=
+package=qt5

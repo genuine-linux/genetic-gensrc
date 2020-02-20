@@ -1,0 +1,12 @@
+### Package <python2-defaults> info. ###
+
+original_name=python2-defaults
+name=python2-defaults
+version=2.7.15
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

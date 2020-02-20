@@ -1,0 +1,5 @@
+source=pidgin
+version=2.13.0
+srcurl=http://host/-2.13.0
+depends=
+package=pidgin

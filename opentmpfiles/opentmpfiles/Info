@@ -1,0 +1,12 @@
+### Package <opentmpfiles> info. ###
+
+original_name=opentmpfiles
+name=opentmpfiles
+version=0.2
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

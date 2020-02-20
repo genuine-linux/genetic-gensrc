@@ -12,7 +12,13 @@ cd ../$original_name-$version;
 # make
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
-	make all;
+	(cp udev_helper/net.sh.orig udev_helper/net.sh &&
+	chmod +x udev_helper/net.sh &&
+	cp udev_rules/90-network.rules.orig udev_rules/90-network.rules)
+	make PREFIX=/usr \
+		SBINDIR=/sbin \
+		SYSCONFDIR=/etc \
+		all;
 fi;
 
 # Create install directory
@@ -21,6 +27,9 @@ mkdir -pv ${GENPKGDESTDIR};
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	make DESTDIR=${GENPKGDESTDIR} install;
+	make PREFIX=/usr \
+		SYSCONFDIR=/etc \
+		SBINDIR=/sbin \
+		DESTDIR=${GENPKGDESTDIR} install;
 fi;
 

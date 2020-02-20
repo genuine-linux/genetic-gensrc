@@ -1,0 +1,5 @@
+source=libcdr
+version=0.1.6
+srcurl=http://host/-0.1.6
+depends=
+package=libcdr

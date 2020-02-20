@@ -1,0 +1,5 @@
+source=docker
+version=19.03.6
+srcurl=http://host/-19.03.6
+depends=
+package=docker

@@ -1,0 +1,5 @@
+source=Jinja2
+version=2.11.1
+srcurl=http://host/-2.11.1
+depends=
+package=Jinja2

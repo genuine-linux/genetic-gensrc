@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir build &&
+cd    build &&
+
+meson --prefix=/usr \
+	-Dwith-libproxy=true \
+	-Dwith-lua=lua ..
+ninja;
+
+DESTDIR=${GENPKGDESTDIR} ninja install;
+

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+pushd ../$original_name-$version;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make lib;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/{include,lib};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	install -vm644 linear.h $GENPKGDESTDIR/usr/include &&
+	install -vm755 liblinear.so.3 $GENPKGDESTDIR/usr/lib &&
+	cd $GENPKGDESTDIR/usr/lib &&
+	ln -sfv liblinear.so.3 liblinear.so
+fi;
+
+
+popd;
+

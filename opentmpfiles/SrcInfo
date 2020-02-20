@@ -1,0 +1,6 @@
+source=opentmpfiles
+version=0.2
+srcurl=http://srchost/opentmpfiles-0.2
+category=base
+depends=
+package=opentmpfiles

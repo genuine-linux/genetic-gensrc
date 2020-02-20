@@ -1,5 +1,8 @@
 #!/bin/bash
 
-groupadd -g 91 dnsmasq
-useradd -u 91 -G dnsmasq dnsmasq -s /bin/false
+grep dnsmasq /etc/group || groupadd -g 91 dnsmasq
+grep dnsmasq /etc/passwd || useradd -u 91 -G dnsmasq dnsmasq -s /bin/false
+
+chmod 644 /etc/logrotate.d/dnsmasq
+
 rc-update add dnsmasq default

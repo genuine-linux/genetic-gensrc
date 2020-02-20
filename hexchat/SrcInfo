@@ -1,0 +1,5 @@
+source=hexchat
+version=2.14.3
+srcurl=http://host/-2.14.3
+depends=
+package=hexchat

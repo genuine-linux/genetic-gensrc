@@ -1,0 +1,5 @@
+source=ettercap
+version=0.8.3
+srcurl=http://host/-0.8.3
+depends=
+package=ettercap

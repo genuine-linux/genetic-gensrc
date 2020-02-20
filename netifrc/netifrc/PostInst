@@ -1,1 +1,11 @@
 #!/bin/bash
+
+interface_name="$(ifconfig | grep Ethernet | grep -v docker | awk '{print $1}' | head -1)";
+
+if [ ! -z "$interface_name" ]; then
+echo "# Note: DHCP is the default behavior if /etc/conf.d/net is empty or missing
+config_${interface_name}=\"dhcp\"
+" >> /etc/conf.d/net
+ln -sfv /etc/init.d/net.lo /etc/init.d/net.$interface_name
+rc-update add net.$interface_name default
+fi;

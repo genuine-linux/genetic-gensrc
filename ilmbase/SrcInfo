@@ -1,4 +1,5 @@
 source=ilmbase
 version=2.3.0
+srcurl=http://host/-2.3.0
 depends=
 package=ilmbase

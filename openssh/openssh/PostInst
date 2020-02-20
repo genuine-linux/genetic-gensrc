@@ -2,10 +2,10 @@
 
 chmod 644 /etc/pam.d/sshd &&
 install  -v -m700 -d /var/lib/sshd &&
-chown    -v root:sys /var/lib/sshd &&
+chown    -v root:sys /var/lib/sshd
 
-groupadd -g 50 sshd        &&
-useradd  -c 'sshd PrivSep' \
+grep sshd /etc/group || groupadd -g 50 sshd
+grep sshd /etc/passwd || useradd  -c 'sshd PrivSep' \
          -d /var/lib/sshd  \
          -g sshd           \
          -s /bin/false     \
@@ -14,5 +14,13 @@ useradd  -c 'sshd PrivSep' \
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 echo "UsePAM yes" >> /etc/ssh/sshd_config
 
-rc-update add sshd default
-
+for dev in $(ls /etc/init.d/net.* | grep -v "net.lo" | awk -F. '{print $NF}'); do
+	if [ ! -f "/etc/init.d/sshd.$dev" ]; then
+		ln -s sshd /etc/init.d/sshd.$dev
+	fi;
+	if [ ! -f "/etc/conf.d/sshd.$dev" ]; then
+		cp /etc/conf.d/sshd /etc/conf.d/sshd.$dev
+		echo 'rc_need="!net net.'$dev'"' >> /etc/conf.d/sshd.$dev
+	fi;
+	rc-update add sshd.$dev default
+done

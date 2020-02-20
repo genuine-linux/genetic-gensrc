@@ -1,0 +1,11 @@
+### Package <GeoIP> info. ###
+
+original_name=GeoIP
+name=GeoIP
+version=1.6.12
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

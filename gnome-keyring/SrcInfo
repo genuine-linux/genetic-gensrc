@@ -1,5 +1,6 @@
 source=gnome-keyring
 version=3.34.0
-srcurl=http://host/-3.34.0
+srcurl=http://srchost/gnome-keyring-3.34.0
+category=base
 depends=
 package=gnome-keyring

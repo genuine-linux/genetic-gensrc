@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+PY3VERS="$(py3versions -iv)";
+
+# CMake configure #
+if test -f "CMakeLists.txt"; then
+	echo " --- CMake Configure <$name ($version)> ---";
+	rm -rf build.cmake &&
+	mkdir build.cmake &&
+	cd build.cmake &&
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_SKIP_RPATH=ON \
+	-DCMAKE_VERBOSE_MAKEFILE=ON \
+	-DFREETYPE_INCLUDE_DIRS="/usr/include/freetype2" \
+	-DPYTHON_VERSION=$PY3VERS \
+	-DWITH_CODEC_FFMPEG=ON \
+	-DWITH_CODEC_SNDFILE=ON \
+	-DWITH_CPU_SSE=ON \
+	-DWITH_CYCLES=ON \
+	-DWITH_DOC_MANPAGE=ON \
+	-DWITH_FFTW3=ON \
+	-DWITH_IMAGE_OPENJPEG=ON \
+	-DWITH_INPUT_NDOF=ON \
+	-DWITH_INSTALL_PORTABLE=OFF \
+	-DWITH_JACK=ON \
+	-DWITH_MOD_OCEANSIM=ON \
+	-DWITH_OPENCOLLADA=ON \
+	-DWITH_OPENCOLORIO=ON \
+	-DWITH_OPENSUBDIV=ON \
+	-DWITH_OPENVDB=ON \
+	-DWITH_PYTHON_INSTALL=ON \
+	-DWITH_SYSTEM_GLEW=ON \
+	../;
+fi;
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make  ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+fi;
+

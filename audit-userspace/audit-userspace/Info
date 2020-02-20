@@ -1,0 +1,12 @@
+### Package <audit-userspace> info. ###
+
+original_name=audit-userspace
+name=audit-userspace
+version=2.8.5
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

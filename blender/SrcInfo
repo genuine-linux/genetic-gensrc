@@ -1,0 +1,6 @@
+source=blender
+version=2.81
+srcurl=http://srchost/blender-2.81
+category=base
+depends=
+package=blender

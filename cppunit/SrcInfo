@@ -1,0 +1,5 @@
+source=cppunit
+version=1.15.1
+srcurl=http://host/-1.15.1
+depends=
+package=cppunit

@@ -23,7 +23,7 @@ fi;
 # make
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
-	make;
+	make prefix=/usr;
 fi;
 
 # Create install directory
@@ -32,6 +32,6 @@ mkdir -pv ${GENPKGDESTDIR};
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	make DESTDIR=${GENPKGDESTDIR} install;
+	make prefix=/usr DESTDIR=${GENPKGDESTDIR} install;
 fi;
 

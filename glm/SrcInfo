@@ -1,0 +1,6 @@
+source=glm
+version=0.9.9.7
+srcurl=http://srchost/glm-0.9.9.7
+category=base
+depends=
+package=glm

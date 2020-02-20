@@ -1,4 +1,6 @@
 source=dialog
-version=0.7
+version=1.3.20190808
+srcurl=http://srchost/dialog-1.3-20190808
+category=base
 depends=
 package=dialog

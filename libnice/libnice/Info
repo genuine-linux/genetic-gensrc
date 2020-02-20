@@ -1,0 +1,11 @@
+### Package <libnice> info. ###
+
+original_name=libnice
+name=libnice
+version=0.1.16
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,11 @@
+### Package <Jinja2> info. ###
+
+original_name=Jinja2
+name=Jinja2
+version=2.11.1
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

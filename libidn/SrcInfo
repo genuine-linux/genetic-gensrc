@@ -1,0 +1,5 @@
+source=libidn
+version=1.35
+srcurl=http://host/-1.35
+depends=
+package=libidn

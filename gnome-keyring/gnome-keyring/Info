@@ -4,6 +4,7 @@ original_name=gnome-keyring
 name=gnome-keyring
 version=3.34.0
 package=$name-$version
+category=
 depends=
 installbefore=
 installafter=

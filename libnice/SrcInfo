@@ -1,0 +1,5 @@
+source=libnice
+version=0.1.16
+srcurl=http://host/-0.1.16
+depends=
+package=libnice

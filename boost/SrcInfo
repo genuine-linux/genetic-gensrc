@@ -1,4 +1,4 @@
 source=boost
-version=1.70.0
-depends="which_2.21 Python2_2.7.16"
+version=1.71.0
+depends="which_2.21 Python_3.7.2 Python-2.7.3"
 package=boost

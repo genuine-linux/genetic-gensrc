@@ -1,0 +1,12 @@
+### Package <pax-utils> info. ###
+
+original_name=pax-utils
+name=pax-utils
+version=1.2.5
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

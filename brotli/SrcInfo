@@ -1,0 +1,6 @@
+source=brotli
+version=1.0.7
+srcurl=http://srchost/brotli-1.0.7
+category=base
+depends=
+package=brotli

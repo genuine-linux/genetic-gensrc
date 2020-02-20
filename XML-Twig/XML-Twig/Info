@@ -1,0 +1,12 @@
+### Package <XML-Twig> info. ###
+
+original_name=XML-Twig
+name=XML-Twig
+version=3.52
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,6 @@
+source=system-tools-backends
+version=2.10.2
+srcurl=http://srchost/system-tools-backends-2.10.2
+category=base
+depends=
+package=system-tools-backends

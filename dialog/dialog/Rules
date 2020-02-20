@@ -6,21 +6,73 @@ source ./Info;
 # Fake GEN<DESTDIR> = <rootfs> to install package #
 GENPKGDESTDIR="$(pwd)/rootfs";
 
+plvers="$(ls /usr/bin/perl5* | sed 's/\/usr\/bin\/perl//g')";
+
 # Change to source directory #
 cd ../$original_name-$version;
 
+# dialog examples #
+dialog_examples="yesno msgbox inputbox checklist menubox menubox1 menubox2 \
+	infobox textbox radiolist gauge gauge2 \
+	msgbox1 msgbox2 inputbox1 inputbox2 inputbox3 calendar timebox \
+	calendar2 fselect2 infobox2 infobox3 infobox4 menubox3 menubox4 \
+	menubox5 password textbox2 timebox2 yesno2 yesno3 \
+	fselect fselect1 inputbox4 inputbox5 \
+	inputmenu1 inputmenu2 inputmenu3 inputmenu4 \
+	checklist-utf8 msgbox4-utf8 inputbox6-utf8 menubox-utf8 msgbox4-eucjp \
+	form1 form2 inputbox7 \
+	calendar-stdout calendar2-stdout gauge0-input-fd \
+	fselect-stdout fselect1-stdout fselect2-stdout \
+	password1 password2 inputmenu-stdout \
+	timebox-stdout timebox2-stdout \
+	menubox10 menubox11 checklist10 radiolist10 pause \
+	editbox editbox2 editbox-utf8 mixedform mixedform2 mixedgauge \
+	report-button report-edit report-string report-tempfile report-yesno \
+	setup-edit setup-tempfile setup-utf8 setup-vars"
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	CFLAGS="$CFLAGS -fPIC -Wall" \
+	LDFLAGS="$LDFLAGS" \
+	CPPFLAGS="$CPPFLAGS" \
+	./configure --host=$GENUINE_HOST \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--enable-nls \
+		--enable-header-subdir \
+		--enable-widec \
+		--with-shared \
+		--with-screen=ncursesw6 \
+		--with-package=dialog \
+		--with-versioned-syms \
+		--disable-rpath-hack;
+fi;
+
 # make
-if test -f "Makefile"; then
+if test -f "Makefile" || test -f "makefile"; then
 	echo " --- Make <$name ($version)> ---";
 	make;
 fi;
 
-# Create install directory
-mkdir -pv ${GENPKGDESTDIR};
+# Create install directories
+mkdir -pv ${GENPKGDESTDIR}
+
+GENPKGDESTDIR_PERL5="$GENPKGDESTDIR/usr/lib/perl5/site_perl/$plvers/`uname -m`-linux-thread-multi";
+mkdir -pv $GENPKGDESTDIR_PERL5;
+
+GENPKGDESTDIR_DOCDIR="$GENPKGDESTDIR/usr/share/doc/$name-$version/examples";
+mkdir -pv $GENPKGDESTDIR_DOCDIR
 
 # make install
-if test -f "Makefile"; then
+if test -f "Makefile" || test -f "makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	make DESTDIR=${GENPKGDESTDIR} install;
+	make DESTDIR=${GENPKGDESTDIR} install &&
+	cp dialog.pl $GENPKGDESTDIR_PERL5/ &&
+	cd samples && cp -p $dialog_examples $GENPKGDESTDIR_DOCDIR/ &&
+	chmod 644 $GENPKGDESTDIR_DOCDIR/report-* &&
+	chmod 644 $GENPKGDESTDIR_DOCDIR/setup-* &&
+	chmod -R u+w $GENPKGDESTDIR_DOCDIR $GENPKGDESTDIR/usr/lib
 fi;
-

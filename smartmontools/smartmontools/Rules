@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+pushd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--with-initscriptdir=no \
+		--with-libsystemd=no \
+		--disable-static \
+		--enable-shared;
+fi;
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{usr/sbin,etc/init.d,etc/conf.d};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make  DESTDIR=${GENPKGDESTDIR} install;
+	install -m 644 smartd.confd $GENPKGDESTDIR/etc/conf.d/smartd
+	install -m 755 smartd.rc $GENPKGDESTDIR/etc/init.d/smartd
+	install -m 755 smartmontools-update-drivedb $GENPKGDESTDIR/usr/sbin/smartmontools-update-drivedb
+fi;
+
+
+popd;
+

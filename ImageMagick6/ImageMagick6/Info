@@ -1,0 +1,11 @@
+### Package <ImageMagick6> info. ###
+
+original_name=ImageMagick6
+name=ImageMagick6
+version=6.9.10.91
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

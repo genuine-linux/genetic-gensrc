@@ -1,0 +1,5 @@
+source=libwpg
+version=0.3.3
+srcurl=http://host/-0.3.3
+depends=
+package=libwpg

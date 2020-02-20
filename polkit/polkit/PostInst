@@ -1,5 +1,11 @@
 #!/bin/bash
 
-groupadd -fg 27 polkitd &&
-useradd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -u 27 \
+grep polkitd /etc/group || groupadd -fg 27 polkitd &&
+grep polkitd /etc/passwd || useradd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -u 27 \
         -g polkitd -s /bin/false polkitd
+
+chmod 0700 /{etc,usr/share}/polkit-1/rules.d
+chown polkitd /{etc,usr/share}/polkit-1/rules.d
+
+chmod 4755 /usr/lib/polkit-1/polkit-agent-helper-1
+chmod 4755 /usr/bin/pkexec

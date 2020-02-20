@@ -1,0 +1,11 @@
+### Package <libodfgen> info. ###
+
+original_name=libodfgen
+name=libodfgen
+version=0.1.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

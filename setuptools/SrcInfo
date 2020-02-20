@@ -1,0 +1,6 @@
+source=setuptools
+version=45.1.0
+srcurl=http://srchost/setuptools-45.1.0
+category=base
+depends=
+package=setuptools

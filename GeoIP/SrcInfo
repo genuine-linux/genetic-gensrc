@@ -1,0 +1,5 @@
+source=GeoIP
+version=1.6.12
+srcurl=http://host/-1.6.12
+depends=
+package=GeoIP

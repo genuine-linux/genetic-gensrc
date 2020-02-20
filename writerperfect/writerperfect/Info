@@ -1,0 +1,11 @@
+### Package <writerperfect> info. ###
+
+original_name=writerperfect
+name=writerperfect
+version=0.9.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

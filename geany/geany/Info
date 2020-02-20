@@ -1,0 +1,11 @@
+### Package <geany> info. ###
+
+original_name=geany
+name=geany
+version=1.36
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

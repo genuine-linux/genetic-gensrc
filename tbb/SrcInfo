@@ -1,0 +1,6 @@
+source=tbb
+version=2020.1
+srcurl=http://srchost/tbb-2020.1
+category=base
+depends=
+package=tbb

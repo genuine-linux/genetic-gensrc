@@ -30,11 +30,13 @@ if test -f "Makefile"; then
 fi;
 
 # Create install directory
-mkdir -pv ${GENPKGDESTDIR};
+mkdir -pv ${GENPKGDESTDIR}/usr/share/doc;
 
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
+	mv $GENPKGDESTDIR/usr/doc/indent \
+		$GENPKGDESTDIR/usr/share/doc/$name-$version
 fi;
 

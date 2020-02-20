@@ -1,0 +1,11 @@
+### Package <libwpd> info. ###
+
+original_name=libwpd
+name=libwpd
+version=0.9.9
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

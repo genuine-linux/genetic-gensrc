@@ -1,0 +1,6 @@
+source=pax-utils
+version=1.2.5
+srcurl=http://srchost/pax-utils-1.2.5
+category=base
+depends=
+package=pax-utils

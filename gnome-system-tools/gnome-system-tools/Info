@@ -1,0 +1,12 @@
+### Package <gnome-system-tools> info. ###
+
+original_name=gnome-system-tools
+name=gnome-system-tools
+version=3.0.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

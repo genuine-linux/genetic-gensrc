@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	export CFLAGS="$CFLAGS -O2 -pipe -fPIC -I/usr/include/libnm"
+	export CXXFLAGS="$CXXFLAGS -O2 -pipe -fPIC -I/usr/include/libnm"
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-gevolution \
+		--enable-cap \
+		--with-system-ssl-certs=/etc/ssl/certs \
+		--enable-perl \
+		--enable-dbus \
+		--enable-gnutls=no \
+		--enable-nss=yes \
+		--enable-vv \
+		--enable-tcl \
+		--enable-tk \
+		--enable-nm \
+		--disable-gtkspell \
+		--disable-meanwhile \
+		--with-python=/usr/bin/python3 \
+		--disable-static \
+		--enable-shared;
+fi;
+
+unset MAKEOPTS MAKE_OPTS
+
+# make
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DESTDIR=${GENPKGDESTDIR} install;
+fi;
+

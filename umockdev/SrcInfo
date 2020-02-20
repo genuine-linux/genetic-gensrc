@@ -1,4 +1,0 @@
-source=umockdev
-version=0.11
-depends="libgudev_1.0"
-package=umockdev

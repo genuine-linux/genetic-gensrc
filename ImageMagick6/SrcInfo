@@ -1,0 +1,5 @@
+source=ImageMagick6
+version=6.9.10.91
+srcurl=http://host/$name-$version
+depends=
+package=ImageMagick6

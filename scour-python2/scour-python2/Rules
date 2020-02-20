@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+echo " --- Make <$name ($version)> ---";
+python2 setup.py build
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+echo " --- Make Install <$name ($version)> ---";
+python2 setup.py install --optimize=1 --root=dest
+cp -av dest/* ${GENPKGDESTDIR}/
+

@@ -1,0 +1,11 @@
+### Package <docker> info. ###
+
+original_name=docker
+name=docker
+version=19.03.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

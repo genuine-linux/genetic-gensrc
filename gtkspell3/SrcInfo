@@ -1,0 +1,5 @@
+source=gtkspell3
+version=3.0.10
+srcurl=http://host/-3.0.10
+depends=
+package=gtkspell3

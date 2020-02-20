@@ -185,7 +185,9 @@ start()
 		migrate_to_run	/var/lock /run/lock
 		migrate_to_run	/var/run /run
 		clean_run
-		mkdir /run/lock
+		if ! [ -d /run/lock ]; then
+			mkdir /run/lock
+		fi
 	fi
 
 	if checkpath -W /var/run; then

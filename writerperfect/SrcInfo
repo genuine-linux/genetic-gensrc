@@ -1,0 +1,5 @@
+source=writerperfect
+version=0.9.6
+srcurl=http://host/-0.9.6
+depends=
+package=writerperfect

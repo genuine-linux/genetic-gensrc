@@ -12,7 +12,15 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
-	./configure --prefix=/usr
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared;
 fi;
 
 # make
@@ -22,12 +30,11 @@ if test -f "Makefile"; then
 fi;
 
 # Create install directory
-mkdir -pv ${GENPKGDESTDIR}/usr/lib/pkgconfig;
+mkdir -pv ${GENPKGDESTDIR};
 
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
-	cp -av IlmBase.pc $GENPKGDESTDIR/usr/lib/pkgconfig
 fi;
 

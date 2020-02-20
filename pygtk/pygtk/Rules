@@ -9,6 +9,8 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
+export PYTHON=/usr/bin/python2
+
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
@@ -39,3 +41,4 @@ if test -f "Makefile"; then
 	make DESTDIR=${GENPKGDESTDIR} install;
 fi;
 
+unset PYTHON

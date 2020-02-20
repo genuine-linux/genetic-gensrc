@@ -1,6 +1,10 @@
-#!/bin/sh
+#!/sbin/openrc-run
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
-command=/usr/bin/ntpd
+NTPD_OPTS="${NTPD_OPTS:--c /etc/ntp.conf}"
+
+command=/usr/sbin/ntpd
 pidfile=/run/ntpd.pid
 command_args="$NTPD_OPTS"
 

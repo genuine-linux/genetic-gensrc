@@ -1,0 +1,12 @@
+### Package <dkms> info. ###
+
+original_name=dkms
+name=dkms
+version=2.8.1
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

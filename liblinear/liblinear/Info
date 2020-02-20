@@ -1,0 +1,12 @@
+### Package <liblinear> info. ###
+
+original_name=liblinear
+name=liblinear
+version=230
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

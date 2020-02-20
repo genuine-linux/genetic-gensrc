@@ -1,1 +1,10 @@
 #!/bin/bash
+
+grep -v ^cron /etc/syslog.conf > /etc/syslog.conf.orig
+cp /etc/syslog.conf.orig /etc/syslog.conf
+rm /etc/syslog.conf.orig
+
+/etc/init.d/syslogd reload
+
+userdel fcron
+groupdel fcron

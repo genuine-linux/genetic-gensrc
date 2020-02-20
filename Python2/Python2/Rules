@@ -9,10 +9,20 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
+pymajver="2";
+pyminver="7";
+pyver="${pymajver}.${pyminver}";
+
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
-	./configure --prefix=/usr \
+	#CC="x86_64-genuine-linux-gnu-gcc" \
+	#GCC="$CC" \
+	#CXX="x86_64-genuine-linux-gnu-g++" \
+	./configure --host="$GENUINE_HOST" \
+		--target="$GENUINE_TGT" \
+		--build="$GENUINE_TGT" \
+		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
@@ -20,7 +30,9 @@ if test -f "configure"; then
 		--with-system-expat \
 		--with-system-ffi \
 		--with-ensurepip=yes \
-		--enable-unicode=ucs4;
+		--enable-unicode=ucs4 \
+		--enable-optimizations \
+		--with-lto
 fi;
 
 # make
@@ -35,7 +47,20 @@ mkdir -pv ${GENPKGDESTDIR};
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	make DESTDIR=${GENPKGDESTDIR} install;
-	chmod -v 755 $GENPKGDESTDIR/usr/lib/libpython2.7.so.1.0;
+	make DESTDIR=${GENPKGDESTDIR} install &&
+	chmod -v 755 $GENPKGDESTDIR/usr/lib/libpython${pyver}.so.1.0 &&
+	cd $GENPKGDESTDIR/usr/bin &&
+	rm -fv python &&
+	rm -fv python-config &&
+	rm -fv easy_install &&
+	mv -v idle idle${pyver} &&
+	ln -sf idle${pyver} idle${pymajver} &&
+	mv -v pydoc pydoc${pyver} &&
+	ln -sf pydoc${pyver} pydoc${pymajver} &&
+	mv -v 2to3 2to3-${pyver} &&
+	ln -sf 2to3-${pyver} 2to3-${pymajver} &&
+	if [ -f "pip" ] && [ ! -x "pip-$pyver" ]; then
+		 mv pip pip-$pyver
+	fi
 fi;
 

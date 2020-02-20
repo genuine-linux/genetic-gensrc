@@ -1,0 +1,6 @@
+source=polkit-gnome
+version=0.105
+srcurl=http://srchost/polkit-gnome-0.105
+category=base
+depends=
+package=polkit-gnome

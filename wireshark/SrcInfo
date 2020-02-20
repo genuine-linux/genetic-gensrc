@@ -1,0 +1,6 @@
+source=wireshark
+version=3.2.1
+srcurl=http://srchost/wireshark-3.2.1
+category=base
+depends=
+package=wireshark

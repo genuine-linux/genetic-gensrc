@@ -1,0 +1,12 @@
+### Package <glm> info. ###
+
+original_name=glm
+name=glm
+version=0.9.9.7
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

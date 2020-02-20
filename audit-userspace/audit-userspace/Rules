@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--bindir=/bin \
+		--sbindir=/sbin \
+		--libdir=/lib \
+		--datadir=/usr/share \
+		--includedir=/usr/include \
+		--libexecdir=/usr/libexec \
+		--sharedstatedir=/var/lib \
+		--localstatedir=/var \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--docdir=/usr/share/doc/$name-$version \
+		--with-python=yes \
+		--with-python3=yes \
+		--with-libwrap \
+		--enable-tcp=yes \
+		--enable-gssapi-krb5=yes \
+		--disable-zos-remote \
+		--with-libcap-ng=yes \
+		--without-golang \
+		--disable-systemd \
+		--disable-static \
+		--enable-shared;
+fi;
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make   DESTDIR=${GENPKGDESTDIR} install;
+fi;
+

@@ -1,0 +1,11 @@
+### Package <cryptography> info. ###
+
+original_name=cryptography
+name=cryptography
+version=2.8
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

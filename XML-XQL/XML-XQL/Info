@@ -1,0 +1,11 @@
+### Package <XML-XQL> info. ###
+
+original_name=XML-XQL
+name=XML-XQL
+version=0.68
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

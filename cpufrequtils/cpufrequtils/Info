@@ -1,0 +1,12 @@
+### Package <cpufrequtils> info. ###
+
+original_name=cpufrequtils
+name=cpufrequtils
+version=008
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

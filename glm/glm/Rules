@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/{include,share/doc/$name-$version};
+
+# Install
+cp -rvf glm $GENPKGDESTDIR/usr/include/ &&
+cp -rvf doc readme.md manual.md util $GENPKGDESTDIR/usr/share/doc/$name-$version/
+

@@ -1,0 +1,5 @@
+source=meanwhile
+version=1.0.2
+srcurl=http://host/-1.0.2
+depends=
+package=meanwhile

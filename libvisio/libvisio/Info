@@ -1,0 +1,11 @@
+### Package <libvisio> info. ###
+
+original_name=libvisio
+name=libvisio
+version=0.1.7
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

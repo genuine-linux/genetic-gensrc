@@ -1,0 +1,12 @@
+### Package <openrc-settingsd> info. ###
+
+original_name=openrc-settingsd
+name=openrc-settingsd
+version=1.0.1
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

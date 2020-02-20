@@ -1,0 +1,6 @@
+source=liblinear
+version=230
+srcurl=http://srchost/liblinear-230
+category=base
+depends=
+package=liblinear

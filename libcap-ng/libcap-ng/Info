@@ -1,0 +1,12 @@
+### Package <libcap-ng> info. ###
+
+original_name=libcap-ng
+name=libcap-ng
+version=0.7.10
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

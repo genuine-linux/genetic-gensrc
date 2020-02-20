@@ -1,0 +1,6 @@
+source=python2-defaults
+version=2.7.15
+srcurl=http://srchost/python2-defaults-2.7.15
+category=base
+depends=
+package=python2-defaults

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+groupadd docker
+
+if [ -f "/etc/init.d/docker" ]; then
+  chmod +x /etc/init.d/docker
+  rc-update add docker default
+fi;

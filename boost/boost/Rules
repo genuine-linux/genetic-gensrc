@@ -9,11 +9,70 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
+topsrcdir="$(pwd)";
+
+pyversions="$(py3versions -iv) $(pyversions -iv)";
+pyverids="$(echo $pyversions | sed 's/\.//g')";
+
+# user-config.jam setup #
+user_config="user-config.jam";
+
+TOOLSET_CONFIG='using gcc : : : <compileflags>"$CPPFLAGS" <cflags>"$CFLAGS" <cxxflags>"$CXXFLAGS -Wno-unused-local-typedefs" <linkflags>"$LDFLAGS" ;'
+
+echo "$TOOLSET_CONFIG" >> $user_config;
+echo "using mpi ;" >> $user_config;
+set -e;
+for pyver in $pyversions; do
+	cp $user_config user-config-${pyver}.jam;
+        echo "using python : ${pyver} : /usr ;" >> user-config-${pyver}.jam;
+done
+
+# BJAM #
+B2="$topsrcdir/b2";
+JAM="$B2 -q -d2 --layout=system --ignore-site-config";
+JAM_OPTS="threading=multi link=shared --prefix=$GENPKGDESTDIR/usr --user-config=$user_config";
+JAM_WITHOUT="--without-context --without-coroutine --without-fiber";
+
+echo " --- Bootstrap ($name - $version) ---" &&
 ./bootstrap.sh --prefix=$GENPKGDESTDIR/usr &&
-./b2 stage threading=multi link=shared
+
+echo " --- Build ($name - $version) bcp, inspect, quickbook ---" &&
+(cd tools/bcp && $JAM)
+(cd tools/inspect/build && $JAM)
+(cd tools/quickbook && $JAM)
+
+echo " --- Build ($name - $version) $JAM_WITHOUT --without-python ---" &&
+
+$JAM stage $JAM_OPTS $JAM_WITHOUT --without-python &&
+set -e;
+for pyver in ${pyversions}; do
+  echo " --- Build ($name - $version) --with-python --with-mpi python=${pyver} ---" &&
+  $JAM stage $JAM_OPTS --build-dir=build-${pyver} --stagedir=stage-${pyver} --user-config=user-config-${pyver}.jam --with-python --with-mpi python=${pyver}
+done
 
 # Create install directory
-mkdir -pv ${GENPKGDESTDIR}/usr;
+mkdir -pv ${GENPKGDESTDIR}/usr/bin &&
 
-./b2 install threading=multi link=shared                 &&
-ln -svf detail/sha1.hpp $GENPKGDESTDIR/usr/include/boost/uuid/sha1.hpp
+echo " --- Install ($name - $version) $JAM_WITHOUT --without-python ---" &&
+
+$JAM install $JAM_OPTS $JAM_WITHOUT --without-python &&
+
+set -e
+
+for pyver in $pyversions; do
+  echo " --- Install ($name - $version) --with-python --with-mpi python=${pyver} ---" &&
+  $JAM install $JAM_OPTS --build-dir=build-${pyver} --stagedir=stage-${pyver} --user-config=user-config-${pyver}.jam --with-python --with-mpi python=${pyver}
+done
+
+echo " --- Install ($name - $version) b2, bjam, bcp, inspect, quickbook ---" &&
+install -m 755 b2 $GENPKGDESTDIR/usr/bin/b2 &&
+install -m 755 dist/bin/bcp $GENPKGDESTDIR/usr/bin/bcp &&
+install -m 755 dist/bin/inspect $GENPKGDESTDIR/usr/bin/inspect &&
+install -m 755 dist/bin/quickbook $GENPKGDESTDIR/usr/bin/quickbook &&
+
+cd $GENPKGDESTDIR/usr/include/boost/uuid &&
+ln -svf detail/sha1.hpp sha1.hpp &&
+
+cd $GENPKGDESTDIR/usr/bin &&
+ln -svf b2 bjam
+

@@ -1,0 +1,5 @@
+source=openmpi
+version=4.0.2
+srcurl=http://host/-4.0.2
+depends=
+package=openmpi

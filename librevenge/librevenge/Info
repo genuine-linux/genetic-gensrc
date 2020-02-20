@@ -1,0 +1,11 @@
+### Package <librevenge> info. ###
+
+original_name=librevenge
+name=librevenge
+version=0.0.4
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

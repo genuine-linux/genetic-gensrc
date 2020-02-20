@@ -26,9 +26,13 @@ if test -f "Makefile"; then
 		DESTDIR=${GENPKGDESTDIR} \
 		MKBASHCOMP=yes \
 		MKPKGCONFIG=yes \
+		MKPAM=pam \
+		MKAUDIT=yes \
+		MKNET=yes \
 		MKSELINUX=no \
 		MKTERMCAP=ncurses \
 		MKSYSVINIT=yes \
+		OS=Linux \
 		BRANDING=\"Genuine/$(uname -s)\" \
 		install && \
 	cp -av ../$name/files/* $GENPKGDESTDIR/;

@@ -1,0 +1,12 @@
+### Package <traceroute> info. ###
+
+original_name=traceroute
+name=traceroute
+version=2.1.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

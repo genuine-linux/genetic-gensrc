@@ -2,22 +2,23 @@
 
 chmod +x /etc/init.d/*
 
+#rc-update add root boot
+#rc-update add procfs boot
+#rc-update add mtab boot
+#rc-update add fsck boot
+#rc-update add swap boot
+#rc-update add devfs sysinit
+#rc-update add sysfs sysinit
+
 rc-update add udev sysinit
 rc-update add udev-trigger sysinit
-rc-update add fcron default
-rc-update add sshd default
 rc-update add sysklogd default
+rc-update add bootlogd default
+rc-update add numlock default
+rc-update add consolefont default
 
-ln -s /etc/init.d/agetty{,.tty1}
-ln -s /etc/init.d/agetty{,.tty2}
-ln -s /etc/init.d/agetty{,.tty3}
-ln -s /etc/init.d/agetty{,.tty4}
-ln -s /etc/init.d/agetty{,.tty5}
-ln -s /etc/init.d/agetty{,.tty6}
+for n in 1 2 3 4 5 6; do
+	ln -s /etc/init.d/agetty{,.tty$n}
+	rc-update add agetty.tty$n default
+done
 
-rc-update add agetty.tty1 default
-rc-update add agetty.tty2 default
-rc-update add agetty.tty3 default
-rc-update add agetty.tty4 default
-rc-update add agetty.tty5 default
-rc-update add agetty.tty6 default

@@ -1,0 +1,12 @@
+### Package <brotli> info. ###
+
+original_name=brotli
+name=brotli
+version=1.0.7
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+
