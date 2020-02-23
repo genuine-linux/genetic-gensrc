@@ -1,5 +1,5 @@
 source=caja
-version=1.23.2
-srcurl=http://host/-1.23.2
+version=1.24.0
+srcurl=http://host/caja-1.24.0
 depends=
 package=caja

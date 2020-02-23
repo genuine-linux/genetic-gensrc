@@ -1,0 +1,6 @@
+source=nano
+version=4.4
+srcurl=http://srchost/nano-4.4
+category=base
+depends=
+package=nano

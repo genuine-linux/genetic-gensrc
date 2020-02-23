@@ -28,7 +28,7 @@ if test -f "configure"; then
 		--docdir=/usr/share/doc/$name-$version \
             	--with-rootprefix=      \
             	--with-rootlibdir=/lib  \
-	    	--with-rootrundir=/run
+	    	--with-rootrundir=/run \
             	--enable-manpages       \
             	--disable-static        \
             	--config-cache \

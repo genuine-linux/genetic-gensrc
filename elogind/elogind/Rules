@@ -12,15 +12,20 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
-	mkdir build &&
-	cd    build &&
-	meson --prefix=/usr                        \
-		--sysconfdir=/etc                    \
-		--localstatedir=/var                 \
-		--libdir /usr/lib \
-		-Dcgroup-controller=elogind          \
-		-Ddbuspolicydir=/etc/dbus-1/system.d \
-		..
+	rccgroupmode="$(grep rc_cgroup_mode /etc/rc.conf | cut -d '"' -f 2)"
+	cgroupmode="legacy"
+	if test "xhybrid" == "x${rccgroupmode}"; then
+		cgroupmode="hybrid"
+	elif test "xunified" == "x${rccgroupmode}"; then
+		cgroupmode="unified"
+	fi
+	mkdir build.meson &&
+	cd    build.meson &&
+	meson -Ddbuspolicydir=/etc/dbus-1/system.d \
+		-Ddocdir=/usr/share/doc/$name-$version \
+		--libdir=/usr/lib \
+		-Dcgroup-controller=openrc \
+		../
 fi;
 
 # ninja

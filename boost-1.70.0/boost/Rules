@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+export CFLAGS="$CFLAGS -O2 -pipe -fPIC -I/usr/include/python3.7m"
+export CXXFLAGS="$CXXFLAGS -O2 -pipe -fPIC -I/usr/include/python3.7m"
+
+./bootstrap.sh --prefix=$GENPKGDESTDIR/usr \
+	--with-libraries=all \
+	--with-python=python3 \
+	--show-libraries &&
+
+./b2 stage threading=multi link=shared
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr;
+
+./b2 install threading=multi link=shared                 &&
+ln -svf detail/sha1.hpp $GENPKGDESTDIR/usr/include/boost/uuid/sha1.hpp

@@ -19,8 +19,12 @@ if test -f "configure"; then
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--enable-libsystemd-login=no \
+		--with-systemdsystemunitdir=no \
+		--with-authfw=pam \
+		--enable-libelogind=yes \
 		--with-os_type=genuine \
-		--enable-introspection \
+		--enable-introspection=yes \
+		--enable-nls \
 		--disable-static \
 		--enable-shared;
 fi;

@@ -1,0 +1,6 @@
+source=ayatana-indicator-power
+version=2.0.94
+srcurl=http://srchost/ayatana-indicator-power-2.0.94
+category=base
+depends=
+package=ayatana-indicator-power

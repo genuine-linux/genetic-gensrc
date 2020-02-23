@@ -1,0 +1,12 @@
+### Package <i3> info. ###
+
+original_name=i3
+name=i3
+version=4.18
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

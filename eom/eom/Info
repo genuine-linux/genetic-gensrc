@@ -2,7 +2,7 @@
 
 original_name=eom
 name=eom
-version=1.23.1
+version=1.24.0
 package=$name-$version
 depends=
 installbefore=

@@ -1,0 +1,6 @@
+source=topmenu-gtk
+version=0.3
+srcurl=http://srchost/topmenu-gtk-0.3
+category=base
+depends=
+package=topmenu-gtk

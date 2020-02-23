@@ -1,0 +1,12 @@
+### Package <bashdb> info. ###
+
+original_name=bashdb
+name=bashdb
+version=5.0.1.1.2
+package=bashdb-5.0.1.1.2
+category=
+depends=
+installbefore=
+installafter=
+replaces="bashdb bashdb.dbg"
+

@@ -1,0 +1,12 @@
+### Package <ayatana-indicator-power> info. ###
+
+original_name=ayatana-indicator-power
+name=ayatana-indicator-power
+version=2.0.94
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

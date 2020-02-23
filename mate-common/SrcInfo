@@ -1,5 +1,5 @@
 source=mate-common
-version=1.23.152
-srcurl=http://host/-1.23.152
+version=1.24.0
+srcurl=http://host/mate-common-1.24.0
 depends=
 package=mate-common

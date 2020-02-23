@@ -1,0 +1,6 @@
+source=appmenu-gtk-module
+version=0.6.94
+srcurl=http://srchost/appmenu-gtk-module-0.6.94
+category=base
+depends=
+package=appmenu-gtk-module

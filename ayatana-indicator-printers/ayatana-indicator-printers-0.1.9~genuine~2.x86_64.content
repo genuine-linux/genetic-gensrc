@@ -1,0 +1,15 @@
+Info
+PkgArch
+PostInst
+PostRemv
+PreInst
+PreRemv
+ayatana-indicator-printers.dirs
+ayatana-indicator-printers.etc.dirs
+ayatana-indicator-printers.etc.files
+ayatana-indicator-printers.etc.links
+ayatana-indicator-printers.files
+ayatana-indicator-printers.links
+rootfs.tmp
+striplib.log
+~genuine~2

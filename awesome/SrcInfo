@@ -1,0 +1,6 @@
+source=awesome
+version=4.3
+srcurl=http://srchost/awesome-4.3
+category=base
+depends=
+package=awesome

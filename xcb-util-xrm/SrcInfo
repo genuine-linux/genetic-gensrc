@@ -1,0 +1,6 @@
+source=xcb-util-xrm
+version=1.3
+srcurl=http://srchost/xcb-util-xrm-1.3
+category=base
+depends=
+package=xcb-util-xrm

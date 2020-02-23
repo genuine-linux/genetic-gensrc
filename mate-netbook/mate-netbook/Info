@@ -2,9 +2,9 @@
 
 original_name=mate-netbook
 name=mate-netbook
-version=1.23.0
+version=1.24.0
 package=$name-$version
-depends="mate-desktop_1.23.0"
+depends="mate-desktop_1.24.0"
 installbefore=
 installafter=
 replaces="$name"

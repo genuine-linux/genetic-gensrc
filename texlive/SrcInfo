@@ -1,0 +1,6 @@
+source=texlive
+version=2019
+srcurl=http://srchost/texlive-2019
+category=base
+depends=
+package=texlive

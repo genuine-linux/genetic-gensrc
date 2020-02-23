@@ -1,0 +1,12 @@
+### Package <cmake-extras> info. ###
+
+original_name=cmake-extras
+name=cmake-extras
+version=1.13
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

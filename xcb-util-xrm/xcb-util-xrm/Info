@@ -1,0 +1,12 @@
+### Package <xcb-util-xrm> info. ###
+
+original_name=xcb-util-xrm
+name=xcb-util-xrm
+version=1.3
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

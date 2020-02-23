@@ -1,0 +1,12 @@
+### Package <vala-panel-appmenu> info. ###
+
+original_name=vala-panel-appmenu
+name=vala-panel-appmenu
+version=0.6.94
+package=vala-panel-appmenu-0.6.94
+category=
+depends=
+installbefore=
+installafter=
+replaces="vala-panel-appmenu vala-panel-appmenu.dbg"
+

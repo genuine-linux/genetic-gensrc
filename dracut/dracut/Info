@@ -1,0 +1,12 @@
+### Package <dracut> info. ###
+
+original_name=dracut
+name=dracut
+version=049
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

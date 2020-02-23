@@ -1,0 +1,15 @@
+/usr
+/usr/lib
+/usr/lib/gtk-3.0
+/usr/lib/gtk-3.0/modules
+/usr/share
+/usr/share/dbus-1
+/usr/share/dbus-1/services
+/usr/share/mate-panel
+/usr/share/mate-panel/applets
+/usr/share/doc
+/usr/share/icons
+/usr/share/icons/hicolor
+/usr/share/icons/hicolor/48x48
+/usr/share/icons/hicolor/48x48/apps
+/usr/libexec

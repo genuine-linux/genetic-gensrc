@@ -1,0 +1,6 @@
+source=lcov
+version=1.14
+srcurl=http://srchost/lcov-1.14
+category=base
+depends=
+package=lcov

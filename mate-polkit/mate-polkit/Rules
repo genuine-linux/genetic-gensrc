@@ -12,6 +12,9 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	cp src/main.c src/main.c.orig
+	sed 's/libappindicator\/app-indicator.h/libayatana-appindicator\/app-indicator.h/g' \
+		src/main.c.orig > src/main.c
 	./configure --host=$GENUINE_HOST \
 		--target=$GENUINE_TGT \
 		--build=$GENUINE_TGT \
@@ -20,7 +23,9 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
 		--disable-static \
-		--enable-shared;
+		--enable-shared \
+		--enable-accountsservice \
+		--enable-appindicator=yes
 fi;
 
 # make
@@ -36,5 +41,6 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
+	cp -av ../$name/files/* $GENPKGDESTDIR/
 fi;
 

@@ -1,0 +1,10 @@
+/usr/lib/libtopmenu-client-gtk3.so.0.0.0
+/usr/lib/libtopmenu-server-gtk3.so.0.0.0
+/usr/lib/libtopmenu-server-gtk3.la
+/usr/lib/gtk-3.0/modules/libtopmenu-gtk-module.so
+/usr/lib/gtk-3.0/modules/libtopmenu-gtk-module.la
+/usr/lib/libtopmenu-client-gtk3.la
+/usr/share/dbus-1/services/org.mate.panel.applet.TopMenuMatePanelAppletFactory.service
+/usr/share/mate-panel/applets/com.javispedro.topmenu.MatePanelApplet.mate-panel-applet
+/usr/share/icons/hicolor/48x48/apps/topmenu-applet.png
+/usr/libexec/topmenu-mate-panel-applet

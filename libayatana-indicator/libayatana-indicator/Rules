@@ -34,5 +34,8 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
+	cd $GENPKGDESTDIR/usr/lib/pkgconfig/
+	sed 's/Name: libayatana-indicator3/Name: libayatana-indicator/g' \
+		ayatana-indicator3-0.4.pc > ayatana-indicator-0.4.pc
 fi;
 

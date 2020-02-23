@@ -36,5 +36,7 @@ if test -f "Makefile"; then
 		BRANDING=\"Genuine/$(uname -s)\" \
 		install && \
 	cp -av ../$name/files/* $GENPKGDESTDIR/;
+	cp -av $GENPKGDESTDIR/share $GENPKGDESTDIR/usr/
+	rm -rf $GENPKGDESTDIR/share
 fi;
 

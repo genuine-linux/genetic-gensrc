@@ -1,0 +1,12 @@
+### Package <topmenu-gtk> info. ###
+
+original_name=topmenu-gtk
+name=topmenu-gtk
+version=0.3
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

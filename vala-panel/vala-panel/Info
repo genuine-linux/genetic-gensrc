@@ -1,0 +1,11 @@
+### Package <vala-panel> info. ###
+
+original_name=vala-panel
+name=vala-panel
+version=0.4.91
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

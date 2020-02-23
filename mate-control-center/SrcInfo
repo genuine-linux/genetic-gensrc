@@ -1,5 +1,5 @@
 source=mate-control-center
-version=1.23.2
-srcurl=http://host/-1.23.2
-depends="mate-common_1.23.0 autoconf-archive_2019.01.06 mate-desktop_1.23.0"
+version=1.24.0
+srcurl=http://host/mate-control-center-1.24.0
+depends="mate-common_1.24.0 autoconf-archive_2019.01.06 mate-desktop_1.24.0"
 package=mate-control-center

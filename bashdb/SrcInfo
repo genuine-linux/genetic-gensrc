@@ -1,0 +1,6 @@
+source=bashdb
+version=5.0.1.1.2
+srcurl=http://srchost/bashdb-5.0.1.1.2
+category=base
+depends=
+package=bashdb

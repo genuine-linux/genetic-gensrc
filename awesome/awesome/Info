@@ -1,0 +1,12 @@
+### Package <awesome> info. ###
+
+original_name=awesome
+name=awesome
+version=4.3
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

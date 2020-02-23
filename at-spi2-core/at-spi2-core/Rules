@@ -15,7 +15,9 @@ cd build.meson
 echo " --- Meson <$name ($version)> ---";
 meson --prefix=/usr \
 	--sysconfdir=/etc \
+	--libexecdir=/usr/lib/at-spi2-core \
 	-Dsystemd_user_dir=no \
+	-Dintrospection=yes \
 	..
 
 echo " --- Ninja <$name ($version)> ---";
@@ -26,4 +28,7 @@ mkdir -pv ${GENPKGDESTDIR};
 
 echo " --- Make Install <$name ($version)> ---";
 DESTDIR=${GENPKGDESTDIR} ninja install;
+if [ -d "$GENPKGDESTDIR/usr/no" ]; then
+	rm -rfv $GENPKGDESTDIR/usr/no
+fi
 

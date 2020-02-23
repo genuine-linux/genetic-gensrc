@@ -12,6 +12,9 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	cp typing-break/drwright.c typing-break/drwright.c.orig
+	sed 's/libappindicator\/app-indicator.h/libayatana-appindicator\/app-indicator.h/g' \
+		typing-break/drwright.c.orig > typing-break/drwright.c
 	./configure --host=$GENUINE_HOST \
 		--target=$GENUINE_TGT \
 		--build=$GENUINE_TGT \

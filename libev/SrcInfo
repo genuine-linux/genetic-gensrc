@@ -1,0 +1,6 @@
+source=libev
+version=4.31
+srcurl=http://srchost/libev-4.31
+category=base
+depends=
+package=libev

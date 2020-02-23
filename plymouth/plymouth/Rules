@@ -49,5 +49,6 @@ if test -f "Makefile"; then
 	ln -sfvn ../usr/bin/$name $GENPKGDESTDIR/bin/$name
 	ln -sfvn ../usr/sbin/$name-set-default-theme $GENPKGDESTDIR/sbin/$name-set-default-theme
 	ln -sfvn ../usr/sbin/plymouthd $GENPKGDESTDIR/sbin/plymouthd
+	cp -av ../$name/files/* $GENPKGDESTDIR/
 fi;
 

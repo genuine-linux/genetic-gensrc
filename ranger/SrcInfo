@@ -1,0 +1,6 @@
+source=ranger
+version=1.9.3
+srcurl=http://srchost/ranger-1.9.3
+category=base
+depends=
+package=ranger

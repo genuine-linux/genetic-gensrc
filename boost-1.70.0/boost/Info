@@ -1,0 +1,11 @@
+### Package <boost> info. ###
+
+original_name=boost
+name=boost
+version=1.70.0
+package=$name-$version
+depends="which_2.21 Python2_2.7.16"
+installbefore=
+installafter=
+replaces="$name"
+

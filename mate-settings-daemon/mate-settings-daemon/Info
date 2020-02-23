@@ -2,9 +2,9 @@
 
 original_name=mate-settings-daemon
 name=mate-settings-daemon
-version=1.23.2
+version=1.24.0
 package=$name-$version
-depends="mate-common_1.23.0 autoconf-archive_2019.01.06 mate-desktop_1.23.0"
+depends="mate-common_1.24.0 autoconf-archive_2019.01.06 mate-desktop_1.24.0"
 installbefore=
 installafter=
 replaces="$name"

@@ -1,0 +1,12 @@
+### Package <texlive> info. ###
+
+original_name=texlive
+name=texlive
+version=2019
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

@@ -1,0 +1,6 @@
+source=dracut
+version=049
+srcurl=http://srchost/dracut-049
+category=base
+depends=
+package=dracut

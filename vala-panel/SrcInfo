@@ -1,0 +1,4 @@
+source=vala-panel
+version=0.4.91
+depends=
+package=vala-panel

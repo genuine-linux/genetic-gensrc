@@ -1,0 +1,6 @@
+source=cmake-extras
+version=1.13
+srcurl=http://srchost/cmake-extras-1.13
+category=base
+depends=
+package=cmake-extras

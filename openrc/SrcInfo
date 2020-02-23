@@ -1,4 +1,4 @@
 source=openrc
-version=0.42.1
+version=0.41.2
 depends="sysvinit_2.93 eudev_3.2.7"
 package=openrc

@@ -14,8 +14,12 @@ cd build.meson
 
 echo " --- Meson <$name ($version)> ---";
 meson --prefix=/usr \
-	-Dadmin_group=adm \
+	-Dadmin_group=root \
+	-Dextra_admin_groups=wheel,adm,sys,daemon,bin \
 	-Delogind=true \
+	-Dminimum_uid=1000 \
+	-Dintrospection=true \
+	-Dsystemd=false \
 	-Dsystemdsystemunitdir=no \
 	..
 

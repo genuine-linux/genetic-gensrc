@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Default theme for Genuine
+Description=A theme that features a genuine logo in a white spinning circle
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/genuine
+ScriptFile=/usr/share/plymouth/themes/genuine/genuine.script

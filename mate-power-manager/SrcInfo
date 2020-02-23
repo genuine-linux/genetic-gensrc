@@ -1,5 +1,5 @@
 source=mate-power-manager
-version=1.23.1
-srcurl=http://host/-1.23.1
+version=1.24.0
+srcurl=http://host/mate-power-manager-1.24.0
 depends=
 package=mate-power-manager

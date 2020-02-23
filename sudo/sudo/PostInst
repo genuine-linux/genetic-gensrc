@@ -1,4 +1,4 @@
 #!/bin/bash
 
 chmod 644 /etc/pam.d/sudo
-
+chown 0:0 /etc/sudo.conf

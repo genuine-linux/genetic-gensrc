@@ -1,0 +1,6 @@
+source=libxdg-basedir
+version=1.2.0
+srcurl=http://srchost/libxdg-basedir-1.2.0
+category=base
+depends=
+package=libxdg-basedir

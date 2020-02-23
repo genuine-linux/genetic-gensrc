@@ -2,7 +2,7 @@
 
 original_name=mate-session-manager
 name=mate-session-manager
-version=1.23.0
+version=1.24.0
 package=$name-$version
 depends=
 installbefore=

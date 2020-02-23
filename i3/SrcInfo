@@ -1,0 +1,6 @@
+source=i3
+version=4.18
+srcurl=http://srchost/i3-4.18
+category=base
+depends=
+package=i3

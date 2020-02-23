@@ -1,0 +1,12 @@
+### Package <ranger> info. ###
+
+original_name=ranger
+name=ranger
+version=1.9.3
+package=ranger-1.9.3
+category=
+depends=
+installbefore=
+installafter=
+replaces="ranger ranger.dbg"
+

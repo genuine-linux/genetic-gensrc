@@ -1,1 +1,14 @@
 #!/bin/bash
+
+chmod +x /etc/init.d/elogind
+
+if [ "$(rc-config list boot | grep elogind)" != "" ]; then
+	if [ "$(rc-config list default | grep elogind)" != "" ]; then
+		rc-update del elogind default
+		rc-update add elogind boot
+	else
+		if [ ! -f "/etc/pam.d/elogind" ]; then
+			rc-update add elogind boot
+		fi
+	fi
+fi;

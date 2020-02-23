@@ -1,18 +1,22 @@
 #
 # Genuine default grub parameters
 #
-GRUB_DEFAULT=0
-#GRUB_TIMEOUT_STYLE=hidden
+GRUB_DEFAULT=saved
+GRUB_TIMEOUT_STYLE=menu
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="Genuine"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet nomodeset"
+GRUB_CMDLINE_LINUX_DEFAULT="init=/sbin/openrc-init quiet splash"
 GRUB_CMDLINE_LINUX=""
+GRUB_SAVEDEFAULT=true
+GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+GRUB_TERMINAL_INPUT=console
+#GRUB_TERMINAL_OUTPUT=console
 #GRUB_TERMINAL=console
 GRUB_GFXMODE=1024x768x32,1024x768
 GRUB_GFXPAYLOAD_LINUX=keep
 GRUB_THEME=/boot/grub/themes/genuine/theme.txt
-#GRUB_COLOR_NORMAL="light-blue/black"
-#GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+GRUB_COLOR_NORMAL="light-grey/black"
+GRUB_COLOR_HIGHLIGHT="green/black"
 #GRUB_DISABLE_LINUX_UUID=true
 #GRUB_DISABLE_RECOVERY="true"
 #GRUB_INIT_TUNE="480 440 1"

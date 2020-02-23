@@ -2,7 +2,7 @@
 
 original_name=tree
 name=tree
-version=1.8.0.tgz
+version=1.8.0
 package=$name-$version
 depends=
 installbefore=

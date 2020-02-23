@@ -2,7 +2,7 @@
 
 original_name=libwpd
 name=libwpd
-version=0.9.9
+version=0.10.3
 package=$name-$version
 depends=
 installbefore=

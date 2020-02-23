@@ -1,0 +1,12 @@
+### Package <libxdg-basedir> info. ###
+
+original_name=libxdg-basedir
+name=libxdg-basedir
+version=1.2.0
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

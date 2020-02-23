@@ -1,0 +1,6 @@
+source=gcovr
+version=4.2
+srcurl=http://srchost/gcovr-4.2
+category=base
+depends=
+package=gcovr

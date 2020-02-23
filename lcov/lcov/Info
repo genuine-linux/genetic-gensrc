@@ -1,0 +1,12 @@
+### Package <lcov> info. ###
+
+original_name=lcov
+name=lcov
+version=1.14
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

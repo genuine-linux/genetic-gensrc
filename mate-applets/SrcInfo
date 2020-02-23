@@ -1,5 +1,5 @@
 source=mate-applets
-version=1.23.0
-srcurl=http://host/-1.23.0
-depends="mate-panel_1.23.0"
+version=1.24.0
+srcurl=http://host/mate-applets-1.24.0
+depends="mate-panel_1.24.0"
 package=mate-applets

@@ -1,0 +1,12 @@
+### Package <libev> info. ###
+
+original_name=libev
+name=libev
+version=4.31
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

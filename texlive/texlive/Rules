@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -pv $GENPKGDESTDIR/opt/$name
+
+TEXLIVE_INSTALL_PREFIX=$GENPKGDESTDIR/opt/$name \
+	./install-tl -no-gui -profile texlive.profile
+
+cp -av ../$name/files/* $GENPKGDESTDIR/

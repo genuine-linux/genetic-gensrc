@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=PolicyKit MATE Authentication Agent
+Comment=PolicyKit MATE Authentication Agent
+Exec=/usr/libexec/polkit-mate-authentication-agent-1
+Terminal=false
+Type=Application
+Categories=
+NoDisplay=true
+OnlyShowIn=MATE;XFCE;Unity;
+AutostartCondition=MATE unless-session mate

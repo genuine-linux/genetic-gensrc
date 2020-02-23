@@ -1,4 +1,4 @@
 source=glibmm
-version=2.60.0
-depends=
+version=2.62.0
+depends="glib_2.62.4 glib-networking_2.62.0"
 package=glibmm
