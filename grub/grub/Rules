@@ -12,6 +12,9 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	unset CFLAGS CXXFLAGS
+	CFLAGS="-O2 -pipe -fno-PIC" \
+	CXXFLAGS="-O2 -pipe -fno-PIC" \
 	./configure \
 		--host="$GENUINE_HOST" \
 		--target="$GENUINE_TGT" \

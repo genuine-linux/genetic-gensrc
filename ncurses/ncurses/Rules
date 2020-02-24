@@ -13,10 +13,7 @@ cd ../$original_name-$version;
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
 	./configure \
-		--host="$GENUINE_HOST" \
-		--target="$GENUINE_TGT" \
-		--build="$GENUINE_TGT" \
-		--prefix=/usr \
+	--prefix=/usr \
 	    --with-shared           \
             --without-debug         \
             --without-normal        \

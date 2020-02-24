@@ -1,0 +1,6 @@
+source=powerline
+version=2.7
+srcurl=http://srchost/powerline-2.7
+category=base
+depends=
+package=powerline

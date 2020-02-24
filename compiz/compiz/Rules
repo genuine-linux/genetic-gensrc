@@ -15,6 +15,7 @@ if test -f "CMakeLists.txt"; then
 	mkdir build.cmake;
 	cd build.cmake;
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+		-DENABLE_PRECOMPILED_HEADERS=OFF \
 		-DCOMPIZ_BUILD_WITH_RPATH=FALSE \
 		-DCMAKE_BUILD_TYPE=Release \
 	       	-DCOMPIZ_PACKAGING_ENABLED=TRUE \

@@ -21,7 +21,8 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
 		--with-privsep-path=/var/lib/sshd \
-		--with-md5-passwords;
+		--with-md5-passwords \
+		--with-pam;
 fi;
 
 # make

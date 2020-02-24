@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/sbin/openrc-run
 
-command=/usr/bin/sshd
+command=/usr/sbin/sshd
 description='ssh daemon'
 command_args="$SSHD_OPTS"
 pidfile=/run/sshd.pid

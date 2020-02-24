@@ -1,0 +1,12 @@
+### Package <powerline> info. ###
+
+original_name=powerline
+name=powerline
+version=2.7
+package=powerline-2.7
+category=
+depends=
+installbefore=
+installafter=
+replaces="powerline powerline.dbg"
+

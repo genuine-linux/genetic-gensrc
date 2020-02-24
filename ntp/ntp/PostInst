@@ -5,3 +5,7 @@ useradd -c "Network Time Protocol" -d /var/lib/ntp -u 87 \
         -g ntp -s /bin/false ntp
 
 install -v -o ntp -g ntp -d /var/lib/ntp
+
+update-leap
+
+rc-update add ntpd default

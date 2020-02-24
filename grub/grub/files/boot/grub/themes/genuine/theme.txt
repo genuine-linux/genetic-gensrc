@@ -1,79 +1,64 @@
-# Default theme for GRUB2
-#
-# Copyright (C) 2011 Daniel Tschudi
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
+# Genuine Grub
 
-#general settings
-message-font: "DejaVu Sans Regular 12"
-message-color: "#000"
-message-bg-color: "#fff"
-terminal-box: "terminal_box_*.png"
-terminal-font: "DejaVu Sans Regular 12"
-desktop-image: "Chromesome.png"
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#0E1533"
+terminal-left: "0%"
+terminal-top: "0%"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
 
-#help bar at the bottom
-+ label {
-	top = 100%-25
-	left = 0
-	width = 100%
-	height = 20
-	text = "@KEYMAP_MIDDLE@"
-	align = "center"
-	font = "DejaVu Sans Regular 10"
-	color = "#FFF"
-}
+#Logotipo 
++ image {
+	top = 10%
+	left = 50%-48
+   	file = "logo.png"
+ }
 
-#boot menu
+#Genuine 
++ image {
+	top = 30%
+	left = 50%-48
+   	file = "genuine.png"
+ }
+
+# Muestra menu
 + boot_menu {
-	left = 10%
-	width = 80%
-	top = 20%
-	height = 50%	
-	item_font = "DejaVu Sans Regular 12"
-	item_color = "#000"
-	selected_item_font = "DejaVu Sans Bold 14"
-	selected_item_color= "#000"
-	selected_item_pixmap_style = "blob_*.png"
-	icon_height = 25
-	icon_width = 25
-	item_height = 26
-	item_padding = 0
-	item_icon_space = 0
-	item_spacing = 1
-	scrollbar = true
-	scrollbar_width = 20
-	scrollbar_thumb = "slider_*.png"
-	menu_pixmap_style = "boot_menu_*.png"
+  top = 40%
+  left = 20%
+  width = 60%
+  height = 50%
+  item_color = "#FFFFFF"
+  selected_item_color = "#FFFFFF"
+  icon_width = 32
+  icon_height = 32
+  item_icon_space = 1
+  item_height = 35
+  item_padding = 5
+  item_spacing = 10
+  selected_item_pixmap_style = "select_*.png"
+  scrollbar = false
 }
 
-#progress bar
+# Opciones
++ label {
+  top = 92%
+  left = 0%
+  width = 100%
+  height = 10%
+  align = "center"
+  text = "@KEYMAP_MIDDLE@"
+  color = "#BD93F9"
+}
+
+# Progress bar
 + progress_bar {
-	id = "__timeout__"
-	left = 15%
-	top = 80%
-	height = 20
-	width = 70%
-	font = "DejaVu Sans Regular 12"
-	text_color = "#000"
-	fg_color = "#fff"
-	bg_color = "#6ac"
-	border_color = "#fff"
-	text = "@TIMEOUT_NOTIFICATION_LONG@"
+  id = "__timeout__"
+  left = 0%
+  width = 100%
+  top = 99%
+  height = 1
+  fg_color = "#BD93F9"
+  bg_color = "#001052"
 }
