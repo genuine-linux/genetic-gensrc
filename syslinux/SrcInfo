@@ -1,0 +1,6 @@
+source=syslinux
+version=6.04
+srcurl=http://srchost/syslinux-6.04-pre1
+category=base
+depends=
+package=syslinux

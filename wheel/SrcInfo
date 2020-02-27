@@ -1,0 +1,6 @@
+source=wheel
+version=0.34.2
+srcurl=http://srchost/wheel-0.34.2
+category=base
+depends=
+package=wheel

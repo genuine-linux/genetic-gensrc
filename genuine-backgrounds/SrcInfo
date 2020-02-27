@@ -1,0 +1,6 @@
+source=genuine-backgrounds
+version=1.0
+srcurl=http://srchost/genuine-backgrounds-1.0
+category=base
+depends=
+package=genuine-backgrounds

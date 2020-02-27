@@ -1,0 +1,6 @@
+source=fonttools
+version=4.4.1
+srcurl=http://srchost/fonttools-4.4.1
+category=base
+depends=
+package=fonttools

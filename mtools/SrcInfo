@@ -1,0 +1,6 @@
+source=mtools
+version=4.0.23
+srcurl=http://srchost/mtools-4.0.23
+category=base
+depends=
+package=mtools

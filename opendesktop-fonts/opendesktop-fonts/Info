@@ -1,0 +1,12 @@
+### Package <opendesktop-fonts> info. ###
+
+original_name=opendesktop-fonts
+name=opendesktop-fonts
+version=1.4.2
+package=opendesktop-fonts-1.4.2
+category=
+depends=
+installbefore=
+installafter=
+replaces="opendesktop-fonts opendesktop-fonts.dbg"
+

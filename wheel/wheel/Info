@@ -1,0 +1,12 @@
+### Package <wheel> info. ###
+
+original_name=wheel
+name=wheel
+version=0.34.2
+package=wheel-0.34.2
+category=
+depends=
+installbefore=
+installafter=
+replaces="wheel wheel.dbg"
+

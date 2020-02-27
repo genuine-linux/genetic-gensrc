@@ -47,7 +47,7 @@ if test -f "Makefile"; then
 fi;
 
 # Create install directory
-mkdir -pv ${GENPKGDESTDIR}/etc/;
+mkdir -pv ${GENPKGDESTDIR}/{usr/include,etc/};
 
 # make install
 if test -f "Makefile"; then
@@ -58,6 +58,7 @@ if test -f "Makefile"; then
 	# Install glibc
 	sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile;
 	make DESTDIR=${GENPKGDESTDIR} install;
+	cp -av include/limits.h $GENPKGDESTDIR/usr/include/;
 
 	# Create nscd.conf
 	cp -v ../nscd/nscd.conf ${GENPKGDESTDIR}/etc/nscd.conf;

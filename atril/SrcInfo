@@ -1,5 +1,5 @@
 source=atril
-version=1.23.1
-srcurl=http://host/-1.23.1
-depends=
+version=1.24.0
+srcurl=http://host/atril-1.24.0
+depends="glib_2.62.4 texlive_2019"
 package=atril

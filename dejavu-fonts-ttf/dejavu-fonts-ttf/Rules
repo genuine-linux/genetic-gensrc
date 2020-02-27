@@ -9,9 +9,9 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-mkdir -pv ${GENPKGDESTDIR}/usr/share/{fonts/X11/TTF,fontconfig/conf.aval,doc/$name-$version};
+mkdir -pv ${GENPKGDESTDIR}/usr/share/{fonts/X11/TTF,fontconfig/conf.avail,doc/$name-$version};
 
 cp -av ttf/* $GENPKGDESTDIR/usr/share/fonts/X11/TTF/ &&
-cp -av fontconfig/* $GENPKGDESTDIR/usr/share/fontconfig/conf.aval/ &&
+cp -av fontconfig/* $GENPKGDESTDIR/usr/share/fontconfig/conf.avail/ &&
 cp -av README.md NEWS AUTHORS LICENSE BUGS *.txt $GENPKGDESTDIR/usr/share/doc/$name-$version;
 

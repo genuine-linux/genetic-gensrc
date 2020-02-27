@@ -9,12 +9,6 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-# make
-if test -f "Makefile" || test -f "makefile"; then
-	echo " --- Make <$name ($version)> ---";
-	make  ;
-fi;
-
 # Create install directory
 mkdir -pv ${GENPKGDESTDIR};
 

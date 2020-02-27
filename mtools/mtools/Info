@@ -1,0 +1,12 @@
+### Package <mtools> info. ###
+
+original_name=mtools
+name=mtools
+version=4.0.23
+package=mtools-4.0.23
+category=
+depends=
+installbefore=
+installafter=
+replaces="mtools mtools.dbg"
+

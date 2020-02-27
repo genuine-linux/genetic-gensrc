@@ -1,0 +1,12 @@
+### Package <syslinux> info. ###
+
+original_name=syslinux
+name=syslinux
+version=6.04
+package=syslinux-6.04
+category=
+depends=
+installbefore=
+installafter=
+replaces="syslinux syslinux.dbg"
+

@@ -1,0 +1,12 @@
+### Package <irssi-scripts> info. ###
+
+original_name=irssi-scripts
+name=irssi-scripts
+version=20200223
+package=irssi-scripts-20200223
+category=
+depends=
+installbefore=
+installafter=
+replaces="irssi-scripts irssi-scripts.dbg"
+

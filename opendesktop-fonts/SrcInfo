@@ -1,0 +1,6 @@
+source=opendesktop-fonts
+version=1.4.2
+srcurl=http://srchost/opendesktop-fonts-1.4.2
+category=base
+depends=
+package=opendesktop-fonts

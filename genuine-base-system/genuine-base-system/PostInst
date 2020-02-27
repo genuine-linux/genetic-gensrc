@@ -1,1 +1,61 @@
 #!/bin/bash
+
+INSTALL_DIR="install -m";
+
+
+KEEP_DIRS=/dev \
+        /run \
+        /sys \
+        /usr/src \
+        /boot \
+        /etc/profile.d \
+        /home \
+        /media \
+        /mnt \
+        /proc \
+        /opt \
+        /root \
+        /usr/local/bin \
+        /usr/local/sbin \
+        /var/cache \
+        /var/empty \
+        /var/lib \
+        /var/log \
+        /var/spool
+
+
+# Create base filesytem layout
+for d in $KEEP_DIRS ; do
+	if [ ! -d "$d" ]; then
+           $INSTALL_DIR 0755 -d $d || exit $?;
+	fi
+done
+
+if [ ! -l "/etc/mtab" ]; then
+	ln -snf /proc/self/mounts /etc/mtab
+fi
+
+if [ ! -l "/var/run" ]; then
+	ln -snf /run /var/run
+fi
+
+if [ ! -l "/var/lock" ]; then
+	ln -snf /run/lock /var/lock
+fi
+
+if [ ! -d "/root" ]; then
+	$INSTALL_DIR 0700 -d /root
+fi
+
+if [ ! -d "/var/tmp" ]; then
+	$INSTALL_DIR 1777 -d /var/tmp
+fi
+
+if [ ! -d "/tmp" ]; then
+	$INSTALL_DIR 1777 -d /tmp
+fi
+
+# FHS compatibility symlinks stuff
+if [ ! -l "/usr/tmp" ]; then
+	ln -snf /var/tmp /usr/tmp
+fi

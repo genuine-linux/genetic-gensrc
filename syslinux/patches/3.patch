@@ -1,0 +1,12 @@
+diff --git a/com32/lib/syslinux/load_linux.c b/com32/lib/syslinux/load_linux.c
+index ac737293..fc7f04f0 100644
+--- a/com32/lib/syslinux/load_linux.c
++++ b/com32/lib/syslinux/load_linux.c
+@@ -323,6 +323,7 @@ int bios_boot_linux(void *kernel_buf, size_t kernel_size,
+     }
+ 
+     whdr->code32_start += base - prot_mode_base;
++    prot_mode_base = base;
+ 
+     /* Real mode code */
+     if (syslinux_memmap_find(amap, &real_mode_base,

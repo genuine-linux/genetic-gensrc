@@ -1,0 +1,11 @@
+### Package <linux5> info. ###
+
+original_name=linux5
+name=linux5
+version=5.5.6
+package=$name-$version
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

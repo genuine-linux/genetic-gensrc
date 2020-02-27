@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+DATE="$(date)";
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make DATE="$DATE" PYTHON=python3 MANDIR=/usr/share/man ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make DATE="$DATE" PYTHON=python3 INSTALLROOT=${GENPKGDESTDIR} MANDIR=/usr/share/man install;
+	#cp -av ../$name/files/* ${GENPKGDESTDIR}/
+fi;
+

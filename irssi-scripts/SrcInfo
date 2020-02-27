@@ -1,0 +1,6 @@
+source=irssi-scripts
+version=20200223
+srcurl=http://srchost/irssi-scripts-20200223
+category=base
+depends=
+package=irssi-scripts

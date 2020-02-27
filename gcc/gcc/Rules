@@ -7,7 +7,7 @@ source ./Info;
 GENPKGDESTDIR="$(pwd)/rootfs";
 
 # If building from dnatools we need to remove this link
-if [ -L "/usr/lib/gcc" ]; then
+if [ -d "/dnatools" ] && [ -L "/usr/lib/gcc" ]; then
 	rm -fv /usr/lib/gcc;
 fi
 

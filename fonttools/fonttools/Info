@@ -1,0 +1,12 @@
+### Package <fonttools> info. ###
+
+original_name=fonttools
+name=fonttools
+version=4.4.1
+package=fonttools-4.4.1
+category=
+depends=
+installbefore=
+installafter=
+replaces="fonttools fonttools.dbg"
+

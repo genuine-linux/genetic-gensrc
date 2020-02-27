@@ -1,0 +1,12 @@
+### Package <genuine-backgrounds> info. ###
+
+original_name=genuine-backgrounds
+name=genuine-backgrounds
+version=1.0
+package=genuine-backgrounds-1.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="genuine-backgrounds genuine-backgrounds.dbg"
+

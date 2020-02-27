@@ -1,0 +1,6 @@
+source=irssi
+version=1.2.2
+srcurl=http://srchost/irssi-1.2.2
+category=base
+depends=
+package=irssi
