@@ -1,0 +1,12 @@
+### Package <ply> info. ###
+
+original_name=ply
+name=ply
+version=3.11
+package=ply-3.11
+category=
+depends=
+installbefore=
+installafter=
+replaces="ply ply.dbg"
+

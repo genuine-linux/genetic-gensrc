@@ -1,0 +1,12 @@
+### Package <fakeroot> info. ###
+
+original_name=fakeroot
+name=fakeroot
+version=1.24
+package=fakeroot-1.24
+category=
+depends=
+installbefore=
+installafter=
+replaces="fakeroot fakeroot.dbg"
+

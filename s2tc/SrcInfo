@@ -1,0 +1,6 @@
+source=s2tc
+version=1.0
+srcurl=http://srchost/s2tc-1.0
+category=base
+depends=
+package=s2tc

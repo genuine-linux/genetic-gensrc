@@ -1,0 +1,6 @@
+source=bind
+version=9.14.10
+srcurl=http://srchost/bind-9.14.10
+category=base
+depends=
+package=bind

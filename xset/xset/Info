@@ -1,0 +1,12 @@
+### Package <xset> info. ###
+
+original_name=xset
+name=xset
+version=1.2.4
+package=xset-1.2.4
+category=
+depends=
+installbefore=
+installafter=
+replaces="xset xset.dbg"
+

@@ -2,15 +2,18 @@
 
 chmod +x /etc/init.d/*
 
+rc-update add nscd boot
 rc-update add udev sysinit
 rc-update add udev-trigger sysinit
-rc-update add sysklogd default
+rc-update add syslogd default
 rc-update add bootlogd default
 rc-update add numlock default
 rc-update add consolefont default
 
 for n in 1 2 3 4 5 6; do
-	ln -s /etc/init.d/agetty{,.tty$n}
-	rc-update add agetty.tty$n default
+	if test -L "/etc/init.d/agetty{,.tty$n}"; then
+		ln -s /etc/init.d/agetty{,.tty$n}
+		rc-update add agetty.tty$n default
+	fi
 done
 

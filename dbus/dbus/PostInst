@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # clean files
-rm /usr/share/dbus-1/services/_keep
-rm /etc/dbus-1/{session,system}.d/_keep
-rm /var/lib/dbus/_keep
+rm -f /usr/share/dbus-1/services/keep
+rm -f k/etc/dbus-1/session/keep
+rm -f /etc/dbus-1/system.d/keep
+rm -f /var/lib/dbus/keep
 
 # configure dbus
 dbus-uuidgen --ensure=/etc/machine-id

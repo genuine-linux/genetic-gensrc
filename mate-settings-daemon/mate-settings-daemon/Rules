@@ -30,11 +30,12 @@ if test -f "Makefile"; then
 fi;
 
 # Create install directory
-mkdir -pv ${GENPKGDESTDIR};
+mkdir -pv ${GENPKGDESTDIR}/lib/;
 
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
+	mv -v $GENPKGDESTDIR/usr/lib/udev $GENPKGDESTDIR/lib/;
 fi;
 

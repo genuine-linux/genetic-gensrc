@@ -1,0 +1,6 @@
+source=gdb
+version=9.1
+srcurl=http://srchost/gdb-9.1
+category=base
+depends=
+package=gdb

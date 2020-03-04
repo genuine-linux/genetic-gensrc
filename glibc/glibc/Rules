@@ -71,7 +71,7 @@ if test -f "Makefile"; then
 	cp -av ../../glibc/files/tzdata tzdata;
 	cd tzdata;
 
-	ZONEINFO=/usr/share/zoneinfo
+	ZONEINFO=$GENPKGDESTDIR/usr/share/zoneinfo
 	mkdir -pv $ZONEINFO/posix
 	mkdir -pv $ZONEINFO/right
 

@@ -1,0 +1,12 @@
+### Package <steam> info. ###
+
+original_name=steam
+name=steam
+version=1.0.0.61
+package=steam-1.0.0.61
+category=
+depends=
+installbefore=
+installafter=
+replaces="steam steam.dbg"
+

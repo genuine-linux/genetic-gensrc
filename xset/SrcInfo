@@ -1,0 +1,6 @@
+source=xset
+version=1.2.4
+srcurl=http://srchost/xset-1.2.4
+category=base
+depends=
+package=xset

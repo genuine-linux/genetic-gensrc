@@ -27,5 +27,6 @@ if test -f "Makefile"; then
      SHAREDIR=/usr/share/hwdata \
      SHARED=yes install install-lib;
 	chmod -v 755 $GENPKGDESTDIR/usr/lib/libpci.so;
+	cp -av ../$name/files/* $GENPKGDESTDIR/
 fi;
 

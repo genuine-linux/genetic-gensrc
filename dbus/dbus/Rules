@@ -61,11 +61,13 @@ if test -f "Makefile"; then
 	chmod -v      4750       $GENPKGDESTDIR/usr/libexec/dbus-daemon-launch-helper &&
 	# needs to exist for dbus sessions to launch
 	mkdir -pv $GENPKGDESTDIR/usr/share/dbus-1/services
-	touch $GENPKGDESTDIR/usr/share/dbus-1/services/_keep
-	mkdir -pv $GENPKGDESTDIR/etc/dbus-1/{session,system}.d
-	touch $GENPKGDESTDIR/etc/dbus-1/{session,system}.d/_keep
+	touch $GENPKGDESTDIR/usr/share/dbus-1/services/keep
+	mkdir -pv $GENPKGDESTDIR/etc/dbus-1/session
+	mkdir -pv $GENPKGDESTDIR/etc/dbus-1/system.d
+	touch $GENPKGDESTDIR/etc/dbus-1/session/keep
+	touch $GENPKGDESTDIR/etc/dbus-1/system.d/keep
 	mkdir -pv $GENPKGDESTDIR/var/lib/dbus
-	touch $GENPKGDESTDIR/var/lib/dbus/_keep
-	cp -av ../$name/files/* $GENPKFDESTDIR/
+	touch $GENPKGDESTDIR/var/lib/dbus/keep
+	cp -av ../$name/files/* $GENPKGDESTDIR/
 fi;
 

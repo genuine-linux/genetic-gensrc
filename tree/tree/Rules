@@ -12,7 +12,7 @@ cd ../$original_name-$version;
 # make
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
-	$MAKE;
+	make;
 fi;
 
 # Create install directory
@@ -21,7 +21,7 @@ mkdir -pv ${GENPKGDESTDIR};
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	$MAKE DESTDIR=${GENPKGDESTDIR} MANDIR=/usr/share/man/man1 install &&
+	make DESTDIR=${GENPKGDESTDIR} MANDIR=/usr/share/man/man1 install &&
 	chmod -v 644 $GENPKGDESTDIR/usr/share/man/man1/tree.1
 fi;
 

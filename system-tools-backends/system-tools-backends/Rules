@@ -20,9 +20,9 @@ if test -f "configure"; then
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--datadir=/usr/share \
 		--with-net-dbus=/usr/lib/perl5/site_perl/$plvers/`uname -m`-linux-thread-multi \
 		--with-dbus-sys=/etc/dbus-1/system.d \
+		--with-stb-group=wheel \
 		--disable-static \
 		--enable-shared;
 fi;

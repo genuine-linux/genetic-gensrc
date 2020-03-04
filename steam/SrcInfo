@@ -1,0 +1,6 @@
+source=steam
+version=1.0.0.61
+srcurl=http://srchost/steam-1.0.0.61
+category=base
+depends=
+package=steam

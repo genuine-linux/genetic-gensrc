@@ -2,8 +2,8 @@
 
 chmod +x /etc/init.d/elogind
 
-if [ "$(rc-config list boot | grep elogind)" != "" ]; then
-	if [ "$(rc-config list default | grep elogind)" != "" ]; then
+if [ "$(rc-status list boot | grep elogind)" != "" ]; then
+	if [ "$(rc-status list default | grep elogind)" != "" ]; then
 		rc-update del elogind default
 		rc-update add elogind boot
 	else

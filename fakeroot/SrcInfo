@@ -1,0 +1,6 @@
+source=fakeroot
+version=1.24
+srcurl=http://srchost/fakeroot-1.24
+category=base
+depends=
+package=fakeroot

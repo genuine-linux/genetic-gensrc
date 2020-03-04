@@ -20,9 +20,7 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
 		--disable-static \
-		--enable-shared \
-		--enable-introspection \
-		--enable-pixbuf;
+		--enable-shared;
 fi;
 
 # make

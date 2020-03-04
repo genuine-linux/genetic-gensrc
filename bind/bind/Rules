@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared \
+		--with-libtool;
+fi;
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make  ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make   DESTDIR=${GENPKGDESTDIR} install;
+	install -v -m755 -d $GENPKGDESTDIR/usr/share/doc/$name-$version/arm &&
+	install -v -m644    doc/arm/*.html \
+                    $GENPKGDESTDIR/usr/share/doc/$name-$version/arm
+	cp -av ../$name/files/* ${GENPKGDESTDIR}/
+	chmod 0640 $GENPKGDESTDIR/var/bind/named.cache \
+		$GENPKGDESTDIR/var/bind/pri/localhost.zone \
+		$GENPKGDESTDIR/etc/bind/{bind.keys,named.conf}
+	chmod 0750 $GENPKGDESTDIR/etc/bind $GENPKGDESTDIR/var/bind/pri
+	chmod 0770 $GENPKGDESTDIR/var/log/named $GENPKGDESTDIR/var/bind/{,sec,dyn}
+fi;
+

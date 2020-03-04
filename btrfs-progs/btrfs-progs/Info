@@ -2,7 +2,7 @@
 
 original_name=btrfs-progs
 name=btrfs-progs
-version=v5.2.2
+version=5.2.2
 package=$name-$version
 depends=
 installbefore=

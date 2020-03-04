@@ -1,7 +1,7 @@
 #!/bin/bash
 
-grep fcron /etc/group || groupadd -g 22 fcron &&
-grep fcron /etc/passwd || useradd -d /dev/null -c "Fcron User" -g fcron -s /bin/false -u 22 fcron
+grep fcron /etc/group || groupadd -g 42 fcron &&
+grep fcron /etc/passwd || useradd -d /dev/null -c "Fcron User" -g fcron -s /bin/false -u 42 fcron
 
 grep ^cron /etc/syslog.conf || cat >> /etc/syslog.conf << "EOF"
 cron.* -/var/log/cron.log
@@ -9,7 +9,10 @@ EOF
 
 /etc/init.d/syslogd reload
 
-install -vdm754 /etc/cron.{hourly,daily,weekly,monthly}
+install -vdm754 /etc/cron.hourly
+install -vdm754 /etc/cron.daily
+install -vdm754 /etc/cron.weekly
+install -vdm754 /etc/cron.monthly
 
 cat > /var/spool/fcron/systab.orig << "EOF"
 &bootrun 01 * * * * root run-parts /etc/cron.hourly

@@ -1,4 +1,4 @@
 #!/bin/bash
 
+rc-update add opentmpfiles-setup sysinit
 rc-update add opentmpfiles-dev sysinit
-rc-update add opentmpfiles-setup boot

@@ -32,11 +32,11 @@ mkdir -pv ${GENPKGDESTDIR}/usr/share/doc/$name-$version;
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	make docdir=$GENPKGDESTDIR/usr/share/doc/$name-$version DESTDIR=${GENPKGDESTDIR} install;
+	make docdir=/usr/share/doc/$name-$version DESTDIR=${GENPKGDESTDIR} install;
 	chown -v -R root:root                        \
-      $GENPKGDESTDIR/usr/bin/db_*                          \
-      $GENPKGDESTDIR/usr/include/db{,_185,_cxx}.h          \
-      $GENPKGDESTDIR/usr/lib/libdb*.{so,la}                \
-      $GENPKGDESTDIR/usr/share/doc/$name-$version
+	      $GENPKGDESTDIR/usr/bin/db_*                          \
+      	$GENPKGDESTDIR/usr/include/db{,_185,_cxx}.h          \
+      	$GENPKGDESTDIR/usr/lib/libdb*.{so,la}                \
+      	$GENPKGDESTDIR/usr/share/doc/$name-$version
 fi;
 

@@ -1,4 +1,4 @@
 source=btrfs-progs
-version=v5.2.2
+version=5.2.2
 depends=
 package=btrfs-progs

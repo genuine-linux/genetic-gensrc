@@ -39,5 +39,7 @@ if test -f "Makefile"; then
 	make DESTDIR=${GENPKGDESTDIR} install;
 	mv -fv ${GENPKGDESTDIR}/usr/bin/bash ${GENPKGDESTDIR}/bin/;
 	cp -a ../$name/files/* $GENPKGDESTDIR/;
+	( cd $GENPKGDESTDIR/bin && ln -sf bash sh )
+
 fi;
 

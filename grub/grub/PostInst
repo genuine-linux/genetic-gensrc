@@ -1,3 +1,9 @@
 #!/bin/bash
 
-grub-mkconf -o /boot/grub/grub.cfg
+if [ -f "/sbin/mkinitramfs" ]; then
+	for kernver in $(ls /boot/vmlinuz-* | sed 's/\/boot\/vmlinuz-//g' | sed 's/-'$(uname -m)'//g'); do
+		mkinitramfs $kernver;
+	done
+fi
+
+grub-mkconfig -o /boot/grub/grub.cfg

@@ -35,7 +35,8 @@ if test -f "configure"; then
 		--enable-split-usr \
 		--enable-manpages \
 		--disable-introspection \
-		--disable-selinux
+		--disable-selinux \
+		--enable-rule-generator
 fi;
 
 # make

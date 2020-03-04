@@ -1,0 +1,12 @@
+### Package <gdb> info. ###
+
+original_name=gdb
+name=gdb
+version=9.1
+package=gdb-9.1
+category=
+depends=
+installbefore=
+installafter=
+replaces="gdb gdb.dbg"
+

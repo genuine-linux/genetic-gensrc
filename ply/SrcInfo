@@ -1,0 +1,6 @@
+source=ply
+version=3.11
+srcurl=http://srchost/ply-3.11
+category=base
+depends=
+package=ply

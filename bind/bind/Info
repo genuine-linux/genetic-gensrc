@@ -1,0 +1,12 @@
+### Package <bind> info. ###
+
+original_name=bind
+name=bind
+version=9.14.10
+package=bind-9.14.10
+category=
+depends=
+installbefore=
+installafter=
+replaces="bind bind.dbg"
+

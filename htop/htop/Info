@@ -1,0 +1,12 @@
+### Package <htop> info. ###
+
+original_name=htop
+name=htop
+version=2.2.0
+package=htop-2.2.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="htop htop.dbg"
+

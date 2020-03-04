@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr;
+
+# configure
+if test -f "configure"; then
+	CFLAGS="$CFLAGS -fPIC" CXXFLAGS="$CXXFLAGS -fPIC" \
+	./configure --prefix=/usr \
+		--enable-setuid \
+		--enable-proc \
+		--enable-cgroup \
+		--enable-taskstats \
+		--enable-delayacct \
+		--enable-linux-affinity
+fi
+
+# make install
+if test -f "Makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make
+
+	echo " --- Make Install <$name ($version)> ---";
+	mkdir -pv $GENPKGDESTDIR
+
+	make DESTDIR=$GENPKGDESTDIR install
+	#cp -av ../$name/files/* $GENPKGDESTDIR/;
+fi;
