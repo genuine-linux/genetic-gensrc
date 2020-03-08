@@ -9,19 +9,27 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-mkdir build.meson
-cd build.meson
+# Meson configure #
+if test -f "meson.build"; then
+	echo " --- Meson Configure <$name ($version)> ---";
+	mkdir build.meson;
+	cd build.meson;
+	meson --prefix=/usr ../;
+fi;
 
-echo " --- Meson <$name ($version)> ---";
-meson --prefix=/usr \
-	..
-
-echo " --- Ninja <$name ($version)> ---";
-ninja
+# ninja
+if test -f "build.ninja"; then
+	echo " --- Ninja <$name ($version)> ---";
+	ninja;
+fi;
 
 # Create install directory
 mkdir -pv ${GENPKGDESTDIR};
 
-echo " --- Make Install <$name ($version)> ---";
-DESTDIR=${GENPKGDESTDIR} ninja install;
+# ninja install
+if test -f "build.ninja"; then
+	echo " --- Ninja Install <$name ($version)> ---";
+	DESTDIR=${GENPKGDESTDIR} ninja install;
+	#cp -av ../$name/files/* ${GENPKGDESTDIR}/
+fi;
 

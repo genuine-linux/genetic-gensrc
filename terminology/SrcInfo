@@ -1,4 +1,6 @@
 source=terminology
-version=1.5.0
+version=1.6.0
+srcurl=http://srchost/terminology-1.6.0
+category=base
 depends=
 package=terminology
