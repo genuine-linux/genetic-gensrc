@@ -1,0 +1,4 @@
+#HTTPD_CONFDIR="/etc/httpd"
+HTTPD_OPTS=""
+#HTTPD_PIDFILE="/var/run/httpd.pid"
+#HTTPD_BINARY="/usr/bin/httpd"

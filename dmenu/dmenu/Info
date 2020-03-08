@@ -1,0 +1,12 @@
+### Package <dmenu> info. ###
+
+original_name=dmenu
+name=dmenu
+version=4.9
+package=dmenu-4.9
+category=
+depends=
+installbefore=
+installafter=
+replaces="dmenu dmenu.dbg"
+

@@ -1,0 +1,4 @@
+source=webkitgtk
+version=2.26.4
+depends=""
+package=webkitgtk

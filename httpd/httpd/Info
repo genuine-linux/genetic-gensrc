@@ -1,0 +1,12 @@
+### Package <httpd> info. ###
+
+original_name=httpd
+name=httpd
+version=2.4.41
+package=httpd-2.4.41
+category=
+depends=
+installbefore=
+installafter=
+replaces="httpd httpd.dbg"
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -d "/usr/share/fonts/powerline" ]; then
+	fc-cache -f /usr/share/fonts/powerline;
+fi

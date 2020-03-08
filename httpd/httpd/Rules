@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	./configure --host=$GENUINE_HOST \
+		--target=$GENUINE_TGT \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc/$name \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared \
+		--enable-authnz-fcgi                              \
+            --enable-mods-shared="all cgi"                    \
+            --enable-mpms-shared=all                          \
+            --enable-suexec=shared                            \
+            --with-apr=/usr/bin/apr-1-config                  \
+            --with-apr-util=/usr/bin/apu-1-config             \
+            --with-suexec-bin=/usr/lib/httpd/suexec           \
+            --with-suexec-caller=apache                       \
+            --with-suexec-docroot=/var/www                    \
+            --with-suexec-logfile=/var/log/httpd/suexec.log   \
+            --with-suexec-uidmin=100                          \
+            --with-suexec-userdir=public_html;
+fi;
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make  ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{var,usr/lib/httpd};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make   DESTDIR=${GENPKGDESTDIR} install;
+	mv -v $GENPKGDESTDIR/usr/sbin/suexec $GENPKGDESTDIR/usr/lib/httpd/suexec
+	mkdir -p $GENPKGDESTDIR/var/log/httpd
+	touch $GENPKGDESTDIR/var/log/httpd/error_log
+	mv -v $GENPKGDESTDIR/usr/htdocs $GENPKGDESTDIR/var/www
+	cp -av ../$name/files/* ${GENPKGDESTDIR}/
+fi;
+

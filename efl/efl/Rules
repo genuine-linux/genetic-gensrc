@@ -19,7 +19,12 @@ if test -f "configure"; then
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
-		--with-opengl=full \
+		--enable-fb \
+		--enable-drm \
+		--enable-gl-drm \
+		--with-opengl=es \
+		--enable-egl \
+		--with-glib=yes \
 		--with-x11=xlib \
 		--disable-ibus \
 		--disable-scim \
@@ -28,8 +33,6 @@ if test -f "configure"; then
 		--enable-vlc \
 		--enable-elogind \
 		--enable-harfbuzz \
-		--enable-sdl \
-		--enable-fb \
 		--enable-wayland \
 		--disable-systemd \
 		--disable-tslib \
@@ -37,6 +40,9 @@ if test -f "configure"; then
 		--enable-cancel-ok \
 		--enable-libvlc \
 		--enable-liblz4 \
+		--with-umount \
+		--with-eject \
+		--with-mount \
 		--disable-static \
 		--enable-shared;
 fi;

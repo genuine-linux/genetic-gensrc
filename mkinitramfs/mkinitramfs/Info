@@ -2,7 +2,7 @@
 
 original_name=mkinitramfs
 name=mkinitramfs
-version=0.6
+version=0.8
 package=$name-$version
 depends="linux_4.20.12 busybox_1.31.0"
 installbefore=

@@ -1,0 +1,12 @@
+### Package <webkitgtk> info. ###
+
+original_name=webkitgtk
+name=webkitgtk
+version=2.26.4
+package=$name-$version
+category=
+depends=
+installbefore=
+installafter=
+replaces="$name"
+

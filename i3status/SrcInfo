@@ -1,0 +1,6 @@
+source=i3status
+version=2.13
+srcurl=http://srchost/i3status-2.13
+category=base
+depends=
+package=i3status

@@ -1,0 +1,12 @@
+### Package <Crypt-PasswdMD5> info. ###
+
+original_name=Crypt-PasswdMD5
+name=Crypt-PasswdMD5
+version=1.40
+package=Crypt-PasswdMD5-1.40
+category=
+depends=
+installbefore=
+installafter=
+replaces="Crypt-PasswdMD5 Crypt-PasswdMD5.dbg"
+

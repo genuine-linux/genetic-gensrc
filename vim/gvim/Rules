@@ -27,7 +27,13 @@ if test -f "configure"; then
 		--enable-fontset \
 		--with-vim-name=gvim \
 		--with-ex-name=gex \
-		--with-view-name=gview;
+		--with-view-name=gview \
+                --enable-multibyte \
+                --enable-pythoninterp=yes   \
+                --enable-python3interp=yes \
+                --with-python-command=python2 \
+                --with-python3-command=python
+
 fi;
 
 # make

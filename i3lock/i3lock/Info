@@ -1,0 +1,12 @@
+### Package <i3lock> info. ###
+
+original_name=i3lock
+name=i3lock
+version=2.12
+package=i3lock-2.12
+category=
+depends=
+installbefore=
+installafter=
+replaces="i3lock i3lock.dbg"
+

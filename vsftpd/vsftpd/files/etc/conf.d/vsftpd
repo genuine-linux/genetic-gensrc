@@ -1,0 +1,5 @@
+#VSFTPD_CONFDIR="/etc"
+VSFTPD_CONF="/etc/vsftpd/vsftpd.conf"
+VSFTPD_OPTS=""
+VSFTPD_PIDFILE="/var/run/vsftpd.pid"
+VSFTPD_BINARY="/usr/bin/vsftpd"

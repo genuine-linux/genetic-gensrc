@@ -1,0 +1,12 @@
+### Package <i3-gaps> info. ###
+
+original_name=i3-gaps
+name=i3-gaps
+version=4.18
+package=i3-gaps-4.18
+category=
+depends=
+installbefore=
+installafter=
+replaces="i3-gaps i3-gaps.dbg"
+

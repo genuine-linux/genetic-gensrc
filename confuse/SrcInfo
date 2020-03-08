@@ -1,0 +1,6 @@
+source=confuse
+version=3.2.2
+srcurl=http://srchost/confuse-3.2.2
+category=base
+depends=
+package=confuse

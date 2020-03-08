@@ -1,0 +1,12 @@
+### Package <vsftpd> info. ###
+
+original_name=vsftpd
+name=vsftpd
+version=3.0.3
+package=vsftpd-3.0.3
+category=
+depends=
+installbefore=
+installafter=
+replaces="vsftpd vsftpd.dbg"
+

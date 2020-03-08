@@ -13,6 +13,6 @@ mandb -c /opt/jdk/man
 
 ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts
 
-/opt/jdk/bin/keytool -list -cacerts
+(echo "") | /opt/jdk/bin/keytool -list -cacerts
 
 source /etc/profile

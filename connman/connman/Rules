@@ -20,7 +20,19 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
 		--disable-static \
-		--enable-shared;
+		--enable-shared \
+		--localstatedir=/var \
+		--enable-iwd \
+		--with-firewall=nftables \
+		--enable-tools \
+		--enable-wifi \
+		--with-systemdunitdir=no \
+		--with-tmpfilesdir=/usr/lib/tmpfiles.d \
+		--enable-client \
+		--enable-datafiles \
+		--enable-loopback=builtin \
+		--disable-iospm \
+		--disable-hh2serial-gps;
 fi;
 
 # make
@@ -36,5 +48,6 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
+	cp -av ../$name/files/* $GENPKGDESTDIR/
 fi;
 

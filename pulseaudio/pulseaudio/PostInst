@@ -1,3 +1,5 @@
 #!/bin/bash
 
-rc-update add pulseaudio default
+# Pulseaudio must not run system wide
+
+rc-update del pulseaudio default

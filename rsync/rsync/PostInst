@@ -1,7 +1,13 @@
 #!/bin/bash
 
-groupadd -g 48 rsyncd &&
-	useradd -c "rsync Daemon" -d /home/rsync -g rsyncd \
+grep rsyncd /etc/group || groupadd -g 48 rsyncd
+grep rsyncd /etc/passwd || useradd -c "rsync Daemon" -d /home/rsync -g rsyncd \
 	-s /bin/false -u 48 rsyncd
 
 rc-update add rsyncd default
+
+if [ ! -f "/home/rsync/welcome.msg" ]; then
+	echo "Genuine rsync server" > /home/rsync/welcome.msg
+fi
+
+chown -R rsyncd:rsyncd /home/rsync

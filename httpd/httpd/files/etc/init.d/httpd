@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+
+command=/usr/bin/httpd
+description='Apache Server'
+command_args="$HTTPD_OPTS"
+pidfile=/run/httpd.pid
+required_files=/etc/httpd/httpd.conf
+
+depend() {
+    use logger
+    need net
+}
+

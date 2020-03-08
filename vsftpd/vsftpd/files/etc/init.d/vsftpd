@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+
+command=$VSFTPD_BINARY
+description='VSFTPD Server'
+command_args="$VSFTPD_OPTS $VSFTPD_CONF &"
+pidfile=$VSFTPD_PIDFILE
+required_files=$VSFTPD_CONF
+
+depend() {
+    use logger
+    need net
+}
+

@@ -1,0 +1,6 @@
+source=i3lock
+version=2.12
+srcurl=http://srchost/i3lock-2.12
+category=base
+depends=
+package=i3lock

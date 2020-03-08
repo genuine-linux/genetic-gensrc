@@ -1,0 +1,6 @@
+source=uniconvertor
+version=2.0
+srcurl=http://srchost/uniconvertor-2.0
+category=base
+depends=
+package=uniconvertor

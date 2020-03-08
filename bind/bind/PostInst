@@ -17,6 +17,7 @@ if [ ! -f '/etc/bind/rndc.key' ]; then
 		/usr/sbin/rndc-confgen -a
 		# echo
 	fi
+	chown named:named /etc/bind
 	mv /etc/rndc.key /etc/bind/rndc.key
 	chown root:named /etc/bind/rndc.key
 	chmod 0640 /etc/bind/rndc.key

@@ -1,0 +1,6 @@
+source=vsftpd
+version=3.0.3
+srcurl=http://srchost/vsftpd-3.0.3
+category=base
+depends=
+package=vsftpd

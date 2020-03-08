@@ -1,0 +1,12 @@
+### Package <powerline-fonts> info. ###
+
+original_name=powerline-fonts
+name=powerline-fonts
+version=2.7
+package=powerline-fonts-2.7
+category=
+depends=
+installbefore=
+installafter=
+replaces="powerline-fonts powerline-fonts.dbg"
+

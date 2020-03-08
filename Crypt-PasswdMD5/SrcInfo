@@ -1,0 +1,6 @@
+source=Crypt-PasswdMD5
+version=1.40
+srcurl=http://srchost/Crypt-PasswdMD5-1.40
+category=base
+depends=
+package=Crypt-PasswdMD5

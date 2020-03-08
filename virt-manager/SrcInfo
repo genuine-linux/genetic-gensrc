@@ -1,0 +1,6 @@
+source=virt-manager
+version=2.2.1
+srcurl=http://srchost/virt-manager-2.2.1
+category=base
+depends=
+package=virt-manager

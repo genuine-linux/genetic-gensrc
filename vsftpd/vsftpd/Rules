@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make  ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/{etc/vsftpd,etc/pam.d,usr/share/doc/$name-$version};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make   DESTDIR=${GENPKGDESTDIR} install;
+	cp -av ../$name/files/* ${GENPKGDESTDIR}/
+	cp -av vsftpd.conf $GENPKGDESTDIR/etc/vsftpd/vsftpd.conf
+	cp -av RedHat/vsftpd.pam $GENPKGDESTDIR/etc/pam.d/vsftpd
+	touch $GENPKGDESTDIR/etc/ftpusers
+	chown root:root $GENPKGDESTDIR/etc/vsftpd/vsftpd.conf
+	cp -av AUDIT COPYING FAQ LICENSE README*  REWARD  SPEED  TUNING \
+		BENCHMARKS  COPYRIGHT  INSTALL  REFS SIZE  EXAMPLE SECURITY \
+		$GENPKGDESTDIR/usr/share/doc/$name-$version/
+fi;
+

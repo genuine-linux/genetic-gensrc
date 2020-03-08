@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+# CMake configure #
+if test -f "CMakeLists.txt"; then
+	echo " --- CMake Configure <$name ($version)> ---";
+	rm -rf build.cmake &&
+	mkdir build.cmake &&
+	cd build.cmake &&
+	cmake -DCMAKE_BUILD_TYPE=Release  \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_SKIP_RPATH=ON       \
+      -DPORT=GTK                  \
+      -DLIB_INSTALL_DIR=/usr/lib  \
+      -DUSE_LIBHYPHEN=OFF         \
+      -DENABLE_MINIBROWSER=ON     \
+      -DENABLE_GLES2=ON \
+      -DUSE_WOFF2=OFF             \
+      -DUSE_WPE_RENDERER=OFF      \
+      -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
+      -Wno-dev \
+      -G Ninja \
+      ../;
+fi;
+
+echo " --- Ninja <$name ($version)> ---";
+ninja;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR};
+
+echo " --- Ninja Install <$name ($version)> ---";
+DESTDIR=${GENPKGDESTDIR} ninja install;

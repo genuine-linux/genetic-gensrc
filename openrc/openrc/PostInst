@@ -11,8 +11,8 @@ rc-update add numlock default
 rc-update add consolefont default
 
 for n in 1 2 3 4 5 6; do
-	if test -L "/etc/init.d/agetty{,.tty$n}"; then
-		ln -s /etc/init.d/agetty{,.tty$n}
+	if test ! -L "/etc/init.d/agetty.tty$n"; then
+		ln -s /etc/init.d/agetty /etc/init.d/agetty.tty$n
 		rc-update add agetty.tty$n default
 	fi
 done

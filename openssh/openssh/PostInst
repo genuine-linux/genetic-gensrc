@@ -1,18 +1,18 @@
 #!/bin/bash
 
 chmod 644 /etc/pam.d/sshd &&
-install  -v -m700 -d /var/lib/sshd &&
-chown    -v root:sys /var/lib/sshd
+install -v -m700 -d /var/lib/sshd &&
+chown -v root:sys /var/lib/sshd
 
-grep sshd /etc/group || groupadd -g 50 sshd
-grep sshd /etc/passwd || useradd  -c 'sshd PrivSep' \
+grep "^sshd:" /etc/group || groupadd -g 50 sshd
+grep "^sshd:" /etc/passwd || useradd  -c 'sshd PrivSep' \
          -d /var/lib/sshd  \
          -g sshd           \
          -s /bin/false     \
          -u 50 sshd
 
-echo "PermitRootLogin no" >> /etc/ssh/sshd_config
-echo "UsePAM yes" >> /etc/ssh/sshd_config
+grep "^PermitRootLogin" /etc/ssh/sshd_config || echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+grep "^UsePAM" /etc/ssh/sshd_config || echo "UsePAM yes" >> /etc/ssh/sshd_config
 
 for dev in $(ls /etc/init.d/net.* | grep -v "net.lo" | awk -F. '{print $NF}'); do
 	if [ ! -f "/etc/init.d/sshd.$dev" ]; then

@@ -1,1 +1,4 @@
 #!/bin/bash
+
+chmod +x /etc/init.d/connman
+rc-update add connman default

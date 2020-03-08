@@ -1,0 +1,12 @@
+### Package <confuse> info. ###
+
+original_name=confuse
+name=confuse
+version=3.2.2
+package=confuse-3.2.2
+category=
+depends=
+installbefore=
+installafter=
+replaces="confuse confuse.dbg"
+

@@ -1,0 +1,6 @@
+source=i3-gaps
+version=4.18
+srcurl=http://srchost/i3-gaps-4.18
+category=base
+depends=
+package=i3-gaps

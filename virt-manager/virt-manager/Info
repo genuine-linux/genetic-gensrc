@@ -1,0 +1,12 @@
+### Package <virt-manager> info. ###
+
+original_name=virt-manager
+name=virt-manager
+version=2.2.1
+package=virt-manager-2.2.1
+category=
+depends=
+installbefore=
+installafter=
+replaces="virt-manager virt-manager.dbg"
+

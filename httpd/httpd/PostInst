@@ -1,0 +1,12 @@
+#!/bin/bash
+
+grep apache /etc/group || groupadd -g 55 apache
+grep apache /etc/passwd || useradd -c "Apache Server" -d /var/www -g apache \
+        -s /bin/false -u 55 apache
+
+chgrp apache /usr/lib/httpd/suexec
+chmod 4754 /usr/lib/httpd/suexec
+chown -R apache:apache /var/www /var/log/httpd
+chmod g+w /var/log/httpd
+
+rc-update add httpd default

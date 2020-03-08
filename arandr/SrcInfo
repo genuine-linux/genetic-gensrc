@@ -1,0 +1,6 @@
+source=arandr
+version=0.1.10
+srcurl=http://srchost/arandr-0.1.10
+category=base
+depends=
+package=arandr

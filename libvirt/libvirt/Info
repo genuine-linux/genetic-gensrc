@@ -1,0 +1,12 @@
+### Package <libvirt> info. ###
+
+original_name=libvirt
+name=libvirt
+version=6.1.0
+package=libvirt-6.1.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="libvirt libvirt.dbg"
+

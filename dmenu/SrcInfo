@@ -1,0 +1,6 @@
+source=dmenu
+version=4.9
+srcurl=http://srchost/dmenu-4.9
+category=base
+depends=
+package=dmenu

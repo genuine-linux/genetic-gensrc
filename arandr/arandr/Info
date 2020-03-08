@@ -1,0 +1,12 @@
+### Package <arandr> info. ###
+
+original_name=arandr
+name=arandr
+version=0.1.10
+package=arandr-0.1.10
+category=
+depends=
+installbefore=
+installafter=
+replaces="arandr arandr.dbg"
+

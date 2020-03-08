@@ -14,7 +14,10 @@ if test -f "CMakeLists.txt"; then
 	echo " --- CMake Configure <$name ($version)> ---";
 	mkdir build.cmake;
 	cd build.cmake;
-	cmake -DCMAKE_INSTALL_PREFIX=/usr 		../;
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBEXECDIR=/usr/libexec \
+		-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+		../;
 fi;
 
 # make

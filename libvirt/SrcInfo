@@ -1,0 +1,6 @@
+source=libvirt
+version=6.1.0
+srcurl=http://srchost/libvirt-6.1.0
+category=base
+depends=
+package=libvirt

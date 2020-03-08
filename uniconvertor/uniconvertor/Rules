@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -pv $GENPKGDESTDIR/
+
+python2 setup-uc2.py build
+
+python2 setup-uc2.py install --root=dest
+cp -av dest/* $GENPKGDESTDIR/

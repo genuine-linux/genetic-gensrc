@@ -1,0 +1,12 @@
+### Package <i3status> info. ###
+
+original_name=i3status
+name=i3status
+version=2.13
+package=i3status-2.13
+category=
+depends=
+installbefore=
+installafter=
+replaces="i3status i3status.dbg"
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -pv $GENPKGDESTDIR/usr/share/fonts/powerline
+
+find . \( -name "*.ttf" -or -name "*.otf" -or -name "*.pcf.gz" \) \
+	-exec cp -v {} $GENPKGDESTDIR/usr/share/fonts/powerline/ \;
+

@@ -4,7 +4,7 @@
 
 command="/usr/bin/rsync"
 command_args="--daemon ${RSYNC_OPTS}"
-pidfile="/var/run/${SVCNAME}.pid"
+pidfile="/var/run/rsyncd.pid"
 
 depend() {
 	use net

@@ -1,0 +1,6 @@
+source=powerline-fonts
+version=2.7
+srcurl=http://srchost/powerline-fonts-2.7
+category=base
+depends=
+package=powerline-fonts
