@@ -1,0 +1,12 @@
+### Package <ibus> info. ###
+
+original_name=ibus
+name=ibus
+version=1.5.22
+package=ibus-1.5.22
+category=
+depends=
+installbefore=
+installafter=
+replaces="ibus ibus.dbg"
+

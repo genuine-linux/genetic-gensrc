@@ -12,6 +12,8 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	CFLAGS="$CFLAGS -Wno-all" \
+	CXXFLAGS="$CXXFLAGS -Wno-all" \
 	./configure --host=$GENUINE_HOST \
 		--target=$GENUINE_TGT \
 		--build=$GENUINE_TGT \
@@ -20,7 +22,8 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
 		--disable-static \
-		--enable-shared;
+		--enable-shared \
+		--enable-introspection=yes;
 fi;
 
 # make

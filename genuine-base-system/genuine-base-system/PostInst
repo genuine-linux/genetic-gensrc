@@ -2,8 +2,7 @@
 
 INSTALL_DIR="install -m";
 
-
-KEEP_DIRS=/dev \
+KEEP_DIRS="/dev \
         /run \
         /sys \
         /usr/src \
@@ -21,8 +20,16 @@ KEEP_DIRS=/dev \
         /var/empty \
         /var/lib \
         /var/log \
-        /var/spool
+        /var/spool";
 
+# Copy passwd shadow group gshadow to system
+for F in /etc/passwd /etc/shadow /etc/group /etc/gshadow; do
+  [ -f $F ] || cp -a /usr/share/genuine-base-system/$F \
+               /etc/$F
+done
+
+chmod 400 /etc/shadow /etc/gshadow
+chmod 644 /etc/passwd /etc/group
 
 # Create base filesytem layout
 for d in $KEEP_DIRS ; do
@@ -31,15 +38,15 @@ for d in $KEEP_DIRS ; do
 	fi
 done
 
-if [ ! -l "/etc/mtab" ]; then
+if [ ! -L "/etc/mtab" ]; then
 	ln -snf /proc/self/mounts /etc/mtab
 fi
 
-if [ ! -l "/var/run" ]; then
+if [ ! -L "/var/run" ]; then
 	ln -snf /run /var/run
 fi
 
-if [ ! -l "/var/lock" ]; then
+if [ ! -L "/var/lock" ]; then
 	ln -snf /run/lock /var/lock
 fi
 
@@ -56,6 +63,6 @@ if [ ! -d "/tmp" ]; then
 fi
 
 # FHS compatibility symlinks stuff
-if [ ! -l "/usr/tmp" ]; then
+if [ ! -L "/usr/tmp" ]; then
 	ln -snf /var/tmp /usr/tmp
 fi

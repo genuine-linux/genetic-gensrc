@@ -1,4 +1,4 @@
 source=gsettings-desktop-schemas
-version=3.32.0
+version=3.34.0
 depends="glib_2.60.1 gobject-introspection_1.60.2"
 package=gsettings-desktop-schemas

@@ -1,5 +1,5 @@
 source=autoconf-archive
 version=2019.01.06
 srcurl=http://host/-2019.01.06
-depends=
+depends="autoconf_2.69 m4_1.4.18""
 package=autoconf-archive

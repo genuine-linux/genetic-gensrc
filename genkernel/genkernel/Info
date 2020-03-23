@@ -1,0 +1,12 @@
+### Package <genkernel> info. ###
+
+original_name=genkernel
+name=genkernel
+version=4.0.2
+package=genkernel-4.0.2
+category=
+depends=
+installbefore=
+installafter=
+replaces="genkernel genkernel.dbg"
+

@@ -2,7 +2,7 @@
 
 original_name=man-db
 name=man-db
-version=2.8.5
+version=2.9.0
 package=$name-$version
 depends=
 installbefore=

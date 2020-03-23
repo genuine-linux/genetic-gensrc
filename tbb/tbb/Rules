@@ -19,14 +19,15 @@ LDFLAGS="$LDFLAGS -lpthread"
 PYTHON="python"
 
 SRCROOT="$(pwd ../$original_name-$version)";
-TBB_ROOT="$SRCROOT/$original_name-$version";
+export TBB_ROOT="$SRCROOT/$original_name-$version";
+export TBBROOT="$SRCROOT";
 
-TBB_OS="$(uname -s)"
-SYSTEM_NAME="$TBB_OS"
+export TBB_OS="$(uname -s)"
+export SYSTEM_NAME="$TBB_OS"
 
-export $TBB_ROOT $TBB_OS
+#export $TBB_ROOT $TBB_OS
 
-builddir="build/linux_intel64_gcc_cc8.2.0_libc2.29_release";
+builddir="build/linux_intel64_gcc_cc9.2.0_libc2.31_release";
 
 # make
 if test -f "Makefile" || test -f "makefile"; then
@@ -34,7 +35,8 @@ if test -f "Makefile" || test -f "makefile"; then
 	make stdver=c++14 \
 		CPLUS_FLAGS="$CXXFLAGS" \
 		LDFLAGS="$LDFLAGS";
-	cmake -DTBB_OS=$TBB_OS -DTBB_ROOT=$TBB_ROOT \
+	cmake -DTBB_OS=$TBB_OS \
+		-DTBB_ROOT=$TBB_ROOT \
 		-DINSTALL_DIR=/usr/lib/cmake/TBB \
 		-DSYSTEM_NAME=$TBB_OS \
 		-DLIB_PATH=/usr/lib \
@@ -50,7 +52,7 @@ fi;
                 CPLUS_FLAGS="$CXXFLAGS" \
                 LDFLAGS="$LDFLAGS" &&
         cp -av rml/libirml.so* . &&
-        cp -av rml/libirml.so* $builddir/ &&
+        cp -av rml/libirml.so* ../$builddir/ &&
         $PYTHON setup.py build
 	fi;)
 

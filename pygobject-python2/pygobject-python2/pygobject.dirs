@@ -1,0 +1,17 @@
+/usr
+/usr/share
+/usr/share/gtk-doc
+/usr/share/gtk-doc/html
+/usr/share/gtk-doc/html/pygobject
+/usr/share/pygobject
+/usr/share/pygobject/xsl
+/usr/share/pygobject/2.0
+/usr/share/pygobject/2.0/defs
+/usr/lib
+/usr/lib/python3.8
+/usr/lib/python3.8/site-packages
+/usr/lib/python3.8/site-packages/glib
+/usr/lib/python3.8/site-packages/gtk-2.0
+/usr/lib/python3.8/site-packages/gtk-2.0/gio
+/usr/lib/python3.8/site-packages/gobject
+/usr/lib/pkgconfig

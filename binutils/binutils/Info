@@ -2,9 +2,9 @@
 
 original_name=binutils
 name=binutils
-version=2.32
+version=2.34
 package=$name-$version
-depends=zlib_1.2.11 bz_1.07.1
+depends="zlib_1.2.11 bz_1.07.1"
 installbefore=
 installafter=
 replaces="$name"

@@ -2,9 +2,9 @@
 
 original_name=XML-Parser
 name=XML-Parser
-version=2.44
+version=2.46
 package=$name-$version
-depends=perl_5.28.1
+depends="perl_5.28.1"
 installbefore=
 installafter=
 replaces="$name"

@@ -10,27 +10,22 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 cd ../$original_name-$version;
 
 # CMake configure #
-if test -f "CMakeLists.txt"; then
-	echo " --- CMake Configure <$name ($version)> ---";
-	rm -rf build.cmake &&
-	mkdir build.cmake &&
-	cd build.cmake &&
-	cmake -DCMAKE_INSTALL_PREFIX=/usr ../;
+if test -f "meson.build"; then
+	echo " --- Meson Configure <$name ($version)> ---";
+	rm -rf build.meson &&
+	mkdir build.meson &&
+	cd build.meson &&
+	meson --prefix=/usr ../;
 fi;
 
-# make
-if test -f "Makefile" || test -f "makefile"; then
-	echo " --- Make <$name ($version)> ---";
-	make  ;
-fi;
+echo " --- Make <$name ($version)> ---";
+ninja ;
 
 # Create install directory
 mkdir -pv ${GENPKGDESTDIR};
 
 # make install
-if test -f "Makefile" || test -f "makefile"; then
-	echo " --- Make Install <$name ($version)> ---";
-	make   DESTDIR=${GENPKGDESTDIR} install;
-	#cp -av ../$name/files/* ${GENPKGDESTDIR}/
-fi;
+echo " --- Make Install <$name ($version)> ---";
+DESTDIR=${GENPKGDESTDIR} ninja install;
+#cp -av ../$name/files/* ${GENPKGDESTDIR}/
 

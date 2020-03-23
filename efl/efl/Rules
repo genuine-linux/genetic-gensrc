@@ -9,56 +9,13 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-# configure #
-if test -f "configure"; then
-	echo " --- Configure <$name ($version)> ---";
-	./configure --host=$GENUINE_HOST \
-		--target=$GENUINE_TGT \
-		--build=$GENUINE_TGT \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--docdir=/usr/share/doc/$name-$version \
-		--enable-fb \
-		--enable-drm \
-		--enable-gl-drm \
-		--with-opengl=es \
-		--enable-egl \
-		--with-glib=yes \
-		--with-x11=xlib \
-		--disable-ibus \
-		--disable-scim \
-		--enable-xine \
-		--enable-v4l2 \
-		--enable-vlc \
-		--enable-elogind \
-		--enable-harfbuzz \
-		--enable-wayland \
-		--disable-systemd \
-		--disable-tslib \
-		--with-generic_vlc \
-		--enable-cancel-ok \
-		--enable-libvlc \
-		--enable-liblz4 \
-		--with-umount \
-		--with-eject \
-		--with-mount \
-		--disable-static \
-		--enable-shared;
-fi;
+rm -rf build.meson
+mkdir build.meson
+cd build.meson
+meson --prefix=/usr ../;
+ninja
 
-# make
-if test -f "Makefile"; then
-	echo " --- Make <$name ($version)> ---";
-	make;
-fi;
-
-# Create install directory
 mkdir -pv ${GENPKGDESTDIR};
 
-# make install
-if test -f "Makefile"; then
-	echo " --- Make Install <$name ($version)> ---";
-	make DESTDIR=${GENPKGDESTDIR} install;
-fi;
+DESTDIR=${GENPKGDESTDIR} ninja install;
 

@@ -1,0 +1,6 @@
+source=genkernel
+version=4.0.2
+srcurl=http://srchost/genkernel-4.0.2
+category=base
+depends=
+package=genkernel

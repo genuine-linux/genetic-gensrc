@@ -24,7 +24,7 @@ if test -f "setup.py"; then
 	/usr/bin/python3 setup.py install --optimize=1 --root=dest;
 	cp -av dest/*  ${GENPKGDESTDIR} &&
 	cd $GENPKGDESTDIR/usr/share &&
-	ln -sf /usr/lib/python3.7/site-packages/powerline powerline
+	ln -sf /usr/lib/python3.8/site-packages/powerline powerline
 	#cp -av ../$name/files/* ${GENPKGDESTDIR}/
 fi;
 

@@ -107,6 +107,7 @@ unset MOZ_TELEMETRY_REPORTING
 mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/firefox-build-dir
 EOF
 
+export SHELL=/bin/bash
 export CC=gcc CXX=g++ &&
 export MOZBUILD_STATE_PATH=${PWD}/mozbuild &&
 ./mach build

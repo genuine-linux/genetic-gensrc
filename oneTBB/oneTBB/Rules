@@ -1,0 +1,86 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+GCC="$GENUINE_HOST-gcc"
+GXX="$GENUINE_HOST-g++"
+
+PYTHON="python"
+
+SRCROOT="$(pwd ../$original_name-$version)";
+
+export TBB_ROOT="$SRCROOT";
+export TBBROOT="$SRCROOT";
+
+export TBB_OS="$(uname -s)"
+export SYSTEM_NAME="$TBB_OS"
+
+#export $TBB_ROOT $TBB_OS
+
+builddir="build/linux_intel64_gcc_cc9.2.0_libc2.31_kernel5.5.6_release";
+
+CFLAGS="$CFLAGS -O3 -pipe -fPIC -DDO_ITT_NOTIFY -DUSE_PTHREAD -L$TBBROOT/$builddir"
+CXXFLAGS="$CXXFLAGS -O3 -pipe -fPIC -DDO_ITT_NOTIFY -DUSE_PTHREAD -L$TBBROOT/$builddir"
+LDFLAGS="$LDFLAGS -lpthread"
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make stdver=c++14 \
+		CPLUS_FLAGS="$CXXFLAGS" \
+		LDFLAGS="$LDFLAGS";
+	cmake -DTBB_OS=$TBB_OS \
+		-DTBB_ROOT=$TBB_ROOT \
+		-DINSTALL_DIR=/usr/lib/cmake/TBB \
+		-DSYSTEM_NAME=$TBB_OS \
+		-DLIB_PATH=/usr/lib \
+		-DINC_PATH=/usr/include \
+		-P cmake/tbb_config_generator.cmake
+fi;
+
+# make python
+(cd python &&
+	if test -f "Makefile" || test -f "makefile"; then
+        echo " --- Make <$name ($version)> ---";
+        make -C rml stdver=c++14 \
+                CPLUS_FLAGS="$CXXFLAGS" \
+                LDFLAGS="$LDFLAGS" &&
+        cp -av rml/libirml.so* . &&
+        cp -av rml/libirml.so* ../$builddir/ &&
+        $PYTHON setup.py build
+	fi;)
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/usr/{lib/cmake/TBB,include,share/doc/$name-$version,share/cmake/Modules};
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	install -v -m755 $builddir/libtbbmalloc_proxy.so $GENPKGDESTDIR/usr/lib/ &&
+	install -v -m755 $builddir/libtbbmalloc_proxy.so.2 $GENPKGDESTDIR/usr/lib/ &&
+	install -v -m755 $builddir/libtbbmalloc.so $GENPKGDESTDIR/usr/lib/ &&
+	install -v -m755 $builddir/libtbbmalloc.so.2 $GENPKGDESTDIR/usr/lib/ &&
+	install -v -m755 $builddir/libtbb.so $GENPKGDESTDIR/usr/lib/ &&
+	install -v -m755 $builddir/libtbb.so.2 $GENPKGDESTDIR/usr/lib/ &&
+	cp -av include/tbb $GENPKGDESTDIR/usr/include/ &&
+	mv -v cmake/TBBConfigVersion.cmake cmake/TBBConfig.cmake $GENPKGDESTDIR/usr/lib/cmake/TBB/ &&
+	cp -av cmake/* $GENPKGDESTDIR/usr/share/cmake/Modules/ &&
+	cp -av doc/* $GENPKGDESTDIR/usr/share/doc/$name-$version/
+fi;
+
+(cd python &&
+if test -f "setup.py"; then
+        $PYTHON setup.py install --root=dest &&
+        cp -av dest/* $GENPKGDESTDIR/ &&
+        cp -av libirml.so.1 $GENPKGDESTDIR/usr/lib &&
+        cd $GENPKGDESTDIR/usr/lib &&
+        ln -svf libirml.so.1 libirml.so
+	fi;)
+

@@ -2,9 +2,9 @@
 
 original_name=psmisc
 name=psmisc
-version=23.2
+version=23.3
 package=$name-$version
-depends=sed_4.7
+depends="sed_4.8"
 installbefore=
 installafter=
 replaces="$name"

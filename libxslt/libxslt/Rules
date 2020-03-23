@@ -9,9 +9,12 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
+sed -i s/3000/5000/ libxslt/transform.c doc/xsltproc.{1,xml}
+
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	PYTHON=/usr/bin/python2 \
 	./configure \
 		--host="$GENUINE_HOST" \
 		--target="$GENUINE_TGT" \
@@ -21,7 +24,9 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
 		--disable-static \
-		--enable-shared;
+		--enable-shared \
+		--with-python \
+		--with-plugins;
 fi;
 
 # make

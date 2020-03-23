@@ -2,7 +2,7 @@
 
 original_name=kbd
 name=kbd
-version=2.0.4
+version=2.2.0
 package=$name-$version
 depends="pkg-config_0.29.2 Linux-PAM_1.3.1 shadow_4.6"
 installbefore=

@@ -1,4 +1,4 @@
 source=ncurses
-version=6.1
-depends=pkg-config_0.29.2
+version=6.2
+depends="pkg-config_0.29.2"
 package=ncurses

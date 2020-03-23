@@ -1,0 +1,6 @@
+source=ibus
+version=1.5.22
+srcurl=http://srchost/ibus-1.5.22
+category=base
+depends=
+package=ibus

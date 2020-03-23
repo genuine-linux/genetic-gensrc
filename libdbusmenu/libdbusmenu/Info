@@ -2,7 +2,7 @@
 
 original_name=libdbusmenu
 name=libdbusmenu
-version=16.04.0
+version=18.10.20180917
 package=$name-$version
 depends=
 installbefore=

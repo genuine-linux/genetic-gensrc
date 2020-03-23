@@ -31,6 +31,7 @@ if test -f "configure"; then
 	    	--with-rootrundir=/run \
             	--enable-manpages       \
             	--disable-static        \
+		--enable-kmod \
             	--config-cache \
 		--enable-split-usr \
 		--enable-manpages \
@@ -54,7 +55,6 @@ if test -f "Makefile"; then
 	make DESTDIR=${GENPKGDESTDIR} install;
 	mkdir -pv $GENPKGDESTDIR/lib/udev/rules.d;
 	mkdir -pv $GENPKGDESTDIR/etc/udev/rules.d;
-	make -f udev-rules/Makefile DESTDIR=$GENPKGDESTDIR install;
 	cp -av ../$name/files/* $GENPKGDESTDIR;
 fi;
 

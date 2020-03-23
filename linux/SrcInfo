@@ -1,5 +1,5 @@
 source=linux
-version=4.20.12
+version=5.5.6
 depends=
 package=linux-headers
 package=linux

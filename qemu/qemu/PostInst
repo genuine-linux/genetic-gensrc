@@ -1,0 +1,4 @@
+#!/bin/bash
+
+grep kvm /etc/group || groupadd -g 61 kvm
+grep kvm /etc/passwd || usermod -a -G kvm root

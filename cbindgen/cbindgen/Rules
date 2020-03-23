@@ -12,6 +12,9 @@ cd ../$original_name-$version;
 # Create install directory
 mkdir -pv ${GENPKGDESTDIR}/usr/bin;
 
+source /etc/profile
+
 cargo build --release
+
 install -Dm755 target/release/cbindgen $GENPKGDESTDIR/usr/bin/
 

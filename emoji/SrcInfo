@@ -1,0 +1,6 @@
+source=emoji
+version=13.0
+srcurl=http://srchost/emoji-13.0
+category=base
+depends=
+package=emoji

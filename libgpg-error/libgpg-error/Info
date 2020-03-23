@@ -2,7 +2,7 @@
 
 original_name=libgpg-error
 name=libgpg-error
-version=1.35
+version=1.37
 package=$name-$version
 depends=
 installbefore=

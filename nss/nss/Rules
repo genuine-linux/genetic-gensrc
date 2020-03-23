@@ -31,14 +31,14 @@ if test -f "Makefile"; then
 	install -v -m755 Linux*/lib/*.so              $GENPKGPREFIX/usr/lib              &&
 	install -v -m644 Linux*/lib/{*.chk,libcrmf.a} $GENPKGPREFIX/usr/lib              &&
 	install -v -m755 -d                           $GENPKGPREFIX/usr/include/nss      &&
-	cp -v -RL {public,private}/nss/*              $GENPKGPREFIX/usr/include/nss      &&
+	cp -v -RL public/nss/*              $GENPKGPREFIX/usr/include/nss      &&
+	cp -v -RL private/nss/*              $GENPKGPREFIX/usr/include/nss      &&
 	chmod -v 644                                  $GENPKGPREFIX/usr/include/nss/*    &&
-	cp -va Linux*/bin/* $GENPKGPREFIX/usr/bin/
-	cd ../$name
-	cp -va config/nss.pc  $GENPKGPREFIX/usr/lib/pkgconfig/
-	rm -fv $GENPKGPREFIX/usr/bin/nss-config
-	cp -va config/nss-config  $GENPKGPREFIX/usr/bin/
+	cp -va Linux*/bin/* $GENPKGPREFIX/usr/bin/ &&
+	cd ../$name &&
+	cp -va config/nss.pc  $GENPKGPREFIX/usr/lib/pkgconfig/ &&
+	rm -fv $GENPKGPREFIX/usr/bin/nss-config &&
+	cp -va config/nss-config  $GENPKGPREFIX/usr/bin/ &&
 	ln -sfv ./pkcs11/p11-kit-trust.so $GENPKGPREFIX/usr/lib/libssckbi.so
-
 fi;
 

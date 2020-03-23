@@ -12,6 +12,8 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	export PYTHONPATH="/usr/lib/python3.8/site-packages:$GENPKGDESTDIR/usr/lib/python3.8/site-packages";
+	PYTHON=/usr/bin/python \
 	./configure --host=$GENUINE_HOST \
 		--target=$GENUINE_TGT \
 		--build=$GENUINE_TGT \
@@ -30,7 +32,7 @@ if test -f "Makefile"; then
 fi;
 
 # Create install directory
-mkdir -pv ${GENPKGDESTDIR};
+mkdir -pv ${GENPKGDESTDIR}/usr/lib/python3.8/site-packages/;
 
 # make install
 if test -f "Makefile"; then

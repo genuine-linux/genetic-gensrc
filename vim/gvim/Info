@@ -2,7 +2,7 @@
 
 original_name=vim
 name=gvim
-version=8.1
+version=8.2.0190
 package=$name-$version
 depends=
 installbefore=

@@ -1,1 +1,5 @@
 #!/bin/bash
+
+chmod +x /etc/init.d/syslogd
+
+rc-update add syslogd default

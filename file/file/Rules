@@ -12,13 +12,17 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	CFLAGS="$CFLAGS -fPIC" \
+	CXXFLAGS="$CXXFLAGS -fPIC" \
 	./configure --prefix=/usr \
 		--host="$GENUINE_HOST" \
 		--target="$GENUINE_TGT" \
 		--build="$GENUINE_TGT" \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--docdir=/usr/share/doc/$name-$version;
+		--docdir=/usr/share/doc/$name-$version \
+		--disable-static \
+		--enable-shared;
 fi;
 
 # make

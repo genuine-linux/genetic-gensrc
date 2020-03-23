@@ -1,4 +1,4 @@
 source=cracklib
 version=2.9.7
-depends=
+depends="attr_2.4.48 acl_2.2.53"
 package=cracklib

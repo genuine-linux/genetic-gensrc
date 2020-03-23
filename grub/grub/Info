@@ -2,9 +2,9 @@
 
 original_name=grub
 name=grub
-version=2.02
+version=2.04
 package=$name-$version
-depends="unifont_12.1.03"
+depends="unifont_12.1.03 freetype_2.10.0 dejavu-fonts-ttf_2.37"
 installbefore=
 installafter=
 replaces="$name"

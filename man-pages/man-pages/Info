@@ -2,7 +2,7 @@
 
 original_name=man-pages
 name=man-pages
-version=4.16
+version=5.05
 package=$name-$version
 depends=
 installbefore=

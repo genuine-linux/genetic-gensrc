@@ -1,4 +1,4 @@
 source=expat
-version=2.2.6
+version=2.2.9
 depends=
 package=expat

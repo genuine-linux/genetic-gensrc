@@ -1,0 +1,6 @@
+source=ucd
+version=03.2020
+srcurl=http://srchost/ucd-03.2020
+category=base
+depends=
+package=ucd

@@ -2,3 +2,12 @@
 
 [ -f /etc/login.access ] && mv -v /etc/login.access{,.NOUSE}
 [ -f /etc/limits ] && mv -v /etc/limits{,.NOUSE}
+
+for F in /etc/passwd /etc/shadow /etc/group /etc/gshadow; do
+  [ -f $F ] || cp -a /usr/share/genuine-base-system/$F \
+               /etc/$F
+done
+
+chmod 400 /etc/shadow /etc/gshadow
+chmod 644 /etc/passwd /etc/group
+

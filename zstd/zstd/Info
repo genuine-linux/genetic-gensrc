@@ -1,0 +1,12 @@
+### Package <zstd> info. ###
+
+original_name=zstd
+name=zstd
+version=1.4.4
+package=zstd-1.4.4
+category=
+depends=
+installbefore=
+installafter=
+replaces="zstd zstd.dbg"
+

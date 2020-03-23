@@ -1,4 +1,4 @@
 source=grep
-version=3.3
-depends=flex_2.6.4
+version=3.4
+depends="flex_2.6.4 sed_4.8"
 package=grep

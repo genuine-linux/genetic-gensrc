@@ -1,4 +1,4 @@
 source=shadow
-version=4.6
+version=4.8.1
 depends="cracklib_2.9.7 Linux-PAM_1.3.1 gnome-doc-utils_0.20.10"
 package=shadow

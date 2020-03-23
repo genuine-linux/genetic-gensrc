@@ -15,13 +15,17 @@ if test -f "configure"; then
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--docdir=/usr/share/doc/$name-$version;
+		--docdir=/usr/share/doc/$name-$version \
+		--enable-symcryptrun;
 fi;
 
 # make
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
 	make;
+	makeinfo --html --no-split -o doc/gnupg_nochunks.html doc/gnupg.texi &&
+	makeinfo --plaintext       -o doc/gnupg.txt           doc/gnupg.texi &&
+	make -C doc html
 fi;
 
 # Create install directory
@@ -31,5 +35,12 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
+	install -v -m755 -d /usr/share/doc/$name-$version/html &&
+	install -v -m644    doc/gnupg_nochunks.html \
+                    /usr/share/doc/$name-$version/html/gnupg.html &&
+	install -v -m644    doc/*.texi doc/gnupg.txt \
+                    /usr/share/doc/$name-$version &&
+	install -v -m644    doc/gnupg.html/* \
+                    /usr/share/doc/$name-$version/html
 fi;
 

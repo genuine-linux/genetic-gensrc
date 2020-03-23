@@ -12,11 +12,10 @@ cd ../$original_name-$version;
 # CMake configure #
 if test -f "CMakeLists.txt"; then
 	echo " --- CMake Configure <$name ($version)> ---";
-	rm -rf build.cmake &&
-	mkdir build.cmake &&
+	rm -rf build.cmake /usr/src/gmock &&
+	mkdir build.cmake /usr/src/gmock &&
 	cd build.cmake &&
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \
-	-DSOURCE_DIR=/usr/src/gmock \
 	../;
 fi;
 
@@ -33,5 +32,6 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile" || test -f "makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make   DESTDIR=${GENPKGDESTDIR} install;
+	rm -rf /usr/src/gmock
 fi;
 

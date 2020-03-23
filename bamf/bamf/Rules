@@ -12,6 +12,7 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+  PYTHON=/usr/bin/python2 \
 	./configure --host=$GENUINE_HOST \
 		--target=$GENUINE_TGT \
 		--build=$GENUINE_TGT \
@@ -20,7 +21,9 @@ if test -f "configure"; then
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
 		--disable-static \
-		--enable-shared;
+		--enable-shared \
+		--disable-silent-rules \
+		--enable-introspection=yes;
 fi;
 
 # make

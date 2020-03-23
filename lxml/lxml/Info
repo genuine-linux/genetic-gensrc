@@ -2,7 +2,7 @@
 
 original_name=lxml
 name=lxml
-version=4.3.4
+version=4.5.0
 package=$name-$version
 depends="Python2_2.7.14 Python_3.7.2 libxslt_1.1.33"
 installbefore=

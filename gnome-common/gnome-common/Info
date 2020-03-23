@@ -1,0 +1,12 @@
+### Package <gnome-common> info. ###
+
+original_name=gnome-common
+name=gnome-common
+version=3.18.0
+package=gnome-common-3.18.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="gnome-common gnome-common.dbg"
+

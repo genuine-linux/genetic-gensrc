@@ -26,7 +26,7 @@ if test -f "configure"; then
             --with-vgrind=/usr/bin/vgrind        \
             --with-grap=/usr/bin/grap            \
             --with-systemdtmpfilesdir=           \
-            --with-systemdsystemunitdir= ;
+            --with-systemdsystemunitdir=
 fi;
 
 # make

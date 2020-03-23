@@ -2,9 +2,9 @@
 
 original_name=Python
 name=Python
-version=3.7.2
+version=3.8.2
 package=$name-$version
-depends=libffi_3.2.1 openssl_1.1.1a
+depends="libffi_3.2.1 openssl_1.1.1a"
 installbefore=
 installafter=
 replaces="$name"

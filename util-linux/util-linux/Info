@@ -2,7 +2,7 @@
 
 original_name=util-linux
 name=util-linux
-version=2.33.1
+version=2.35.1
 package=$name-$version
 depends=
 installbefore=

@@ -1,4 +1,4 @@
 source=attr
 version=2.4.48
-depends=ncurses_6.1
+depends=
 package=attr

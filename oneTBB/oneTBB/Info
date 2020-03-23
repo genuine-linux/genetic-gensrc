@@ -1,0 +1,12 @@
+### Package <oneTBB> info. ###
+
+original_name=oneTBB
+name=oneTBB
+version=2020.1
+package=oneTBB-2020.1
+category=
+depends=
+installbefore=
+installafter=
+replaces="oneTBB oneTBB.dbg"
+

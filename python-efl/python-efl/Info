@@ -2,7 +2,7 @@
 
 original_name=python-efl
 name=python-efl
-version=1.22.0
+version=1.23.0
 package=$name-$version
 depends=
 installbefore=

@@ -9,18 +9,18 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
+#Genuine 
++ image {
+	top = 20%
+	left = 35%-78
+   	file = "genuine.png"
+ }
+
 #Logotipo 
 + image {
 	top = 10%
 	left = 30%-98
    	file = "logo.png"
- }
-
-#Genuine 
-+ image {
-	top = 20%
-	left = 35%-68
-   	file = "genuine.png"
  }
 
 # Muestra menu

@@ -1,4 +1,4 @@
 source=gettext
-version=0.19.8.1
+version=0.20.1
 depends=
 package=gettext

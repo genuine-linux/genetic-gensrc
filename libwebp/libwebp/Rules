@@ -21,7 +21,6 @@ if test -f "configure"; then
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
-		--disable-static \
 		--enable-shared \
 		--enable-libwebpmux \
 		--enable-libwebpdemux \

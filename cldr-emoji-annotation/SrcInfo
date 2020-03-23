@@ -1,0 +1,6 @@
+source=cldr-emoji-annotation
+version=36.12.120191002
+srcurl=http://srchost/cldr-emoji-annotation-36.12.120191002
+category=base
+depends=
+package=cldr-emoji-annotation

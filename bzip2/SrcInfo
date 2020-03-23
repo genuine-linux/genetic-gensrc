@@ -1,4 +1,4 @@
 source=bzip2
-version=1.0.6
-depends=
+version=1.0.8
+depends="zlib_1.2.11"
 package=bzip2

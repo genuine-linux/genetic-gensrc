@@ -6,14 +6,16 @@ source ./Info;
 # Fake GEN<DESTDIR> = <rootfs> to install package #
 GENPKGDESTDIR="$(pwd)/rootfs";
 
+GCC_VERSION="$(gcc -v 2>&1 | tail -1 | awk '{print $3}')";
+
 # Change to source directory #
 cd ../$original_name-$version;
 
 case $(uname -m) in
-    i?86)    GCC_INCDIR=/usr/lib/gcc/$(uname -m)-genuine-linux-gnu/8.2.0/include
-            ln -sfv ld-linux.so.2 /lib/ld-lsb.so.3
+    i?86) GCC_INCDIR=/usr/lib/gcc/$(uname -m)-genuine-linux-gnu/$GCC_VERSION/include
+          ln -sfv ld-linux.so.2 /lib/ld-lsb.so.3
     ;;
-    x86_64) GCC_INCDIR=/usr/lib/gcc/x86_64-genuine-linux-gnu/8.2.0/include
+    x86_64) GCC_INCDIR=/usr/lib/gcc/x86_64-genuine-linux-gnu/$GCC_VERSION/include
             #ln -sfv ../lib/ld-linux-x86-64.so.2 /lib64
             ln -sfv ../lib/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3
     ;;
@@ -27,7 +29,7 @@ cd build
 # configure #
 if test -f "../configure"; then
 	echo " --- Configure <$name ($version)> ---";
-	CC="${GENUINE_TGT}-gcc -isystem $GCC_INCDIR -isystem /usr/include" \
+	CC="${GENUINE_TGT}-gcc -ffile-prefix-map=/tools=/usr" \
 	../configure --prefix=/usr \
 	     --host="$GENUINE_HOST" \
 	     --target="$GENUINE_TGT" \

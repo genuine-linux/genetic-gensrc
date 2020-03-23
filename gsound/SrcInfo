@@ -1,0 +1,6 @@
+source=gsound
+version=1.0.2
+srcurl=http://srchost/gsound-1.0.2
+category=base
+depends=
+package=gsound

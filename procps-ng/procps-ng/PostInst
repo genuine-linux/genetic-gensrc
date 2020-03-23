@@ -1,3 +1,2 @@
 #!/bin/bash
 
-ln -sfv ../../lib/$(readlink /usr/lib/libprocps.so) /usr/lib/libprocps.so

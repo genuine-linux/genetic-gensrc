@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -pv $GENPKGDESTDIR/usr/share/unicode/emoji
+
+cp -av * $GENPKGDESTDIR/usr/share/unicode/emoji/

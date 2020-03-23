@@ -14,7 +14,7 @@ if test -f "CMakeLists.txt"; then
 	echo " --- CMake Configure <$name ($version)> ---";
 	mkdir build.cmake;
 	cd build.cmake;
-	$CMAKE -DCMAKE_INSTALL_PREFIX=/usr \
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
 		-DWITH_DBUS=ON \
 		-DWITH_GTK3_EXPERIMENTAL=ON \
 		-DWITH_IMAGE_MAGICK=ON \

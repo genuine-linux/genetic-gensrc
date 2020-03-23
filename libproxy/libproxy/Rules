@@ -9,12 +9,17 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
+perldir=$(perl -v | head -2 | tail -1 | awk '{print "perl"$4"/"$4"."$6"."$8"/"$12}' | sed 's/,//g');
+
 # CMake configure #
 if test -f "CMakeLists.txt"; then
 	echo " --- CMake Configure <$name ($version)> ---";
 	mkdir build.cmake;
 	cd build.cmake;
-	cmake -DCMAKE_INSTALL_PREFIX=/usr 		../;
+	CFLAGS="$CFLAGS -I/usr/lib/$perldir" \
+	CXXFLAGS="$CXXFLAGS -I/usr/lib/$perldir" \
+	cmake -DCMAKE_INSTALL_PREFIX=/usr  \
+	../;
 fi;
 
 # make

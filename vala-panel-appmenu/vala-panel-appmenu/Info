@@ -2,8 +2,8 @@
 
 original_name=vala-panel-appmenu
 name=vala-panel-appmenu
-version=0.6.94
-package=vala-panel-appmenu-0.6.94
+version=0.7.3
+package=vala-panel-appmenu-0.7.3
 category=
 depends=
 installbefore=

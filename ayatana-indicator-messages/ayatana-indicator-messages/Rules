@@ -14,11 +14,17 @@ if test ! -f "configure"; then
 		echo " --- Autogen <$name ($version)> ---";
 		sh autogen.sh
 		echo " --- Configure <$name ($version)> ---";
-		./configure --prefix=/usr
+		CFLAGS="$CFLAGS -Wno-deprecated-declarations" \
+		CXXFLAGS="$CXXFLAGS -Wno-deprecated-declarations" \
+		./configure --prefix=/usr \
+			--enable-introspection=yes
 	fi
 else
 	echo " --- Configure <$name ($version)> ---";
-	./configure --prefix=/usr
+	CFLAGS="$CFLAGS -Wno-deprecated-declarations" \
+	CXXFLAGS="$CXXFLAGS -Wno-deprecated-declarations" \
+	./configure --prefix=/usr \
+		--enable-introspection=yes
 fi;
 
 # make

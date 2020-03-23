@@ -1,4 +1,4 @@
 source=llvm
-version=8.0.1
+version=9.0.1
 depends="cmake_3.13.4 libxml2_2.9.9 Python2_2.7.15 ninja_1.9.0"
 package=llvm

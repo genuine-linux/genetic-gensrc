@@ -1,6 +1,6 @@
 source=vala-panel-appmenu
-version=0.6.94
-srcurl=http://srchost/vala-panel-appmenu-0.6.94
+version=0.7.3
+srcurl=http://srchost/vala-panel-appmenu-0.7.3
 category=base
 depends=
 package=vala-panel-appmenu

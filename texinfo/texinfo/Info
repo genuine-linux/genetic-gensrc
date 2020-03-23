@@ -2,9 +2,9 @@
 
 original_name=texinfo
 name=texinfo
-version=6.6
+version=6.7
 package=$name-$version
-depends=perl_5.28.1
+depends="perl_5.28.1"
 installbefore=
 installafter=
 replaces="$name"

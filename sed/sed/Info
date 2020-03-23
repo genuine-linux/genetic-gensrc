@@ -2,7 +2,7 @@
 
 original_name=sed
 name=sed
-version=4.7
+version=4.8
 package=$name-$version
 depends=
 installbefore=

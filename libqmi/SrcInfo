@@ -1,4 +1,4 @@
 source=libqmi
-version=1.22.4
+version=1.24.6
 depends="glib_2.60.1 libmbim_1.20.0 gtk-doc_1.31 help2man_1.47.10"
 package=libqmi

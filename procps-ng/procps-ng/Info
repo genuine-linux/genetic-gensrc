@@ -2,7 +2,7 @@
 
 original_name=procps-ng
 name=procps-ng
-version=3.3.15
+version=3.3.16
 package=$name-$version
 depends=
 installbefore=

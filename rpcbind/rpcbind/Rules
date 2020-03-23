@@ -41,6 +41,6 @@ mkdir -pv ${GENPKGDESTDIR};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
-	cp -a ../$name/files/* $GENPKGDESTDIR/;
+	#cp -a ../$name/files/* $GENPKGDESTDIR/;
 fi;
 

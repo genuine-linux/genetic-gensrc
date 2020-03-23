@@ -1,4 +1,4 @@
 source=linux-firmware
-version=4.20.12
+version=5.5.6
 depends="linux_$version"
 package=linux-firmware

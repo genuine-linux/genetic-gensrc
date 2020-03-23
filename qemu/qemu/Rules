@@ -1,0 +1,97 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+if [ $(uname -m) = i686 ]; then
+   QEMU_ARCH=i386-softmmu
+else
+   QEMU_ARCH=x86_64-softmmu
+fi
+
+
+
+# configure #
+if test -f "configure"; then
+	echo " --- Configure <$name ($version)> ---";
+	mkdir -vp build &&
+	cd build &&
+	../configure --host=$GENUINE_HOST \
+		--build=$GENUINE_TGT \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--docdir=/usr/share/doc/$name-$version \
+		--target-list=$QEMU_ARCH \
+		--audio-drv-list=alsa,pa \
+		--enable-plugins \
+		--enable-system \
+		--enable-gtk \
+		--enable-vte \
+		--enable-curses \
+		--enable-sdl \
+		--enable-iconv \
+		--enable-curl \
+		--enable-virtfs \
+		--enable-bluez \
+		--enable-kvm \
+		--enable-cap-ng \
+		--enable-attr \
+		--enable-vhost-net \
+		--enable-vhost-vsock \
+		--enable-vhost-scsi \
+		--enable-vhost-crypto \
+		--enable-vhost-kernel \
+		--enable-vhost-user \
+		--enable-libusb \
+		--enable-bzip2 \
+		--enable-libssh \
+		--enable-replication \
+		--enable-opengl \
+		--enable-virglrenderer \
+		--enable-xfsctl \
+		--enable-libxml2 \
+		--enable-tools \
+		--enable-cloop \
+		--enable-dmg \
+		--enable-qcow1 \
+		--enable-vdi \
+		--enable-vvfat \
+		--enable-qed \
+		--enable-parallels \
+		--enable-xkbcommon
+fi;
+
+unset QEMU_ARCH;
+
+# make
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make <$name ($version)> ---";
+	make  ;
+fi;
+
+# Create install directory
+mkdir -pv ${GENPKGDESTDIR}/lib/udev/rules.d;
+
+# make install
+if test -f "Makefile" || test -f "makefile"; then
+	echo " --- Make Install <$name ($version)> ---";
+	make   DESTDIR=${GENPKGDESTDIR} install;
+	cat > $GENPKGDESTDIR/lib/udev/rules.d/65-kvm.rules << "EOF"
+KERNEL=="kvm", GROUP="kvm", MODE="0660"
+EOF
+	chgrp kvm  $GENPKGDESTDIR/usr/libexec/qemu-bridge-helper &&
+	chmod 4750 $GENPKGDESTDIR/usr/libexec/qemu-bridge-helper &&
+	cp -av ../$name/files/* ${GENPKGDESTDIR}/ &&
+	cd $GENPKGDESTDIR/usr/bin &&
+	ln -sfv qemu-system-$(uname -m) qemu &&
+	install -vdm 755 $GENPKGDESTDIR/etc/qemu &&
+	echo allow br0 > $GENPKGDESTDIR/etc/qemu/bridge.conf 
+fi;
+

@@ -2,7 +2,7 @@
 
 original_name=gawk
 name=gawk
-version=4.2.1
+version=5.0.1
 package=$name-$version
 depends=automake15_1.15.1
 installbefore=

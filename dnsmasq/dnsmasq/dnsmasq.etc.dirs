@@ -1,0 +1,5 @@
+/etc
+/etc/logrotate.d
+/etc/conf.d
+/etc/init.d
+/etc/dnsmasq.d

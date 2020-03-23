@@ -1,4 +1,4 @@
 source=readline
 version=8.0
-depends=file_5.36
+depends="file_5.38"
 package=readline

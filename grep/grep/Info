@@ -2,9 +2,9 @@
 
 original_name=grep
 name=grep
-version=3.3
+version=3.4
 package=$name-$version
-depends=flex_2.6.4
+depends="flex_2.6.4 sed_4.8"
 installbefore=
 installafter=
 replaces="$name"

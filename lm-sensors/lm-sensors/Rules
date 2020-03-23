@@ -12,7 +12,7 @@ cd ../$original_name-$version;
 # make
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
-	$MAKE PREFIX=/usr \
+	make PREFIX=/usr \
      	BUILD_STATIC_LIB=0 \
 	PROG_EXTRA=sensord \
      	MANDIR=/usr/share/man;
@@ -24,7 +24,7 @@ mkdir -pv ${GENPKGDESTDIR};
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
-	$MAKE PREFIX=/usr \
+	make PREFIX=/usr \
      	BUILD_STATIC_LIB=0 \
      	MANDIR=/usr/share/man \
 	PROG_EXTRA=sensord \

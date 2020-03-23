@@ -2,10 +2,11 @@
 
 original_name=lz4
 name=lz4
-version=1.9.1
-package=$name-$version
+version=1.9.2
+package=lz4-1.9.2
+category=
 depends=
 installbefore=
 installafter=
-replaces="$name"
+replaces="lz4 lz4.dbg"
 

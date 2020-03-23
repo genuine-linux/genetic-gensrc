@@ -1,0 +1,6 @@
+source=oneTBB
+version=2020.1
+srcurl=http://srchost/oneTBB-2020.1
+category=base
+depends=
+package=oneTBB

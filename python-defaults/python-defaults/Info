@@ -2,10 +2,10 @@
 
 original_name=python-defaults
 name=python-defaults
-version=3.7.2
+version=3.8.2
 package=$name-$version
 category=
-depends=
+depends="Python_3.8.2"
 installbefore=
 installafter=
 replaces="$name"

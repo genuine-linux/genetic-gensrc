@@ -1,0 +1,12 @@
+### Package <qemu> info. ###
+
+original_name=qemu
+name=qemu
+version=4.2.0
+package=qemu-4.2.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="qemu qemu.dbg"
+

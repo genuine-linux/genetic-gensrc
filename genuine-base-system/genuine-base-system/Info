@@ -2,7 +2,7 @@
 
 original_name=genuine-base-system
 name=genuine-base-system
-version=G20.02.02
+version=20.03.08
 package=$name-$version
 category=
 depends=

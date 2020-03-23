@@ -1,0 +1,12 @@
+### Package <ucd> info. ###
+
+original_name=ucd
+name=ucd
+version=03.2020
+package=ucd-03.2020
+category=
+depends=
+installbefore=
+installafter=
+replaces="ucd ucd.dbg"
+

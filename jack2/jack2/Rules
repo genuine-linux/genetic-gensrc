@@ -9,15 +9,15 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-./waf configure --prefix=/usr \
+python2 waf configure --prefix=/usr \
 	--dbus \
 	--autostart=dbus \
 	--enable-pkg-config-dbus-service-dir
 
-./waf build -p
+python2 waf build -p
 
 # Create install directory
 mkdir -pv ${GENPKGDESTDIR};
 
-./waf install -p --destdir=$GENPKGDESTDIR
+python2 waf install -p --destdir=$GENPKGDESTDIR
 

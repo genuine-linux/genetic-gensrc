@@ -40,5 +40,7 @@ if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	make DESTDIR=${GENPKGDESTDIR} install;
 	mv -v $GENPKGDESTDIR/usr/lib/libprocps.so.* $GENPKGDESTDIR/lib;
+	cd $GENPKGDESTDIR/usr/lib
+	ln -sfv ../../lib/libprocps.so.8.0.2 libprocps.so
 fi;
 

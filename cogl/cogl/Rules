@@ -12,6 +12,8 @@ cd ../$original_name-$version;
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	CFLAGS="$CFLAGS -I/usr/include/EGL" \
+	CXXFLAGS="$CXXFLAGS -I/usr/include/EGL" \
 	./configure --host=$GENUINE_HOST \
 		--target=$GENUINE_TGT \
 		--build=$GENUINE_TGT \

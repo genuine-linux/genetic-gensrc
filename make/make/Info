@@ -2,7 +2,7 @@
 
 original_name=make
 name=make
-version=4.2.1
+version=4.3
 package=$name-$version
 depends="libpipeline_1.5.1"
 installbefore=

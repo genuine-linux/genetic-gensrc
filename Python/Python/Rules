@@ -10,7 +10,7 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 cd ../$original_name-$version;
 
 pymajver="3";
-pyminver="7";
+pyminver="8";
 pyver="${pymajver}.${pyminver}";
 
 # configure #
@@ -44,8 +44,10 @@ mkdir -pv ${GENPKGDESTDIR};
 # make install
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
+	mkdir -pv /root/.cache/pip/http &&
+	chown -R root:root /root/.cache &&
 	make DESTDIR=${GENPKGDESTDIR} install &&
-	chmod -v 755 $GENPKGDESTDIR/usr/lib/libpython${pyver}m.so &&
+	chmod -v 755 $GENPKGDESTDIR/usr/lib/libpython${pyver}.so &&
 	chmod -v 755 $GENPKGDESTDIR/usr/lib/libpython${pymajver}.so &&
 	cd $GENPKGDESTDIR/usr/bin &&
 	ln -sfv python${pyver} python  &&
@@ -56,6 +58,7 @@ if test -f "Makefile"; then
 		ln -sfv easy_install-$pyver easy_install
 	fi &&
 	if [ -f "pip$pyver" ] && [ ! -x "pip" ]; then
+		ln -sfv pip${pyver} pip${pymajver}
 		ln -sfv pip${pyver} pip
 	fi
 fi;

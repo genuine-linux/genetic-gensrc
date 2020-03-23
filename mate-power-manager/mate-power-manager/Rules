@@ -19,6 +19,7 @@ if test -f "configure"; then
 		--sysconfdir=/etc \
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/$name-$version \
+		--without-keyring \
 		--disable-static \
 		--enable-shared;
 fi;

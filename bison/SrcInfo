@@ -1,4 +1,4 @@
 source=bison
-version=3.3.2
-depends=
+version=3.5.2
+depends="sed_4.8"
 package=bison

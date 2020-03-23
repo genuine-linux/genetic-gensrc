@@ -2,7 +2,7 @@
 
 original_name=efl
 name=efl
-version=1.22.4
+version=1.23.3
 package=$name-$version
 depends=
 installbefore=

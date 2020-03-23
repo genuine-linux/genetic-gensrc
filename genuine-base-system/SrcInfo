@@ -1,6 +1,6 @@
 source=genuine-base-system
-version=G20.02.02
-srcurl=http://srchost/genuine-base-system-G20.02.02
+version=20.03.08
+srcurl=http://srchost/genuine-base-system-20.03.08
 category=base
 depends=
 package=genuine-base-system

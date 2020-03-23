@@ -1,0 +1,6 @@
+source=qt5webengine
+version=5.14.1
+srcurl=http://srchost/qt5webengine-5.14.1
+category=base
+depends=
+package=qt5webengine

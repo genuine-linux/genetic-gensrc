@@ -1,6 +1,6 @@
 source=python-defaults
-version=3.7.2
-srcurl=http://srchost/python-defaults-3.7.2
+version=3.8.2
+srcurl=http://srchost/python-defaults-3.8.2
 category=base
-depends=
+depends="Python_3.8.2"
 package=python-defaults

@@ -2,7 +2,7 @@
 
 original_name=sysvinit
 name=sysvinit
-version=2.93
+version=2.96
 package=$name-$version
 depends="sysklogd_1.5.1"
 installbefore=

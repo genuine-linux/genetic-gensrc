@@ -1,4 +1,4 @@
 source=xz
 version=5.2.4
-depends=
+depends="zlib_1.2.11"
 package=xz

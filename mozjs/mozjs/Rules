@@ -12,6 +12,7 @@ cd ../$original_name-$version;
 # configure #
 if test -f "js/src/configure"; then
 	echo " --- Configure <$name ($version)> ---";
+	rm -rf mozjs-build &&
 	mkdir mozjs-build &&
 	cd    mozjs-build &&
 	export SHELL="/bin/bash" &&
@@ -19,7 +20,7 @@ if test -f "js/src/configure"; then
 	CXXFLAGS="$CXXFLAGS -O2 -pipe -fPIC" \
 	AUTOCONF="/usr/bin/autoconf2.13" \
 	PYTHON="/usr/bin/python2" \
-	PYTHON3="/usr/bin/python3.7" \
+	PYTHON3="/usr/bin/python" \
 	CONFIG_SHELL="/bin/bash" \
 	../js/src/configure \
 			--host=$GENUINE_HOST \

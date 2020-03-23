@@ -2,7 +2,7 @@
 
 original_name=gnupg
 name=gnupg
-version=2.2.13
+version=2.2.19
 package=$name-$version
 depends="libassuan_2.5.3 libgcrypt_1.8.4 libgpg-error_1.35 libksba_1.3.5 npth_1.6 gnutls_3.6.6"
 installbefore=

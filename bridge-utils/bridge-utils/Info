@@ -1,0 +1,12 @@
+### Package <bridge-utils> info. ###
+
+original_name=bridge-utils
+name=bridge-utils
+version=1.6
+package=bridge-utils-1.6
+category=
+depends=
+installbefore=
+installafter=
+replaces="bridge-utils bridge-utils.dbg"
+

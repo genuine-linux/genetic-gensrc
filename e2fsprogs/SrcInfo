@@ -1,4 +1,4 @@
 source=e2fsprogs
-version=1.44.5
-depends=util-linux_2.33.1
+version=1.45.5
+depends="util-linux_2.33.1"
 package=e2fsprogs

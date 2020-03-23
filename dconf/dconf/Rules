@@ -9,6 +9,7 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
+rm -rf build.meson
 mkdir build.meson
 cd build.meson
 

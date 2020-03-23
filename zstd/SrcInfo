@@ -1,0 +1,6 @@
+source=zstd
+version=1.4.4
+srcurl=http://srchost/zstd-1.4.4
+category=base
+depends=
+package=zstd

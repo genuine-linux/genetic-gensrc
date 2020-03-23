@@ -1,5 +1,5 @@
 source=ayatana-indicator-messages
-version=0.6.0
-srcurl=http://host/-0.6.0
+version=0.6.1
+srcurl=http://host/ayatana-indicator-messages-0.6.1
 depends=
 package=ayatana-indicator-messages

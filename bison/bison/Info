@@ -2,9 +2,9 @@
 
 original_name=bison
 name=bison
-version=3.3.2
+version=3.5.2
 package=$name-$version
-depends=
+depends="sed_4.8"
 installbefore=
 installafter=
 replaces="$name"

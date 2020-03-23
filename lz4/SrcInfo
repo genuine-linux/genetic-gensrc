@@ -1,4 +1,6 @@
 source=lz4
-version=1.9.1
+version=1.9.2
+srcurl=http://srchost/lz4-1.9.2
+category=base
 depends=
 package=lz4

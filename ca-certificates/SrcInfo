@@ -1,4 +1,4 @@
 source=ca-certificates
 version=20190110
-depends=
+depends="Python_3.8.2"
 package=ca-certificates

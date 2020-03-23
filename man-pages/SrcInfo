@@ -1,4 +1,4 @@
 source=man-pages
-version=4.16
+version=5.05
 depends=
 package=man-pages

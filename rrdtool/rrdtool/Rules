@@ -11,7 +11,7 @@ export PYTHON="/usr/bin/python3";
 # Change to source directory #
 cd ../$original_name-$version;
 
-LUA_PATH="$(ls /usr/lib/lua)";
+LUA_PATH="/usr/lib/lua/5.3";
 
 # configure #
 if test -f "configure"; then
@@ -36,6 +36,7 @@ fi;
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
 	make LUA_PATH=$LUA_PATH;
+	make LUA_PATH=$LUA_PATH etc-install;
 fi;
 
 # Create install directory

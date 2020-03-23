@@ -23,7 +23,8 @@ if test -f "configure"; then
 		--libdir=/lib \
 		--disable-zstd \
 		--disable-static \
-		--enable-shared;
+		--enable-shared \
+		--disable-documentation;
 fi;
 
 # make

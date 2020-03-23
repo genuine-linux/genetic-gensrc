@@ -2,9 +2,9 @@
 
 original_name=bzip2
 name=bzip2
-version=1.0.6
+version=1.0.8
 package=$name-$version
-depends=
+depends="zlib_1.2.11"
 installbefore=
 installafter=
 replaces="$name"

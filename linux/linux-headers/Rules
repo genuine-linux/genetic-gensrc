@@ -13,8 +13,8 @@ cd ../$original_name-$version;
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
 	make mrproper;
-	make INSTALL_HDR_PATH=dest headers_install;
-	find dest/include \( -name .install -o -name ..install.cmd \) -delete
+	make headers
+	find usr/include -name '.*' -delete
 fi;
 
 # Create install directory
@@ -24,6 +24,7 @@ mkdir -pv ${GENPKGPREFIX};
 if test -f "Makefile"; then
 	echo " --- Make Install <$name ($version)> ---";
 	mkdir -p ${GENPKGPREFIX}/usr/include
-	cp -rv dest/include/* ${GENPKGPREFIX}/usr/include;
+	cp -rv usr/include/* $GENPKGPREFIX/usr/include
+	rm $GENPKGPREFIX/usr/include/Makefile
 fi;
 

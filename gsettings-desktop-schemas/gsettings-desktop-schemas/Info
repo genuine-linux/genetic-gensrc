@@ -2,7 +2,7 @@
 
 original_name=gsettings-desktop-schemas
 name=gsettings-desktop-schemas
-version=3.32.0
+version=3.34.0
 package=$name-$version
 depends="glib_2.60.1 gobject-introspection_1.60.2"
 installbefore=

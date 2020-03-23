@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Load Info file #
+source ./Info;
+
+# Fake GEN<DESTDIR> = <rootfs> to install package #
+GENPKGDESTDIR="$(pwd)/rootfs";
+
+# Change to source directory #
+cd ../$original_name-$version;
+
+mkdir -pv $GENPKGDESTDIR/usr
+
+mkdir build &&
+cd    build &&
+
+qmake .. -- -system-ffmpeg -webengine-icu &&
+make
+
+make DESTDIR=$GENPKGDESTDIR install
+
+find $GENPKGDESTDIR/usr/ -name \*.prl \
+   -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \;

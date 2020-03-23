@@ -1,0 +1,6 @@
+source=bridge-utils
+version=1.6
+srcurl=http://srchost/bridge-utils-1.6
+category=base
+depends=
+package=bridge-utils

@@ -1,0 +1,6 @@
+/etc/dnsmasq.conf
+/etc/logrotate.d/dnsmasq
+/etc/conf.d/dnsmasq
+/etc/init.d/dnsmasq-dhcp
+/etc/init.d/dnsmasq
+/etc/dnsmasq.d/.delete_me

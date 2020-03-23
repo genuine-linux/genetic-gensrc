@@ -9,6 +9,9 @@ rc-update add syslogd default
 rc-update add bootlogd default
 rc-update add numlock default
 rc-update add consolefont default
+rc-update add rpcbind default
+rc-update add openrc-status default
+rc-update add udev-postmount default
 
 for n in 1 2 3 4 5 6; do
 	if test ! -L "/etc/init.d/agetty.tty$n"; then

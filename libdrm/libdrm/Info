@@ -2,7 +2,7 @@
 
 original_name=libdrm
 name=libdrm
-version=2.4.99
+version=2.4.100
 package=$name-$version
 depends="libxshmfence_1.3 docbook-xml_4.5 docbook-xsl-nons_1.79.1 libxslt_1.1.29"
 installbefore=

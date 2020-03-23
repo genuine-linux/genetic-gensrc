@@ -1,0 +1,12 @@
+### Package <cldr-emoji-annotation> info. ###
+
+original_name=cldr-emoji-annotation
+name=cldr-emoji-annotation
+version=36.12.120191002
+package=cldr-emoji-annotation-36.12.120191002
+category=
+depends=
+installbefore=
+installafter=
+replaces="cldr-emoji-annotation cldr-emoji-annotation.dbg"
+

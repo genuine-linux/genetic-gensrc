@@ -1,0 +1,12 @@
+### Package <qt5webengine> info. ###
+
+original_name=qt5webengine
+name=qt5webengine
+version=5.14.1
+package=qt5webengine-5.14.1
+category=
+depends=
+installbefore=
+installafter=
+replaces="qt5webengine qt5webengine.dbg"
+

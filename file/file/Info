@@ -2,7 +2,7 @@
 
 original_name=file
 name=file
-version=5.36
+version=5.38
 package=$name-$version
 depends=zlib_1.2.11
 installbefore=

@@ -1,4 +1,4 @@
 source=grub
-version=2.02
-depends="unifont_12.1.03"
+version=2.04
+depends="unifont_12.1.03 freetype_2.10.0 dejavu-fonts-ttf_2.37"
 package=grub

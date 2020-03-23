@@ -2,7 +2,7 @@
 
 original_name=findutils
 name=findutils
-version=4.6.0
+version=4.7.0
 package=$name-$version
 depends=
 installbefore=

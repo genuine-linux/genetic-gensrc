@@ -1,4 +1,4 @@
 source=bc
 version=1.07.1
-depends=readline_8.0 m4_1.4.18
+depends="readline_8.0 m4_1.4.18"
 package=bc

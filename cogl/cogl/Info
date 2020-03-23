@@ -2,7 +2,7 @@
 
 original_name=cogl
 name=cogl
-version=1.22.4
+version=1.22.6
 package=$name-$version
 depends="cairo_1.16.0 gdk-pixbuf_2.38.1 glu_9.0.1 mesa_19.1.5 pango_1.42.4 wayland_1.17.0 egl-wayland_1.1.3 gobject-introspection_1.60.2 gtk-doc_1.31 SDL_1.2.15 SDL2_2.0.10"
 installbefore=

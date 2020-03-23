@@ -1,4 +1,4 @@
 source=xkeyboard-config
 version=2.27
-depends="font-xfree86-type1_1.0.4"
+depends="libxshmfence_1.3"
 package=xkeyboard-config

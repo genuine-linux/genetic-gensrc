@@ -2,9 +2,9 @@
 
 original_name=gmp
 name=gmp
-version=6.1.2
+version=6.2.0
 package=$name-$version
-depends=binutils_2.32
+depends="binutils_2.34"
 installbefore=
 installafter=
 replaces="$name"

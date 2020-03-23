@@ -1,1 +1,5 @@
 #!/bin/bash
+
+chmod +x /etc/init.d/gpm
+
+rc-update add gpm default

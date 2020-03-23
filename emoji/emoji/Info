@@ -1,0 +1,12 @@
+### Package <emoji> info. ###
+
+original_name=emoji
+name=emoji
+version=13.0
+package=emoji-13.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="emoji emoji.dbg"
+

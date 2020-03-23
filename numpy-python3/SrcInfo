@@ -1,5 +1,5 @@
 source=numpy-python3
 version=1.18.1
 srcurl=http://host/$name-$version
-depends=
+depends="Cython_0.29.14"
 package=numpy-python3

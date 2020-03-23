@@ -13,7 +13,7 @@ cd ../$original_name-$version;
 if test -f "Makefile"; then
 	echo " --- Make <$name ($version)> ---";
 	make defconfig
-	make;
+	make CONFIG_EXTRA_LDLIBS="pthread dl tirpc audit pam";
 fi;
 
 # Create install directory

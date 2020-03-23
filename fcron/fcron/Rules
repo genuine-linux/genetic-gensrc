@@ -9,8 +9,8 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-groupadd -g 22 fcron &&
-useradd -d /dev/null -c "Fcron User" -g fcron -s /bin/false -u 22 fcron
+groupadd -g 42 fcron &&
+useradd -d /dev/null -c "Fcron User" -g fcron -s /bin/false -u 42 fcron
 
 # configure #
 if test -f "configure"; then
