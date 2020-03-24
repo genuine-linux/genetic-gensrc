@@ -1,0 +1,12 @@
+### Package <libvirt-glib> info. ###
+
+original_name=libvirt-glib
+name=libvirt-glib
+version=3.0.0
+package=libvirt-glib-3.0.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="libvirt-glib libvirt-glib.dbg"
+

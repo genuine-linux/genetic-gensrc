@@ -1,0 +1,12 @@
+### Package <python3-reportlab> info. ###
+
+original_name=python3-reportlab
+name=python3-reportlab
+version=3.5.42
+package=python3-reportlab-3.5.42
+category=
+depends=
+installbefore=
+installafter=
+replaces="python3-reportlab python3-reportlab.dbg"
+

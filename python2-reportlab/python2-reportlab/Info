@@ -1,0 +1,12 @@
+### Package <python2-reportlab> info. ###
+
+original_name=python2-reportlab
+name=python2-reportlab
+version=3.5.42
+package=python2-reportlab-3.5.42
+category=
+depends=
+installbefore=
+installafter=
+replaces="python2-reportlab python2-reportlab.dbg"
+

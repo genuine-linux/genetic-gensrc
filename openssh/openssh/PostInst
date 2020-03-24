@@ -4,12 +4,12 @@ chmod 644 /etc/pam.d/sshd &&
 install -v -m700 -d /var/lib/sshd &&
 chown -v root:sys /var/lib/sshd
 
-grep "^sshd:" /etc/group || groupadd -g 50 sshd
+grep "^sshd:" /etc/group || groupadd -g 54 sshd
 grep "^sshd:" /etc/passwd || useradd  -c 'sshd PrivSep' \
          -d /var/lib/sshd  \
          -g sshd           \
          -s /bin/false     \
-         -u 50 sshd
+         -u 54 sshd
 
 grep "^PermitRootLogin" /etc/ssh/sshd_config || echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 grep "^UsePAM" /etc/ssh/sshd_config || echo "UsePAM yes" >> /etc/ssh/sshd_config

@@ -1,0 +1,6 @@
+source=libart-lgpl
+version=2.3.19
+srcurl=http://srchost/libart-lgpl-2.3.19
+category=base
+depends=
+package=libart-lgpl

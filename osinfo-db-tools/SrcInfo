@@ -1,0 +1,6 @@
+source=osinfo-db-tools
+version=1.2.0
+srcurl=http://srchost/osinfo-db-tools-1.2.0
+category=base
+depends=
+package=osinfo-db-tools

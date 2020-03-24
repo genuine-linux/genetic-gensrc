@@ -9,9 +9,8 @@ GENPKGDESTDIR="$(pwd)/rootfs";
 # Change to source directory #
 cd ../$original_name-$version;
 
-mkdir build &&
-cd    build &&
-
+mkdir build.meson &&
+cd    build.meson &&
 meson --prefix=/usr \
 	-Dwith-libproxy=true \
 	-Dwith-lua=lua ..

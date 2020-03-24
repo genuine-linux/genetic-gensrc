@@ -1,0 +1,12 @@
+### Package <python3-certifi> info. ###
+
+original_name=python3-certifi
+name=python3-certifi
+version=2019.11.28
+package=python3-certifi-2019.11.28
+category=
+depends=
+installbefore=
+installafter=
+replaces="python3-certifi python3-certifi.dbg"
+

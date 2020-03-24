@@ -1,0 +1,12 @@
+### Package <libart-lgpl> info. ###
+
+original_name=libart-lgpl
+name=libart-lgpl
+version=2.3.19
+package=libart-lgpl-2.3.19
+category=
+depends=
+installbefore=
+installafter=
+replaces="libart-lgpl libart-lgpl.dbg"
+

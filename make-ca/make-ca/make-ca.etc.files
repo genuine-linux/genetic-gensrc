@@ -1,0 +1,5 @@
+/etc/make-ca.conf.dist
+/etc/cron.weekly/update-pki.sh
+/etc/make-ca.conf
+/etc/ssl/local/root.crt
+/etc/ssl/local/class3.crt

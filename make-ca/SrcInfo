@@ -1,4 +1,4 @@
 source=make-ca
-version=1.2
+version=1.7
 depends="p11-kit_0.23.15 nss_3.42.1 help2man_1.47.10"
 package=make-ca

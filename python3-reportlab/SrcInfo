@@ -1,0 +1,6 @@
+source=python3-reportlab
+version=3.5.42
+srcurl=http://srchost/python3-reportlab-3.5.42
+category=base
+depends=
+package=python3-reportlab

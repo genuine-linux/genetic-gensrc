@@ -1,0 +1,6 @@
+source=python3-chardet
+version=3.0.4
+srcurl=http://srchost/python3-chardet-3.0.4
+category=base
+depends=
+package=python3-chardet

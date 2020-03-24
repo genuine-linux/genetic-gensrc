@@ -1,0 +1,6 @@
+source=python3-requests
+version=2.23.0
+srcurl=http://srchost/python3-requests-2.23.0
+category=base
+depends=
+package=python3-requests

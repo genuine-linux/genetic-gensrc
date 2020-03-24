@@ -1,0 +1,3 @@
+#!/bin/bash
+
+osinfo-db-import --system /var/lib/osinfo/osinfo-db-20200214.tar.xz

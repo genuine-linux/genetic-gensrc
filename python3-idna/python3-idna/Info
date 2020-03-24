@@ -1,0 +1,12 @@
+### Package <python3-idna> info. ###
+
+original_name=python3-idna
+name=python3-idna
+version=2.9
+package=python3-idna-2.9
+category=
+depends=
+installbefore=
+installafter=
+replaces="python3-idna python3-idna.dbg"
+

@@ -1,0 +1,12 @@
+### Package <python2-urllib3> info. ###
+
+original_name=python2-urllib3
+name=python2-urllib3
+version=1.25.8
+package=python2-urllib3-1.25.8
+category=
+depends=
+installbefore=
+installafter=
+replaces="python2-urllib3 python2-urllib3.dbg"
+

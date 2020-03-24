@@ -1,0 +1,12 @@
+### Package <python3-chardet> info. ###
+
+original_name=python3-chardet
+name=python3-chardet
+version=3.0.4
+package=python3-chardet-3.0.4
+category=
+depends=
+installbefore=
+installafter=
+replaces="python3-chardet python3-chardet.dbg"
+

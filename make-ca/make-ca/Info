@@ -2,7 +2,7 @@
 
 original_name=make-ca
 name=make-ca
-version=1.2
+version=1.7
 package=$name-$version
 depends="p11-kit_0.23.15 nss_3.42.1 help2man_1.47.10"
 installbefore=

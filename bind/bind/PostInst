@@ -1,7 +1,9 @@
 #!/bin/bash
 
-grep named /etc/group || groupadd -g 40 named
-grep named /etc/passwd || useradd -g 40 -s /bin/false -d /etc/bind named
+grep "^named:" /etc/group || groupadd -g 41 named
+grep "^named:" /etc/passwd || useradd -c "Named User" \
+  -g named -s /bin/false \
+  -d /etc/bind -u 41 named
 
 chmod +x /etc/init.d/named
 

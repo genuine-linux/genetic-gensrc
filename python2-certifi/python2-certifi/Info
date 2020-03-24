@@ -1,0 +1,12 @@
+### Package <python2-certifi> info. ###
+
+original_name=python2-certifi
+name=python2-certifi
+version=2019.11.28
+package=python2-certifi-2019.11.28
+category=
+depends=
+installbefore=
+installafter=
+replaces="python2-certifi python2-certifi.dbg"
+

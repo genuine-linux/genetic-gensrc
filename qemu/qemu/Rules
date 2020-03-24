@@ -15,11 +15,10 @@ else
    QEMU_ARCH=x86_64-softmmu
 fi
 
-
-
 # configure #
 if test -f "configure"; then
 	echo " --- Configure <$name ($version)> ---";
+  rm -rf build &&
 	mkdir -vp build &&
 	cd build &&
 	../configure --host=$GENUINE_HOST \
@@ -51,10 +50,8 @@ if test -f "configure"; then
 		--enable-vhost-user \
 		--enable-libusb \
 		--enable-bzip2 \
-		--enable-libssh \
 		--enable-replication \
 		--enable-opengl \
-		--enable-virglrenderer \
 		--enable-xfsctl \
 		--enable-libxml2 \
 		--enable-tools \
@@ -86,9 +83,7 @@ if test -f "Makefile" || test -f "makefile"; then
 	cat > $GENPKGDESTDIR/lib/udev/rules.d/65-kvm.rules << "EOF"
 KERNEL=="kvm", GROUP="kvm", MODE="0660"
 EOF
-	chgrp kvm  $GENPKGDESTDIR/usr/libexec/qemu-bridge-helper &&
-	chmod 4750 $GENPKGDESTDIR/usr/libexec/qemu-bridge-helper &&
-	cp -av ../$name/files/* ${GENPKGDESTDIR}/ &&
+	cp -av ../../$name/files/* ${GENPKGDESTDIR}/ &&
 	cd $GENPKGDESTDIR/usr/bin &&
 	ln -sfv qemu-system-$(uname -m) qemu &&
 	install -vdm 755 $GENPKGDESTDIR/etc/qemu &&

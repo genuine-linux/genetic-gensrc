@@ -1,0 +1,6 @@
+source=libvirt-python
+version=6.1.0
+srcurl=http://srchost/libvirt-python-6.1.0
+category=base
+depends=
+package=libvirt-python

@@ -1,0 +1,6 @@
+source=libvirt-glib
+version=3.0.0
+srcurl=http://srchost/libvirt-glib-3.0.0
+category=base
+depends=
+package=libvirt-glib

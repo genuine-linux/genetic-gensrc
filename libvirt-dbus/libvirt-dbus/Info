@@ -1,0 +1,12 @@
+### Package <libvirt-dbus> info. ###
+
+original_name=libvirt-dbus
+name=libvirt-dbus
+version=1.3.0
+package=libvirt-dbus-1.3.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="libvirt-dbus libvirt-dbus.dbg"
+

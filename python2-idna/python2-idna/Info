@@ -1,0 +1,12 @@
+### Package <python2-idna> info. ###
+
+original_name=python2-idna
+name=python2-idna
+version=2.9
+package=python2-idna-2.9
+category=
+depends=
+installbefore=
+installafter=
+replaces="python2-idna python2-idna.dbg"
+

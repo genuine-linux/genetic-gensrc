@@ -11,7 +11,7 @@ cd ../$original_name-$version;
 
 mkdir -pv $GENPKGDESTDIR/
 
-python2 setup-uc2.py build
+python2 setup.py build
 
-python2 setup-uc2.py install --root=dest
+python2 setup.py install --root=dest
 cp -av dest/* $GENPKGDESTDIR/

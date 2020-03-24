@@ -1,0 +1,6 @@
+source=libvirt-dbus
+version=1.3.0
+srcurl=http://srchost/libvirt-dbus-1.3.0
+category=base
+depends=
+package=libvirt-dbus

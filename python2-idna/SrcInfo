@@ -1,0 +1,6 @@
+source=python2-idna
+version=2.9
+srcurl=http://srchost/python2-idna-2.9
+category=base
+depends=
+package=python2-idna

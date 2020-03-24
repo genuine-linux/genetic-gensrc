@@ -1,0 +1,6 @@
+source=python2-certifi
+version=2019.11.28
+srcurl=http://srchost/python2-certifi-2019.11.28
+category=base
+depends=
+package=python2-certifi

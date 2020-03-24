@@ -1,0 +1,12 @@
+### Package <osinfo-db-tools> info. ###
+
+original_name=osinfo-db-tools
+name=osinfo-db-tools
+version=1.2.0
+package=osinfo-db-tools-1.2.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="osinfo-db-tools osinfo-db-tools.dbg"
+

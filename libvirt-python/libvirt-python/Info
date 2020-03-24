@@ -1,0 +1,12 @@
+### Package <libvirt-python> info. ###
+
+original_name=libvirt-python
+name=libvirt-python
+version=6.1.0
+package=libvirt-python-6.1.0
+category=
+depends=
+installbefore=
+installafter=
+replaces="libvirt-python libvirt-python.dbg"
+
